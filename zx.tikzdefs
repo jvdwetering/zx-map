@@ -1,0 +1,7 @@
+\usepackage{xspace}
+\usepackage{bm}
+
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{fadings}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
