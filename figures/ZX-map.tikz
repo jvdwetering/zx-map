@@ -17,7 +17,7 @@
 		\node [style=Z phase dot] (15) at (11, 3.75) {\scriptsize Sal Wolffs};
 		\node [style=Z phase dot] (16) at (9, 5.5) {\scriptsize Stach Kuijpers};
 		\node [style=Z phase dot] (17) at (12, 6.25) {\scriptsize Kang Feng Ng};
-		\node [style=Z phase dot] (18) at (4, -9.25) {\scriptsize Mehdi};
+		\node [style=Z phase dot] (18) at (4, -9.25) {\scriptsize Mehdi Mhalla};
 		\node [style=Z phase dot] (20) at (6, -8) {\scriptsize Dominic Horsman};
 		\node [style=Z phase dot] (21) at (9.75, -8.25) {\scriptsize Richard East};
 		\node [style=Z phase dot] (22) at (-2, 4.5) {\scriptsize Will Simons};
