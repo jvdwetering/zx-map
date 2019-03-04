@@ -479,7 +479,7 @@ These ZX-rules are much simpler than the complete of set Clifford+T circuit equa
   author={Hadzihasanovic, Amar},
   journal={PhD Thesis},
   year={2017},
-  keywords = {ZW-calculus, Completeness},
+  keywords = {ZW-calculus, Completeness, PhD Thesis},
   link = {https://arxiv.org/abs/1709.08086},
   abstract = {String diagrams turn algebraic equations into topological moves that have recurring shapes, involving the sliding of one diagram past another. We individuate, at the root of this fact, the dual nature of polygraphs as presentations of higher algebraic theories, and as combinatorial descriptions of "directed spaces". Operations of polygraphs modelled on operations of topological spaces are used as the foundation of a compositional universal algebra, where sliding moves arise from tensor products of polygraphs. We reconstruct several higher algebraic theories in this framework. 
     In this regard, the standard formalism of polygraphs has some technical problems. We propose a notion of regular polygraph, barring cell boundaries that are not homeomorphic to a disk of the appropriate dimension. We define a category of non-degenerate shapes, and show how to calculate their tensor products. Then, we introduce a notion of weak unit to recover weakly degenerate boundaries in low dimensions, and prove that the existence of weak units is equivalent to a representability property. 
@@ -496,3 +496,176 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
   link = {https://arxiv.org/abs/1801.01231},
   abstract = {We introduce the fermionic ZW calculus, a string-diagrammatic language for fermionic quantum computing (FQC). After defining a fermionic circuit model, we present the basic components of the calculus, together with their interpretation, and show how the main physical gates of interest in FQC can be represented in our language. We then list our axioms, and derive some additional equations. We prove that the axioms provide a complete equational axiomatisation of the monoidal category whose objects are systems of finitely many local fermionic modes (LFMs), with maps that preserve or reverse the parity of states, and the tensor product as monoidal product. We achieve this through a procedure that rewrites any diagram in a normal form. As an example, we show how the statistics of a fermionic Mach-Zehnder interferometer can be calculated in the diagrammatic language. We conclude by giving a diagrammatic treatment of the dual-rail encoding, a standard method in optical quantum computing used to perform universal quantum computation.}
 }
+
+
+@article{backens_complete_2015,
+    title = {A Complete Graphical Calculus for Spekkens’ Toy Bit Theory},
+    volume = {46},
+    issn = {0015-9018, 1572-9516},
+    url = {http://link.springer.com/article/10.1007/s10701-015-9957-7},
+    keywords = {ZX-calculus, Spekkens toy model, Completeness},
+    link = {https://arxiv.org/abs/1411.1618},
+    doi = {10.1007/s10701-015-9957-7},
+    abstract = {While quantum theory cannot be described by a local hidden variable model, it is nevertheless possible to construct such models that exhibit features commonly associated with quantum mechanics. These models are also used to explore the question of $\psi$-ontic versus $\psi$-epistemic theories for quantum mechanics. Spekkens’ toy theory is one such model. It arises from classical probabilistic mechanics via a limit on the knowledge an observer may have about the state of a system. The toy theory for the simplest possible underlying system closely resembles stabilizer quantum mechanics, a fragment of quantum theory which is efficiently classically simulable but also non-local. Further analysis of the similarities and differences between those two theories can thus yield new insights into what distinguishes quantum theory from classical theories, and $\psi$-ontic from $\psi$-epistemic theories. In this paper, we develop a graphical language for Spekkens’ toy theory. Graphical languages offer intuitive and rigorous formalisms for the analysis of quantum mechanics and similar theories. To compare quantum mechanics and a toy model, it is useful to have similar formalisms for both. We show that our language fully describes Spekkens’ toy theory and in particular, that it is complete: meaning any equality that can be derived using other formalisms can also be derived entirely graphically. Our language is inspired by a similar graphical language for quantum mechanics called the ZX-calculus. Thus Spekkens’ toy bit theory and stabilizer quantum mechanics can be analysed and compared using analogous graphical formalisms.},
+    language = {en},
+    number = {1},
+    urldate = {2016-01-15},
+    journal = {Foundations of Physics},
+    author = {Backens, Miriam and Duman, Ali Nabi},
+    month = {oct},
+    year = {2015},
+    pages = {70--103}
+}
+
+@phdthesis{backens_completeness_2016,
+    address = {Oxford},
+    type = {{PhD} thesis},
+    journal = {PhD Thesis},
+    title = {Completeness and the ZX-calculus},
+    keywords = {ZX-calculus, Completeness, PhD thesis},
+    link = {http://arxiv.org/abs/1602.08954},
+    abstract = {Graphical languages offer intuitive and rigorous formalisms for quantum physics. They can be used to simplify expressions, derive equalities, and do computations. Yet in order to replace conventional formalisms, rigour alone is not sufficient: the new formalisms also need to have equivalent deductive power. This requirement is captured by the property of completeness, which means that any equality that can be derived using some standard formalism can also be derived graphically. In this thesis, I consider the ZX-calculus, a graphical language for pure state qubit quantum mechanics. I show that it is complete for pure state stabilizer quantum mechanics, so any problem within this fragment of quantum theory can be fully analysed using graphical methods. This includes questions of central importance in areas such as error-correcting codes or measurement-based quantum computation. Furthermore, I show that the ZX-calculus is complete for the single-qubit Clifford+T group, which is approximately universal: any single-qubit unitary can be approximated to arbitrary accuracy using only Clifford gates and the T-gate. Lastly, I extend the use of rigorous graphical languages outside quantum theory to Spekkens' toy theory, a local hidden variable model that nevertheless exhibits some features commonly associated with quantum mechanics. I develop a graphical calculus similar to the ZX-calculus that fully describes Spekkens' toy theory, and show that it is complete. Hence, stabilizer quantum mechanics and Spekkens' toy theory can be fully analysed and compared using graphical formalisms. Intuitive graphical languages can replace conventional formalisms for the analysis of many questions in quantum computation and foundations without loss of mathematical rigour or deductive power.},
+    language = {English},
+    urldate = {2016-03-01},
+    school = {University of Oxford},
+    author = {Backens, Miriam},
+    month = {feb},
+    year = {2016},
+}
+
+
+@article{carette_completeness_2019,
+    title = {Completeness of Graphical Languages for Mixed States Quantum Mechanics},
+    keywords = {Completeness, Category Theory, Mixed States},
+    link = {http://arxiv.org/abs/1902.07143},
+    abstract = {There exist several graphical languages for quantum information processing, like quantum circuits, ZX-Calculus, ZW-Calculus, etc. Each of these languages forms a dagger-symmetric monoidal category (dagger-SMC) and comes with an interpretation functor to the dagger-SMC of (finite dimension) Hilbert spaces. In the recent years, one of the main achievements of the categorical approach to quantum mechanics has been to provide several equational theories for most of these graphical languages, making them complete for various fragments of pure quantum mechanics. We address the question of the extension of these languages beyond pure quantum mechanics, in order to reason on mixed states and general quantum operations, i.e. completely positive maps. Intuitively, such an extension relies on the axiomatisation of a discard map which allows one to get rid of a quantum system, operation which is not allowed in pure quantum mechanics. We introduce a new construction, the discard construction, which transforms any dagger-symmetric monoidal category into a symmetric monoidal category equipped with a discard map. Roughly speaking this construction consists in making any isometry causal. Using this construction we provide an extension for several graphical languages that we prove to be complete for general quantum operations. However this construction fails for some fringe cases like the Clifford+T quantum mechanics, as the category does not have enough isometries.},
+    urldate = {2019-02-20},
+    journal = {arXiv:1902.07143 [quant-ph]},
+    author = {Carette, Titouan and Jeandel, Emmanuel and Perdrix, Simon and Vilmart, Renaud},
+    month = {feb},
+    year = {2019},
+}
+
+@article{ng_completeness_2018,
+    title = {Completeness of the ZX-calculus for Pure Qubit Clifford+T Quantum Mechanics},
+    link = {http://arxiv.org/abs/1801.07993},
+    keywords = {ZX-calculus, Completeness, Clifford+T},
+    abstract = {Recently, we gave a complete axiomatisation of the ZX-calculus for the overall pure qubit quantum mechanics. Based on this result, here we also obtain a complete axiomatisation of the ZX-calculus for the Clifford+T quantum mechanics by restricting the ring of complex numbers to its subring corresponding to the Clifford+T fragment resting on the completeness theorem of the ZW-calculus for arbitrary commutative ring. In contrast to the first complete axiomatisation of the ZX-calculus for the Clifford+T fragment, we have two new generators as features rather than novelties: the triangle can be employed as an essential component to construct a Toffoli gate in a very simple form, while the lambda box can be slightly extended to a generalised phase so that the generalised supplementarity (cyclotomic supplementarity ) is naturally seen as a special case of the generalised spider rule.},
+    urldate = {2018-02-16},
+    journal = {arXiv:1801.07993 [quant-ph]},
+    author = {Ng, Kang Feng and Wang, Quanlong},
+    month = {jan},
+    year = {2018},
+}
+
+@article{jeandel_rational_2018,
+    title = {The rational fragment of the ZX-calculus},
+    link = {http://arxiv.org/abs/1810.05377},
+    keywords = {ZX-calculus, Rational-fragment, Completeness},
+    abstract = {We introduce here a new axiomatisation of the rational fragment of the ZX-calculus, a diagrammatic language for quantum mechanics. Compared to the previous axiomatisation introduced in [8], our axiomatisation does not use any metarule , but relies instead on a more natural rule, called the cyclotomic supplementarity rule, that was introduced previously in the literature. Our axiomatisation is only complete for diagrams using rational angles , and is not complete in the general case. Using results on diophantine geometry, we characterize precisely which diagram equality involving arbitrary angles are provable in our framework without any new axioms, and we show that our axiomatisation is continuous, in the sense that a diagram equality involving arbitrary angles is provable iff it is a limit of diagram equalities involving rational angles. We use this result to give a complete characterization of all Euler equations that are provable in this axiomatisation.},
+    urldate = {2018-10-15},
+    journal = {arXiv:1810.05377 [quant-ph]},
+    author = {Jeandel, Emmanuel},
+    month = {oct},
+    year = {2018},
+    note = {arXiv: 1810.05377}
+}
+
+
+@article{ranchin_complete_2014,
+    title = {Complete set of circuit equations for stabilizer quantum mechanics},
+    volume = {90},
+    url = {http://link.aps.org/doi/10.1103/PhysRevA.90.012109},
+    link = {https://arxiv.org/abs/1310.7932},
+    doi = {10.1103/PhysRevA.90.012109},
+    keywords = {ZX-calculus, Completeness, Clifford-fragment},
+    abstract = {We find a sufficient set of equations between quantum circuits from which we can derive any other equation between stabilizer quantum circuits. To establish this result, we rely upon existing work on the completeness of the graphical ZX language for quantum processes, a two-coloured logical calculus for multi-qubit systems. The complexity of the circuit equations, as opposed to the very intuitive reading of the much smaller number of ZX equations, advocates the latter for performing computations with quantum circuits.},
+    number = {1},
+    urldate = {2014-11-05},
+    journal = {Physical Review A},
+    author = {Ranchin, André and Coecke, Bob},
+    month = {jul},
+    year = {2014}
+}
+
+@article{jeandel_generalised_2017,
+    title = {Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive},
+    link = {http://arxiv.org/abs/1702.01945},
+    keywords = {ZX-calculus, Supplementarity},
+    abstract = {The ZX-Calculus is a powerful diagrammatic language for quantum mechanics and quantum information processing. The completeness of the $\pi/4$-fragment is a main open problem in categorical quantum mechanics, a program initiated by Abramsky and Coecke. It has recently been proven that this fragment, also called Clifford+T quantum mechanics, was not complete, and hence a new rule called supplementarity was introduced to palliate it. The completeness of the $\pi/4$-fragment is a crucial question, for it is the "easiest" approximately universal fragment, whereas the $\pi/2$-fragment, the stabiliser quantum mechanics, is known to be complete but is not approximately universal. In this paper, we will show that, on the one hand, the $\pi/4$-fragment is still not complete despite the new supplementarity rule, and that, on the other hand, this supplementarity rule can be generalised to any natural number n. To prove the incompleteness of the $\pi/4$-fragment, we can show an equality over scalars that is not derivable from the set of axioms, and that will lead to a substitute for the inverse rule, and the obsolescence of the zero rule. We can also show that the generalised supplementarity for any n not a power of 2 is not derivable from the current set of axioms of the ZX-Calculus, but that the rule for some n can be derived from some others. The hierarchy of these rules will be discussed.},
+    urldate = {2017-02-08},
+    journal = {arXiv:1702.01945 [quant-ph]},
+    author = {Jeandel, Emmanuel and Perdrix, Simon and Vilmart, Renaud and Wang, Quanlong},
+    month = {feb},
+    year = {2017},
+    note = {arXiv: 1702.01945}
+}
+
+@article{gong_equivalence_2017,
+    title = {Equivalence of Local Complementation and Euler Decomposition in the Qutrit ZX-calculus},
+    link = {http://arxiv.org/abs/1704.05955},
+    keywords = {ZX-calculus, Qutrit, Local Complementation},
+    abstract = {In this paper, we give a modified version of the qutrit ZX-calculus, by which we represent qutrit graph states as diagrams and prove that the qutrit version of local complementation property is true if and only if the qutrit Hadamard gate \$H\$ has an Euler decomposition into $4\pi/3$-green and red rotations. This paves the way for studying the completeness of qutrit ZX-calculus for qutrit stabilizer quantum mechanics.},
+    urldate = {2017-04-21},
+    journal = {arXiv:1704.05955 [quant-ph]},
+    author = {Gong, Xiaoyan and Wang, Quanlong},
+    month = {apr},
+    year = {2017},
+    note = {arXiv: 1704.05955}
+}
+
+
+@article{cicala_categorifying_2018,
+    title = {Categorifying the ZX-calculus},
+    volume = {266},
+    issn = {2075-2180},
+    link = {http://arxiv.org/abs/1704.07034},
+    doi = {10.4204/EPTCS.266.19},
+    keywords = {ZX-calculus, Category Theory},
+    abstract = {We build a symmetric monoidal and compact closed bicategory by combining spans and cospans inside a topos. This can be used as a framework in which to study open networks and diagrammatic languages. We illustrate this framework with Coecke and Duncan's zx-calculus by constructing a bicategory with the natural numbers for 0-cells, the zx-calculus diagrams for 1-cells, and rewrite rules for 2-cells.},
+    language = {en},
+    urldate = {2019-03-04},
+    journal = {Electronic Proceedings in Theoretical Computer Science},
+    author = {Cicala, Daniel},
+    month = {feb},
+    year = {2018},
+    pages = {294--314}
+}
+
+@article{hillebrand_superdense_2012,
+    title = {Superdense Coding with GHZ and Quantum Key Distribution with W in the ZX-calculus},
+    volume = {95},
+    issn = {2075-2180},
+    url = {http://arxiv.org/abs/1210.0650},
+    doi = {10.4204/EPTCS.95.10},
+    keywords = {ZX-calculus, Protocols},
+    abstract = {Quantum entanglement is a key resource in many quantum protocols, such as quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to verify. This is why Coecke and Duncan have introduced a diagrammatic language for quantum protocols, called the ZX-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. In the author's MSc thesis it has been shown for over 25 quantum protocols that the ZX-calculus provides a relatively easy and more intuitive presentation. Moreover, the author embarked on the task to apply categorical quantum mechanics on quantum security; earlier works did not touch anything but Bennett and Brassard's quantum key distribution protocol, BB84. Superdense coding with the Greenberger-Horne-Zeilinger state and quantum key distribution with the W-state are presented in the ZX-calculus in this paper.},
+    urldate = {2015-01-29},
+    journal = {Electronic Proceedings in Theoretical Computer Science},
+    author = {Hillebrand, Anne},
+    month = {oct},
+    year = {2012},
+    note = {arXiv: 1210.0650},
+    pages = {103--121}
+}
+
+@phdthesis{wang_completeness_2018,
+    type = {PhD thesis},
+    title = {Completeness of the ZX-calculus},
+    journal = {PhD thesis},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Harny.pdf},
+    keywords = {ZX-calculus, Completeness, PhD thesis},
+    abstract = {The ZX-calculus is an intuitive but also mathematically strict graphical language for quantum computing, which is especially powerful for the framework of quantum circuits. Completeness of the ZX-calculus means any equality of matrices with size powers of n can be derived purely diagrammatically. In this thesis, we give the first complete axiomatisation the ZX-calculus for the overall pure qubit quantum mechanics, via a translation from the completeness result of another graphical language for quantum computing– the ZW-calculus. This paves the way for automated pictorial quantum computing, with the aid of some software like Quantomatic.
+
+    Based on this universal completeness, we directly obtain a complete axiomatisation of the ZX-calculus for the Clifford+T quantum mechanics, which is approximatively universal for quantum computing, by restricting the ring of complex numbers to its subring corresponding to the Clifford+T fragment resting on the completeness theorem of the ZW-calculus for arbitrary commutative ring.
+
+    Furthermore, we prove the completeness of the ZX-calculus (with just 9 rules) for 2-qubit Clifford+T circuits by verifying the complete set of 17 circuit relations in diagrammatic rewriting. This is an important step towards efficient simplification of general n-qubit Clifford+T circuits, considering that we now have all the necessary rules for diagrammatical quantum reasoning and a very simple construction of Toffoli gate within our axiomatisation framework, which is approximately universal for quantum computation together with the Hadamard gate.
+
+    In addition to completeness results within the qubit related formalism, we extend the completeness of the ZX-calculus for qubit stabilizer quantum mechanics to the qutrit stabilizer system.
+
+    Finally, we show with some examples the application of the ZX-calculus to the proof of generalised supplementarity, the representation of entanglement classification and Toffoli gate, as well as equivalence-checking for the UMA gate.},
+    urldate = {2019-02-26},
+    school = {University of Oxford},
+    author = {Wang, Quanlong},
+    year = {2018},
+} 
