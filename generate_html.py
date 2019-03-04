@@ -40,10 +40,26 @@ def entry_to_html(entry):
                        year = entry['year'], abstract=entry['abstract'])
 
 def library_to_html(lib):
-    entries = [entry_to_html(b) for b in sorted(lib.entries,key=entry_sort_key,reverse=True)]
+    pubs_per_year = {}
+    for b in lib.entries:
+        k = entry_sort_key(b)
+        y = k//100
+        if y in pubs_per_year:
+            pubs_per_year[y].append(b)
+        else: pubs_per_year[y] = [b]
+
     output = ""
-    for e in entries:
-        output += "<li>" + e + "</li>" +"\n"
+    for y in sorted(pubs_per_year.keys(),reverse=True):
+        pubs = pubs_per_year[y]
+        output += "<h2>{:d}</h2>\n".format(2000+y)
+        output += "<ul>\n"
+        for e in [entry_to_html(b) for b in sorted(pubs,key=entry_sort_key,reverse=True)]:
+            output += "<li>" + e + "</li>" +"\n"
+        output += "</ul>\n \n"
+    #entries = [entry_to_html(b) for b in sorted(lib.entries,key=entry_sort_key,reverse=True)]
+    #output = ""
+    #for e in entries:
+    #    output += "<li>" + e + "</li>" +"\n"
 
     return output
 
