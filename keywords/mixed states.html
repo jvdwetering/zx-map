@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Publications concerning 'Mixed States'</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/custom.css" rel="stylesheet">
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/menucollapse.js"></script>
+<script type="text/javascript" src="../js/arrow78.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<body id="page-top" class="index">
+
+<!-- Research Section -->
+<section id="publications">
+    <div class="container lead">
+        <div style="text-align: left; margin-top:10px" class="col-md-12">
+            <div class="allshow" style="display:none;" id="tab-3-content">
+            <hr class="star-primary">
+            <h1>Publications concerning 'Mixed States'</h1>
+                <ul>
+<li class="pub_entry"><a target="_blank" href="http://arxiv.org/abs/1902.07143">Completeness of Graphical Languages for Mixed States Quantum Mechanics</a>, Titouan Carette, Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart, <i>arXiv:1902.07143 [quant-ph]</i> (2019).<br>
+Keywords: <a target="_blank" href="Completeness.html">Completeness</a>, <a target="_blank" href="Category Theory.html">Category Theory</a>, <a target="_blank" href="Mixed States.html">Mixed States</a>.&nbsp;&nbsp;
+<span class="abstract">There exist several graphical languages for quantum information processing, like quantum circuits, ZX-Calculus, ZW-Calculus, etc. Each of these languages forms a dagger-symmetric monoidal category (dagger-SMC) and comes with an interpretation functor to the dagger-SMC of (finite dimension) Hilbert spaces. In the recent years, one of the main achievements of the categorical approach to quantum mechanics has been to provide several equational theories for most of these graphical languages, making them complete for various fragments of pure quantum mechanics. We address the question of the extension of these languages beyond pure quantum mechanics, in order to reason on mixed states and general quantum operations, i.e. completely positive maps. Intuitively, such an extension relies on the axiomatisation of a discard map which allows one to get rid of a quantum system, operation which is not allowed in pure quantum mechanics. We introduce a new construction, the discard construction, which transforms any dagger-symmetric monoidal category into a symmetric monoidal category equipped with a discard map. Roughly speaking this construction consists in making any isometry causal. Using this construction we provide an extension for several graphical languages that we prove to be complete for general quantum operations. However this construction fails for some fringe cases like the Clifford+T quantum mechanics, as the category does not have enough isometries.</span>&nbsp;&nbsp;
+<span class="bibdata"><pre><code>@article{carette_completeness_2019,
+    author = {Carette, Titouan and Jeandel, Emmanuel and Perdrix, Simon and Vilmart, Renaud},
+    title = {Completeness of Graphical Languages for Mixed States Quantum Mechanics},
+    year = {2019},
+    journal = {arXiv:1902.07143 [quant-ph]},
+    link = {http://arxiv.org/abs/1902.07143},
+    keyword = {Completeness, Category Theory, Mixed States},
+    abstract = {There exist several graphical languages for quantum information processing, like quantum circuits, ZX-Calculus, ZW-Calculus, etc. Each of these languages forms a dagger-symmetric monoidal category (dagger-SMC) and comes with an interpretation functor to the dagger-SMC of (finite dimension) Hilbert spaces. In the recent years, one of the main achievements of the categorical approach to quantum mechanics has been to provide several equational theories for most of these graphical languages, making them complete for various fragments of pure quantum mechanics. We address the question of the extension of these languages beyond pure quantum mechanics, in order to reason on mixed states and general quantum operations, i.e. completely positive maps. Intuitively, such an extension relies on the axiomatisation of a discard map which allows one to get rid of a quantum system, operation which is not allowed in pure quantum mechanics. We introduce a new construction, the discard construction, which transforms any dagger-symmetric monoidal category into a symmetric monoidal category equipped with a discard map. Roughly speaking this construction consists in making any isometry causal. Using this construction we provide an extension for several graphical languages that we prove to be complete for general quantum operations. However this construction fails for some fringe cases like the Clifford+T quantum mechanics, as the category does not have enough isometries.},
+    month = {feb},
+    urldate = {2019-02-20}
+}
+
+</code></pre></span></li>
+</ul>
+ 
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+
+    $('span.abstract').each(function(event){ /* select all divs with the item class */
+
+        var abstract = $(this).html();
+        
+        $(this).html('<a href="#" class="abstract_more">Abstract</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="abstract_text" style="display:none;">'+ abstract + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.abstract_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.abstract').find('.abstract_text').show(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.abstract').find('.abstract_text').hide(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('.abstract_more').show();
+        });
+    });
+
+    $('span.bibdata').each(function(event){ /* select all divs with the item class */
+
+        var bibdata = $(this).html();
+        
+        $(this).html('<a href="#" class="bibdata_more">Bibdata</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="bibdata_text" style="display:none;">'+ bibdata + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.bibdata_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').show(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').hide(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('.bibdata_more').show();
+        });
+    });
+});
+</script>
+
+
+<hr class="star-primary">
+<footer>
+    <small>
+    <center>
+        Â© 2019 | J. van de Wetering. Credits: AR template
+    <a onclick="javascript:$('#credit').toggle();"><img border="0" src="../images/ccby.png"/></a>
+    <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence: 
+    <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
+        https://github.com/dmsl/academic-responsive-template
+    </a>
+    </div>
+    </center>
+    </small>
+</footer>
+
+</body>
+
+</html>

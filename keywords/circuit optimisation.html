@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Publications concerning 'Circuit optimisation'</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/custom.css" rel="stylesheet">
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/menucollapse.js"></script>
+<script type="text/javascript" src="../js/arrow78.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<body id="page-top" class="index">
+
+<!-- Research Section -->
+<section id="publications">
+    <div class="container lead">
+        <div style="text-align: left; margin-top:10px" class="col-md-12">
+            <div class="allshow" style="display:none;" id="tab-3-content">
+            <hr class="star-primary">
+            <h1>Publications concerning 'Circuit optimisation'</h1>
+                <ul>
+<li class="pub_entry"><a target="_blank" href="https://arxiv.org/abs/1902.03178">Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus</a>, Ross Duncan, Aleks Kissinger, Simon Pedrix and John van de Wetering, <i>arXiv preprint arXiv:1902.03178</i> (2019).<br>
+Keywords: <a target="_blank" href="ZX-Calculus.html">ZX-Calculus</a>, <a target="_blank" href="Circuit optimisation.html">Circuit optimisation</a>.&nbsp;&nbsp;
+<span class="abstract">We present the theoretical foundations for a new quantum circuit optimisation technique based on an equational theory called the ZX-calculus. We first interpret quantum circuits as ZX-diagrams, which provide a flexible, lower-level language for describing quantum computations graphically. Then, using the rules of the ZX-calculus, we derive a terminating simplification procedure for ZX-diagrams based on the two graph transformations of local complementation and pivoting. While little is known about extracting an equivalent quantum circuit from an arbitrary ZX-diagram, we show that our simplification procedure preserves a graph property called focused gFlow, and use this property to derive a deterministic strategy for circuit re-extraction. Hence, this approach enables us to temporarily break the rigid quantum circuit structure and 'see around' obstructions (namely non-Clifford quantum gates) to produce significant reductions, while still maintaining enough data to extract a reduced quantum circuit at the end.</span>&nbsp;&nbsp;
+<span class="bibdata"><pre><code>@article{duncan2019graph,
+    author = {Duncan, Ross and Kissinger, Aleks and Pedrix, Simon and van de Wetering, John},
+    title = {Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus},
+    year = {2019},
+    journal = {arXiv preprint arXiv:1902.03178},
+    link = {https://arxiv.org/abs/1902.03178},
+    keyword = {ZX-Calculus, Circuit optimisation},
+    abstract = {We present the theoretical foundations for a new quantum circuit optimisation technique based on an equational theory called the ZX-calculus. We first interpret quantum circuits as ZX-diagrams, which provide a flexible, lower-level language for describing quantum computations graphically. Then, using the rules of the ZX-calculus, we derive a terminating simplification procedure for ZX-diagrams based on the two graph transformations of local complementation and pivoting. While little is known about extracting an equivalent quantum circuit from an arbitrary ZX-diagram, we show that our simplification procedure preserves a graph property called focused gFlow, and use this property to derive a deterministic strategy for circuit re-extraction. Hence, this approach enables us to temporarily break the rigid quantum circuit structure and 'see around' obstructions (namely non-Clifford quantum gates) to produce significant reductions, while still maintaining enough data to extract a reduced quantum circuit at the end.}
+}
+
+</code></pre></span></li>
+<li class="pub_entry"><a target="_blank" href="https://arxiv.org/abs/1901.10114">Optimising Clifford Circuits with Quantomatic</a>, Andrew Fagan and Ross Duncan, <i>Proceedings of the 15th International Conference on Quantum Physics and Logic (QPL)</i> (2019).<br>
+Keywords: <a target="_blank" href="ZX-Calculus.html">ZX-Calculus</a>, <a target="_blank" href="Quantomatic.html">Quantomatic</a>, <a target="_blank" href="Clifford Fragment.html">Clifford Fragment</a>, <a target="_blank" href="Circuit optimisation.html">Circuit optimisation</a>.&nbsp;&nbsp;
+<span class="abstract">We present a system of equations between Clifford circuits, all derivable in the ZX-calculus, and formalised as rewrite rules in the Quantomatic proof assistant. By combining these rules with some non-trivial simplification procedures defined in the Quantomatic tactic language, we demonstrate the use of Quantomatic as a circuit optimisation tool. We prove that the system always reduces Clifford circuits of one or two qubits to their minimal form, and give numerical results demonstrating its performance on larger Clifford circuits.</span>&nbsp;&nbsp;
+<span class="bibdata"><pre><code>@inproceedings{FaganDuncan,
+    author = {Fagan, Andrew and Duncan, Ross},
+    title = {Optimising Clifford Circuits with Quantomatic},
+    year = {2019},
+    booktitle = {Proceedings of the 15th International Conference on Quantum Physics and Logic (QPL)},
+    series = {Electronic Proceedings in Theoretical Computer Science},
+    volume = {287},
+    pages = {85-105},
+    publisher = {Open Publishing Association},
+    doi = {10.4204/EPTCS.287.5},
+    link = {https://arxiv.org/abs/1901.10114},
+    keyword = {ZX-Calculus, Quantomatic, Clifford Fragment, Circuit optimisation},
+    abstract = {We present a system of equations between Clifford circuits, all derivable in the ZX-calculus, and formalised as rewrite rules in the Quantomatic proof assistant. By combining these rules with some non-trivial simplification procedures defined in the Quantomatic tactic language, we demonstrate the use of Quantomatic as a circuit optimisation tool. We prove that the system always reduces Clifford circuits of one or two qubits to their minimal form, and give numerical results demonstrating its performance on larger Clifford circuits.}
+}
+
+</code></pre></span></li>
+</ul>
+ 
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+
+    $('span.abstract').each(function(event){ /* select all divs with the item class */
+
+        var abstract = $(this).html();
+        
+        $(this).html('<a href="#" class="abstract_more">Abstract</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="abstract_text" style="display:none;">'+ abstract + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.abstract_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.abstract').find('.abstract_text').show(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.abstract').find('.abstract_text').hide(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('.abstract_more').show();
+        });
+    });
+
+    $('span.bibdata').each(function(event){ /* select all divs with the item class */
+
+        var bibdata = $(this).html();
+        
+        $(this).html('<a href="#" class="bibdata_more">Bibdata</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="bibdata_text" style="display:none;">'+ bibdata + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.bibdata_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').show(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').hide(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('.bibdata_more').show();
+        });
+    });
+});
+</script>
+
+
+<hr class="star-primary">
+<footer>
+    <small>
+    <center>
+        Â© 2019 | J. van de Wetering. Credits: AR template
+    <a onclick="javascript:$('#credit').toggle();"><img border="0" src="../images/ccby.png"/></a>
+    <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence: 
+    <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
+        https://github.com/dmsl/academic-responsive-template
+    </a>
+    </div>
+    </center>
+    </small>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Publications concerning 'Clifford-Fragment'</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/custom.css" rel="stylesheet">
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/menucollapse.js"></script>
+<script type="text/javascript" src="../js/arrow78.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<body id="page-top" class="index">
+
+<!-- Research Section -->
+<section id="publications">
+    <div class="container lead">
+        <div style="text-align: left; margin-top:10px" class="col-md-12">
+            <div class="allshow" style="display:none;" id="tab-3-content">
+            <hr class="star-primary">
+            <h1>Publications concerning 'Clifford-Fragment'</h1>
+                <ul>
+<li class="pub_entry"><a target="_blank" href="https://arxiv.org/abs/0902.0500">Graphs States and the necessity of Euler Decomposition</a>, Ross Duncan and Simon Perdrix, <i>arXiv preprint arXiv:0902.0500</i> (2009).<br>
+Keywords: <a target="_blank" href="ZX-Calculus.html">ZX-Calculus</a>, <a target="_blank" href="Clifford-Fragment.html">Clifford-Fragment</a>, <a target="_blank" href="Graph-states.html">Graph-states</a>, <a target="_blank" href="Foundational.html">Foundational</a>.&nbsp;&nbsp;
+<span class="abstract">Coecke and Duncan recently introduced a categorical formalisation of the interaction of complementary quantum observables. In this paper we use their diagrammatic language to study graph states, a computationally interesting class of quantum states. We give a graphical proof of the fixpoint property of graph states. We then introduce a new equation, for the Euler decomposition of the Hadamard gate, and demonstrate that Van den Nest's theorem--locally equivalent graphs represent the same entanglement--is equivalent to this new axiom. Finally we prove that the Euler decomposition equation is not derivable from the existing axioms.</span>&nbsp;&nbsp;
+<span class="bibdata"><pre><code>@article{DuncanPerdrixGraphStates,
+    author = {Duncan, Ross and Perdrix, Simon},
+    title = {Graphs States and the necessity of Euler Decomposition},
+    year = {2009},
+    journal = {arXiv preprint arXiv:0902.0500},
+    link = {https://arxiv.org/abs/0902.0500},
+    keyword = {ZX-Calculus, Clifford-Fragment, Graph-states, Foundational},
+    abstract = {Coecke and Duncan recently introduced a categorical formalisation of the interaction of complementary quantum observables. In this paper we use their diagrammatic language to study graph states, a computationally interesting class of quantum states. We give a graphical proof of the fixpoint property of graph states. We then introduce a new equation, for the Euler decomposition of the Hadamard gate, and demonstrate that Van den Nest's theorem--locally equivalent graphs represent the same entanglement--is equivalent to this new axiom. Finally we prove that the Euler decomposition equation is not derivable from the existing axioms.}
+}
+
+</code></pre></span></li>
+</ul>
+ 
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+
+    $('span.abstract').each(function(event){ /* select all divs with the item class */
+
+        var abstract = $(this).html();
+        
+        $(this).html('<a href="#" class="abstract_more">Abstract</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="abstract_text" style="display:none;">'+ abstract + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.abstract_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.abstract').find('.abstract_text').show(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.abstract').find('.abstract_text').hide(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('.abstract_more').show();
+        });
+    });
+
+    $('span.bibdata').each(function(event){ /* select all divs with the item class */
+
+        var bibdata = $(this).html();
+        
+        $(this).html('<a href="#" class="bibdata_more">Bibdata</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="bibdata_text" style="display:none;">'+ bibdata + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.bibdata_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').show(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').hide(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('.bibdata_more').show();
+        });
+    });
+});
+</script>
+
+
+<hr class="star-primary">
+<footer>
+    <small>
+    <center>
+        Â© 2019 | J. van de Wetering. Credits: AR template
+    <a onclick="javascript:$('#credit').toggle();"><img border="0" src="../images/ccby.png"/></a>
+    <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence: 
+    <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
+        https://github.com/dmsl/academic-responsive-template
+    </a>
+    </div>
+    </center>
+    </small>
+</footer>
+
+</body>
+
+</html>

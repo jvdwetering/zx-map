@@ -106,3 +106,7 @@ body {
 .bg-success {
 	background-color: #dff0d8;
 }
+
+.pub_entry {
+    margin: 10px 0;
+}

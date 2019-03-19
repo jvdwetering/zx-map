@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Publications concerning 'Real Fragment'</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/custom.css" rel="stylesheet">
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/menucollapse.js"></script>
+<script type="text/javascript" src="../js/arrow78.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<body id="page-top" class="index">
+
+<!-- Research Section -->
+<section id="publications">
+    <div class="container lead">
+        <div style="text-align: left; margin-top:10px" class="col-md-12">
+            <div class="allshow" style="display:none;" id="tab-3-content">
+            <hr class="star-primary">
+            <h1>Publications concerning 'Real Fragment'</h1>
+                <ul>
+<li class="pub_entry"><a target="_blank" href="https://arxiv.org/abs/1702.00934">Y-Calculus: A Language for Real Matrices Derived from the ZX-Calculus</a>, Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart, <i>Proceedings 14th International Conference on Quantum Physics and Logic, Nijmegen, The Netherlands, 3-7 July 2017</i> (2018).<br>
+Keywords: <a target="_blank" href="Y-Calculus.html">Y-Calculus</a>, <a target="_blank" href="Completeness.html">Completeness</a>, <a target="_blank" href="Real Fragment.html">Real Fragment</a>.&nbsp;&nbsp;
+<span class="abstract">We introduce a ZX-like diagrammatic language devoted to manipulating real matrices - and rebits -, with its own set of axioms. We prove the necessity of some non trivial axioms of these. We show that some restriction of the language is complete. We exhibit two interpretations to and from the ZX-Calculus, thus showing the consistency between the two languages. Finally, we derive from our work a way to extract the real or imaginary part of a ZX-diagram, and prove that a restriction of our language is complete if the equivalent restriction of the ZX-calculus is complete.</span>&nbsp;&nbsp;
+<span class="bibdata"><pre><code>@inproceedings{EPTCS266.2,
+    author = {Jeandel, Emmanuel and Perdrix, Simon and Vilmart, Renaud},
+    title = {Y-Calculus: A Language for Real Matrices Derived from the ZX-Calculus},
+    year = {2018},
+    booktitle = {Proceedings 14th International Conference on
+Quantum Physics and Logic, Nijmegen, The Netherlands, 3-7 July 2017},
+    editor = {Coecke, Bob and Kissinger, Aleks},
+    series = {Electronic Proceedings in Theoretical Computer Science},
+    volume = {266},
+    pages = {23-57},
+    publisher = {Open Publishing Association},
+    doi = {10.4204/EPTCS.266.2},
+    link = {https://arxiv.org/abs/1702.00934},
+    keyword = {Y-Calculus, Completeness, Real Fragment},
+    abstract = {We introduce a ZX-like diagrammatic language devoted to manipulating real matrices - and rebits -, with its own set of axioms. We prove the necessity of some non trivial axioms of these. We show that some restriction of the language is complete. We exhibit two interpretations to and from the ZX-Calculus, thus showing the consistency between the two languages. Finally, we derive from our work a way to extract the real or imaginary part of a ZX-diagram, and prove that a restriction of our language is complete if the equivalent restriction of the ZX-calculus is complete.}
+}
+
+</code></pre></span></li>
+</ul>
+ 
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+
+    $('span.abstract').each(function(event){ /* select all divs with the item class */
+
+        var abstract = $(this).html();
+        
+        $(this).html('<a href="#" class="abstract_more">Abstract</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="abstract_text" style="display:none;">'+ abstract + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.abstract_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.abstract').find('.abstract_text').show(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.abstract').find('.abstract_text').hide(); /* show the .more_text span */
+            $(this).parents('span.abstract').find('.abstract_more').show();
+        });
+    });
+
+    $('span.bibdata').each(function(event){ /* select all divs with the item class */
+
+        var bibdata = $(this).html();
+        
+        $(this).html('<a href="#" class="bibdata_more">Bibdata</a>' + '&nbsp;&nbsp;' + 
+                     '<span class="bibdata_text" style="display:none;">'+ bibdata + '</span>'+ '&nbsp;&nbsp;' +
+                     '<a href="#" class="read_less" style="display:none;">Collapse</a>'); /* Alter the html to allow the read more functionality */
+                     
+        $(this).find('a.bibdata_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            /*$(this).hide(); */ /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').hide();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').show(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('a.read_less').show();
+        });
+
+        $(this).find('a.read_less').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+            event.preventDefault(); /* prevent the a from changing the url */
+            $(this).hide(); /* hide the read more button */
+            /*$(this).parents('span.abstract').find('.short_text').show();*/
+            $(this).parents('span.bibdata').find('.bibdata_text').hide(); /* show the .more_text span */
+            $(this).parents('span.bibdata').find('.bibdata_more').show();
+        });
+    });
+});
+</script>
+
+
+<hr class="star-primary">
+<footer>
+    <small>
+    <center>
+        Â© 2019 | J. van de Wetering. Credits: AR template
+    <a onclick="javascript:$('#credit').toggle();"><img border="0" src="../images/ccby.png"/></a>
+    <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence: 
+    <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
+        https://github.com/dmsl/academic-responsive-template
+    </a>
+    </div>
+    </center>
+    </small>
+</footer>
+
+</body>
+
+</html>
