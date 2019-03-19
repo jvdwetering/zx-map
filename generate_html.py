@@ -54,7 +54,7 @@ def entry_to_html(entry):
     if 'keyword' in entry:
         keywords = [s.strip() for s in entry['keyword'].split(',')]
     else: keywords = []
-    keyword_html = ", ".join('<a target="_blank" href="{kw}.html">{kw}</a>'.format(kw=kw) for kw in keywords)
+    keyword_html = ", ".join('<a target="_blank" href="{}.html">{}</a>'.format(kw.lower(),kw) for kw in keywords)
     html = HTML.format(url = entry['link'], title=entry['title'],
                        authors = authors, journal = journal,
                        year = entry['year'], abstract=entry['abstract'],
@@ -63,7 +63,7 @@ def entry_to_html(entry):
         if kw in keyword_pubs: keyword_pubs[kw].append(html)
         else: keyword_pubs[kw] = [html]
 
-    keyword_html = ", ".join('<a target="_blank" href="keywords/{kw}.html">{kw}</a>'.format(kw=kw) for kw in keywords)
+    keyword_html = ", ".join('<a target="_blank" href="keywords/{}.html">{}</a>'.format(kw.lower(),kw) for kw in keywords)
     html = HTML.format(url = entry['link'], title=entry['title'],
                        authors = authors, journal = journal,
                        year = entry['year'], abstract=entry['abstract'],
@@ -101,7 +101,7 @@ def generate_keyword_page(kw):
 def generate_keyword_html():
     l = list(keyword_pubs.keys())
     l.sort(key=lambda v: len(keyword_pubs[v]),reverse=True)
-    return ", ".join('<a target="_blank" href="keywords/{kw}.html">{kw}</a> ({n:d})'.format(kw=kw,n=len(keyword_pubs[kw])) for kw in l)
+    return ", ".join('<a target="_blank" href="keywords/{}.html">{}</a> ({})'.format(kw.lower(),kw,len(keyword_pubs[kw])) for kw in l)
 
 def to_clipboard(s):
     try:
