@@ -19,9 +19,14 @@ def normalise_name(n):
     p1, p2 = n.split(', ')
     return p2.strip() + " " + p1.strip()
 
-HTML = r"""<a target="_blank" href="{url}">{title}</a>, {authors}, <i>{journal}</i> ({year}).<br>
-Keywords: {keywords}.&nbsp;&nbsp;
-<span class="abstract">{abstract}</span>&nbsp;&nbsp;
+HTML = r"""
+<a target="_blank" href="{url}" class="paperTitle">{title}</a>,
+<span class="authors">{authors}</span>,
+<span class="journal">{journal}</span>
+<span class="year">({year})</span>.
+<br>
+Keywords: <span class="keywords">{keywords}</span>.
+<span class="abstract">{abstract}</span>
 <span class="bibdata"><pre><code>{bibdata}</code></pre></span>"""
 
 keyword_pubs = dict()
@@ -38,7 +43,6 @@ def entry_to_html(entry):
         authors = normalise_name(e['author'][0])
     else:
         for a in e['author'][:-2]:
-            p1, p2 = a.split(',')
             authors += normalise_name(a) + ", "
         authors += normalise_name(e['author'][-2]) + " and "
         authors += normalise_name(e['author'][-1])
@@ -51,10 +55,10 @@ def entry_to_html(entry):
         journal = entry['note']
     journal = journal.replace('\n', ' ')
 
-    if 'keyword' in entry:
-        keywords = [s.strip() for s in entry['keyword'].split(',')]
+    if 'keywords' in entry:
+        keywords = [s.strip() for s in entry['keywords'].split(',')]
     else: keywords = []
-    keyword_html = ", ".join('<a target="_blank" href="{}.html">{}</a>'.format(kw.lower(),kw) for kw in keywords)
+    keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
     html = HTML.format(url = entry['link'], title=entry['title'],
                        authors = authors, journal = journal,
                        year = entry['year'], abstract=entry['abstract'],
@@ -62,12 +66,6 @@ def entry_to_html(entry):
     for kw in keywords:
         if kw in keyword_pubs: keyword_pubs[kw].append(html)
         else: keyword_pubs[kw] = [html]
-
-    keyword_html = ", ".join('<a target="_blank" href="keywords/{}.html">{}</a>'.format(kw.lower(),kw) for kw in keywords)
-    html = HTML.format(url = entry['link'], title=entry['title'],
-                       authors = authors, journal = journal,
-                       year = entry['year'], abstract=entry['abstract'],
-                       bibdata=raw_bibdata, keywords = keyword_html)
     return html
 
 def library_to_html(lib):
@@ -128,12 +126,3 @@ if __name__ == '__main__':
     f = open("publications.html",'wb')
     f.write(output.encode('utf-8'))
     f.close()
-    #Generate keyword pages
-    with open('html/keyword_page.html') as f:
-        html_base = f.read()
-    for kw in keyword_pubs:
-        content = generate_keyword_page(kw)
-        output = html_base.format(keyword=kw,content=content,javascript=js_base)
-        f = open("keywords/{}.html".format(kw.lower()),'wb')
-        f.write(output.encode('utf-8'))
-        f.close()

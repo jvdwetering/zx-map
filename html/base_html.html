@@ -18,6 +18,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/menucollapse.js"></script>
+<script src="js/search.js"></script>
 <script type="text/javascript" src="js/arrow78.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" async
@@ -42,25 +43,13 @@
 
 
 
-<section id="keywords">
-    <div class="container lead">
-        <div style="text-align: left; margin-top:10px" class="col-md-12">
-            <div class="allshow" style="display:none;" id="tab-3-content">
-            <hr class="star-primary">
-            <h1>Search by keyword</h1>
-                {keywords}
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <section id="publications">
     <div class="container lead">
         <div style="text-align: left; margin-top:10px" class="col-md-12">
             <div class="allshow" style="display:none;" id="tab-3-content">
             <hr class="star-primary">
             <h1>All publications concerning the ZX-calculus</h1>
+            <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
                 {content}
             </div>
         </div>

@@ -110,3 +110,11 @@ body {
 .pub_entry {
     margin: 10px 0;
 }
+
+.journal {
+	font-style: italic;
+}
+
+#txtSearch {
+	padding: 5px;
+}
