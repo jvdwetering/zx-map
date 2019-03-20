@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZX-calculus community map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <script src="js/d3/d3.min.js"></script>
+  <script src="js/force-directed-graph.js"></script>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0 1em;
+      font-weight: initial;
+    }
+
+    
+    h3 {
+      text-align: center;
+      font-weight: initial;
+    }
+
+    #topgrid {
+      display: grid;
+    }
+    #map {
+      text-align: center;
+    }
+  </style>
+
+<body>
+  <div id="topgrid">
+    <h1 style="grid-column: span 3">Map of the ZX community</h1>
+    <h2 style="grid-column: 1; background-color: #ADA8">People</h2>
+    <h2 style="grid-column: 2; background-color: #DAA8">Places</h2>
+    <h2 style="grid-column: 3; background-color: #AAD8">Fields</h2>
+    <h3 style="grid-column: span 3">This map is automatically generated. You can drag nodes with the mouse.
+    For a list of publications <a href="./publications.html">click here</a>.</h2>
+  </div>
+  <div id="map"></div>
+
+</body>
+<script>
+  start()
+</script>
+
+</html>
