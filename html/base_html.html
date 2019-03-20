@@ -27,29 +27,18 @@
 
 <body id="page-top" class="index">
 
-<section id="zx-map">
-    <div class="container lead">
-        <div style="text-align: centre; margin-top:10px" class="col-md-12">
-            <div class="allshow" style="display:none;" id="tab-3-content">
-            <hr class="star-primary">
-            <h2>Map of ZX</h2>
-            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/jvdwetering/zx-map/raw/master/zx-map.pdf" width="1200" height="600">
-            </div>
-        </div>
-    </div>
-
-
-</section>
-
-
-
 <section id="publications">
     <div class="container lead">
         <div style="text-align: left; margin-top:10px" class="col-md-12">
             <div class="allshow" style="display:none;" id="tab-3-content">
-            <hr class="star-primary">
             <h1>All publications concerning the ZX-calculus</h1>
             <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
+                Search inside:
+                <label><input type="checkbox" id="chktitle" checked>Title</label>
+                <label><input type="checkbox" id="chkauthors" checked>Authors</label>
+                <label><input type="checkbox" id="chkabstract" checked>Abstract</label>
+                <label><input type="checkbox" id="chkkeywords" checked>Keywords</label>
+            <hr class="star-primary">
                 {content}
             </div>
         </div>

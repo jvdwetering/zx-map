@@ -3,13 +3,20 @@ function log(a) {
 }
 
 function search(s) {
-  var reg = new RegExp(s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "gim");
-  $("li").each(function (index) {
-    var h = $(this).text()
+  var reg = new RegExp((s||"").replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "gim");
+  $("li").each(function (index, elt) {
+    var find = function (selector) {
+      if ($("#chk" + selector).is(":checked")) {
+        return $(elt).find("."+selector).text()
+      } else {
+        return ""
+      }
+    }
+    var h = "" + find("title") + find("authors") + find("abstract") + find("keywords")
     if (h.match(reg)) {
-      $(this).show()
+      $(elt).show()
     } else {
-      $(this).hide()
+      $(elt).hide()
     }
   })
 }
@@ -19,7 +26,17 @@ function updateSearch() {
   search($("#txtSearch").val())
 }
 
-function forceSearch(s){
+function forceSearch(s) {
   $("#txtSearch").val(s)
   updateSearch()
 }
+
+$(function(){ // Code to be executed once all the html is ready
+  $("input[type='checkbox']").on("change", function(){
+    log("chk")
+    updateSearch()
+  })
+  // Clear the search box on page load
+  $("#txtSearch").val("")
+}
+)

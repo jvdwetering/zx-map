@@ -20,7 +20,7 @@ def normalise_name(n):
     return p2.strip() + " " + p1.strip()
 
 HTML = r"""
-<a target="_blank" href="{url}" class="paperTitle">{title}</a>,
+<a target="_blank" href="{url}" class="title">{title}</a>,
 <span class="authors">{authors}</span>,
 <span class="journal">{journal}</span>
 <span class="year">({year})</span>.
