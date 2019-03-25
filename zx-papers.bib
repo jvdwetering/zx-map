@@ -158,7 +158,7 @@
     Author = {de Beaudrap, Niel and Horsman, Dominic},
     Title = {The ZX calculus is a language for surface code lattice surgery},
     Year = {2017},
-    keywords = {ZX-Calculus, Lattice Surgery},
+    keywords = {ZX-Calculus, Lattice Surgery, Topological Quantum Computing},
     journal = {arXiv preprint arXiv:1704.08670},
     link = {https://arxiv.org/abs/1704.08670},
     abstract = {Quantum computing is moving rapidly to the point of deployment of technology. Functional quantum devices will require the ability to correct error in order to be scalable and effective. A leading choice of error correction, in particular for modular or distributed architectures, is the surface code with logical two-qubit operations realised via "lattice surgery". These operations consist of "merges" and "splits" acting non-unitarily on the logical states and are not easily captured by standard circuit notation. This raises the question of how best to reason about lattice surgery in order efficiently to use quantum states and operations in architectures with complex resource management issues. In this paper we demonstrate that the operations of the ZX calculus, a form of quantum diagrammatic reasoning designed using category theory, match exactly the operations of lattice surgery. Red and green "spider" nodes match rough and smooth merges and splits, and follow the axioms of a dagger special associative Frobenius algebra. Some lattice surgery operations can require non-trivial correction operations, which are captured natively in the use of the ZX calculus in the form of ensembles of diagrams. We give a first taste of the power of the calculus as a language for surgery by considering two operations (magic state use and producing a CNOT) and show how ZX diagram re-write rules give lattice surgery procedures for these operations that are novel, efficient, and highly configurable.}
@@ -798,4 +798,18 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
   link = {https://arxiv.org/abs/1903.06035},
   keywords = {ZX-Calculus, Completeness, Triangle, Clifford+T, Universal Fragment},
   abstract = {The ZX-Calculus is a graphical language for diagrammatic reasoning in quantum mechanics and quantum information theory. It comes equipped with an equational presentation. We focus here on a very important property of the language: completeness, which roughly ensures the equational theory captures all of quantum mechanics. We first improve on the known-to-be-complete presentation or the so-called Clifford fragment of the language - a restriction that is not universal - by adding some axioms. Thanks to a system of back-and-forth translation between the ZX-Calculus and a third-party complete graphical language, we prove that the provided axiomatisation is complete for the first approximately universal fragment of the language, namely Clifford+T. We then prove that the expressive power of this presentation, though aimed at achieving completeness for the aforementioned restriction, extends beyond Clifford+T, to a class of diagrams that we call linear with Clifford+T constants. We use another version of the third-party language - and an adapted system of back-and-forth translation - to complete the language for the ZX-Calculus as a whole, that is, with no restriction. We briefly discuss the added axioms, and finally, we provide a complete axiomatisation for an altered version of the language which involves an additional generator, making the presentation simpler.}
+}
+
+@article{horsman2011quantum,
+  title={Quantum picturalism for topological cluster-state computing},
+  author={Horsman, Clare},
+  journal={New Journal of Physics},
+  volume={13},
+  number={9},
+  pages={095011},
+  year={2011},
+  publisher={IOP Publishing},
+  keywords = {ZX-calculus, Topological Quantum Computing},
+  link = {https://arxiv.org/abs/1101.4722},
+  abstract = {Topological quantum computing is a way of allowing precise quantum computations to run on noisy and imperfect hardware. One implementation uses surface codes created by forming defects in a highly-entangled cluster state. Such a method of computing is a leading candidate for large-scale quantum computing. However, there has been a lack of sufficiently powerful high-level languages to describe computing in this form without resorting to single-qubit operations, which quickly become prohibitively complex as the system size increases. In this paper we apply the category-theoretic work of Abramsky and Coecke to the topological cluster-state model of quantum computing to give a high-level graphical language that enables direct translation between quantum processes and physical patterns of measurement in a computer - a "compiler language". We give the equivalence between the graphical and topological information flows, and show the applicable rewrite algebra for this computing model. We show that this gives us a native graphical language for the design and analysis of topological quantum algorithms, and finish by discussing the possibilities for automating this process on a large scale.}
 }
