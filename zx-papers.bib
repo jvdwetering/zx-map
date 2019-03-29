@@ -824,3 +824,68 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     link = {https://arxiv.org/abs/1903.10477},
     abstract = {Reducing the number of non-Clifford quantum gates present in a circuit is an important task for efficiently implementing quantum computations, especially in the fault-tolerant regime. We present a new method for reducing the number of T-gates in a quantum circuit based on the ZX-calculus, which matches or beats previous approaches to T-count reduction on the majority of our benchmark circuits in the ancilla-free case, in some cases yielding up to 50\% improvement. Our method begins by representing the quantum circuit as a ZX-diagram, a tensor network-like structure that can be transformed and simplified according to the rules of the ZX-calculus. We then show that a recently-proposed simplification strategy can be extended to reduce T-count using a new technique called phase teleportation. This technique allows non-Clifford phases to combine and cancel by propagating non-locally through a generic quantum circuit. Phase teleportation does not change the number or location of non-phase gates and the method also applies to arbitrary non-Clifford phase gates as well as gates with unknown phase parameters in parametrised circuits. Furthermore, the simplification strategy we use is powerful enough to validate equality of many circuits. In particular, we use it to show that our optimised circuits are indeed equal to the original ones. We have implemented the routines of this paper in the open-source library PyZX.}
 }
+
+@article{1404.1288,
+Author = {André Ranchin},
+Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
+Year = {2014},
+Eprint = {arXiv:1404.1288},
+Howpublished = {EPTCS 172, 2014, pp. 68-91},
+Doi = {10.4204/EPTCS.172.6},
+abstract{We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
+calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
+qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
+mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
+of qudit stabilizer quantum mechanics and provides a geometrical picture of qudit stabilizer theory
+using D-toruses, which generalizes the Bloch sphere picture for qubit stabilizer quantum mechanics.
+We also use our framework to describe generalizations of Spekkens toy theory to higher dimensional
+systems. This gives a novel proof that qudit stabilizer quantum mechanics and Spekkens-Schreiber
+toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
+is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
+quantum m,echanics, and provide a novel, high level description of quantum information protocols.
+}
+link{https://arxiv.org/pdf/1404.1288.pdf}
+}
+
+@article{1404.1288,
+Author = {André Ranchin},
+Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
+Year = {2014},
+Eprint = {arXiv:1404.1288},
+Howpublished = {EPTCS 172, 2014, pp. 68-91},
+Doi = {10.4204/EPTCS.172.6},
+abstract{We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
+calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
+qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
+mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
+of qudit stabilizer quantum mechanics and provides a geometrical picture of qudit stabilizer theory
+using D-toruses, which generalizes the Bloch sphere picture for qubit stabilizer quantum mechanics.
+We also use our framework to describe generalizations of Spekkens toy theory to higher dimensional
+systems. This gives a novel proof that qudit stabilizer quantum mechanics and Spekkens-Schreiber
+toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
+is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
+quantum m,echanics, and provide a novel, high level description of quantum information protocols.
+}
+link{https://arxiv.org/pdf/1404.1288.pdf}
+}
+
+@unpublished{Borun,
+    Author = {Shi, Borun},
+    Note = {University of Oxford MSc thesis},
+    Title = {Towards Minimality of Clifford+T ZX-Calculus},
+    Year = {2018},
+    keywords = {ZX-Calculus, Minimality},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
+    abstract = {ZX-calculus is a high-level graphical language used for quantum computa-tion.  A complete set of axioms for ZX-calculus has been found very recently.This thesis works towards minimizing axioms of ZX-calculus for Clifford+Tquantum  mechanics,  a  fragment  consisting  of  an  approximately  universalgate  set.   Similar  work  has  been  done  for  the  smaller  fragment,  stabilizerquantum mechanics, which motivates many of our proofs.  We derive somesingleton axioms and instances of axiom schemes.  We establish the necessityand some weaker independence results of several axioms, by considering avariety of models.  As a further step towards simplification we also consideralternative  presentations  of  axioms  that  are  equivalent  and  discuss  theiruses.}
+}
+
+@unpublished{Christian,
+    Author = {Schr{\"o}der, Christian},
+    Note = {University of Oxford MSc thesis},
+    Title = {The ZX calculus is incompletefor non-stabilizer quantummechanics},
+    Year = {2013},
+    keywords = {ZX-Calculus, Completeness},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
+    abstract = {We prove that the ZX-calculus is incomplete for non-stabilizer quan-tum mechanics.   We suggest additional rules to be integrated with thegraphical calculus and possible further incompleteness sources.  We ex-press a simple quantum error correction circuit in Selinger’s CPM con-struction in an attempt to obtain a graphical construction framework forgeneral stabilizer error codes.  We also provide a simple framework forthe integration of gate approximation errors into the ZX-calculus, includ-ing a simple way of propagating upper approximation bounds throughquantum circuits}
+}
+
