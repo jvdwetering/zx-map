@@ -51,8 +51,12 @@ def entry_to_html(entry):
         journal = entry['journal']
     elif 'booktitle' in entry:
         journal = entry['booktitle']
-    else:
+    elif 'note' in entry:
         journal = entry['note']
+    else:
+        print("Missing entries:")
+        print(entry)
+        raise
     journal = journal.replace('\n', ' ')
 
     if 'keywords' in entry:

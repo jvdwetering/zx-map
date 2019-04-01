@@ -248,12 +248,12 @@
 
 @unpublished{Anne,
     Author = {Hillebrand, Anne},
-    Note = {University of Oxford MSc thesis},
+    note = {University of Oxford MSc thesis},
     Title = {Quantum Protocols involving Multiparticle Entanglement and their Representations in the ZX-calculus},
     Year = {2011},
     keywords = {ZX-Calculus, Protocols},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Anne.pdf},
-    abstract = {Quantum entanglement, described by Einstein as “spooky action at a distance”, is a key resource in many quantum protocols, like quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to follow and check. This is why Coecke nad Duncan have introduced a diagrammatic language for multi-qubit systems, called the red/green calculus or the zx-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. One crucial feature that will be exploited here is the encoding of complementary observables and corresponding phase shifts. Reasoning is done by rewriting diagrams, i.e. locally replacing some part of a diagram. Diagrams are defined by their topology only; the number of inputs and outputs and the way they are connected. This exemplifies the 'flow' of information. For protocols involving multipartite entangled states, such as the GreenbergerHorne-Zeilinger and W-state, it will be shown that the zx-calculus provides a relatively easy and more intuitive presentation. Moreover, in this representation it is easier to check that protocols are correct. Protocols that will be discussed in detail are quantum teleportation, quantum cryptography, leader election, superdense coding and quantum direct communication with multipartite entangled states.}
+    abstract = {Quantum entanglement, described by Einstein as "spooky action at a distance", is a key resource in many quantum protocols, like quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to follow and check. This is why Coecke and Duncan have introduced a diagrammatic language for multi-qubit systems, called the red/green calculus or the ZX-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. One crucial feature that will be exploited here is the encoding of complementary observables and corresponding phase shifts. Reasoning is done by rewriting diagrams, i.e. locally replacing some part of a diagram. Diagrams are defined by their topology only; the number of inputs and outputs and the way they are connected. This exemplifies the 'flow' of information. For protocols involving multipartite entangled states, such as the GreenbergerHorne-Zeilinger and W-state, it will be shown that the zx-calculus provides a relatively easy and more intuitive presentation. Moreover, in this representation it is easier to check that protocols are correct. Protocols that will be discussed in detail are quantum teleportation, quantum cryptography, leader election, superdense coding and quantum direct communication with multipartite entangled states.}
 }
 
 @article{backens2014zx,
@@ -473,9 +473,9 @@
 }
 
 @article{hadzihasanovic2017algebra,
-  title={The algebra of entanglement and the geometry of composition},
-  author={Hadzihasanovic, Amar},
-  journal={PhD Thesis},
+  title = {The algebra of entanglement and the geometry of composition},
+  author = {Hadzihasanovic, Amar},
+  note = {PhD Thesis},
   year={2017},
   keywords = {ZW-Calculus, Completeness, PhD Thesis},
   link = {https://arxiv.org/abs/1709.08086},
@@ -517,8 +517,8 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 
 @phdthesis{backens_completeness_2016,
     address = {Oxford},
-    type = {PhD thesis},
-    journal = {PhD Thesis},
+    type = {PhD Thesis},
+    note = {PhD Thesis},
     title = {Completeness and the ZX-calculus},
     keywords = {ZX-Calculus, Completeness, PhD Thesis},
     link = {http://arxiv.org/abs/1602.08954},
@@ -650,7 +650,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 @phdthesis{wang_completeness_2018,
     type = {PhD thesis},
     title = {Completeness of the ZX-calculus},
-    journal = {PhD thesis},
+    note = {PhD Thesis},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Harny.pdf},
     keywords = {ZX-Calculus, Completeness, PhD Thesis},
     abstract = {The ZX-calculus is an intuitive but also mathematically strict graphical language for quantum computing, which is especially powerful for the framework of quantum circuits. Completeness of the ZX-calculus means any equality of matrices with size powers of n can be derived purely diagrammatically. In this thesis, we give the first complete axiomatisation the ZX-calculus for the overall pure qubit quantum mechanics, via a translation from the completeness result of another graphical language for quantum computing– the ZW-calculus. This paves the way for automated pictorial quantum computing, with the aid of some software like Quantomatic.
@@ -825,67 +825,50 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     abstract = {Reducing the number of non-Clifford quantum gates present in a circuit is an important task for efficiently implementing quantum computations, especially in the fault-tolerant regime. We present a new method for reducing the number of T-gates in a quantum circuit based on the ZX-calculus, which matches or beats previous approaches to T-count reduction on the majority of our benchmark circuits in the ancilla-free case, in some cases yielding up to 50\% improvement. Our method begins by representing the quantum circuit as a ZX-diagram, a tensor network-like structure that can be transformed and simplified according to the rules of the ZX-calculus. We then show that a recently-proposed simplification strategy can be extended to reduce T-count using a new technique called phase teleportation. This technique allows non-Clifford phases to combine and cancel by propagating non-locally through a generic quantum circuit. Phase teleportation does not change the number or location of non-phase gates and the method also applies to arbitrary non-Clifford phase gates as well as gates with unknown phase parameters in parametrised circuits. Furthermore, the simplification strategy we use is powerful enough to validate equality of many circuits. In particular, we use it to show that our optimised circuits are indeed equal to the original ones. We have implemented the routines of this paper in the open-source library PyZX.}
 }
 
-@article{1404.1288,
-Author = {André Ranchin},
-Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
-Year = {2014},
-Eprint = {arXiv:1404.1288},
-Howpublished = {EPTCS 172, 2014, pp. 68-91},
-Doi = {10.4204/EPTCS.172.6},
-abstract{We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
-calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
-qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
-mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
-of qudit stabilizer quantum mechanics and provides a geometrical picture of qudit stabilizer theory
-using D-toruses, which generalizes the Bloch sphere picture for qubit stabilizer quantum mechanics.
-We also use our framework to describe generalizations of Spekkens toy theory to higher dimensional
-systems. This gives a novel proof that qudit stabilizer quantum mechanics and Spekkens-Schreiber
-toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
-is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
-quantum m,echanics, and provide a novel, high level description of quantum information protocols.
-}
-link{https://arxiv.org/pdf/1404.1288.pdf}
-}
-
-@article{1404.1288,
-Author = {André Ranchin},
-Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
-Year = {2014},
-Eprint = {arXiv:1404.1288},
-Howpublished = {EPTCS 172, 2014, pp. 68-91},
-Doi = {10.4204/EPTCS.172.6},
-abstract{We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
-calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
-qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
-mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
-of qudit stabilizer quantum mechanics and provides a geometrical picture of qudit stabilizer theory
-using D-toruses, which generalizes the Bloch sphere picture for qubit stabilizer quantum mechanics.
-We also use our framework to describe generalizations of Spekkens toy theory to higher dimensional
-systems. This gives a novel proof that qudit stabilizer quantum mechanics and Spekkens-Schreiber
-toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
-is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
-quantum m,echanics, and provide a novel, high level description of quantum information protocols.
-}
-link{https://arxiv.org/pdf/1404.1288.pdf}
+@inproceedings{1404.1288,
+    Author = {André Ranchin},
+    Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
+    Year = {2014},
+    editor    = {Coecke, Bob and Hasuo, Ichiro and Panangaden, Prakash},
+    booktitle = { Proceedings of the 11th workshop on Quantum Physics and Logic, Kyoto, Japan, 4-6th June 2014},
+    series    = {Electronic Proceedings in Theoretical Computer Science},
+    volume    = {172},
+    publisher = {Open Publishing Association},
+    pages     = {68-91},
+    Doi = {10.4204/EPTCS.172.6},
+    keywords = {ZX-calculus, Qudits, Spekkens Toy Model},
+    link = {https://arxiv.org/abs/1404.1288},
+    abstract = {We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
+    calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
+    qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
+    mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
+    of qudit stabilizer quantum mechanics and provides a geometrical picture of qudit stabilizer theory
+    using D-toruses, which generalizes the Bloch sphere picture for qubit stabilizer quantum mechanics.
+    We also use our framework to describe generalizations of Spekkens toy theory to higher dimensional
+    systems. This gives a novel proof that qudit stabilizer quantum mechanics and Spekkens-Schreiber
+    toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
+    is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
+    quantum mechanics, and provide a novel, high level description of quantum information protocols.
+    }
 }
 
 @unpublished{Borun,
     Author = {Shi, Borun},
-    Note = {University of Oxford MSc thesis},
+    note = {University of Oxford MSc thesis},
     Title = {Towards Minimality of Clifford+T ZX-Calculus},
     Year = {2018},
-    keywords = {ZX-Calculus, Minimality},
+    keywords = {ZX-Calculus, Minimality, Master Thesis},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
-    abstract = {ZX-calculus is a high-level graphical language used for quantum computa-tion.  A complete set of axioms for ZX-calculus has been found very recently.This thesis works towards minimizing axioms of ZX-calculus for Clifford+Tquantum  mechanics,  a  fragment  consisting  of  an  approximately  universalgate  set.   Similar  work  has  been  done  for  the  smaller  fragment,  stabilizerquantum mechanics, which motivates many of our proofs.  We derive somesingleton axioms and instances of axiom schemes.  We establish the necessityand some weaker independence results of several axioms, by considering avariety of models.  As a further step towards simplification we also consideralternative  presentations  of  axioms  that  are  equivalent  and  discuss  theiruses.}
+    abstract = {ZX-calculus is a high-level graphical language used for quantum computation.  A complete set of axioms for ZX-calculus has been found very recently. This thesis works towards minimizing axioms of ZX-calculus for Clifford+T quantum  mechanics,  a  fragment  consisting  of  an  approximately  universal gate  set. Similar work  has  been  done  for  the  smaller  fragment,  stabilizer quantum mechanics, which motivates many of our proofs.  We derive some singleton axioms and instances of axiom schemes.  We establish the necessity and some weaker independence results of several axioms, by considering a variety of models.  As a further step towards simplification we also consider alternative  presentations  of  axioms  that  are  equivalent  and  discuss  their uses.}
 }
 
 @unpublished{Christian,
     Author = {Schr{\"o}der, Christian},
-    Note = {University of Oxford MSc thesis},
-    Title = {The ZX calculus is incompletefor non-stabilizer quantummechanics},
+    note = {University of Oxford MSc thesis},
+    Title = {The ZX calculus is incomplete for non-stabilizer quantum mechanics},
     Year = {2013},
-    keywords = {ZX-Calculus, Completeness},
+    keywords = {ZX-Calculus, Completeness, Master Thesis},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
-    abstract = {We prove that the ZX-calculus is incomplete for non-stabilizer quan-tum mechanics.   We suggest additional rules to be integrated with thegraphical calculus and possible further incompleteness sources.  We ex-press a simple quantum error correction circuit in Selinger’s CPM con-struction in an attempt to obtain a graphical construction framework forgeneral stabilizer error codes.  We also provide a simple framework forthe integration of gate approximation errors into the ZX-calculus, includ-ing a simple way of propagating upper approximation bounds throughquantum circuits}
+    abstract = {We prove that the ZX-calculus is incomplete for non-stabilizer quantum mechanics.   We suggest additional rules to be integrated with the graphical calculus and possible further incompleteness sources.  We express a simple quantum error correction circuit in Selinger's CPM construction in an attempt to obtain a graphical construction framework for general stabilizer error codes.  We also provide a simple framework for the integration of gate approximation errors into the ZX-calculus, including a simple way of propagating upper approximation bounds through quantum circuits.}
 }
 
