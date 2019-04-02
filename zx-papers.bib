@@ -825,14 +825,17 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     abstract = {Reducing the number of non-Clifford quantum gates present in a circuit is an important task for efficiently implementing quantum computations, especially in the fault-tolerant regime. We present a new method for reducing the number of T-gates in a quantum circuit based on the ZX-calculus, which matches or beats previous approaches to T-count reduction on the majority of our benchmark circuits in the ancilla-free case, in some cases yielding up to 50\% improvement. Our method begins by representing the quantum circuit as a ZX-diagram, a tensor network-like structure that can be transformed and simplified according to the rules of the ZX-calculus. We then show that a recently-proposed simplification strategy can be extended to reduce T-count using a new technique called phase teleportation. This technique allows non-Clifford phases to combine and cancel by propagating non-locally through a generic quantum circuit. Phase teleportation does not change the number or location of non-phase gates and the method also applies to arbitrary non-Clifford phase gates as well as gates with unknown phase parameters in parametrised circuits. Furthermore, the simplification strategy we use is powerful enough to validate equality of many circuits. In particular, we use it to show that our optimised circuits are indeed equal to the original ones. We have implemented the routines of this paper in the open-source library PyZX.}
 }
 
-@article{1404.1288,
-Author = {André Ranchin},
+
+
+@article{Ranchin,
+Author = {Andr{\'e} Ranchin},
 Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
 Year = {2014},
-Eprint = {arXiv:1404.1288},
-Howpublished = {EPTCS 172, 2014, pp. 68-91},
-Doi = {10.4204/EPTCS.172.6},
-abstract{We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
+keywords = {ZX-Calculus},
+journal = {EPTCS 172, 2014, pp. 68-91},
+Year = {2014},
+link = {https://arxiv.org/pdf/1404.1288.pdf},
+abstract = {We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
 calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
 qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
 mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
@@ -843,30 +846,8 @@ systems. This gives a novel proof that qudit stabilizer quantum mechanics and Sp
 toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
 is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
 quantum m,echanics, and provide a novel, high level description of quantum information protocols.
-}
-link{https://arxiv.org/pdf/1404.1288.pdf}
 }
 
-@article{1404.1288,
-Author = {André Ranchin},
-Title = {Depicting qudit quantum mechanics and mutually unbiased qudit theories},
-Year = {2014},
-Eprint = {arXiv:1404.1288},
-Howpublished = {EPTCS 172, 2014, pp. 68-91},
-Doi = {10.4204/EPTCS.172.6},
-abstract{We generalize the ZX calculus to quantum systems of dimension higher than two. The resulting
-calculus is sound and universal for quantum mechanics. We define the notion of a mutually unbiased
-qudit theory and study two particular instances of these theories in detail: qudit stabilizer quantum
-mechanics and Spekkens-Schreiber toy theory for dits. The calculus allows us to analyze the structure
-of qudit stabilizer quantum mechanics and provides a geometrical picture of qudit stabilizer theory
-using D-toruses, which generalizes the Bloch sphere picture for qubit stabilizer quantum mechanics.
-We also use our framework to describe generalizations of Spekkens toy theory to higher dimensional
-systems. This gives a novel proof that qudit stabilizer quantum mechanics and Spekkens-Schreiber
-toy theory for dits are operationally equivalent in three dimensions. The qudit pictorial calculus
-is a useful tool to study quantum foundations, understand the relationship between qubit and qudit
-quantum m,echanics, and provide a novel, high level description of quantum information protocols.
-}
-link{https://arxiv.org/pdf/1404.1288.pdf}
 }
 
 @unpublished{Borun,
@@ -882,7 +863,7 @@ link{https://arxiv.org/pdf/1404.1288.pdf}
 @unpublished{Christian,
     Author = {Schr{\"o}der, Christian},
     Note = {University of Oxford MSc thesis},
-    Title = {The ZX calculus is incompletefor non-stabilizer quantummechanics},
+    Title = {The ZX calculus is incomplete for non-stabilizer quantum mechanics},
     Year = {2013},
     keywords = {ZX-Calculus, Completeness},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
