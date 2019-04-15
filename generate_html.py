@@ -59,9 +59,10 @@ def entry_to_html(entry):
         raise
     journal = journal.replace('\n', ' ')
 
-    if 'keywords' in entry:
-        keywords = [s.strip() for s in entry['keywords'].split(',')]
-    else: keywords = []
+    if 'keywords' in entry: kw = entry['keywords']
+    elif 'keyword' in entry: kw = entry['keyword']
+    else: kw = ""
+    keywords = [s.strip() for s in kw.split(',')]
     keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
     html = HTML.format(url = entry['link'], title=entry['title'],
                        authors = authors, journal = journal,

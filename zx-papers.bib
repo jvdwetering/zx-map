@@ -65,7 +65,7 @@
     Title = {Optimising Clifford Circuits with Quantomatic},
     Volume = {287},
     Year = {2019},
-    keywords = {ZX-Calculus, Quantomatic, Clifford Fragment, Circuit optimisation},
+    keywords = {ZX-Calculus, Quantomatic, Clifford Fragment, Circuit optimisation, Automation},
     link = {https://arxiv.org/abs/1901.10114},
     abstract = {We present a system of equations between Clifford circuits, all derivable in the ZX-calculus, and formalised as rewrite rules in the Quantomatic proof assistant. By combining these rules with some non-trivial simplification procedures defined in the Quantomatic tactic language, we demonstrate the use of Quantomatic as a circuit optimisation tool. We prove that the system always reduces Clifford circuits of one or two qubits to their minimal form, and give numerical results demonstrating its performance on larger Clifford circuits.}
 }
@@ -454,7 +454,7 @@
   pages={326--336},
   year={2015},
   organization={Springer},
-  keywords = {Quantomatic},
+  keywords = {Quantomatic, Automation},
   link = {https://arxiv.org/abs/1503.01034},
   abstract = {Monoidal algebraic structures consist of operations that can have multiple outputs as well as multiple inputs, which have applications in many areas including categorical algebra, programming language semantics, representation theory, algebraic quantum information, and quantum groups. String diagrams provide a convenient graphical syntax for reasoning formally about such structures, while avoiding many of the technical challenges of a term-based approach. Quantomatic is a tool that supports the (semi-)automatic construction of equational proofs using string diagrams. We briefly outline the theoretical basis of Quantomatic's rewriting engine, then give an overview of the core features and architecture and give a simple example project that computes normal forms for commutative bialgebras.}
 }
@@ -874,6 +874,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 }
 
 
+
 @article{Qtritdit,
     Author = {  Wang , Quanlong and Bian,Xiaoning },
     Title = {{Qutrit Dichromatic Calculus and Its Universality}},
@@ -891,3 +892,14 @@ ZX calculus contains all single qudit unitary transformations, which implies tha
 with qutrit dichromatic calculus as a special case, is universal for quantum mechanics.
 }
 }
+
+@article{kissinger2019tcount,
+    Author = {Kissinger, Aleks and van de Wetering, John},
+    Title = {{PyZX: Large Scale Automated Diagrammatic Reasoning}},
+    Year = {2019},
+    keywords = {ZX-Calculus, Circuit Optimisation, PyZX, Automation},
+    journal = {arXiv preprint arXiv:1904.04735},
+    link = {https://arxiv.org/abs/1904.04735},
+    abstract = {The ZX-calculus is a graphical language for reasoning about ZX-diagrams, a tensor network-like language that can represent arbitrary linear maps between qubits. Using the ZX-calculus, we can intuitively reason about quantum mechanics, and optimise and validate quantum circuits. In this paper we introduce PyZX, an open source library for automated reasoning with large ZX-diagrams. We give a brief introduction to the ZX-calculus, then show how PyZX implements methods for circuit optimisation, equality validation, and visualisation and how it can be used in tandem with other software. We end with a set of challenges that when solved would expand the power of automated diagrammatic reasoning.}
+}
+
