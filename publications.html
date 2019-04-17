@@ -61,6 +61,63 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
+<a target="_blank" href="https://arxiv.org/abs/1904.07545" class="title">Completeness of the Phase-free ZH-calculus</a>,
+<span class="authors">John van de Wetering and cSal Wolffs</span>,
+<span class="journal">arXiv preprint arXiv:1904.07545</span>
+<span class="year">(2019)</span>.
+<br>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')">ZH-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')">Completeness</a></span>.
+<span class="abstract">The ZH-calculus is a graphical calculus for linear maps between qubits that allows a natural representation of the Toffoli+Hadamard gate set. The original version of the calculus, which allows every generator to be labelled by an arbitrary complex number, was shown to be complete by Backens and Kissinger. Even though the calculus is complete, this does not mean it allows one to easily reason in restricted settings such as is the case in quantum computing. In this paper we study the fragment of the ZH-calculus that is phase-free, and thus is closer aligned to physically implementable maps. We present a modified rule-set for the phase-free ZH-calculus and show that it is complete. We further discuss the minimality of this rule-set and we give an intuitive interpretation of the rules. Our completeness result follows by reducing to Vilmart's rule-set for the phase-free $Δ$ZX-calculus. </span>
+<span class="bibdata"><pre><code>@article{PhasefreeZH2019,
+    author = {van de Wetering, John and Wolffs,cSal},
+    title = {{Completeness of the Phase-free ZH-calculus}},
+    year = {2019},
+    journal = {arXiv preprint arXiv:1904.07545},
+    link = {https://arxiv.org/abs/1904.07545},
+    keywords = {ZH-Calculus, Completeness},
+    abstract = {The ZH-calculus is a graphical calculus for linear maps between qubits that allows a natural representation of the Toffoli+Hadamard gate set. The original version of the calculus, which allows every generator to be labelled by an arbitrary complex number, was shown to be complete by Backens and Kissinger. Even though the calculus is complete, this does not mean it allows one to easily reason in restricted settings such as is the case in quantum computing. In this paper we study the fragment of the ZH-calculus that is phase-free, and thus is closer aligned to physically implementable maps. We present a modified rule-set for the phase-free ZH-calculus and show that it is complete. We further discuss the minimality of this rule-set and we give an intuitive interpretation of the rules. Our completeness result follows by reducing to Vilmart's rule-set for the phase-free $\Delta$ZX-calculus. }
+}
+
+</code></pre></span></li>
+<li class="pub_entry">
+<a target="_blank" href="https://arxiv.org/abs/1904.07551" class="title">Graphical Fourier Theory and the Cost of Quantum Addition</a>,
+<span class="authors">Stach; Van de Wetering, John; Kuijpers and Aleks Kissinger</span>,
+<span class="journal">arXiv preprint arXiv:1904.07551</span>
+<span class="year">(2019)</span>.
+<br>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')">ZH-Calculus</a>, <a target="_blank" onclick="forceSearch('zx-calculus')">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('fourier')">Fourier</a></span>.
+<span class="abstract">The ZX-calculus is a convenient formalism for expressing and reasoning about quantum circuits at a low level, whereas the recently-proposed ZH-calculus yields convenient expressions of mid-level quantum gates such as Toffoli and CCZ. In this paper, we will show that the two calculi are linked by Fourier transform. In particular, we will derive new Fourier expansion rules using the ZH-calculus, and show that we can straightforwardly pass between ZH- and ZX-diagrams using them. Furthermore, we demonstrate that the graphical Fourier expansion of a ZH normal-form corresponds to the standard Fourier transform of a semi-Boolean function. As an illustration of the calculational power of this technique, we then show that several tricks for reducing the T-gate cost of Toffoli circuits, which include for instance quantum adders, can be derived using graphical Fourier theory and straightforwardly generalized to more qubits.</span>
+<span class="bibdata"><pre><code>@article{GraphicalFourier2019,
+    author = { Kuijpers,Stach;  Van de Wetering, John; and Kissinger, Aleks },
+    title = {{Graphical Fourier Theory and the Cost of Quantum Addition}},
+    year = {2019},
+    journal = {arXiv preprint arXiv:1904.07551},
+    link = {https://arxiv.org/abs/1904.07551},
+    keywords = {ZH-Calculus, ZX-Calculus, Fourier},
+    abstract = {The ZX-calculus is a convenient formalism for expressing and reasoning about quantum circuits at a low level, whereas the recently-proposed ZH-calculus yields convenient expressions of mid-level quantum gates such as Toffoli and CCZ. In this paper, we will show that the two calculi are linked by Fourier transform. In particular, we will derive new Fourier expansion rules using the ZH-calculus, and show that we can straightforwardly pass between ZH- and ZX-diagrams using them. Furthermore, we demonstrate that the graphical Fourier expansion of a ZH normal-form corresponds to the standard Fourier transform of a semi-Boolean function. As an illustration of the calculational power of this technique, we then show that several tricks for reducing the T-gate cost of Toffoli circuits, which include for instance quantum adders, can be derived using graphical Fourier theory and straightforwardly generalized to more qubits.}
+}
+
+</code></pre></span></li>
+<li class="pub_entry">
+<a target="_blank" href="https://arxiv.org/abs/1904.00633" class="title">CNOT circuit extraction for topologically-constrained quantum memories</a>,
+<span class="authors">Stach; Van de Wetering, John; Kuijpers and Aleks Kissinger</span>,
+<span class="journal">arXiv preprint arXiv:1904.00633</span>
+<span class="year">(2019)</span>.
+<br>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx adjacent')">ZX Adjacent</a>, <a target="_blank" onclick="forceSearch('cnot')">CNOT</a>, <a target="_blank" onclick="forceSearch('circuit extraction')">Circuit extraction</a>, <a target="_blank" onclick="forceSearch('quantum memories')">Quantum memories</a></span>.
+<span class="abstract">Many physical implementations of quantum computers impose stringent memory constraints in which 2-qubit operations can only be performed between qubits which are nearest neighbours in a lattice or graph structure. Hence, before a computation can be run on such a device, it must be mapped onto the physical architecture. That is, logical qubits must be assigned physical locations in the quantum memory, and the circuit must be replaced by an equivalent one containing only operations between nearest neighbours. In this paper, we give a new technique for quantum circuit mapping (a.k.a. routing), based on Gaussian elimination constrained to certain optimal spanning trees called Steiner trees. We give a reference implementation of the technique for CNOT circuits and show that it significantly out-performs general-purpose routines on CNOT circuits. We then comment on how the technique can be extended straightforwardly to the synthesis of CNOT+Rz circuits and as a modification to a recently-proposed circuit simplification/extraction procedure for generic circuits based on the ZX-calculus. </span>
+<span class="bibdata"><pre><code>@article{GraphicalFourier2019,
+    author = { Kuijpers,Stach;  Van de Wetering, John; and Kissinger, Aleks },
+    title = {{CNOT circuit extraction for topologically-constrained quantum memories}},
+    year = {2019},
+    journal = {arXiv preprint arXiv:1904.00633},
+    link = {https://arxiv.org/abs/1904.00633},
+    keywords = {ZX Adjacent, CNOT, Circuit extraction, Quantum memories},
+    abstract = {Many physical implementations of quantum computers impose stringent memory constraints in which 2-qubit operations can only be performed between qubits which are nearest neighbours in a lattice or graph structure. Hence, before a computation can be run on such a device, it must be mapped onto the physical architecture. That is, logical qubits must be assigned physical locations in the quantum memory, and the circuit must be replaced by an equivalent one containing only operations between nearest neighbours. In this paper, we give a new technique for quantum circuit mapping (a.k.a. routing), based on Gaussian elimination constrained to certain optimal spanning trees called Steiner trees. We give a reference implementation of the technique for CNOT circuits and show that it significantly out-performs general-purpose routines on CNOT circuits. We then comment on how the technique can be extended straightforwardly to the synthesis of CNOT+Rz circuits and as a modification to a recently-proposed circuit simplification/extraction procedure for generic circuits based on the ZX-calculus. }
+}
+
+</code></pre></span></li>
+<li class="pub_entry">
 <a target="_blank" href="https://arxiv.org/abs/1903.06035" class="title">Completeness of the ZX-Calculus</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">arXiv preprint arXiv:1903.06035</span>
@@ -993,12 +1050,12 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/pdf/1406.3056.pdf" class="title">Qutrit Dichromatic Calculus and Its Universality</a>,
+<a target="_blank" href="https://arxiv.org/abs/1406.3056" class="title">Qutrit Dichromatic Calculus and Its Universality</a>,
 <span class="authors">Quanlong Wang and Xiaoning Bian</span>,
 <span class="journal">Electronic Proceedings in Theoretical Computer Science</span>
 <span class="year">(2014)</span>.
 <br>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('qtrit')">Qtrit</a>, <a target="_blank" onclick="forceSearch('qdit')">Qdit</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('qutrit')">Qutrit</a>, <a target="_blank" onclick="forceSearch('qudit')">Qudit</a></span>.
 <span class="abstract">We introduce a dichromatic calculus (RG) for qutrit systems. We show that the decomposition of
 the qutrit Hadamard gate is non-unique and not derivable from the dichromatic calculus. As an
 application of the dichromatic calculus, we depict a quantum algorithm with a single qutrit. Since it
@@ -1012,8 +1069,8 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
     title = {{Qutrit Dichromatic Calculus and Its Universality}},
     year = {2014},
     journal = {Electronic Proceedings in Theoretical Computer Science},
-    link = {https://arxiv.org/pdf/1406.3056.pdf},
-    keywords = {ZX-Calculus, Qtrit, Qdit},
+    link = {https://arxiv.org/abs/1406.3056},
+    keywords = {ZX-Calculus, Qutrit, Qudit},
     abstract = {We introduce a dichromatic calculus (RG) for qutrit systems. We show that the decomposition of
 the qutrit Hadamard gate is non-unique and not derivable from the dichromatic calculus. As an
 application of the dichromatic calculus, we depict a quantum algorithm with a single qutrit. Since it
