@@ -1,0 +1,122 @@
+{
+    "people": {"Kissinger, Aleks": 
+                {"place": ["Nijmegen"],
+                "fields": ["ZH", 
+                        "PyZX", 
+                        "Circuit optimisation", 
+                        "Error correcting codes",
+                        "Quantomatic",
+                        "Foundations",
+                        "CoSy"]},
+                "van de Wetering, John":
+                {"place": ["Nijmegen"],
+                "fields": ["ZH", 
+                        "PyZX", 
+                        "Circuit optimisation"]},
+                "Wolffs, Sal":
+                {"place": ["Nijmegen"],
+                "fields": ["ZH"]},
+                "Kuijpers, Stach":
+                {"place": ["Nijmegen"],
+                "fields": ["ZH"]},
+                "Ng, Kang Feng":
+                {"place": ["Nijmegen"],
+                "fields": ["ZW",
+                        "Completeness",
+                        "Scalable ZX",
+                        "Qudits",
+                        "Fermionic QC"]},
+                "Horsman, Dominic":
+                {"place": ["Grenoble"],
+                "fields": ["Surface codes",
+                        "Error correcting codes",
+                        "Scalable ZX",
+                        "Mixed ZX"]},
+                "East, Richard":
+                {"place": ["Grenoble"],
+                "fields": ["Surface codes",
+                        "Scalable ZX",
+                        "Mixed ZX"]},
+                "Simons, Will":
+                {"place": ["Cambridge"],
+                "fields": ["Circuit optimisation"]},
+                "Duncan, Ross":
+                {"place": ["Cambridge"],
+                "fields": ["Circuit optimisation",
+                        "MBQC",
+                        "Quantomatic",
+                        "Foundations"]},
+                "Zamziev,Vladimir":
+                {"place": ["Nancy"],
+                "fields": ["Quantomatic"]},
+                "Perdrix, Simon":
+                {"place": ["Nancy"],
+                "fields": ["Completeness",
+                        "MBQC",
+                        "Surface codes",
+                        "Mixed ZX"]},
+                "Carette, Titouan":
+                {"place": ["Nancy"],
+                "fields": ["Completeness",
+                        "Mixed ZX",
+                        "Scalable ZX"]},
+                "Vilmart, Renaud":
+                {"place": ["Nancy"],
+                "fields": ["Completeness",
+                        "ΔZX",
+                        "Mixed ZX"]},
+                "Hadjihasanovic, Amar":
+                {"place": ["Kyoto"],
+                "fields": ["ZW",
+                        "Fermionic QC"]},
+                "Borehi, Philipe":
+                {"place": ["Piza"],
+                "fields": ["Hopf algebras",
+                        "String diagrams"]},
+                "Zanasi, Fabio":
+                {"place": ["London"],
+                "fields": ["Hopf algebras",
+                        "String diagrams"]},
+                "Coecke, Bob":
+                {"place": ["Oxford"],
+                "fields": ["Completeness",
+                        "Circuit optimisation",
+                        "Foundations",
+                        "ZW"]},
+                "de Beaudrap, Niel":
+                {"place": ["Oxford"],
+                "fields": ["Circuit optimisation"]},
+                "Miller-Bakewell, Hector":
+                {"place": ["Oxford"],
+                "fields": ["Quantomatic","CoSy"]},
+                "Backens, Miriam":
+                {"place": ["London"],
+                "fields": ["Completeness",
+                        "ZH",
+                        "Foundations"]},
+                "Chancellor, Nicholas":
+                {"place": ["Durham"],
+                "fields": ["Error correcting codes"]},
+                "Collins, Joe":
+                {"place": ["Glasgow"],
+                "fields": ["Hopf algebras"]},
+                "Jeandel, Emmanuel":
+                {"place": ["Nancy"],
+                "fields": ["Completeness",
+                        "Mixed ZX"]},
+                "de Felice, Giovanni":
+                {"place": ["Oxford"],
+                "fields": ["ZW",
+                        "Fermionic QC"]},
+                "Gogioso, Stefano":
+                {"place": ["Oxford"],
+                "fields": ["ZX-Dynamics", "Foundations"]},
+                "Wang, Quanlong":
+                {"place": ["Oxford"],
+                "fields": ["Completeness",
+                        "Circuit optimisation",
+                        "Foundations",
+                        "Qudits"]}
+
+    }
+}
