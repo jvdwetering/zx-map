@@ -1,18 +1,117 @@
 <html>
 
-<body>
-    <h1>Welcome to information on the ZX-calculus</h1>
+<head>
+    <title>The ZX-calculus</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/intro.css">
+    <script>
 
-    <p>
-        This is currently a work in progress, but check back here soon for all the information you need on the
-        ZX-calculus and quantum computing.</p>
+        var setup = function () {
+            var i;
+            var slides = [
+                ["/figures/swap1.png", "We start with three CNOT gates"],
+                ["/figures/swap2.png", "Apply the bi-algebra rule"],
+                ["/figures/swap3.png", "Pull the gate through the swap"],
+                ["/figures/swap4.png", "Merge the two red nodes and the two green nodes"],
+                ["/figures/swap5.png", "Apply the Hopf law"],
+                ["/figures/swap6.png", "And remove the blank spiders, leaving just the swap gate"]
+            ]
 
-    <p>Currently active links:</p>
-    <ul>
-        <li><a href="./publications.html">ZX publications</a></li>
-        <li><a href="./map.html">Map of the ZX community</a></li>
-        <li><a href="./colours.html">Suggested colours for the ZX calculus</a></li>
-    </ul>
+            var slideshowHTML = ""
+            slides.forEach(function (sc) {
+                slideshowHTML += `<div class="slideHolder">
+                <img src="${sc[0]}" class="slide">
+                <div class="slideCaption">${sc[1]}</div>
+            </div>`
+            })
+
+            slideshowHTML += `<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>`
+            var dotsHTML = ""
+            slides.forEach(function (sc, i) {
+                dotsHTML += `<span class="dot" onclick="currentSlide(${i})"></span>`
+            })
+            document.getElementById("slideshow").innerHTML = slideshowHTML
+            document.getElementById("slideshowDots").innerHTML = dotsHTML
+            showSlides(slideIndex);
+        }
+
+        var slideIndex = 0;
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var slides = document.getElementsByClassName("slideHolder");
+            var dots = document.getElementsByClassName("dot");
+            if (n >= slides.length) { slideIndex = slides.length - 1 }
+            if (n < 0) { slideIndex = 0 }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+            console.log(slideIndex)
+        } 
+    </script>
+</head>
+
+<body onload="setup()">
+    <div id="introBody">
+        <div class="row cell title shaded">
+            <h1>The ZX-calculus</h1>
+        </div>
+        <div id="introText" class="square cell">
+            The ZX-calculus is a graphical language that goes beyond circuit diagrams.
+            It works by generalising the ideas of the Z and X operations,
+            allowing us to break out of the circuit model while maintaining soundness of reasoning.
+            In doing so we can show properties of circuits, entanglement states, and protocols,
+            in a visually succint but logically complete manner.
+
+        </div>
+        <div id="introImage" class="square cell">
+            <img src="./figures/cnot.svg" />
+        </div>
+        <div id="introDerivation" class="derivation row cell">
+            <h2>Example derivation</h2>
+            This example starts with a circuit and ends with a circuit, but the intermediate steps are not always circuits:
+            <div id="slideshow">
+                The example derivation requires javascript in order to be displayed.
+            </div>
+
+            <div id="slideshowDots">
+            </div>
+        </div>
+        <div id="introPublications" class="row cell">
+            <h2>Selected publications</h2>
+                <ul>
+                    <li><a href="./publications.html">Paper link</a></li>
+                </ul>
+               <h2>Other parts of the site:</h2>
+                <ul>
+                    <li><a href="./publications.html">A full, searchable list of publications</a></li>
+                    <li><a href="./map.html">A map of the ZX community</a></li>
+                    <li><a href="./colours.html">Accessibility advice on colour choice and conference access</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+            <a href="/">Home</a>
+            <a href="/publications.html">Publications</a>
+            <a href="/colours.html">Accessibility</a>
+            <a href="/map.html">Map</a>
+    </div>
 </body>
 
 </html>
