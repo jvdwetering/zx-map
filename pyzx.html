@@ -1,0 +1,165 @@
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>PyZX Demo</title>
+<style>
+body{
+    font-size: 14px;
+    font-family: Helvetica;
+}
+
+#console {
+  background-color:#121;
+  color: #EEE;
+  font-size:12px;
+  font-weight:700;
+  width: 30vw;
+  height: 300px;
+}
+
+#editor { 
+        width: 40vw;
+        height: 300px;
+        float: left;
+        margin-right: 50px;
+        font-size: 20px;
+    }
+
+#display-content {
+    min-height: 350px;
+    width: 70%;
+    margin: 1px;
+    display: inline-block;
+    overflow:auto;
+    border: 1px solid black;
+}
+
+button{
+    background-color: #dadada;
+    color: #113;
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
+button.btn-ls{
+    font-size: 1em;
+}
+
+</style>
+
+</head>
+
+<body onload="brython({debug: 0, indexedDB: true})">
+<!-- <body> -->
+<h2>PyZX Demo</h2>
+<br></br>
+<div style="display: inline-block; overflow:auto;border: 1px solid black;">
+    <div id="editor"></div>
+    <textarea id="console"></textarea>
+</div>
+<br></br>
+<button id="run-button">Run Code</button>
+<br></br>
+<div id="display-content">
+Loading PyZX
+</div>
+
+<script type="text/python">
+    from browser import window
+    editor = window.ace.edit("editor")
+    editor.setTheme("ace/theme/monokai")
+    session = editor.getSession()
+    session.setMode("ace/mode/python")
+</script>
+
+<script type="text/python">
+    import javascript
+    from browser import document as doc, window, alert, html, timer
+
+    import traceback
+    import sys
+
+    editor = window.ace.edit("editor")
+
+    editor.setValue("""g = zx.generate.cliffordT(3,20)\ndisplay(zx.draw(g))\nzx.simplify.full_reduce(g)\ng.normalise()\ndisplay(zx.draw(g))""")
+
+    import pyzx as zx
+
+    div_display = doc["display-content"]
+    div_display.html = ""
+    button = doc["run-button"]
+    console = doc["console"]
+
+    class cOutput:
+        encoding = 'utf-8'
+
+        def __init__(self):
+            self.cons = console
+            self.buf = ''
+
+        def write(self, data):
+            self.buf += str(data)
+
+        def flush(self):
+            self.cons.value += self.buf
+            self.buf = ''
+
+        def reset(self):
+            self.buf = ''
+            self.cons.value = ''
+
+        def __len__(self):
+            return len(self.buf)
+
+    cOut = cOutput()
+    sys.stdout = cOut
+    sys.stderr = cOut
+
+    def display(elements):
+        if isinstance(elements, str):
+            div_display.html = elements
+        else:
+            for e in elements:
+                div_display <= e
+
+    def respond(ev=None):
+        button.innerHTML = "Running..."
+        cOut.reset()
+        div_display.html = ""
+        timer.set_timeout(run_code,0) # Give control back to browser
+        #
+
+    def run_code():
+        content = editor.getValue()
+        content += "\nNone" # Hack to make it be an expression, and not a statement
+        try:
+            eval(content)
+        except Exception as exc:
+            traceback.print_exc(file=sys.stderr)
+        sys.stdout.flush()
+        button.innerHTML = "Run Code"
+
+    button.bind('click', respond)
+
+    timer.set_timeout(respond,0)
+</script>
+
+
+<script src="js/require.js"></script>
+<script src="js/main.js"></script>
+
+
+<script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ace/mode-python.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ace/snippets/python.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/brython.js"></script>
+<script src="js/brython_modules.js"></script>
+
+</body>
+
+</html>
