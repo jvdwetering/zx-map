@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>PyZX Demo</title>
+<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/css/intro.css">
 <style>
-body{
-    font-size: 14px;
-    font-family: Helvetica;
+
+body {
+    font-size: 20px;
 }
 
 #console {
@@ -15,25 +17,33 @@ body{
   font-size:12px;
   font-weight:700;
   width: 30vw;
-  height: 300px;
+  height: 280px;
 }
 
 #editor { 
+        min-width: 400px;
         width: 40vw;
         height: 300px;
         float: left;
         margin-right: 50px;
-        font-size: 20px;
+        font-size: 16px;
     }
 
 #display-content {
     min-height: 350px;
+    min-width: 700px;
     width: 70%;
     margin: 1px;
     display: inline-block;
     overflow:auto;
     border: 1px solid black;
 }
+
+div.example{
+    margin-top: 2em;
+    display: none;
+}
+
 
 button{
     background-color: #dadada;
@@ -53,19 +63,77 @@ button.btn-ls{
 </head>
 
 <body onload="brython({debug: 0, indexedDB: true})">
-<!-- <body> -->
+
 <h2>PyZX Demo</h2>
 <br></br>
-<div style="display: inline-block; overflow:auto;border: 1px solid black;">
-    <div id="editor"></div>
-    <textarea id="console"></textarea>
+
+<div class="header">
+    <a href="/">Home</a>
+    <a href="/publications.html">Publications</a>
+    <a href="/colours.html">Accessibility</a>
+    <a href="/map.html">Map</a>
 </div>
-<br></br>
-<button id="run-button">Run Code</button>
-<br></br>
-<div id="display-content">
-Loading PyZX
+
+<div style="display:table; width:100%;">
+    <div style="display: table-row">
+        <div style="display: table-cell; width:15%; vertical-align: top;">
+            <h3>Examples</h3>
+            <ul id="menu" style="margin-right:20px;">
+            </ul>
+        </div>
+
+        <div style="display: inline-block; overflow:auto;border: 1px solid black;">
+            <div id="editor"></div>
+            <div style="display: inline-block;overflow:auto;"><span>Console output:</span><br>
+            <textarea id="console"></textarea>
+            </div>
+        </div>
+        <br></br>
+        <button id="run-button">Run Code</button>
+        <br></br>
+        <div id="display-content">
+        Loading PyZX. This can take a few seconds.
+        </div>
+
+    </div>
 </div>
+
+
+<div class="example" id="ex0">
+    <button>Manually constructing a ZX-diagram</button>
+    <script type="text/template">
+        g = zx.Graph()
+        #add_vertex(vertex_type, qubit_num, row_num, phase)
+        i = g.add_vertex(0, 0, 0)
+        v = g.add_vertex(1, 0, 1, Fraction(1,2))
+        w = g.add_vertex(2, 0, 2, Fraction(-1,2))
+        o = g.add_vertex(0, 0, 3)
+        g.add_edges([(i,v),(v,w),(w,o)])
+        display(zx.draw(g))
+    </script>
+</div>
+
+<div class="example" id="ex1">
+    <button>Generating and simplifying a Circuit</button>
+    <script type="text/template">
+        g = zx.generate.cliffordT(3,20)
+        display(zx.draw(g))
+        zx.simplify.full_reduce(g)
+        g.normalise()
+        display(zx.draw(g))
+    </script>
+</div>
+
+<div class="example" id="ex2">
+    <button>Converting ZX-diagram to tikz</button>
+    <script type="text/template">
+        g = zx.generate.cliffordT(3,10)
+        display(g)
+        display(zx.tikz.to_tikz(g))
+    </script>
+</div>
+
+
 
 <script type="text/python">
     from browser import window
@@ -76,11 +144,53 @@ Loading PyZX
 </script>
 
 <script type="text/python">
+    from browser import document, html, window
+
+    editor = window.ace.edit("editor")
+
+    current = None
+
+    def load_example(ev):
+        global current
+        if current is not None:
+            document["a"+current].style.fontWeight = "normal"
+        example_id = ev.target.num
+        ev.target.style.fontWeight = "bold"
+
+        example = document[example_id]
+        src = example.get(selector="script")[0].text
+        while src.startswith("\n"):
+            src = src[1:]
+        indent = 0
+        while src[indent] == ' ':
+            indent += 1
+        src = "\n".join(line[indent:] for line in src.split("\n"))
+
+        editor.setValue(src)
+
+        current = example_id
+
+
+
+    for example in document.get(selector=".example"):
+        button = example.get(selector="button")[0]
+        anchor = html.A(button.text, Class="menu", href="#", id="a"+example.id)
+        anchor.num = example.id
+
+        anchor.bind("click", load_example)
+        document["menu"] <= html.LI(anchor)
+
+
+
+</script>
+
+<script type="text/python">
     import javascript
     from browser import document as doc, window, alert, html, timer
 
     import traceback
     import sys
+    from fractions import Fraction
 
     editor = window.ace.edit("editor")
 
@@ -118,12 +228,17 @@ Loading PyZX
     sys.stdout = cOut
     sys.stderr = cOut
 
-    def display(elements):
-        if isinstance(elements, str):
-            div_display.html = elements
-        else:
-            for e in elements:
-                div_display <= e
+    def display(item, raw=False):
+        if isinstance(item, str):
+            if raw:
+                div_display.html += item
+            else:
+                div_display.html += "<pre>" + item + "</pre>"
+            return
+        elif hasattr(item, "to_tensor"): # It is a circuit or graph
+            item = zx.draw(item)
+        for e in item:
+            div_display <= e
 
     def respond(ev=None):
         button.innerHTML = "Running..."
