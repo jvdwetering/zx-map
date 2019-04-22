@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Font Awesome Icons -->
+<link href="css/intro.css" rel="stylesheet">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/normalize.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
 
 
@@ -24,23 +25,25 @@
 </script>
 
 <body id="page-top" class="index">
-
 <section id="publications">
     <div class="container lead">
-        <div style="text-align: left; margin-top:10px" class="col-md-12">
-            <div class="allshow" style="display:none;" id="tab-3-content">
-            <h1>All publications concerning the ZX-calculus</h1>
-            <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
+        <div style="display: grid; grid-template-columns: 1fr" class="col-md-12">
+            <div class="title row shaded cell">
+                <h1>ZX-calculus publications</h1>
+            </div>
+            <div id="search" class="row cell">
+                <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
                 Search inside:
                 <label><input type="checkbox" id="chktitle" checked>Title</label>
                 <label><input type="checkbox" id="chkauthors" checked>Authors</label>
                 <label><input type="checkbox" id="chkabstract" checked>Abstract</label>
                 <label><input type="checkbox" id="chkkeywords" checked>Keywords</label>
-            <hr class="star-primary">
+            </div>
+            <div class="allshow row cell" id="tab-3-content">
                 <h2>2019</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1904.04735" class="title">PyZX: Large Scale Automated Diagrammatic Reasoning</a>,
+<a target="_blank" href="https://arxiv.org/abs/1904.04735" class="paperTitle">PyZX: Large Scale Automated Diagrammatic Reasoning</a>,
 <span class="authors">Aleks Kissinger and John van de Wetering</span>,
 <span class="journal">arXiv preprint arXiv:1904.04735</span>
 <span class="year">(2019)</span>.
@@ -59,7 +62,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1904.07545" class="title">Completeness of the Phase-free ZH-calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1904.07545" class="paperTitle">Completeness of the Phase-free ZH-calculus</a>,
 <span class="authors">John van de Wetering and Sal Wolffs</span>,
 <span class="journal">arXiv preprint arXiv:1904.07545</span>
 <span class="year">(2019)</span>.
@@ -78,7 +81,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1904.07551" class="title">Graphical Fourier Theory and the Cost of Quantum Addition</a>,
+<a target="_blank" href="https://arxiv.org/abs/1904.07551" class="paperTitle">Graphical Fourier Theory and the Cost of Quantum Addition</a>,
 <span class="authors">Stach Kuijpers, John Van de Wetering and Aleks Kissinger</span>,
 <span class="journal">arXiv preprint arXiv:1904.07551</span>
 <span class="year">(2019)</span>.
@@ -97,7 +100,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1904.00633" class="title">CNOT circuit extraction for topologically-constrained quantum memories</a>,
+<a target="_blank" href="https://arxiv.org/abs/1904.00633" class="paperTitle">CNOT circuit extraction for topologically-constrained quantum memories</a>,
 <span class="authors">Aleks Kissinger and Arianne Meijer-van de Griend</span>,
 <span class="journal">arXiv preprint arXiv:1904.00633</span>
 <span class="year">(2019)</span>.
@@ -116,7 +119,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx adj
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1903.06035" class="title">Completeness of the ZX-Calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1903.06035" class="paperTitle">Completeness of the ZX-Calculus</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">arXiv preprint arXiv:1903.06035</span>
 <span class="year">(2019)</span>.
@@ -135,7 +138,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1903.10477" class="title">Reducing T-count with the ZX-calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1903.10477" class="paperTitle">Reducing T-count with the ZX-calculus</a>,
 <span class="authors">Aleks Kissinger and John van de Wetering</span>,
 <span class="journal">arXiv preprint arXiv:1903.10477</span>
 <span class="year">(2019)</span>.
@@ -154,7 +157,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1902.03178" class="title">Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1902.03178" class="paperTitle">Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus</a>,
 <span class="authors">Ross Duncan, Aleks Kissinger, Simon Pedrix and John van de Wetering</span>,
 <span class="journal">arXiv preprint arXiv:1902.03178</span>
 <span class="year">(2019)</span>.
@@ -173,7 +176,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1902.07143" class="title">Completeness of Graphical Languages for Mixed States Quantum Mechanics</a>,
+<a target="_blank" href="http://arxiv.org/abs/1902.07143" class="paperTitle">Completeness of Graphical Languages for Mixed States Quantum Mechanics</a>,
 <span class="authors">Titouan Carette, Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">arXiv:1902.07143 [quant-ph]</span>
 <span class="year">(2019)</span>.
@@ -194,7 +197,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('comple
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1901.10114" class="title">Optimising Clifford Circuits with Quantomatic</a>,
+<a target="_blank" href="https://arxiv.org/abs/1901.10114" class="paperTitle">Optimising Clifford Circuits with Quantomatic</a>,
 <span class="authors">Andrew Fagan and Ross Duncan</span>,
 <span class="journal">Proceedings of the 15th International Conference on Quantum Physics and Logic (QPL)</span>
 <span class="year">(2019)</span>.
@@ -222,7 +225,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2018</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1812.09114" class="title">A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1812.09114" class="paperTitle">A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics</a>,
 <span class="authors">Renaud Vilmart</span>,
 <span class="journal">arXiv preprint arXiv:1812.09114</span>
 <span class="year">(2018)</span>.
@@ -241,7 +244,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1810.05377" class="title">The rational fragment of the ZX-calculus</a>,
+<a target="_blank" href="http://arxiv.org/abs/1810.05377" class="paperTitle">The rational fragment of the ZX-calculus</a>,
 <span class="authors">Emmanuel Jeandel</span>,
 <span class="journal">arXiv:1810.05377 [quant-ph]</span>
 <span class="year">(2018)</span>.
@@ -263,7 +266,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1805.05296" class="title">A Generic Normal Form for ZX-Diagrams and Application to the Rational Angle Completeness</a>,
+<a target="_blank" href="https://arxiv.org/abs/1805.05296" class="paperTitle">A Generic Normal Form for ZX-Diagrams and Application to the Rational Angle Completeness</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">arXiv preprint arXiv:1805.05296</span>
 <span class="year">(2018)</span>.
@@ -282,7 +285,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1805.02175" class="title">ZH: A Complete Graphical Calculus for Quantum Computations Involving Classical Non-linearity</a>,
+<a target="_blank" href="https://arxiv.org/abs/1805.02175" class="paperTitle">ZH: A Complete Graphical Calculus for Quantum Computations Involving Classical Non-linearity</a>,
 <span class="authors">Miriam Backens and Aleks Kissinger</span>,
 <span class="journal">Proceedings of the 15th International Conference on Quantum Physics and Logic, Halifax, Canada, 3-7th June 2018</span>
 <span class="year">(2019)</span>.
@@ -309,7 +312,7 @@ Halifax, Canada, 3-7th June 2018},
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1804.05356" class="title">ZX-rules for 2-qubit Clifford+ T quantum circuits</a>,
+<a target="_blank" href="https://arxiv.org/abs/1804.05356" class="paperTitle">ZX-rules for 2-qubit Clifford+ T quantum circuits</a>,
 <span class="authors">Bob Coecke and Quanlong Wang</span>,
 <span class="journal">International Conference on Reversible Computation</span>
 <span class="year">(2018)</span>.
@@ -332,7 +335,7 @@ These ZX-rules are much simpler than the complete of set Clifford+T circuit equa
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1804.03084" class="title">A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+T, and Beyond</a>,
+<a target="_blank" href="https://arxiv.org/abs/1804.03084" class="paperTitle">A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+T, and Beyond</a>,
 <span class="authors">Renaud Vilmart</span>,
 <span class="journal">Proceedings of the 15th International Conference on Quantum Physics and Logic, Halifax, Canada, 3-7th June 2018</span>
 <span class="year">(2019)</span>.
@@ -359,7 +362,7 @@ Halifax, Canada, 3-7th June 2018},
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1803.00696" class="title">Qutrit ZX-calculus is Complete for Stabilizer Quantum Mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1803.00696" class="paperTitle">Qutrit ZX-calculus is Complete for Stabilizer Quantum Mechanics</a>,
 <span class="authors">Quanlong Wang</span>,
 <span class="journal">Proceedings 14th International Conference on Quantum Physics and Logic, Nijmegen, The Netherlands, 3-7 July 2017</span>
 <span class="year">(2018)</span>.
@@ -386,7 +389,7 @@ Nijmegen, The Netherlands, 3-7 July 2017},
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1801.10142" class="title">Diagrammatic Reasoning Beyond Clifford+T Quantum Mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1801.10142" class="paperTitle">Diagrammatic Reasoning Beyond Clifford+T Quantum Mechanics</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in Computer Science</span>
 <span class="year">(2018)</span>.
@@ -414,7 +417,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1801.01231" class="title">A Diagrammatic Axiomatisation of Fermionic Quantum Circuits</a>,
+<a target="_blank" href="https://arxiv.org/abs/1801.01231" class="paperTitle">A Diagrammatic Axiomatisation of Fermionic Quantum Circuits</a>,
 <span class="authors">Amar Hadzihasanovic, Giovanni de Felice and Kang Feng Ng</span>,
 <span class="journal">3rd International Conference on Formal Structures for Computation and Deduction</span>
 <span class="year">(2018)</span>.
@@ -433,7 +436,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1801.07993" class="title">Completeness of the ZX-calculus for Pure Qubit Clifford+T Quantum Mechanics</a>,
+<a target="_blank" href="http://arxiv.org/abs/1801.07993" class="paperTitle">Completeness of the ZX-calculus for Pure Qubit Clifford+T Quantum Mechanics</a>,
 <span class="authors">Kang Feng Ng and Quanlong Wang</span>,
 <span class="journal">arXiv:1801.07993 [quant-ph]</span>
 <span class="year">(2018)</span>.
@@ -454,7 +457,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://dl.acm.org/citation.cfm?id=3209128" class="title">Two Complete Axiomatisations of Pure-state Qubit Quantum Computing</a>,
+<a target="_blank" href="https://dl.acm.org/citation.cfm?id=3209128" class="paperTitle">Two Complete Axiomatisations of Pure-state Qubit Quantum Computing</a>,
 <span class="authors">Amar Hadzihasanovic, Kang Feng Ng and Quanlong Wang</span>,
 <span class="journal">Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in Computer Science</span>
 <span class="year">(2018)</span>.
@@ -486,7 +489,7 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Harny.pdf" class="title">Completeness of the ZX-calculus</a>,
+<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Harny.pdf" class="paperTitle">Completeness of the ZX-calculus</a>,
 <span class="authors">Quanlong Wang</span>,
 <span class="journal">PhD Thesis</span>
 <span class="year">(2018)</span>.
@@ -524,7 +527,7 @@ Finally, we show with some examples the application of the ZX-calculus to the pr
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Borun" class="title">Towards Minimality of Clifford+T ZX-Calculus</a>,
+<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Borun" class="paperTitle">Towards Minimality of Clifford+T ZX-Calculus</a>,
 <span class="authors">Borun Shi</span>,
 <span class="journal">University of Oxford MSc thesis</span>
 <span class="year">(2018)</span>.
@@ -547,7 +550,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2017</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1709.08086" class="title">The algebra of entanglement and the geometry of composition</a>,
+<a target="_blank" href="https://arxiv.org/abs/1709.08086" class="paperTitle">The algebra of entanglement and the geometry of composition</a>,
 <span class="authors">Amar Hadzihasanovic</span>,
 <span class="journal">PhD Thesis</span>
 <span class="year">(2017)</span>.
@@ -572,7 +575,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1706.09877" class="title">A universal completion of the ZX-calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1706.09877" class="paperTitle">A universal completion of the ZX-calculus</a>,
 <span class="authors">Kang Feng Ng and Quanlong Wang</span>,
 <span class="journal">arXiv preprint arXiv:1706.09877</span>
 <span class="year">(2017)</span>.
@@ -591,7 +594,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1706.02717" class="title">Verifying the Smallest Interesting Colour Code with Quantomatic</a>,
+<a target="_blank" href="https://arxiv.org/abs/1706.02717" class="paperTitle">Verifying the Smallest Interesting Colour Code with Quantomatic</a>,
 <span class="authors">Liam Garvie and Ross Duncan</span>,
 <span class="journal">Proceedings 14th International Conference on Quantum Physics and Logic, Nijmegen, The Netherlands, 3-7 July 2017</span>
 <span class="year">(2018)</span>.
@@ -618,7 +621,7 @@ Nijmegen, The Netherlands, 3-7 July 2017},
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1705.11151" class="title">A Complete Axiomatisation of the ZX-Calculus for Clifford+T Quantum Mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1705.11151" class="paperTitle">A Complete Axiomatisation of the ZX-Calculus for Clifford+T Quantum Mechanics</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in Computer Science</span>
 <span class="year">(2018)</span>.
@@ -646,7 +649,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('cliffo
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1704.06504" class="title">Universal MBQC with generalised parity-phase interactions and Pauli measurements</a>,
+<a target="_blank" href="https://arxiv.org/abs/1704.06504" class="paperTitle">Universal MBQC with generalised parity-phase interactions and Pauli measurements</a>,
 <span class="authors">Aleks Kissinger and John van de Wetering</span>,
 <span class="journal">arXiv preprint arXiv:1704.06504</span>
 <span class="year">(2017)</span>.
@@ -665,7 +668,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1704.08670" class="title">The ZX calculus is a language for surface code lattice surgery</a>,
+<a target="_blank" href="https://arxiv.org/abs/1704.08670" class="paperTitle">The ZX calculus is a language for surface code lattice surgery</a>,
 <span class="authors">Niel de Beaudrap and Dominic Horsman</span>,
 <span class="journal">arXiv preprint arXiv:1704.08670</span>
 <span class="year">(2017)</span>.
@@ -684,7 +687,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1704.05955" class="title">Equivalence of Local Complementation and Euler Decomposition in the Qutrit ZX-calculus</a>,
+<a target="_blank" href="http://arxiv.org/abs/1704.05955" class="paperTitle">Equivalence of Local Complementation and Euler Decomposition in the Qutrit ZX-calculus</a>,
 <span class="authors">Xiaoyan Gong and Quanlong Wang</span>,
 <span class="journal">arXiv:1704.05955 [quant-ph]</span>
 <span class="year">(2017)</span>.
@@ -706,7 +709,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1704.07034" class="title">Categorifying the ZX-calculus</a>,
+<a target="_blank" href="http://arxiv.org/abs/1704.07034" class="paperTitle">Categorifying the ZX-calculus</a>,
 <span class="authors">Daniel Cicala</span>,
 <span class="journal">Electronic Proceedings in Theoretical Computer Science</span>
 <span class="year">(2018)</span>.
@@ -732,7 +735,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1702.01945" class="title">ZX-Calculus: Cyclotomic Supplementarity and Incompleteness for Clifford+T Quantum Mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1702.01945" class="paperTitle">ZX-Calculus: Cyclotomic Supplementarity and Incompleteness for Clifford+T Quantum Mechanics</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix, Renaud Vilmart and Quanlong Wang</span>,
 <span class="journal">42nd International Symposium on Mathematical Foundations of Computer Science (MFCS 2017)</span>
 <span class="year">(2017)</span>.
@@ -760,7 +763,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1702.00934" class="title">Y-Calculus: A Language for Real Matrices Derived from the ZX-Calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1702.00934" class="paperTitle">Y-Calculus: A Language for Real Matrices Derived from the ZX-Calculus</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix and Renaud Vilmart</span>,
 <span class="journal">Proceedings 14th International Conference on Quantum Physics and Logic, Nijmegen, The Netherlands, 3-7 July 2017</span>
 <span class="year">(2018)</span>.
@@ -787,7 +790,7 @@ Nijmegen, The Netherlands, 3-7 July 2017},
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1702.01945" class="title">Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive</a>,
+<a target="_blank" href="http://arxiv.org/abs/1702.01945" class="paperTitle">Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive</a>,
 <span class="authors">Emmanuel Jeandel, Simon Perdrix, Renaud Vilmart and Quanlong Wang</span>,
 <span class="journal">arXiv:1702.01945 [quant-ph]</span>
 <span class="year">(2017)</span>.
@@ -809,7 +812,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://www.amazon.com/Picturing-Quantum-Processes-Diagrammatic-Reasoning/dp/110710422X" class="title">Picturing Quantum Processes</a>,
+<a target="_blank" href="https://www.amazon.com/Picturing-Quantum-Processes-Diagrammatic-Reasoning/dp/110710422X" class="paperTitle">Picturing Quantum Processes</a>,
 <span class="authors">Bob Coecke and Aleks Kissinger</span>,
 <span class="journal">Cambridge University Press</span>
 <span class="year">(2017)</span>.
@@ -832,7 +835,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('')"></
 <h2>2016</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1611.08012" class="title">Graphical Structures for Design and Verification of Quantum Error Correction</a>,
+<a target="_blank" href="https://arxiv.org/abs/1611.08012" class="paperTitle">Graphical Structures for Design and Verification of Quantum Error Correction</a>,
 <span class="authors">Nicholas Chancellor, Aleks Kissinger, Joschka Roffe, Stefan Zohren and Dominic Horsman</span>,
 <span class="journal">arXiv preprint arXiv:1611.08012</span>
 <span class="year">(2016)</span>.
@@ -851,7 +854,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1602.04744" class="title">A Simplified Stabilizer ZX-calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1602.04744" class="paperTitle">A Simplified Stabilizer ZX-calculus</a>,
 <span class="authors">Miriam Backens, Simon Perdrix and Quanlong Wang</span>,
 <span class="journal">Proceedings 13th International Conference on Quantum Physics and Logic, Glasgow, Scotland, 6-10 June 2016</span>
 <span class="year">(2017)</span>.
@@ -876,7 +879,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1602.08954" class="title">Completeness and the ZX-calculus</a>,
+<a target="_blank" href="http://arxiv.org/abs/1602.08954" class="paperTitle">Completeness and the ZX-calculus</a>,
 <span class="authors">Miriam Backens</span>,
 <span class="journal">PhD Thesis</span>
 <span class="year">(2016)</span>.
@@ -905,7 +908,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2015</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1507.03854" class="title">Making the stabilizer ZX-calculus complete for scalars</a>,
+<a target="_blank" href="https://arxiv.org/abs/1507.03854" class="paperTitle">Making the stabilizer ZX-calculus complete for scalars</a>,
 <span class="authors">Miriam Backens</span>,
 <span class="journal">Proceedings of the 12th International Workshop on Quantum Physics and Logic (QPL 2015)</span>
 <span class="year">(2015)</span>.
@@ -929,7 +932,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1506.03055" class="title">Supplementarity is Necessary for Quantum Diagram Reasoning</a>,
+<a target="_blank" href="https://arxiv.org/abs/1506.03055" class="paperTitle">Supplementarity is Necessary for Quantum Diagram Reasoning</a>,
 <span class="authors">Simon Perdrix and Quanlong Wang</span>,
 <span class="journal">41st International Symposium on Mathematical Foundations of Computer Science (MFCS 2016)</span>
 <span class="year">(2016)</span>.
@@ -953,7 +956,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1503.01034" class="title">Quantomatic: A proof assistant for diagrammatic reasoning</a>,
+<a target="_blank" href="https://arxiv.org/abs/1503.01034" class="paperTitle">Quantomatic: A proof assistant for diagrammatic reasoning</a>,
 <span class="authors">Aleks Kissinger and Vladimir Zamdzhiev</span>,
 <span class="journal">International Conference on Automated Deduction</span>
 <span class="year">(2015)</span>.
@@ -974,7 +977,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('quanto
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1501.07082" class="title">A diagrammatic axiomatisation for qubit entanglement</a>,
+<a target="_blank" href="https://arxiv.org/abs/1501.07082" class="paperTitle">A diagrammatic axiomatisation for qubit entanglement</a>,
 <span class="authors">Amar Hadzihasanovic</span>,
 <span class="journal">2015 30th Annual ACM/IEEE Symposium on Logic in Computer Science</span>
 <span class="year">(2015)</span>.
@@ -1001,7 +1004,7 @@ In this paper, we present a full graphical axiomatisation of the relations betwe
 <h2>2014</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1412.8553" class="title">The ZX-calculus is complete for the single-qubit Clifford+T group</a>,
+<a target="_blank" href="https://arxiv.org/abs/1412.8553" class="paperTitle">The ZX-calculus is complete for the single-qubit Clifford+T group</a>,
 <span class="authors">Miriam Backens</span>,
 <span class="journal">arXiv preprint arXiv:1412.8553</span>
 <span class="year">(2014)</span>.
@@ -1020,7 +1023,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1411.1618" class="title">A Complete Graphical Calculus for Spekkens’ Toy Bit Theory</a>,
+<a target="_blank" href="https://arxiv.org/abs/1411.1618" class="paperTitle">A Complete Graphical Calculus for Spekkens’ Toy Bit Theory</a>,
 <span class="authors">Miriam Backens and Ali Nabi Duman</span>,
 <span class="journal">Foundations of Physics</span>
 <span class="year">(2015)</span>.
@@ -1048,7 +1051,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1406.3056" class="title">Qutrit Dichromatic Calculus and Its Universality</a>,
+<a target="_blank" href="https://arxiv.org/abs/1406.3056" class="paperTitle">Qutrit Dichromatic Calculus and Its Universality</a>,
 <span class="authors">Quanlong Wang and Xiaoning Bian</span>,
 <span class="journal">Electronic Proceedings in Theoretical Computer Science</span>
 <span class="year">(2014)</span>.
@@ -1081,7 +1084,7 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1404.3633" class="title">The ZX-calculus is incomplete for quantum mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1404.3633" class="paperTitle">The ZX-calculus is incomplete for quantum mechanics</a>,
 <span class="authors">Christian Schröder de Witt and Vladimir Zamdzhiev</span>,
 <span class="journal">Proceedings QPL 2014</span>
 <span class="year">(2014)</span>.
@@ -1104,7 +1107,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1404.1288" class="title">Depicting qudit quantum mechanics and mutually unbiased qudit theories</a>,
+<a target="_blank" href="https://arxiv.org/abs/1404.1288" class="paperTitle">Depicting qudit quantum mechanics and mutually unbiased qudit theories</a>,
 <span class="authors">André Ranchin</span>,
 <span class="journal"> Proceedings of the 11th workshop on Quantum Physics and Logic, Kyoto, Japan, 4-6th June 2014</span>
 <span class="year">(2014)</span>.
@@ -1155,7 +1158,7 @@ quantum mechanics, and provide a novel, high level description of quantum inform
 <h2>2013</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1310.7932" class="title">Complete set of circuit equations for stabilizer quantum mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1310.7932" class="paperTitle">Complete set of circuit equations for stabilizer quantum mechanics</a>,
 <span class="authors">André Ranchin and Bob Coecke</span>,
 <span class="journal">Physical Review A</span>
 <span class="year">(2014)</span>.
@@ -1180,7 +1183,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1307.7048" class="title">Pivoting makes the ZX-calculus complete for real stabilizers</a>,
+<a target="_blank" href="https://arxiv.org/abs/1307.7048" class="paperTitle">Pivoting makes the ZX-calculus complete for real stabilizers</a>,
 <span class="authors">Ross Duncan and Simon Perdrix</span>,
 <span class="journal">Proceedings of the 10th International Workshop on Quantum Physics and Logic (QPL)</span>
 <span class="year">(2014)</span>.
@@ -1204,7 +1207,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1307.7025" class="title">The ZX-calculus is complete for stabilizer quantum mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1307.7025" class="paperTitle">The ZX-calculus is complete for stabilizer quantum mechanics</a>,
 <span class="authors">Miriam Backens</span>,
 <span class="journal">New Journal of Physics</span>
 <span class="year">(2014)</span>.
@@ -1227,7 +1230,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1306.4532" class="title">Verifying the Steane code with Quantomatic</a>,
+<a target="_blank" href="https://arxiv.org/abs/1306.4532" class="paperTitle">Verifying the Steane code with Quantomatic</a>,
 <span class="authors">Ross Duncan and Maxime Lucas</span>,
 <span class="journal">arXiv preprint arXiv:1306.4532</span>
 <span class="year">(2013)</span>.
@@ -1246,7 +1249,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Borun" class="title">The ZX calculus is incomplete for non-stabilizer quantum mechanics</a>,
+<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Borun" class="paperTitle">The ZX calculus is incomplete for non-stabilizer quantum mechanics</a>,
 <span class="authors">Christian Schröder</span>,
 <span class="journal">University of Oxford MSc thesis</span>
 <span class="year">(2013)</span>.
@@ -1269,7 +1272,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2012</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1210.0650" class="title">Superdense Coding with GHZ and Quantum Key Distribution with W in the ZX-calculus</a>,
+<a target="_blank" href="http://arxiv.org/abs/1210.0650" class="paperTitle">Superdense Coding with GHZ and Quantum Key Distribution with W in the ZX-calculus</a>,
 <span class="authors">Anne Hillebrand</span>,
 <span class="journal">Electronic Proceedings in Theoretical Computer Science</span>
 <span class="year">(2012)</span>.
@@ -1295,7 +1298,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1203.6242" class="title">A graphical approach to measurement-based quantum computing</a>,
+<a target="_blank" href="https://arxiv.org/abs/1203.6242" class="paperTitle">A graphical approach to measurement-based quantum computing</a>,
 <span class="authors">Ross Duncan</span>,
 <span class="journal">arXiv preprint arXiv:1203.6242</span>
 <span class="year">(2012)</span>.
@@ -1314,7 +1317,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1203.4988" class="title">Strong complementarity and non-locality in categorical quantum mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1203.4988" class="paperTitle">Strong complementarity and non-locality in categorical quantum mechanics</a>,
 <span class="authors">Bob Coecke, Ross Duncan, Aleks Kissinger and Quanlong Wang</span>,
 <span class="journal">Proceedings of the 27th Annual IEEE Symposium on Logic in Computer Science (LICS)</span>
 <span class="year">(2012)</span>.
@@ -1346,7 +1349,7 @@ The diagrammatic calculus substantially simplifies (and sometimes even trivialis
 <h2>2011</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1110.2613" class="title">Trichromatic Open Digraphs for Understanding Qubits</a>,
+<a target="_blank" href="https://arxiv.org/abs/1110.2613" class="paperTitle">Trichromatic Open Digraphs for Understanding Qubits</a>,
 <span class="authors">Alex Lang and Bob Coecke</span>,
 <span class="journal">m̊ Proceedings 8th International Workshop on Quantum Physics and Logic, \ ̊Nijmegen, Netherlands, October 27-29, 2011</span>
 <span class="year">(2012)</span>.
@@ -1373,7 +1376,7 @@ Quantum Physics and Logic,
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1103.2811" class="title">Three qubit entanglement within graphical Z/X-calculus</a>,
+<a target="_blank" href="https://arxiv.org/abs/1103.2811" class="paperTitle">Three qubit entanglement within graphical Z/X-calculus</a>,
 <span class="authors">Bob Coecke and Bill Edwards</span>,
 <span class="journal">Proceedings CSR 2010 Workshop on High Productivity Computations, Kazan, Russia, June 21-22, 2010</span>
 <span class="year">(2011)</span>.
@@ -1399,7 +1402,7 @@ Kazan, Russia, June 21-22, 2010},
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1103.2812" class="title">The GHZ/W-calculus contains rational arithmetic</a>,
+<a target="_blank" href="https://arxiv.org/abs/1103.2812" class="paperTitle">The GHZ/W-calculus contains rational arithmetic</a>,
 <span class="authors">Bob Coecke, Aleks Kissinger, Alex Merry and Shibdas Roy</span>,
 <span class="journal">Electronic Proceedings in Theoretical Computer Science</span>
 <span class="year">(2010)</span>.
@@ -1420,7 +1423,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1101.4722" class="title">Quantum picturalism for topological cluster-state computing</a>,
+<a target="_blank" href="https://arxiv.org/abs/1101.4722" class="paperTitle">Quantum picturalism for topological cluster-state computing</a>,
 <span class="authors">Clare Horsman</span>,
 <span class="journal">New Journal of Physics</span>
 <span class="year">(2011)</span>.
@@ -1443,7 +1446,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Anne.pdf" class="title">Quantum Protocols involving Multiparticle Entanglement and their Representations in the ZX-calculus</a>,
+<a target="_blank" href="http://www.cs.ox.ac.uk/people/bob.coecke/Anne.pdf" class="paperTitle">Quantum Protocols involving Multiparticle Entanglement and their Representations in the ZX-calculus</a>,
 <span class="authors">Anne Hillebrand</span>,
 <span class="journal">University of Oxford MSc thesis</span>
 <span class="year">(2011)</span>.
@@ -1466,7 +1469,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2010</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1004.1598" class="title">Environment and classical channels in categorical quantum mechanics</a>,
+<a target="_blank" href="https://arxiv.org/abs/1004.1598" class="paperTitle">Environment and classical channels in categorical quantum mechanics</a>,
 <span class="authors">Bob Coecke and Simon Perdrix</span>,
 <span class="journal">Proceedings of the 19th EACSL Annual Conference on Computer Science Logic (CSL)</span>
 <span class="year">(2010)</span>.
@@ -1489,7 +1492,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/1003.5005" class="title">Phase groups and the origin of non-locality for qubits</a>,
+<a target="_blank" href="https://arxiv.org/abs/1003.5005" class="paperTitle">Phase groups and the origin of non-locality for qubits</a>,
 <span class="authors">Bob Coecke, Bill Edwards and Rob Spekkens</span>,
 <span class="journal">Electronic Notes in Theoretical Computer Science</span>
 <span class="year">(2011)</span>.
@@ -1512,7 +1515,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/1002.2540" class="title">The compositional structure of multipartite quantum entanglement</a>,
+<a target="_blank" href="http://arxiv.org/abs/1002.2540" class="paperTitle">The compositional structure of multipartite quantum entanglement</a>,
 <span class="authors">Bob Coecke and Aleks Kissinger</span>,
 <span class="journal">Automata, Languages and Programming</span>
 <span class="year">(2010)</span>.
@@ -1538,7 +1541,7 @@ Together, a GHZ and a W Frobenius state form the primitives of a graphical calcu
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="http://personal.strath.ac.uk/ross.duncan/papers/gflow.pdf" class="title">Rewriting measurement-based quantum computations with generalised flow</a>,
+<a target="_blank" href="http://personal.strath.ac.uk/ross.duncan/papers/gflow.pdf" class="paperTitle">Rewriting measurement-based quantum computations with generalised flow</a>,
 <span class="authors">Ross Duncan and Simon Perdrix</span>,
 <span class="journal">International Colloquium on Automata, Languages, and Programming</span>
 <span class="year">(2010)</span>.
@@ -1563,7 +1566,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2009</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="http://arxiv.org/abs/0908.1787" class="title">Quantum picturalism</a>,
+<a target="_blank" href="http://arxiv.org/abs/0908.1787" class="paperTitle">Quantum picturalism</a>,
 <span class="authors">Bob Coecke</span>,
 <span class="journal">Contemporary Physics</span>
 <span class="year">(2009)</span>.
@@ -1584,7 +1587,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/0906.4725" class="title">Interacting quantum observables: categorical algebra and diagrammatics</a>,
+<a target="_blank" href="https://arxiv.org/abs/0906.4725" class="paperTitle">Interacting quantum observables: categorical algebra and diagrammatics</a>,
 <span class="authors">Bob Coecke and Ross Duncan</span>,
 <span class="journal">New Journal of Physics</span>
 <span class="year">(2011)</span>.
@@ -1607,7 +1610,7 @@ Using the well-studied canonical correspondence between graphical calculi and sy
 
 </code></pre></span></li>
 <li class="pub_entry">
-<a target="_blank" href="https://arxiv.org/abs/0902.0500" class="title">Graphs States and the necessity of Euler Decomposition</a>,
+<a target="_blank" href="https://arxiv.org/abs/0902.0500" class="paperTitle">Graphs States and the necessity of Euler Decomposition</a>,
 <span class="authors">Ross Duncan and Simon Perdrix</span>,
 <span class="journal">arXiv preprint arXiv:0902.0500</span>
 <span class="year">(2009)</span>.
@@ -1630,7 +1633,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 <h2>2008</h2>
 <ul>
 <li class="pub_entry">
-<a target="_blank" href="https://ora.ox.ac.uk/objects/uuid:77175185-265b-4467-a81a-a9593ed329e7/download_file?file_format=pdf&safe_filename=Interacting%252520Quantum%252520Observables.pdf&type_of_work=Conference+item" class="title">Interacting quantum observables</a>,
+<a target="_blank" href="https://ora.ox.ac.uk/objects/uuid:77175185-265b-4467-a81a-a9593ed329e7/download_file?file_format=pdf&safe_filename=Interacting%252520Quantum%252520Observables.pdf&type_of_work=Conference+item" class="paperTitle">Interacting quantum observables</a>,
 <span class="authors">Bob Coecke and Ross Duncan</span>,
 <span class="journal">Proceedings of the 37th International Colloquium on Automata, Languages and Programming (ICALP)</span>
 <span class="year">(2008)</span>.
@@ -1718,10 +1721,16 @@ jQuery(document).ready(function ($) {
 
 
 <hr class="star-primary">
+<div class="header">
+    <a href="/">Home</a>
+    <a href="/publications.html">Publications</a>
+    <a href="/colours.html">Accessibility</a>
+    <a href="/map.html">Map</a>
+</div>
 <footer>
     <small>
     <center>
-        Â© 2019 | J. van de Wetering. Credits: AR template
+        © 2019 | J. van de Wetering. Credits: AR template
     <a onclick="javascript:$('#credit').toggle();"><img border="0" src="images/ccby.png"/></a>
     <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence: 
     <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
