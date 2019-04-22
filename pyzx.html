@@ -99,6 +99,8 @@ grid-template-columns: 2fr 3fr 2fr;">
                     # We list here the 'fast' circuits from https://github.com/Quantomatic/pyzx
                     # Note that this is a demonstration running inside your browser
                     # And so will be slower than running PyZX directly
+
+                    # Here is a list of the circuits included with this demonstration:
                     fast_circuits = ['Adder8',
                         'adder_8',
                         'barenco_tof_10',
@@ -147,6 +149,7 @@ grid-template-columns: 2fr 3fr 2fr;">
                         display(c_opt)
                         display("with a T-count of "+str(c_opt.tcount()))
                         
+                    # Apply the optimiser and show the results for:
                     optimise("mod5_4")
                         </script>
                 </div>
