@@ -1,5 +1,21 @@
-<h1>Suggested red and green colours</h1>
-
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/intro.css">
+    <style>
+    pre {
+      overflow: auto;
+    }
+    </style>
+</head>
+<body>
+  <div class="contentGrid" style="grid-template-columns: 1fr;">
+    <div class="title cell shaded row">
+      <h1>
+      ZX-calculus and accessibility
+      </h1>
+    </div>
+    <div class="cell row">
+    <h2>Suggested red and green colours</h2>
 <p>
   The ZX calculus has always been a red / green calculus.
   This can cause problems if authors use shades of red and green that are hard to distinguish
@@ -19,9 +35,12 @@
 <p>
   For methodology and metrics see the Jupyter notebook <a
     href="https://github.com/zx-outreach/accessibility/blob/master/colours.ipynb">here</a>.
+    Comments from the community are welcome.
 </p>
+</div>
+<div class="row cell">
 <h2>How to implement in LaTeX</h2>
-
+<p>
 Simply add the following two snippets of code to your preamble. The first defines the colours "zx_red" and "zx_green":
 
 <pre>
@@ -32,8 +51,20 @@ Simply add the following two snippets of code to your preamble. The first define
 The second defines two node types "gn" and "rn" for use inside tikz diagrams:
 
 <pre>
-\tikzstyle{gn}=[rectangle,rounded corners=0.8em,fill=zx_green,draw=Black,line width=0.8 pt,inner sep=3pt,minimum width=1.5em,minimum height=1.5em]
-\tikzstyle{rn}=[rectangle,rounded corners=0.8em,fill=zx_red,draw=Black,line width=0.8 pt,inner sep=3pt,minimum width=1.5em,minimum height=1.5em]
+\tikzstyle{gn}=[rectangle,rounded corners=0.8em,fill=zx_green,draw=Black,
+  line width=0.8 pt,inner sep=3pt,minimum width=1.5em,minimum height=1.5em]
+\tikzstyle{rn}=[rectangle,rounded corners=0.8em,fill=zx_red,draw=Black,
+  line width=0.8 pt,inner sep=3pt,minimum width=1.5em,minimum height=1.5em]
 </pre>
 
 Note that we encourage rounded rectangles over circles.
+</p>
+</div>
+</div>
+<div class="header">
+    <a href="/">Home</a>
+    <a href="/publications.html">Publications</a>
+    <a href="/colours.html">Accessibility</a>
+    <a href="/map.html">Map</a>
+</div>
+</body>
