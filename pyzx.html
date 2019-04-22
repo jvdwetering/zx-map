@@ -13,7 +13,7 @@
             font-weight: 700;
         }
 
-        .menu{
+        .menu {
             cursor: pointer;
             border-bottom: 1px dashed;
         }
@@ -46,7 +46,6 @@
         div.example {
             display: none;
         }
-
     </style>
 
 </head>
@@ -55,10 +54,12 @@
     <div style="display: grid; 
 grid-template-columns: 2fr 3fr 2fr;">
         <div class="row cell title shaded">
-            <h2>PyZX Demo</h2>
+            <h1>PyZX Demo</h1>
             <p>
-                An in-browser implementation of the protocol that was published [here],
-                based on the python code used and made available [here].
+                An in-browser implementation of the protocol that was published <a
+                    href="https://arxiv.org/abs/1903.10477">here</a>,
+                based on <a href="https://arxiv.org/abs/1904.04735#">PyZX</a>.
+                This page may take a moment to load.
             </p>
         </div>
 
@@ -67,7 +68,8 @@ grid-template-columns: 2fr 3fr 2fr;">
                 How to use this tool
             </h3>
             <p id="explanation">
-                PyZX [link] is a tool for analysing ZX diagrams (and therefore also quantum circuit diagrams,)
+                <a href="https://github.com/Quantomatic/pyzx">PyZX</a> is a tool for analysing ZX diagrams (and
+                therefore also quantum circuit diagrams,)
                 written in Python by a team at Radboud.
                 This webpage implements the same code, allowing you to use the tool inside your browser.
                 Below this description are three panels,
@@ -91,7 +93,64 @@ grid-template-columns: 2fr 3fr 2fr;">
         <div class="square console">
             <ul id="menu">
             </ul>
-            <div class="example" id="ex1">
+            <div class="example" id="ex3">
+                    <button>T-count optimisation</button>
+                    <script type="text/template">
+                    # We list here the 'fast' circuits from https://github.com/Quantomatic/pyzx
+                    # Note that this is a demonstration running inside your browser
+                    # And so will be slower than running PyZX directly
+                    fast_circuits = ['Adder8',
+                        'adder_8',
+                        'barenco_tof_10',
+                        'barenco_tof_3',
+                        'barenco_tof_4',
+                        'barenco_tof_5',
+                        'csla_mux_3_original',
+                        'csum_mux_9_corrected',
+                        'gf2^10_mult',
+                        'gf2^4_mult',
+                        'gf2^5_mult',
+                        'gf2^6_mult',
+                        'gf2^7_mult',
+                        'gf2^8_mult',
+                        'gf2^9_mult',
+                        'grover_5.qc',
+                        'ham15-low.qc',
+                        'hwb6.qc',
+                        'mod5_4',
+                        'mod_mult_55',
+                        'mod_red_21',
+                        'nth_prime6.tfc',
+                        'qcla_adder_10',
+                        'qcla_com_7',
+                        'qcla_mod_7',
+                        'QFT16',
+                        'QFT8',
+                        'QFTAdd8',
+                        'qft_4.qc',
+                        'rc_adder_6',
+                        'tof_10',
+                        'tof_3',
+                        'tof_4',
+                        'tof_5',
+                        'vbe_adder_3']
+    
+                    def optimise(file):
+                        c = zx.Circuit.from_quipper_file("./circuits/"+file+"_before")
+                        g = c.to_graph()
+                        g = zx.simplify.teleport_reduce(g)
+                        c_opt = zx.Circuit.from_graph(g).split_phase_gates().to_basic_gates()
+                        display("Starting with circuit")
+                        display(c)
+                        display("with a T-count of "+str(c.tcount()))
+                        display("Ending with circuit")
+                        display(c_opt)
+                        display("with a T-count of "+str(c_opt.tcount()))
+                        
+                    optimise("mod5_4")
+                        </script>
+                </div>
+            <div class="example" id="ex0">
                 <button>Generating and simplifying a Circuit</button>
                 <script type="text/template">
                         # Generate a random circuit on 3 qubits, depth 20
@@ -105,7 +164,7 @@ grid-template-columns: 2fr 3fr 2fr;">
                         display(zx.draw(g))
                     </script>
             </div>
-            <div class="example" id="ex0">
+            <div class="example" id="ex1">
                 <button>Manually constructing a ZX-diagram</button>
                 <script type="text/template">
                         # Instantiate an empty graph
@@ -134,6 +193,7 @@ grid-template-columns: 2fr 3fr 2fr;">
                         display(zx.tikz.to_tikz(g))
                     </script>
             </div>
+            
         </div>
         <div class="square">
             <div id="editor" class="console"></div>
@@ -157,11 +217,12 @@ grid-template-columns: 2fr 3fr 2fr;">
 
 
     <div class="header">
-            <a href="/">Home</a>
-            <a href="/publications.html">Publications</a>
-            <a href="/accessibility.html">Accessibility</a>
-            <a href="/map.html">Map</a>
-        </div>
+        <a href="/">Home</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/map.html">Map</a>
+        <a href="/pyzx.html">PyZX Demo</a>
+    </div>
 
     <script type="text/python">
     from browser import window
