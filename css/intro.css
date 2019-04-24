@@ -1,8 +1,6 @@
 .square {
     grid-column: span 1;
     grid-row: span 1;
-    align-self: center;
-    justify-self: center;
 }
 
 .row {
