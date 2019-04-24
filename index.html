@@ -79,8 +79,8 @@
             in a visually succint but logically complete manner.
 
         </div>
-        <div id="introImage" class="square cell">
-            <img src="./figures/cnot.svg" />
+        <div id="introImage" class="square" style="text-align: center;">
+            <img src="./figures/cnot.svg" style="max-height: 100%; max-width: 100%;"/>
         </div>
         <div id="introDerivation" class="derivation row cell">
             <h2>Example derivation</h2>
@@ -93,24 +93,37 @@
             <div id="slideshowDots">
             </div>
         </div>
-        <div id="introPublications" class="row cell">
+        <div class="square cell">
             <h2>
                 PyZX demonstration
             </h2>
             <p>
-                We have <a
-                href="./pyzx.html">implemented a demonstration</a> of the T-count optimising procedure from
+                We have <a href="./pyzx.html">implemented an in-browser demonstration</a> of the T-count optimising procedure from
                 <a href="https://arxiv.org/abs/1903.10477">this paper</a>.
             </p>
+        </div>
+        <div class="square cell">
+            <img src="/images/pyzx.png" style="max-width: 100%; max-height: 100%;">
+        </div>
+        <div id="introPublications" class="row cell">
             <h2>Selected publications</h2>
+            <p>Although there are <a href="./publications.html">plenty</a> of papers on ZX-calculus related work,
+            many of those are on the development and properties of the language rather than on its applications.
+            Here are a few papers that show the calculus' uses and also its most modern presentation.
+            </p>
             <ul>
-                <li><a href="./publications.html">Paper link</a></li>
+                <li><a href="https://arxiv.org/abs/1903.10477">Reducing T-count with the ZX-calculus.</a></li>
+                <li><a href="https://arxiv.org/abs/1812.09114">A Near-Optimal Axiomatisation of ZX-Calculus for Pure
+                        Qubit Quantum Mechanics</a></li>
             </ul>
             <h2>Other parts of the site:</h2>
+            These are also accessible from the banner at the top of the page.
             <ul>
                 <li><a href="./publications.html">A full, searchable list of publications</a></li>
                 <li><a href="./map.html">A map of the ZX community</a></li>
-                <li><a href="./accessibility.html">Accessibility advice on colour choice and conference livestreaming</a></li>
+                <li><a href="./accessibility.html">Accessibility advice on colour choice and conference
+                        livestreaming</a></li>
+                <li><a href="./pyzx.html">An in-browser demonstration of (part of) PyZX</a></li>
             </ul>
             </p>
         </div>
