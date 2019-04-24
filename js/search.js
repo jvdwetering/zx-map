@@ -12,7 +12,7 @@ function search(s) {
         return ""
       }
     }
-    var h = "" + find("title") + find("authors") + find("abstract") + find("keywords")
+    var h = "" + find("paperTitle") + find("authors") + find("abstract") + find("keywords")
     if (h.match(reg)) {
       $(elt).show()
     } else {
