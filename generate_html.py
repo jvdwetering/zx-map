@@ -19,6 +19,18 @@ def normalise_name(n):
     p1, p2 = n.split(', ')
     return p2.strip() + " " + p1.strip()
 
+def parse_math(s):
+    i = s.rfind('$',0)
+    while i != -1:
+        j = s.rfind('$',0,i)
+        if j == -1: raise Exception("No matching $ in abstract: ", s)
+        s = s[:j] + "\\(" + s[j+1:i] + "\\)" + s[i+1:]
+        i = s.rfind('$')
+    return s
+
+def clean_text(s):
+    return s.replace('{','').replace('}','').replace(r'\rm','')
+
 HTML = r"""
 <a target="_blank" href="{url}" class="paperTitle">{title}</a>,
 <span class="authors">{authors}</span>,
@@ -35,6 +47,18 @@ def entry_to_html(entry):
     db = BibDatabase()
     db.entries = [entry]
     raw_bibdata = writer.write(db)
+
+    if 'journal' in entry:
+        journal = clean_text(entry['journal'])
+    elif 'booktitle' in entry:
+        journal = clean_text(entry['booktitle'])
+    elif 'note' in entry:
+        journal = clean_text(entry['note'])
+    else:
+        print("Missing entries:")
+        print(entry)
+        raise
+    journal = journal.replace('\n', ' ')
     
     e = bibtexparser.customization.author(entry)
     bibtexparser.customization.convert_to_unicode(entry)
@@ -47,26 +71,15 @@ def entry_to_html(entry):
         authors += normalise_name(e['author'][-2]) + " and "
         authors += normalise_name(e['author'][-1])
 
-    if 'journal' in entry:
-        journal = entry['journal']
-    elif 'booktitle' in entry:
-        journal = entry['booktitle']
-    elif 'note' in entry:
-        journal = entry['note']
-    else:
-        print("Missing entries:")
-        print(entry)
-        raise
-    journal = journal.replace('\n', ' ')
 
     if 'keywords' in entry: kw = entry['keywords']
     elif 'keyword' in entry: kw = entry['keyword']
     else: kw = ""
     keywords = [s.strip() for s in kw.split(',')]
     keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
-    html = HTML.format(url = entry['link'], title=entry['title'],
+    html = HTML.format(url = entry['link'], title=clean_text(entry['title']),
                        authors = authors, journal = journal,
-                       year = entry['year'], abstract=entry['abstract'],
+                       year = entry['year'], abstract=parse_math(entry['abstract']),
                        bibdata=raw_bibdata, keywords = keyword_html)
     for kw in keywords:
         if kw in keyword_pubs: keyword_pubs[kw].append(html)
