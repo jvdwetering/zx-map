@@ -45,11 +45,27 @@
         div.example {
             display: none;
         }
-    </style>
 
+        #obscure {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            z-index: 2;
+            background-color: #ffffffcc;
+            text-align: center;
+            padding: 5em;
+        }
+    </style>
 </head>
 
 <body onload="brython({debug: 0, indexedDB: true})">
+    <div id="obscure">
+        <h1>
+            Loading...
+        </h1>
+    </div>
     <div style="display: grid; 
 grid-template-columns: 2fr 3fr 2fr;">
         <div class="row cell title shaded">
@@ -58,7 +74,6 @@ grid-template-columns: 2fr 3fr 2fr;">
                 An in-browser implementation of the protocol that was published <a
                     href="https://arxiv.org/abs/1903.10477">here</a>,
                 based on <a href="https://arxiv.org/abs/1904.04735#">PyZX</a>.
-                This page may take a moment to load.
             </p>
         </div>
 
@@ -352,6 +367,7 @@ grid-template-columns: 2fr 3fr 2fr;">
 
     #timer.set_timeout(respond,0)
     button.innerHTML = "Run Code"
+    doc["obscure"].hidden = True
 </script>
 
 
