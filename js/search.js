@@ -40,7 +40,7 @@ $(function(){ // Code to be executed once all the html is ready
   $("#txtSearch").val("");
   var s = window.location.search.substr(1);
   if (s != null && s != "" && s[0] == 'q') {
-    forceSearch(s.split('=')[1])
+    forceSearch(decodeURI(s).split('=')[1])
   }
 
 }
