@@ -251,7 +251,7 @@
     note = {University of Oxford MSc thesis},
     Title = {Quantum Protocols involving Multiparticle Entanglement and their Representations in the ZX-calculus},
     Year = {2011},
-    keywords = {ZX-Calculus, Protocols},
+    keywords = {ZX-Calculus, Protocols, Master Thesis},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Anne.pdf},
     abstract = {Quantum entanglement, described by Einstein as "spooky action at a distance", is a key resource in many quantum protocols, like quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to follow and check. This is why Coecke and Duncan have introduced a diagrammatic language for multi-qubit systems, called the red/green calculus or the ZX-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. One crucial feature that will be exploited here is the encoding of complementary observables and corresponding phase shifts. Reasoning is done by rewriting diagrams, i.e. locally replacing some part of a diagram. Diagrams are defined by their topology only; the number of inputs and outputs and the way they are connected. This exemplifies the 'flow' of information. For protocols involving multipartite entangled states, such as the GreenbergerHorne-Zeilinger and W-state, it will be shown that the zx-calculus provides a relatively easy and more intuitive presentation. Moreover, in this representation it is easier to check that protocols are correct. Protocols that will be discussed in detail are quantum teleportation, quantum cryptography, leader election, superdense coding and quantum direct communication with multipartite entangled states.}
 }
@@ -603,7 +603,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     title = {Equivalence of Local Complementation and Euler Decomposition in the Qutrit ZX-calculus},
     link = {http://arxiv.org/abs/1704.05955},
     keywords = {ZX-Calculus, Qutrits, Local Complementation},
-    abstract = {In this paper, we give a modified version of the qutrit ZX-calculus, by which we represent qutrit graph states as diagrams and prove that the qutrit version of local complementation property is true if and only if the qutrit Hadamard gate \$H\$ has an Euler decomposition into $4\pi/3$-green and red rotations. This paves the way for studying the completeness of qutrit ZX-calculus for qutrit stabilizer quantum mechanics.},
+    abstract = {In this paper, we give a modified version of the qutrit ZX-calculus, by which we represent qutrit graph states as diagrams and prove that the qutrit version of local complementation property is true if and only if the qutrit Hadamard gate H has an Euler decomposition into $4\pi/3$-green and red rotations. This paves the way for studying the completeness of qutrit ZX-calculus for qutrit stabilizer quantum mechanics.},
     urldate = {2017-04-21},
     journal = {arXiv:1704.05955 [quant-ph]},
     author = {Gong, Xiaoyan and Wang, Quanlong},
@@ -863,13 +863,13 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     abstract = {ZX-calculus is a high-level graphical language used for quantum computation.  A complete set of axioms for ZX-calculus has been found very recently. This thesis works towards minimizing axioms of ZX-calculus for Clifford+T quantum  mechanics,  a  fragment  consisting  of  an  approximately  universal gate  set. Similar work  has  been  done  for  the  smaller  fragment,  stabilizer quantum mechanics, which motivates many of our proofs.  We derive some singleton axioms and instances of axiom schemes.  We establish the necessity and some weaker independence results of several axioms, by considering a variety of models.  As a further step towards simplification we also consider alternative  presentations  of  axioms  that  are  equivalent  and  discuss  their uses.}
 }
 
-@unpublished{Christian,
-    Author = {Schr{\"o}der, Christian},
+@unpublished{ChristianMSC,
+    Author = {Schr{\"o}der de Witt, Christian },
     Note = {University of Oxford MSc thesis},
     Title = {The ZX calculus is incomplete for non-stabilizer quantum mechanics},
     Year = {2013},
     keywords = {ZX-Calculus, Completeness, Master Thesis},
-    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Christian_thesis.pdf},
     abstract = {We prove that the ZX-calculus is incomplete for non-stabilizer quantum mechanics.   We suggest additional rules to be integrated with the graphical calculus and possible further incompleteness sources.  We express a simple quantum error correction circuit in Selinger's CPM construction in an attempt to obtain a graphical construction framework for general stabilizer error codes.  We also provide a simple framework for the integration of gate approximation errors into the ZX-calculus, including a simple way of propagating upper approximation bounds through quantum circuits.}
 }
 
@@ -915,7 +915,7 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
 }
 
 @article{GraphicalFourier2019,
-    Author = { Kuijpers , Stach and  Van de Wetering, John and  Kissinger, Aleks },
+    Author = {Kuijpers, Stach and van de Wetering, John and  Kissinger, Aleks},
     Title = {{Graphical Fourier Theory and the Cost of Quantum Addition}},
     Year = {2019},
     keywords = {ZH-Calculus, ZX-Calculus, Fourier},
@@ -934,3 +934,13 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
     abstract = {Many physical implementations of quantum computers impose stringent memory constraints in which 2-qubit operations can only be performed between qubits which are nearest neighbours in a lattice or graph structure. Hence, before a computation can be run on such a device, it must be mapped onto the physical architecture. That is, logical qubits must be assigned physical locations in the quantum memory, and the circuit must be replaced by an equivalent one containing only operations between nearest neighbours. In this paper, we give a new technique for quantum circuit mapping (a.k.a. routing), based on Gaussian elimination constrained to certain optimal spanning trees called Steiner trees. We give a reference implementation of the technique for CNOT circuits and show that it significantly out-performs general-purpose routines on CNOT circuits. We then comment on how the technique can be extended straightforwardly to the synthesis of CNOT+Rz circuits and as a modification to a recently-proposed circuit simplification/extraction procedure for generic circuits based on the ZX-calculus. }
 }
 
+
+@unpublished{HerrmannThesis,
+    Author = {Herrmann, Michael},
+    note = {University of Oxford MSc thesis},
+    Title = {Models of Multipartite Entanglement},
+    Year = {2010},
+    keywords = {ZW-Calculus, Entanglement, Master Thesis},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Michael.pdf},
+    abstract = {While multipartite entanglement is a crucial resource for many quantum algorithms and protocols, the abstract, structural rules governing it are still not fully understood. In their recent paper, Coecke and Kissinger propose a new language called GHZ/W-calculus that aims to give a structural axiomatization of multipartite entanglement in terms of interacting ``special'' and ``anti-special'' commutative Frobenius algebras (S/A-CFAs). These algebraic structures correspond precisely to the two different types of genuine entanglement between three qubits, as given by inter-convertability by stochastic local (quantum) operations and classical communication (SLOCC). An important feature of the language is that it lives in the framework of categorical quantum mechanics and thus comes with a Penrose-Joyal-Street graphical calulus. This thesis explores the expressive power of the GHZ/W-calculus. We prove a new result that demonstrates the canonicity of the recent concept of antispeciality for CFAs and use it to give a new classification of Frobenius Algebras on $\mathbb{C}^2$ in FdHilb, the category of finite-dimensional Hilbert spaces and bounded linear maps. Next, we look at the non-standard model of categorical quantum mechanics given by FRel, the category of finite sets and binary relations. We classify all special CFAs in this category, prove some properties of anti-special ones and identify precisely which SCFAs/ACFAs are captured by the GHZ/W-language. Finally, we define a quantum AND gate in the graphical language and prove (or disprove) some of its properties. We come to the conclusion that the GHZ/W-calculus is unlikely to be the final answer to the structural entanglement problem in dimensions $D > 2$ and identify intermediate ranks $1 < rank < D$ as the notion it fails to explain.}
+}
