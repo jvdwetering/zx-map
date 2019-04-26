@@ -159,7 +159,7 @@ def parse_map_data(js):
         name = first.strip()+ " " + last.strip()
         people[name] = {'id': n, 'places': [], 'fields': []}
         if name in coauthors:
-            people[name]['coauthors'] = list(coauthors[name])
+            people[name]['coauthors'] = sorted(coauthors[name])
         else: people[name]['coauthors'] = []
         for place in d["place"]:
             if place not in places:
@@ -180,7 +180,7 @@ def parse_map_data(js):
     infodata = ""
     for place, d in places.items():
         nodedata += '  addNode({:d},"{}", "place")\n'.format(d['id'],place)
-        infodata += PLACEDIV.format(d['id'], place, ", ".join(person_link(p) for p in d['people']))
+        infodata += PLACEDIV.format(d['id'], place, ", ".join(person_link(p) for p in sorted(d['people'])))
     for person, d in people.items():
         nodedata += '  addNode({:d},"{}", "person")\n'.format(d['id'],person)
         if not d['coauthors']: authorstr = ""
@@ -189,7 +189,7 @@ def parse_map_data(js):
                                 ", ".join(d['fields']), authorstr)
     for field, d in fields.items():
         nodedata += '  addNode({:d},"{}", "field")\n'.format(d['id'],field)
-        infodata += FIELDDIV.format(d['id'], field, ", ".join(person_link(p) for p in d['people']))
+        infodata += FIELDDIV.format(d['id'], field, ", ".join(person_link(p) for p in sorted(d['people'])))
     for t,s in edges:
         nodedata += "  addLink({:d},{:d})\n".format(t,s)
 
