@@ -55,50 +55,6 @@
 	height: 20px;
 	background: url('../images/ppt.gif') no-repeat 0px 3px;
 }
-.isotope-item {
-  z-index: 2;
-}
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-.category-title {
-	text-align: center;
-	font-weight: bold;
-}
-
-.isotope,
-.isotope .isotope-item {
-
-/* change duration value to whatever you like */
-
-	-webkit-transition-duration: 0s;
-	-moz-transition-duration: 0s;
-	-ms-transition-duration: 0s;
-	-o-transition-duration: 0s;
-	transition-duration: 0s;
-}
-	  	
-
-	  	
-.isotope {
-	-webkit-transition-property: height, width;
-	-moz-transition-property: height, width;
-	-ms-transition-property: height, width;
-	-o-transition-property: height, width;
-	transition-property: height, width;
-}
-	  	
-
-	  	
-.isotope .isotope-item {
-	-webkit-transition-property: -webkit-transform, opacity;
-	-moz-transition-property:    -moz-transform, opacity;
-	-ms-transition-property:     -ms-transform, opacity;
-	-o-transition-property:         top, left, opacity;
-	transition-property:         transform, opacity;
-}
 
 .bg-success {
 	background-color: #dff0d8;
@@ -122,4 +78,14 @@ input[type="checkbox"] {
 
 label {
 	font-weight: inherit;
+}
+
+.abstract {
+	max-width: 90%;
+}
+
+code {
+	overflow: auto;
+	max-width: 90%;
+	white-space: pre-wrap;
 }

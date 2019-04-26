@@ -38,8 +38,11 @@ HTML = r"""
 <span class="year">({year})</span>.
 <br>
 Keywords: <span class="keywords">{keywords}</span>.
-<span class="abstract">{abstract}</span>
-<span class="bibdata"><pre><code>{bibdata}</code></pre></span>"""
+<a href="#" class="abstract_more">Abstract</a>&nbsp;&nbsp;
+<a href="#" class="bibdata_more">Bibdata</a>
+<br>
+<span class="abstract" style="display:none">{abstract}</span>
+<span class="bibdata" style="display:none"><pre><code>{bibdata}</code></pre></span>"""
 
 keyword_pubs = dict()
 
