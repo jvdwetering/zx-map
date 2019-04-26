@@ -1,5 +1,5 @@
 function log(a) {
-  console.log(a)
+  console.log(a);
 }
 
 function search(s) {
@@ -35,8 +35,13 @@ $(function(){ // Code to be executed once all the html is ready
   $("input[type='checkbox']").on("change", function(){
     log("chk")
     updateSearch()
-  })
+  });
   // Clear the search box on page load
-  $("#txtSearch").val("")
+  $("#txtSearch").val("");
+  var s = window.location.search.substr(1);
+  if (s != null && s != "" && s[0] == 'q') {
+    forceSearch(s.split('=')[1])
+  }
+
 }
 )
