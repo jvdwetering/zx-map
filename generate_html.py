@@ -73,10 +73,13 @@ def entry_to_html(entry):
     e = bibtexparser.customization.author(entry)
     bibtexparser.customization.convert_to_unicode(entry)
     authors = ""
+
+    publink = """<a href="{}" target="_blank">{}</a>""".format(entry['link'], clean_text(entry['title']))
+
     if len(e['author'])==1:
         authors = normalise_name(e['author'][0])
         if authors not in coauthors: coauthors[authors] = set()
-        if authors not in latest_pubs: latest_pubs[authors] = clean_text(entry['title'])
+        if authors not in latest_pubs: latest_pubs[authors] = publink
     else:
         names = [normalise_name(a) for a in e['author']]
         for a in names[:-2]:
@@ -87,7 +90,7 @@ def entry_to_html(entry):
         for author in names:
             if author not in coauthors: coauthors[author] = set()
             coauthors[author].update(authorset.difference({author}))
-            if author not in latest_pubs: latest_pubs[author] = clean_text(entry['title'])
+            if author not in latest_pubs: latest_pubs[author] = publink
 
 
     if 'keywords' in entry: kw = entry['keywords']
@@ -187,7 +190,7 @@ def parse_map_data(js):
     for person, d in people.items():
         nodedata += '  addNode({:d},"{}", "person")\n'.format(d['id'],person)
         if person in latest_pubs:
-            authorstr = "<p>Latest publication: <i>" + latest_pubs[person] + "</i></p>"
+            authorstr = "<p>Latest publication: " + latest_pubs[person] + "</p>"
         else: authorstr = ""
         if d['coauthors']: authorstr += "<p><i>Coauthors</i>: "+ ", ".join(person_link(p) for p in d['coauthors']) + "</p>"
         infodata += PERSONDIV.format(d['id'], person_link(person), ", ".join(d['places']),
