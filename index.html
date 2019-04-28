@@ -64,6 +64,11 @@
             console.log(slideIndex)
         } 
     </script>
+    <style>
+        #introImage {
+            align-self: center;
+        }
+    </style>
 </head>
 
 <body onload="setup()">
@@ -72,12 +77,28 @@
             <h1>The ZX-calculus</h1>
         </div>
         <div id="introText" class="square cell">
-            The ZX-calculus is a graphical language that goes beyond circuit diagrams.
-            It works by generalising the ideas of the Z and X operations,
-            allowing us to break out of the circuit model while maintaining soundness of reasoning.
-            In doing so we can show properties of circuits, entanglement states, and protocols,
-            in a visually succint but logically complete manner.
+            <p>
+                The ZX-calculus is a graphical language that goes beyond circuit diagrams.
+                It ‘splits the atom’ of well-known quantum logic gates to reveal the compositional structure inside.
+                The calculus works by generalising the ideas of Z and X operations,
+                allowing us to break out of the circuit model while maintaining soundness of reasoning.
+                In doing so we can show properties of circuits, entanglement states, and protocols, in a visually
+                succinct
+                but logically complete manner.
+            </p>
 
+            <p>
+                The ZX-calculus is forging the next generation of quantum software.
+                Using the calculus gives optimisation strategies that out-perform all others in T-count reduction (an
+                important metric for fault-tolerant computing) and gate compilation.
+                The generators of the calculus correspond closely to the basic operations of lattice surgery in the
+                surface
+                code, giving a visual design and verification language for these codes;
+                and ZX has also been used to discover novel error correction procedures.
+                It comes with a scalable notation capable of representing repeated structures at arbitrary qubit scales.
+                The calculus also acts in the crucial role of an intermediate representation in a new commercial quantum
+                compiler.
+            </p>
         </div>
         <div id="introImage" class="square" style="text-align: center;">
             <img src="./figures/cnot.svg" style="max-height: 100%; max-width: 100%;" />
@@ -130,7 +151,8 @@
         </div>
         <div class="row cell">
             <p class="subtle">
-                Website by <a href="hmillerbakewell.github.io/website">Hector Miller-Bakewell</a> and <a href="vdwetering.name">John van
+                Website by <a href="hmillerbakewell.github.io/website">Hector Miller-Bakewell</a> and <a
+                    href="vdwetering.name">John van
                     der Wetering</a>,
                 with thanks to
                 <a
