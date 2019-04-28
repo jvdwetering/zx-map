@@ -64,6 +64,11 @@
             console.log(slideIndex)
         } 
     </script>
+    <style>
+        #introImage {
+            align-self: center;
+        }
+    </style>
 </head>
 
 <body onload="setup()">
@@ -72,15 +77,31 @@
             <h1>The ZX-calculus</h1>
         </div>
         <div id="introText" class="square cell">
-            The ZX-calculus is a graphical language that goes beyond circuit diagrams.
-            It works by generalising the ideas of the Z and X operations,
-            allowing us to break out of the circuit model while maintaining soundness of reasoning.
-            In doing so we can show properties of circuits, entanglement states, and protocols,
-            in a visually succint but logically complete manner.
+            <p>
+                The ZX-calculus is a graphical language that goes beyond circuit diagrams.
+                It ‘splits the atom’ of well-known quantum logic gates to reveal the compositional structure inside.
+                The calculus works by generalising the ideas of Z and X operations,
+                allowing us to break out of the circuit model while maintaining soundness of reasoning.
+                In doing so we can show properties of circuits, entanglement states, and protocols, in a visually
+                succinct
+                but logically complete manner.
+            </p>
 
+            <p>
+                The ZX-calculus is forging the next generation of quantum software.
+                Using the calculus gives optimisation strategies that out-perform all others in T-count reduction (an
+                important metric for fault-tolerant computing) and gate compilation.
+                The generators of the calculus correspond closely to the basic operations of lattice surgery in the
+                surface
+                code, giving a visual design and verification language for these codes;
+                and ZX has also been used to discover novel error correction procedures.
+                It comes with a scalable notation capable of representing repeated structures at arbitrary qubit scales.
+                The calculus also acts in the crucial role of an intermediate representation in a new commercial quantum
+                compiler.
+            </p>
         </div>
         <div id="introImage" class="square" style="text-align: center;">
-            <img src="./figures/cnot.svg" style="max-height: 100%; max-width: 100%;"/>
+            <img src="./figures/cnot.svg" style="max-height: 100%; max-width: 100%;" />
         </div>
         <div id="introDerivation" class="derivation row cell">
             <h2>Example derivation</h2>
@@ -98,7 +119,8 @@
                 PyZX demonstration
             </h2>
             <p>
-                We have <a href="./pyzx.html">implemented an in-browser demonstration</a> of the T-count optimising procedure from
+                We have <a href="./pyzx.html">implemented an in-browser demonstration</a> of the T-count optimising
+                procedure from
                 <a href="https://arxiv.org/abs/1903.10477">this paper</a>.
             </p>
         </div>
@@ -108,8 +130,8 @@
         <div id="introPublications" class="row cell">
             <h2>Selected publications</h2>
             <p>Although there are <a href="./publications.html">plenty</a> of papers on ZX-calculus related work,
-            many of those are on the development and properties of the language rather than on its applications.
-            Here are a few papers that show the calculus' uses and also its most modern presentation.
+                many of those are on the development and properties of the language rather than on its applications.
+                Here are a few papers that show the calculus' uses and also its most modern presentation.
             </p>
             <ul>
                 <li><a href="https://arxiv.org/abs/1903.10477">Reducing T-count with the ZX-calculus.</a></li>
@@ -125,6 +147,18 @@
                         livestreaming</a></li>
                 <li><a href="./pyzx.html">An in-browser demonstration of (part of) PyZX</a></li>
             </ul>
+            </p>
+        </div>
+        <div class="row cell">
+            <p class="subtle">
+                Website by <a href="hmillerbakewell.github.io/website">Hector Miller-Bakewell</a> and <a
+                    href="vdwetering.name">John van
+                    der Wetering</a>,
+                with thanks to
+                <a
+                    href="https://quantum.univ-grenoble-alpes.fr/fostering-the-ecosystem/our-chairs-of-excellence/quantum-computing/horsman-dominic-734445.htm">
+                    Dom Horsman
+                </a> and Richard East
             </p>
         </div>
     </div>

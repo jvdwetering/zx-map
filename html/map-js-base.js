@@ -23,6 +23,7 @@ NODEDATAHERE
 
   // Event handling
 
+  var selected = null;
 
   drag = simulation => {
 
@@ -30,6 +31,11 @@ NODEDATAHERE
       if (!d3.event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;
       d.fy = d.y;
+      if (selected != null) {
+        $("#info-"+selected).toggle();
+      }
+      $("#info-"+d.id).toggle();
+      selected = d.id;
     }
 
     function dragged(d) {

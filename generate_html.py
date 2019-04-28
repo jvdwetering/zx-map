@@ -1,3 +1,8 @@
+import json
+
+#############################################
+# First we do Publications stuff
+
 import bibtexparser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
@@ -45,6 +50,8 @@ Keywords: <span class="keywords">{keywords}</span>.
 <span class="bibdata" style="display:none"><pre><code>{bibdata}</code></pre></span>"""
 
 keyword_pubs = dict()
+coauthors = dict()
+latest_pubs = dict()
 
 def entry_to_html(entry):
     db = BibDatabase()
@@ -66,13 +73,24 @@ def entry_to_html(entry):
     e = bibtexparser.customization.author(entry)
     bibtexparser.customization.convert_to_unicode(entry)
     authors = ""
+
+    publink = """<a href="{}" target="_blank">{}</a>""".format(entry['link'], clean_text(entry['title']))
+
     if len(e['author'])==1:
         authors = normalise_name(e['author'][0])
+        if authors not in coauthors: coauthors[authors] = set()
+        if authors not in latest_pubs: latest_pubs[authors] = publink
     else:
-        for a in e['author'][:-2]:
-            authors += normalise_name(a) + ", "
-        authors += normalise_name(e['author'][-2]) + " and "
-        authors += normalise_name(e['author'][-1])
+        names = [normalise_name(a) for a in e['author']]
+        for a in names[:-2]:
+            authors += a + ", "
+        authors += names[-2] + " and "
+        authors += names[-1]
+        authorset = set(names)
+        for author in names:
+            if author not in coauthors: coauthors[author] = set()
+            coauthors[author].update(authorset.difference({author}))
+            if author not in latest_pubs: latest_pubs[author] = publink
 
 
     if 'keywords' in entry: kw = entry['keywords']
@@ -109,41 +127,99 @@ def library_to_html(lib):
 
     return output
 
-def generate_keyword_page(kw):
-    entries = keyword_pubs[kw]
-    output = "<ul>\n"
-    for e in entries:
-        output += '<li class="pub_entry">' + e + "</li>" +"\n"
-    output += "</ul>\n \n"
-    return output
-
-def generate_keyword_html():
-    l = list(keyword_pubs.keys())
-    l.sort(key=lambda v: len(keyword_pubs[v]),reverse=True)
-    return ", ".join('<a target="_blank" href="keywords/{}.html">{}</a> ({})'.format(kw.lower(),kw,len(keyword_pubs[kw])) for kw in l)
-
-def to_clipboard(s):
-    try:
-        from Tkinter import Tk
-    except ImportError:
-        from tkinter import Tk
-    r = Tk()
-    r.withdraw()
-    r.clipboard_clear()
-    r.clipboard_append(s)
-    r.update() # now it stays on the clipboard after the window is closed
-    r.destroy()
-
-if __name__ == '__main__':
+def generate_publications_html():
     with open('zx-papers.bib',encoding='utf-8') as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
         bib_data = library_to_html(bib_database)
-    with open('html/expand.js') as f:
-        js_base = f.read()
     #Generate main page
-    with open('html/base_html.html') as f:
+    with open('html/publications_base.html') as f:
         html_base = f.read()
-    output = html_base.format(keywords=generate_keyword_html(), content=bib_data,javascript=js_base)
+    output = html_base.format(content=bib_data)
     f = open("publications.html",'wb')
     f.write(output.encode('utf-8'))
     f.close()
+
+############################################
+# Now we do ZX-Map stuff
+
+PLACEDIV  = """<div class="place" id="info-{:d}" style="display:none"><b>{}</b>:
+<br></br>{}</div>\n"""
+PERSONDIV = """<div class="person" id="info-{:d}" style="display:none"><b>{}</b> ({}): {}
+{}</div>\n"""
+FIELDDIV  = """<div class="field" id="info-{:d}" style="display:none"><b>{}</b>:
+<br></br>{}</div>\n"""
+
+def person_link(name):
+    return """<a href="/publications.html?q={name}" target="_blank" class="person-link">{name}</a>""".format(name=name)
+
+def parse_map_data(js):
+    nodecount = 0
+    people = {}
+    places = {}
+    fields = {}
+    edges = []
+    for p, d in js["people"].items():
+        last, first = p.split(',')
+        n = nodecount
+        nodecount += 1
+        name = first.strip()+ " " + last.strip()
+        people[name] = {'id': n, 'places': [], 'fields': []}
+        if name in coauthors:
+            people[name]['coauthors'] = sorted(coauthors[name])
+        else: people[name]['coauthors'] = []
+        for place in d["place"]:
+            if place not in places:
+                places[place] = {'id': nodecount, 'people': []}
+                nodecount += 1
+            places[place]['people'].append(name)
+            people[name]['places'].append(place)
+            edges.append((places[place]['id'],n))
+        for field in d["fields"]:
+            if field not in fields:
+                fields[field] = {'id': nodecount, 'people': []}
+                nodecount += 1
+            fields[field]['people'].append(name)
+            people[name]['fields'].append(field)
+            edges.append((fields[field]['id'],n))
+                
+    nodedata = ""
+    infodata = ""
+    for place, d in places.items():
+        nodedata += '  addNode({:d},"{}", "place")\n'.format(d['id'],place)
+        infodata += PLACEDIV.format(d['id'], place, ", ".join(person_link(p) for p in sorted(d['people'])))
+    for person, d in people.items():
+        nodedata += '  addNode({:d},"{}", "person")\n'.format(d['id'],person)
+        if person in latest_pubs:
+            authorstr = "<p>Latest publication: " + latest_pubs[person] + "</p>"
+        else: authorstr = ""
+        if d['coauthors']: authorstr += "<p><i>Coauthors</i>: "+ ", ".join(person_link(p) for p in d['coauthors']) + "</p>"
+        infodata += PERSONDIV.format(d['id'], person_link(person), ", ".join(d['places']),
+                                ", ".join(d['fields']), authorstr)
+    for field, d in fields.items():
+        nodedata += '  addNode({:d},"{}", "field")\n'.format(d['id'],field)
+        infodata += FIELDDIV.format(d['id'], field, ", ".join(person_link(p) for p in sorted(d['people'])))
+    for t,s in edges:
+        nodedata += "  addLink({:d},{:d})\n".format(t,s)
+
+    return nodedata, infodata
+
+
+def generate_map_html():
+    with open("mapdata.json",'r', encoding='utf-8') as f:
+        js = json.load(f)
+    nodedata, infodata = parse_map_data(js)
+    with open("html/map-js-base.js",'r') as f:
+        data = f.read()
+    data = data.replace("NODEDATAHERE", nodedata)
+    with open("js/force-directed-graph.js", 'w', encoding='utf-8') as f:
+        f.write(data)
+
+    with open("html/map_base.html", 'r') as f:
+        data = f.read()
+    data = data.replace("INFODATAHERE", infodata)
+    with open("map.html", 'w', encoding='utf-8') as f:
+        f.write(data)
+
+if __name__ == '__main__':
+    generate_publications_html()
+    generate_map_html()
