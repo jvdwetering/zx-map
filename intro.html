@@ -16,6 +16,10 @@
         .cell {
             align-self: center;
         }
+
+        ul.expanded>li {
+            margin: 1em;
+        }
     </style>
 </head>
 
@@ -29,6 +33,7 @@
             <h2>Reading the rules</h2>
         </div>
         <div class="square cell">
+            <h2>What is a rule?</h2>
             <p>
                 The ZX-calculus has two important meta-rules:
                 <ul>
@@ -36,13 +41,16 @@
                     <li> Everything is still true if you swap red and green</li>
                 </ul>
 
-                Let's give an example.
+                All other rules in the ZX-calculus
+                look like an equation between two diagrams.
+                For example:
                 The rule to the right is called the green spider rule,
                 and this is because these coloured nodes
                 remind people of spiders with bodies (the coloured circle) and legs (the black wires.)
+                Spiders are allowed to have any number of legs, including zero!
             </p>
             <p>
-                The rule is simple: If two spiders of the same colour are joined (there is a wire from one to
+                The rule is simple: If two green spiders are joined (there is a wire from one to
                 the other)
                 then you can merge those two spiders together.
                 As you do so the newly merged spider maintains all its other connections.
@@ -54,15 +62,19 @@
                 Wires that don't have a node at both ends are called "open wires."
                 These indicate that we don't mind what those wires are attached to at the other end.
                 Think of them as boundaries that allow us to embed our small diagram into some larger context.
-                The "..." indicates that we also don't mind how many of there wires there are (including possibly 0
+                The "..." indicates that we also don't mind how many of these wires there are (including possibly 0
                 wires.)
+            </p>
+            <p>
+                The usual presentation of this rule is a little more complicated, because it says that if you have have
+                one or more
+                wires between the nodes you can merge them, but this version will do for now.
             </p>
         </div>
         <div class="square cell img" style="text-align: center;">
             <img src="./figures/sp1.svg" />
             <p class="subtle">
-                The green spider rule, although the form we use here is slightly simpler than the one most commonly
-                used.
+                The green spider rule, saying you can merge two green spiders if they are joined by a wire
             </p>
 
         </div>
@@ -70,12 +82,12 @@
         <div class="square cell img" style="text-align: center;">
             <img src="./figures/sp1r.svg" />
             <p class="subtle">
-                The analogous red spider rule, found by just swapping the colours red and green everywhere.
+                The analogous red spider rule, found by just swapping the colours red and green everywhere
             </p>
 
         </div>
         <div class="square cell">
-
+            <h2>Swapping red and green</h2>
             <p>
                 Since everything remains true if you swap red and green (you need to swap it everywhere!)
                 then this rule, called the red spider rule, also holds true.
@@ -99,41 +111,46 @@
         </div>
 
         <div class="square cell">
+            <h2>Moving angles through $\pi$ nodes</h2>
             <p>
                 Here is a rule involving
-                a green $\alpha$ spider and a red $\pi$ spider,
+                a green $\alpha$ spider (meaning it can have any angle on it) and a red $\pi$ spider,
                 running along a single wire.
                 The rule says that we can swap the order of these two spiders,
                 but it has the side affect of flipping the sign in front of the $\alpha$.
+            </p>
+            <p>
+                The $\pi$-commutation rule (as this is known) we show here is actually only true up to a complex scalar
+                factor.
+                This is something that can be easily fixed by just including the scalar,
+                but many people prefer to work with scalars left implicit (to avoid clutter in their diagrams.)
             </p>
         </div>
 
         <div class="square cell img" style="text-align: center;">
             <img src="./figures/pi.svg" />
             <p class="subtle">
-                The pi-commutation rule we show here is actually only true up to a complex scalar factor.
-                This is something that can be easily fixed by just including the scalar,
-                but many people prefer to work without scalars (partly because it makes it easier to see what is going
-                on.)
+                The pi-commutation rule (up to a complex scalar factor)
             </p>
         </div>
 
         <div class="square cell img" style="text-align: center;">
             <img src="./figures/H.svg" />
             <p class="subtle">
-                The Hadamard rule allows you to convert red spiders to green spiders and back again.
-                There need to be Hadamard gates (yellow squares) on all of the wires in the left hand diagram.
+                The Hadamard rule allows you to convert red spiders to green spiders and back again using Hadamard gates
             </p>
 
         </div>
         <div class="square cell">
+            <h2>Hadamards swap colours too</h2>
             <p>
                 This is called the Hadamard rule, and it describes the action of the Hadamard gate (the yellow squares.)
-                It says that we can use Hadamard gates to turn a red spider into a green spider
-                (and, because of the second meta-rule, green spiders into red spiders.)
+                It says that we can use Hadamard gates to turn a green spider into a red spider
+                (and, because of the second meta-rule, red spiders into green spiders.)
                 It can be shown that two Hadamard gates applied in succession cancel each other out,
                 meaning that not only is this a very versatile rule,
                 but there is also a limit to how many Hadamard gates you will need in your diagram.
+                There need to be Hadamard gates (yellow squares) on all of the wires in the left hand diagram.
             </p>
             <p>
                 Why is it a Hadamard gate, not a Hadamard spider?
@@ -142,17 +159,154 @@
                 and so it's really just a short-hand symbol, but it's such a useful one that
                 it is sometimes given the same level of status as the red and green spiders.
             </p>
+            <p>
+                Since two Hadamard gates in a row cancel each other out,
+                the creation and deletion of pairs of Hadamards is often done implicitly.
+                This means that one can "pull" a Hadamard gate through a spider,
+                changing its colour,
+                and creating new Hadamarad gates on every other leg.
+            </p>
         </div>
 
         <div class="row cell">
             <p>
                 These aren't all of the rules of the ZX-calculus, but they should give you enough indication of of how
                 to read the rules.
-                In 2018 the ZX-calculus was shown to be complete:
-                This means that if you have two diagrams that describe the same matrix,
-                then the rules of the ZX-calculus can take you from one to the other.
+                In 2018 a complete set of rules for the ZX-calculus was found:
+                This means that if you have two diagrams that describe the same matrix
+                (we talk about how to do that later,)
+                then the rules of the ZX-calculus can take you from one diagram to the other.
+                Since then other complete sets of rules have been found,
+                and it is now a matter of choosing the right set of rules for the job in hand.
+
             </p>
         </div>
+
+        <div class="row cell title">
+            <h2>Applying the rules</h2>
+        </div>
+        <div class="square cell">
+            <h2>Spotting where to use them</h2>
+            <p>
+                Now that we know what the rules are, let's talk about how to use them.
+                The intuitive notion behind rewriting (as rule application is also known)
+                is to identify part of a diagram that matches
+                the left hand side of your rule,
+                and replace it with the right hand side (or vice versa,)
+                keeping the rest of the diagram in place.
+            </p>
+            <p>
+                Here we have applied the Hadamard rule (described earlier)
+                to the diagram, by first identifying a place where it can be applied,
+                then replacing the matched region with the right hand side of the rule.
+            </p>
+
+            <p>
+                Since we can bend wires and move nodes around as much as we like,
+                it can often be hard to spot where such a rule application can take place.
+                Remember that all that matters is which nodes are connected to which other nodes.
+            </p>
+        </div>
+
+        <div class="square cell img" style="text-align: center;">
+            <img src="./figures/application.svg" />
+            <p class="subtle">
+                The dashed rectangle shows where we are applying the Hadamard rule
+            </p>
+
+        </div>
+
+        <div class="square cell img" style="text-align: center;">
+            <img src="./figures/application2.svg" />
+            <p class="subtle">
+                Choices of which rule to apply and where have consequences
+            </p>
+
+        </div>
+
+        <div class="square cell">
+            <h2>Knowing where to use them</h2>
+            <p>
+                To the left we show two possible chains of rules (out of many.)
+                The grey arrows show rule applications.
+                Starting at the top we pull the Hadamard gate through a spider,
+                but we have a choice of which spider to use!
+                After doing so we merge the adjacent spiders of the same colour.
+                The ZX-calculus does not have a terminating (nor confluent) set of rewrite rules,
+                so choices of which rules to apply and where to apply them really do matter.
+            </p>
+
+        </div>
+
+
+
+        <div class="row cell">
+            <h2>Words, words, words (and most of them about rules)</h2>
+            <p>
+                The ZX-calculus overlaps with quantum computing,
+                traditional logic, and category theory.
+                It uses ideas that have similar, but not identical,
+                names in these areas. Here is a short glossary that will hopefully help a reader
+                when they go on to read other documents.
+            </p>
+            <ul class="expanded">
+                <li>
+                    A <strong>generator</strong> is a diagrammatic building block,
+                    which cannot be broken down further.
+                    In ZX these are the red and green spiders.
+                    Some people also include the Hadamard gate
+                    as a generator rather than a shorthand.
+                </li>
+                <li>
+                    A <strong>rule</strong>, also known as an <strong>axiom</strong>,
+                    is an equation between two diagrams that is simply stated as being true.
+                </li>
+                <li>
+                    A <strong>fragment</strong> of the ZX-calculus
+                    is a restriction of the angles allowed on the nodes:
+                    <ul class="expanded">
+                        <li>
+                            <strong>Universal ZX</strong> allows any angle between 0 and $2\pi$
+                        </li>
+                        <li>
+                            <strong>Clifford+T ZX</strong> allows angles that are multiples of $\pi/4$
+                        </li>
+                        <li>
+                            <strong>Stabilizer ZX</strong> allows angles that are multiples of $\pi/2$
+                        </li>
+                    </ul>
+                    These are just the best known ones, and these fragments have had extensive study.
+                    Although research in this area is slowing down,
+                    there is still work being done on finding
+                    the most convenient sets of rules for a given setting.
+                    In particular: The fragment you are working in determines which properties your set of rules will
+                    have.
+                </li>
+                <li>
+                    The <strong>ZW</strong> and <strong>ZH</strong>
+                    calculi are two other calculi that work in a similar way to ZX,
+                    but have different generators and different rules.
+                </li>
+
+                <li>
+                    A calculus comes with an <strong>interpretation</strong> (we give ZX's interpretation lower down)
+                    which is a way of turning diagrams into a more computable setting.
+                    For ZX, as with the rest of quantum computing, this is complex matrices.
+                </li>
+                <li>
+                    A calculus with a set of rules is <strong>sound</strong> if those
+                    rules express true statements after being interpreted.
+                </li>
+                <li>
+                    A calculus with a set of rules is <strong>complete</strong> if the set of rules
+                    can be used to show any true statement possible in the language (using the interpretation to
+                    determine "true".)
+                    The fragments mentioned above all have complete sets of rules.
+                </li>
+            </ul>
+        </div>
+
+
 
         <div class="row cell title">
             <h2>Circuits and Diagrams and Matrices</h2>
@@ -161,7 +315,7 @@
         <div class="square cell">
             <h3>Not all diagrams are circuits, but all circuits are diagrams</h3>
             <p>
-                It is well known that one can build all quantum circuits from
+                One can build all quantum circuits from
                 single qubit Z and X rotations, and two qubit CNOT gates.
                 Quantum circuit diagrams are very rigid in structure:
                 There are a fixed number of wires,
@@ -183,8 +337,7 @@
         <div class="square cell img" style="text-align: center;">
             <img src="./figures/cnot.svg" />
             <p class="subtle">
-                The CNOT gate, here shown so the wire connecting the two nodes does not run vertically,
-                as a reminder that the two nodes are spiders and we can bend these wires freely.
+                The CNOT gate, here shown so the wire connecting the two nodes does not run vertically
             </p>
         </div>
 
@@ -193,9 +346,7 @@
         <div class="square cell img" style="text-align: center;">
             <img src="./figures/interpret.svg" />
             <p class="subtle">
-                Interpretations of the cup, Hadamard, and green spider elements of the ZX-calculus.
-                If the green node has $n$ inputs and $m$ outputs,
-                then the resulting matrix has $2^n$ columns and $2^m$ rows.
+                Interpretations of the bent wire ("cup"), Hadamard, and green spider elements of the ZX-calculus
             </p>
         </div>
 
@@ -221,6 +372,9 @@
             <p>
                 The big square brackets mean "interpretation of",
                 and sends a diagram to a matrix.
+                Spiders can have any number of input and output legs,
+                and a spider with $n$ inputs and $m$ outputs
+                is interpreted as a matrix with $2^n$ columns and $2^m$ rows.
             </p>
         </div>
 
@@ -236,8 +390,9 @@
                 taking the matrix composition of those operations.
             </p>
             <p>
-                To the left is a diagram that has had tensor and compositional product symbols added
-                to illustrate this point.
+                To the right is a diagram that has been broken down so that each
+                cell in the grid contains just one element.
+                Remember you can bend wires around as needed to make this easier to do.
             </p>
         </div>
 
@@ -252,16 +407,41 @@
         <div class="row cell">
             <h3>Transposes, cups, caps and reflections</h3>
             <p>
-                ZX-calculus have another thing that circuit diagrams do not:
-                Bent wires.
+                Bent wires are a thing that may catch you off guard if you come from circuit diagrams.
                 The interpretation of a bare wire running with the flow of your diagram is just the identity matrix.
-                How about when a wire that forms a "cup"?
-                The interpretation is given above,
+                How about when a wire bends round to form a "cup"?
+                This interpretation is given above,
                 but we leave out what to do when the wire forms a "cap".
                 This is because reflecting a diagram (in the vertical axis) has the effect of applying a transpose to
                 the matrix interpretation.
             </p>
+            <p>
+                For diagrams that flow left-to-right there is no interpretation for a vertical wire.
+                We get around this by giving any vertical wires the slightest of bends, so that it forms either a cup or a
+                cap
+                (and it does not matter which option one chooses.)
+            </p>
         </div>
+
+
+        <div class="row cell title">
+            <h2>Thank you for reading</h2>
+        </div>
+        <div class="row cell">
+            <p>
+                Hopefully this introduction will give you an indication
+                of how to read ZX diagrams and their rules.
+                The <a href="./publications.html">publications</a>
+                gives a list of the latest papers, and you can filter by authors, titles, keywords, and abstracts
+                to find the content you are looking for.
+                If you have any comments or suggestions on how we can improve this tutorial,
+                please contact a member of the website team.
+            </p>
+        </div>
+
+
+
+
 
 
 
@@ -282,6 +462,7 @@
     </div>
     <div class="header">
         <a href="/">Home</a>
+        <a href="/intro.html">Tutorial</a>
         <a href="/publications.html">Publications</a>
         <a href="/accessibility.html">Accessibility</a>
         <a href="/map.html">Map</a>
