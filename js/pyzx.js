@@ -3,8 +3,8 @@ define(['d3'], function(d3) {
     // styling functions
     function nodeColor(t) {
         if (t == 0) return "black";
-        else if (t == 1) return "green";
-        else if (t == 2) return "red";
+        else if (t == 1) return "rgb(216, 248, 216)";
+        else if (t == 2) return "rgb(232, 165, 165)";
     }
 
     function edgeColor(t) {
