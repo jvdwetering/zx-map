@@ -85,7 +85,10 @@
                         "ZW"]},
                 "de Beaudrap, Niel":
                 {"place": ["Oxford"],
-                "fields": ["Circuit optimisation"]},
+                "fields": ["Circuit optimisation",
+                        "MBQC",
+                        "Surface codes",
+                        "ZH"]},
                 "Miller-Bakewell, Hector":
                 {"place": ["Oxford"],
                 "fields": ["Quantomatic","CoSy"]},
