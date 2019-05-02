@@ -120,57 +120,71 @@ grid-template-columns: 3fr 6fr 4fr;">
                     # And so will be slower than running PyZX directly
 
                     # Here is a list of the circuits included with this demonstration:
-                    fast_circuits = ['Adder8',
-                        'adder_8',
-                        'barenco_tof_10',
+                    circuits = ['mod5_4',
                         'barenco_tof_3',
                         'barenco_tof_4',
                         'barenco_tof_5',
                         'csla_mux_3_original',
                         'csum_mux_9_corrected',
-                        'gf2^10_mult',
                         'gf2^4_mult',
-                        'gf2^5_mult',
-                        'gf2^6_mult',
-                        'gf2^7_mult',
-                        'gf2^8_mult',
-                        'gf2^9_mult',
-                        'grover_5.qc',
-                        'ham15-low.qc',
-                        'hwb6.qc',
-                        'mod5_4',
                         'mod_mult_55',
                         'mod_red_21',
-                        'nth_prime6.tfc',
                         'qcla_adder_10',
                         'qcla_com_7',
                         'qcla_mod_7',
-                        'QFT16',
                         'QFT8',
                         'QFTAdd8',
-                        'qft_4.qc',
                         'rc_adder_6',
-                        'tof_10',
                         'tof_3',
                         'tof_4',
                         'tof_5',
                         'vbe_adder_3']
-    
-                    def optimise(file):
-                        c = zx.Circuit.from_quipper_file("./circuits/"+file+"_before")
-                        g = c.to_graph()
-                        g = zx.simplify.teleport_reduce(g)
-                        c_opt = zx.Circuit.from_graph(g).split_phase_gates().to_basic_gates()
-                        display("Starting with circuit")
-                        display(c)
-                        display("with a T-count of "+str(c.tcount()))
-                        display("Ending with circuit")
-                        display(c_opt)
-                        display("with a T-count of "+str(c_opt.tcount()))
+                    
+                    class NameSpace:
+                        pass
+                    ns = NameSpace()
+                    ns.circ_name = 'mod5_4'
+                    ns.circ = zx.Circuit.from_quipper_file("./circuits/"+ns.circ_name+"_before")
+                    ns.circ = ns.circ.to_basic_gates()
+
+                    def change(event):
+                        l = event.target
+                        ns.circ_name = l.options[l.selectedIndex].value
+                        print(ns.circ_name)
+                        ns.circ = zx.Circuit.from_quipper_file("./circuits/"+ns.circ_name+"_before")
+                        ns.circ = ns.circ.to_basic_gates()
+                        div_display.clear()
+                        display([dropdown,show_button,simp_button,tele_button])
+                        display(ns.circ.stats())
+
+                    def original(event):
+                        display("Original circuit:")
+                        display(ns.circ)
                         
-                    # Apply the optimiser and show the results for:
-                    optimise("mod5_4")
-                        </script>
+                    def simplify(event):
+                        display("Simplified diagram:")
+                        g = ns.circ.to_graph()
+                        zx.simplify.full_reduce(g)
+                        display(zx.draw(g))
+
+                    def tele(event):
+                        display("Circuit after phase teleportation:")
+                        g = zx.simplify.teleport_reduce(ns.circ.to_graph())
+                        display(g)
+
+                    dropdown = html.SELECT(html.OPTION(s) for s in circuits)
+                    dropdown.bind("change", change)
+                    show_button = html.BUTTON("Show original")
+                    show_button.bind("click", original)
+                    simp_button = html.BUTTON("Simplified")
+                    simp_button.bind("click", simplify)
+                    tele_button = html.BUTTON("Phase teleport")
+                    tele_button.bind("click", tele)
+
+                    display([dropdown,show_button,simp_button,tele_button])
+
+                    display(ns.circ.stats())
+                </script>
             </div>
             <div class="example" id="ex0">
                 <button>Generating and simplifying a Circuit</button>
@@ -352,7 +366,7 @@ grid-template-columns: 3fr 6fr 4fr;">
                 if raw:
                     div_display.html += item
                 else:
-                    div_display.html += "<pre>" + item + "</pre>"
+                    div_display <= html.PRE(item)
                 return
             elif hasattr(item, "to_tensor"): # It is a circuit or graph
                 item = zx.draw(item)
