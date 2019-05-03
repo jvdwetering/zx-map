@@ -147,9 +147,11 @@
 @article{kissinger2017MBQC,
     Author = {Kissinger, Aleks and van de Wetering, John},
     Title = {{Universal MBQC with generalised parity-phase interactions and Pauli measurements}},
-    Year = {2017},
+    Year = {2019},
     keywords = {ZX-Calculus, Clifford+T, MBQC},
-    journal = {arXiv preprint arXiv:1704.06504},
+    journal = {Quantum},
+    volume = {3},
+    issue = {134},
     link = {https://arxiv.org/abs/1704.06504},
     abstract = {We introduce a new family of models for measurement-based quantum computation which are deterministic and approximately universal. The resource states which play the role of graph states are prepared via 2-qubit gates of the form $\exp(−i\pi 2nZ\otimes Z)$. When $n=2$, these are equivalent, up to local Clifford unitaries, to graph states. However, when $n>2$, their behaviour diverges in two important ways. First, multiple applications of the entangling gate to a single pair of qubits produces non-trivial entanglement, and hence multiple parallel edges between nodes play an important role in these generalised graph states. Second, such a state can be used to realise deterministic, approximately universal computation using only Pauli Z and X measurements and feed-forward. Even though, for $n>2$, the relevant resource states are no longer stabiliser states, they admit a straightforward, graphical representation using the ZX-calculus. Using this representation, we are able to provide a simple, graphical proof of universality. We furthermore show that for every $n>2$ this family is capable of producing all Clifford gates and all diagonal gates in the $n$-th level of the Clifford hierarchy.}
 }
@@ -944,3 +946,24 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Michael.pdf},
     abstract = {While multipartite entanglement is a crucial resource for many quantum algorithms and protocols, the abstract, structural rules governing it are still not fully understood. In their recent paper, Coecke and Kissinger propose a new language called GHZ/W-calculus that aims to give a structural axiomatization of multipartite entanglement in terms of interacting ``special'' and ``anti-special'' commutative Frobenius algebras (S/A-CFAs). These algebraic structures correspond precisely to the two different types of genuine entanglement between three qubits, as given by inter-convertability by stochastic local (quantum) operations and classical communication (SLOCC). An important feature of the language is that it lives in the framework of categorical quantum mechanics and thus comes with a Penrose-Joyal-Street graphical calulus. This thesis explores the expressive power of the GHZ/W-calculus. We prove a new result that demonstrates the canonicity of the recent concept of antispeciality for CFAs and use it to give a new classification of Frobenius Algebras on $\mathbb{C}^2$ in FdHilb, the category of finite-dimensional Hilbert spaces and bounded linear maps. Next, we look at the non-standard model of categorical quantum mechanics given by FRel, the category of finite sets and binary relations. We classify all special CFAs in this category, prove some properties of anti-special ones and identify precisely which SCFAs/ACFAs are captured by the GHZ/W-language. Finally, we define a quantum AND gate in the graphical language and prove (or disprove) some of its properties. We come to the conclusion that the GHZ/W-calculus is unlikely to be the final answer to the structural entanglement problem in dimensions $D > 2$ and identify intermediate ranks $1 < rank < D$ as the notion it fails to explain.}
 }
+
+@article{PauliFusion,
+    Author = {de Beaudrap, Niel and Duncan, Ross and Horsman, Dominic and Perdrix, Simon},
+    Title = {{Pauli Fusion: a computational model to realise quantum transformations from ZX terms}},
+    Year = {2019},
+    keywords = {ZX-calculus, Lattice Surgery, Pauli Fusion},
+    journal = {arXiv preprint arXiv:1904.12817},
+    link = {https://arxiv.org/abs/1904.12817},
+    abstract = {We present an abstract model of quantum computation, the Pauli Fusion model, whose primitive operations correspond closely to generators of the ZX calculus (a formal graphical language for quantum computing). The fundamental operations of Pauli Fusion are also straightforward abstractions of basic processes in some leading proposed quantum technologies. These operations have non-deterministic heralded effects, similarly to measurement-based quantum computation. We describe sufficient conditions for Pauli Fusion procedures to be deterministically realisable, so that it performs a given transformation independently of its non-deterministic outcomes. This provides an operational model to realise ZX terms beyond the circuit model.}
+}
+
+@article{Hector2019,
+    Author = {Miller-Bakewell, Hector},
+    Title = {{Finite Verification for Infinite Families of Diagram Equations}},
+    Year = {2019},
+    keywords = {ZX-calculus, Bang-Boxes, ZH-calculus, ZW-calculus, Automation},
+    journal = {arXiv preprint arXiv:1904.00706},
+    link = {https://arxiv.org/abs/1904.00706},
+    abstract = {The ZX, ZW and ZH calculi are all complete graphical calculi for reasoning about pure state qubit quantum mechanics. All of these languages use certain diagrammatic decorations, called !-boxes and phase variables, to indicate not just one diagram but an infinite family of diagrams. In this same manner one can express infinite families of equations between diagrams, and these decorations are powerful enough to allow for complete rulesets expressing any equivalence in pure state qubit quantum mechanics. We present here results that show that equations between separable infinite families of diagrams are finitely verifiable; that is to say that to verify these infinite families of equations it suffices to check a finite subset of that family, provided a condition we call separability is met. The results we present in this paper not only construct such a verifying subfamily directly, but also generalise to any diagrammatic calculus that satisfies certain simple conditions.}
+}
+
