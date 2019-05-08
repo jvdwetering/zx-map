@@ -30,7 +30,11 @@
             "ZX-Calculus: Cyclotomic Supplementarity and Incompleteness for Clifford+T quantum mechanics",
             "Completeness and the ZX-calculus"
         ],
-        "A Diagrammatic Axiomatisation of Fermionic Quantum Circuits": [],
+        "A Diagrammatic Axiomatisation of Fermionic Quantum Circuits": [
+            "Two complete axiomatisations of pure-state qubit quantum computing",
+            "Pyzx: Large scale automated diagrammatic reasoning",
+            "Completeness of the Phase-free ZH-calculus"
+        ],
         "A Generic Normal Form for ZX-Diagrams and Application to the Rational Angle Completeness": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
             "Completeness of Graphical Languages for Mixed States Quantum Mechanics",
@@ -39,7 +43,9 @@
         "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
             "PyZX: Large Scale Automated Diagrammatic Reasoning",
-            "Completeness of Graphical Languages for Mixed States Quantum Mechanics"
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics",
+            "Pauli Fusion: a computational model to realise quantum transformations from ZX terms",
+            "Finite Verification for Infinite Families of Diagram Equations"
         ],
         "A Simplified Stabilizer ZX-calculus": [
             "The Category CNOT",
@@ -49,10 +55,33 @@
         ],
         "A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+T, and Beyond": [
             "A Generic Normal Form for ZX-Diagrams and Application to the Rational Angle Completeness",
-            "The Category TOF"
+            "The Category TOF",
+            "Completeness of the ZX-Calculus",
+            "Circuit Relations for Real Stabilizers: Towards TOF+ H",
+            "Dagger linear logic for categorical quantum mechanics",
+            "Completeness of the Phase-free ZH-calculus"
         ],
         "A diagrammatic axiomatisation for qubit entanglement": [
-            "ZX-Rules for 2-qubit Clifford+T Quantum Circuits"
+            "ZX-Rules for 2-qubit Clifford+T Quantum Circuits",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "The algebra of entanglement and the geometry of composition",
+            "A universal completion of the ZX-calculus",
+            "Categorical probabilistic theories",
+            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "Two roads to classicality",
+            "Two complete axiomatisations of pure-state qubit quantum computing",
+            "A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+ T, and Beyond",
+            "A generic normal form for zx-diagrams and application to the rational angle completeness",
+            "A topological perspective on interacting algebraic theories",
+            "Shaded tangles for the design and verification of quantum programs",
+            "Categorical quantum dynamics",
+            "Enriching a Linear/Non-linear Lambda Calculus: A Programming Language for String Diagrams",
+            "A diagrammatic axiomatisation of fermionic quantum circuits",
+            "(Modular) Effect Algebras are Equivalent to (Frobenius) Antispecial Algebras",
+            "Completeness of the ZX-Calculus",
+            "A diagrammatic axiomatisation of the GHZ and W quantum states",
+            "The rational fragment of the ZX-calculus",
+            "Finite Verification for Infinite Families of Diagram Equations"
         ],
         "A graphical approach to measurement-based quantum computing": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
@@ -60,7 +89,16 @@
             "ZH: A Complete Graphical Calculus for Quantum Computations Involving Classical Non-linearity",
             "Reconstructing quantum theory from diagrammatic postulates",
             "Quantum linear network coding as one-way quantum computation",
-            "Global Quantum Circuit Optimization"
+            "Global Quantum Circuit Optimization",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "Verifying the Steane code with Quantomatic",
+            "Pivoting makes the ZX-calculus complete for real stabilizers",
+            "Interacting Frobenius Algebras are Hopf",
+            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "Categorical quantum dynamics",
+            "Completeness of the ZX-Calculus",
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics"
         ],
         "A universal completion of the ZX-calculus": [
             "Graphical Fourier Theory and the Cost of Quantum Addition",
@@ -78,7 +116,12 @@
             "A diagrammatic axiomatisation of fermionic quantum circuits",
             "Towards a Minimal Stabilizer ZX-calculus",
             "The algebra of entanglement and the geometry of composition",
-            "Graphical Structures for Design and Verification of Quantum Error Correction"
+            "Graphical Structures for Design and Verification of Quantum Error Correction",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus",
+            "Universal MBQC with generalised parity-phase interactions and Pauli measurements",
+            "Rewriting with Frobenius",
+            "Finite Verification for Infinite Families of Diagram Equations"
         ],
         "CNOT circuit extraction for topologically-constrained quantum memories": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
@@ -89,7 +132,10 @@
         "Categorifying the ZX-calculus": [
             "Spans of cospans in a topos"
         ],
-        "Complete set of circuit equations for stabilizer quantum mechanics": [],
+        "Complete set of circuit equations for stabilizer quantum mechanics": [
+            "Interacting Frobenius Algebras are Hopf",
+            "Distinguishability and copiability of programs in general process theories"
+        ],
         "Completeness and the ZX-calculus": [
             "Hopf-Frobenius algebras and a new Drinfeld double",
             "Circuit Relations for Real Stabilizers: Towards TOF+H",
@@ -118,7 +164,9 @@
             "Completeness and the ZX-calculus"
         ],
         "Completeness of Graphical Languages for Mixed States Quantum Mechanics": [
-            "Quantum channels as a categorical completion"
+            "Quantum channels as a categorical completion",
+            "SZX-calculus: Scalable Graphical Quantum Reasoning",
+            "Pauli Fusion: a computational model to realise quantum transformations from ZX terms"
         ],
         "Completeness of the Phase-free ZH-calculus": [],
         "Completeness of the ZX-Calculus": [
@@ -187,7 +235,8 @@
         ],
         "Diagrammatic Reasoning Beyond Clifford+T Quantum Mechanics": [
             "A Generic Normal Form for ZX-Diagrams and Application to the Rational Angle Completeness",
-            "ZX-Rules for 2-qubit Clifford+T Quantum Circuits"
+            "ZX-Rules for 2-qubit Clifford+T Quantum Circuits",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics"
         ],
         "Environment and classical channels in categorical quantum mechanics": [
             "Graphical Methods in Device-Independent Quantum Cryptography",
@@ -203,7 +252,10 @@
             "Qutrit ZX-calculus is Complete for Stabilizer Quantum Mechanics"
         ],
         "Finite Verification for Infinite Families of Diagram Equations": [],
-        "Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive": [],
+        "Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive": [
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "Y-calculus: A language for real matrices derived from the zx-calculus"
+        ],
         "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
             "Pauli Fusion: a computational model to realise quantum transformations from ZX terms",
@@ -434,7 +486,14 @@
             "Transition of a Z3 topologically ordered phase to trivial and critical phases",
             "Topological Transitions from Multipartite Entanglement with Tensor Networks: A Procedure for Sharper and Faster Characterization"
         ],
-        "Optimising Clifford Circuits with Quantomatic": [],
+        "Optimising Clifford Circuits with Quantomatic": [
+            "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus",
+            "Pyzx: Large scale automated diagrammatic reasoning",
+            "Verified Optimization in a Quantum Intermediate Representation",
+            "Circuit Relations for Real Stabilizers: Towards TOF+ H",
+            "Completeness of the Phase-free ZH-calculus",
+            "Formally Verified Quantum Programming"
+        ],
         "Pauli Fusion: a computational model to realise quantum transformations from ZX terms": [],
         "Phase groups and the origin of non-locality for qubits": [
             "The time-reverse of any causal theory is eternal noise",
@@ -632,7 +691,14 @@
             "Strong Complementarity and Non-locality in Categorical Quantum Mechanics",
             "Trichromatic Open Digraphs for Understanding Qubits"
         ],
-        "Qutrit Dichromatic Calculus and Its Universality": [],
+        "Qutrit Dichromatic Calculus and Its Universality": [
+            "Interacting Frobenius Algebras are Hopf",
+            "Depicting qudit quantum mechanics and mutually unbiased qudit theories",
+            "Two complete axiomatisations of pure-state qubit quantum computing",
+            "Equivalence of Local Complementation and Euler Decomposition in the Qutrit ZX-calculus",
+            "Qutrit ZX-calculus is Complete for Stabilizer Quantum Mechanics",
+            "The ZX calculus, Non-Locality and Spekkens toy theory"
+        ],
         "Qutrit ZX-calculus is Complete for Stabilizer Quantum Mechanics": [],
         "Reducing T-count with the ZX-calculus": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
@@ -644,7 +710,50 @@
             "Optimizing T gates in Clifford+T circuit as π/4 rotations around Paulis",
             "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus"
         ],
-        "Rewriting measurement-based quantum computations with generalised flow": [],
+        "Rewriting measurement-based quantum computations with generalised flow": [
+            "Interacting quantum observables: categorical algebra and diagrammatics",
+            "The ZX-calculus is complete for stabilizer quantum mechanics",
+            "The compositional structure of multipartite quantum entanglement",
+            "Environment and classical channels in categorical quantum mechanics",
+            "Strong complementarity and non-locality in categorical quantum mechanics",
+            "Quantomatic: A proof assistant for diagrammatic reasoning",
+            "Quantum picturalism for topological cluster-state computing",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "The ZX-calculus is incomplete for quantum mechanics",
+            "Verifying the Steane code with Quantomatic",
+            "Pivoting makes the ZX-calculus complete for real stabilizers",
+            "Interacting Frobenius Algebras are Hopf",
+            "A complete graphical calculus for Spekkens' toy bit theory",
+            "A universal completion of the ZX-calculus",
+            "A graphical approach to measurement-based quantum computing",
+            "Supplementarity is necessary for quantum diagram reasoning",
+            "Compositional quantum logic",
+            "ZX-calculus: Cyclotomic supplementarity and incompleteness for Clifford+ T quantum mechanics",
+            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "The GHZ/W-calculus contains rational arithmetic",
+            "Depicting qudit quantum mechanics and mutually unbiased qudit theories",
+            "Completeness and the ZX-calculus",
+            "Trichromatic open digraphs for understanding qubits",
+            "Zh: A complete graphical calculus for quantum computations involving classical non-linearity",
+            "A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+ T, and Beyond",
+            "A generic normal form for zx-diagrams and application to the rational angle completeness",
+            "Y-calculus: A language for real matrices derived from the zx-calculus",
+            "ZX-rules for 2-qubit Clifford+ T quantum circuits",
+            "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus",
+            "Universal MBQC with generalised parity-phase interactions and Pauli measurements",
+            "Pyzx: Large scale automated diagrammatic reasoning",
+            "Qutrit ZX-calculus is Complete for Stabilizer Quantum Mechanics",
+            "A diagrammatic axiomatisation of fermionic quantum circuits",
+            "Completeness of the ZX-Calculus",
+            "The ZX calculus, Non-Locality and Spekkens toy theory",
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
+            "Circuit Relations for Real Stabilizers: Towards TOF+ H",
+            "Trichromatic Diagrams for Understanding Qubits",
+            "Pauli Fusion: a computational model to realise quantum transformations from ZX terms",
+            "SZX-calculus: Scalable Graphical Quantum Reasoning",
+            "Completeness of the Phase-free ZH-calculus",
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics"
+        ],
         "SZX-calculus: Scalable Graphical Quantum Reasoning": [],
         "Strong complementarity and non-locality in categorical quantum mechanics": [
             "ZX-Rules for 2-qubit Clifford+T Quantum Circuits",
@@ -657,13 +766,36 @@
             "Monadic Dynamics",
             "The logic of quantum mechanics - Take II"
         ],
-        "Superdense Coding with GHZ and Quantum Key Distribution with W in the ZX-calculus": [],
+        "Superdense Coding with GHZ and Quantum Key Distribution with W in the ZX-calculus": [
+            "The ZX-calculus is incomplete for quantum mechanics",
+            "Completeness and the ZX-calculus",
+            "Quantum communication over bit flip channels using entangled bipartite and tripartite states",
+            "Graphical Methods in Device-Independent Quantum Cryptography"
+        ],
         "Supplementarity is Necessary for Quantum Diagram Reasoning": [
-            "Completeness and the ZX-calculus"
+            "Completeness and the ZX-calculus",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "A simplified stabilizer zx-calculus",
+            "ZX-calculus: Cyclotomic supplementarity and incompleteness for Clifford+ T quantum mechanics",
+            "Verifying the smallest interesting colour code with quantomatic",
+            "Towards a minimal stabilizer ZX-calculus",
+            "Y-calculus: A language for real matrices derived from the zx-calculus",
+            "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus",
+            "Optimising Clifford Circuits with Quantomatic",
+            "Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive",
+            "Completeness of the ZX-Calculus",
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
+            "The rational fragment of the ZX-calculus"
         ],
         "The GHZ/W-calculus contains rational arithmetic": [
             "A Diagrammatic Axiomatisation for Qubit Entanglement",
-            "Pictures of Processes: Automated Graph Rewriting for Monoidal Categories and Applications to Quantum Computing"
+            "Pictures of Processes: Automated Graph Rewriting for Monoidal Categories and Applications to Quantum Computing",
+            "A diagrammatic axiomatisation for qubit entanglement",
+            "The algebra of entanglement and the geometry of composition",
+            "Quantum protocols involving multiparticle entanglement and their representations in the zx-calculus",
+            "Towards normal forms for GHZ/W calculus",
+            "(Modular) Effect Algebras are Equivalent to (Frobenius) Antispecial Algebras",
+            "A diagrammatic axiomatisation of the GHZ and W quantum states"
         ],
         "The ZX calculus is a language for surface code lattice surgery": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
@@ -792,10 +924,40 @@
             "Trichromatic Open Digraphs for Understanding Qubits"
         ],
         "Towards Minimality of Clifford+T ZX-Calculus": [],
-        "Trichromatic Open Digraphs for Understanding Qubits": [],
-        "Two Complete Axiomatisations of Pure-state Qubit Quantum Computing": [],
-        "Universal MBQC with generalised parity-phase interactions and Pauli measurements": [],
-        "Verifying the Smallest Interesting Colour Code with Quantomatic": [],
+        "Trichromatic Open Digraphs for Understanding Qubits": [
+            "Pivoting makes the ZX-calculus complete for real stabilizers",
+            "Y-calculus: A language for real matrices derived from the zx-calculus"
+        ],
+        "Two Complete Axiomatisations of Pure-state Qubit Quantum Computing": [
+            "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus",
+            "Pyzx: Large scale automated diagrammatic reasoning",
+            "Completeness of the ZX-Calculus",
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
+            "The rational fragment of the ZX-calculus",
+            "Quantum channels as a categorical completion",
+            "Reducing T-count with the ZX-calculus",
+            "Pauli Fusion: a computational model to realise quantum transformations from ZX terms",
+            "SZX-calculus: Scalable Graphical Quantum Reasoning",
+            "Completeness of the Phase-free ZH-calculus",
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics"
+        ],
+        "Universal MBQC with generalised parity-phase interactions and Pauli measurements": [
+            "SZX-calculus: Scalable Graphical Quantum Reasoning",
+            "PyZX: Large Scale Automated Diagrammatic Reasoning",
+            "Verifying commuting quantum computations via fidelity estimation of weighted graph states"
+        ],
+        "Verifying the Smallest Interesting Colour Code with Quantomatic": [
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
+            "A Generic Normal Form for ZX-Diagrams and Application to the Rational Angle Completeness",
+            "Reconstructing quantum theory from diagrammatic postulates",
+            "Diagrammatic Reasoning beyond Clifford+T Quantum Mechanics",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "Graphical structures for design and verification of quantum error correction",
+            "Towards large-scale functional verification of universal quantum circuits",
+            "Optimising Clifford Circuits with Quantomatic",
+            "Completeness of the ZX-Calculus",
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics"
+        ],
         "Verifying the Steane code with Quantomatic": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
             "Pauli Fusion: a computational model to realise quantum transformations from ZX terms",
@@ -805,19 +967,39 @@
             "The ZX-calculus is incomplete for quantum mechanics"
         ],
         "Y-Calculus: A Language for Real Matrices Derived from the ZX-Calculus": [
+            "ZX-calculus: Cyclotomic supplementarity and incompleteness for Clifford+ T quantum mechanics",
             "ZH: A Complete Graphical Calculus for Quantum Computations Involving Classical Non-linearity",
             "Towards a Minimal Stabilizer ZX-calculus"
         ],
         "ZH: A Complete Graphical Calculus for Quantum Computations Involving Classical Non-linearity": [
             "PyZX: Large Scale Automated Diagrammatic Reasoning",
             "Reducing T-count with the ZX-calculus",
-            "Universal MBQC with generalised parity-phase interactions and Pauli measurements"
+            "Universal MBQC with generalised parity-phase interactions and Pauli measurements",
+            "A generic normal form for zx-diagrams and application to the rational angle completeness",
+            "Circuit Relations for Real Stabilizers: Towards TOF+ H",
+            "SZX-calculus: Scalable Graphical Quantum Reasoning",
+            "Finite Verification for Infinite Families of Diagram Equations",
+            "Completeness of the Phase-free ZH-calculus",
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics",
+            "Graphical Fourier Theory and the Cost of Quantum Addition"
         ],
         "ZX-Calculus: Cyclotomic Supplementarity and Incompleteness for Clifford+T Quantum Mechanics": [
-            "Towards a Minimal Stabilizer ZX-calculus"
+            "Towards a Minimal Stabilizer ZX-calculus",
+            "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
+            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+ T, and Beyond",
+            "A generic normal form for zx-diagrams and application to the rational angle completeness",
+            "Y-calculus: A language for real matrices derived from the zx-calculus",
+            "Completeness of the ZX-calculus for Pure Qubit Clifford+ T Quantum Mechanics",
+            "Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus",
+            "Completeness of the ZX-Calculus",
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
+            "The rational fragment of the ZX-calculus"
         ],
         "ZX-rules for 2-qubit Clifford+ T quantum circuits": [
-            "Completeness of Graphical Languages for Mixed States Quantum Mechanics"
+            "Completeness of Graphical Languages for Mixed States Quantum Mechanics",
+            "A generic normal form for zx-diagrams and application to the rational angle completeness",
+            "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics"
         ]
     }
 }
