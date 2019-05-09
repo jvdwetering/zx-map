@@ -116,7 +116,17 @@ NODEDATAHERE
     .attr("height", "90%")
     .attr('viewBox', `-${size} -${size} ${2*size} ${2*size}`)
 
-  const link = svg.append("g")
+  g = svg.append('g');
+
+  svg.call(d3.zoom()
+    .scaleExtent([1 / 2, 8])
+    .on("zoom", zoomed));
+
+  function zoomed() {
+    g.attr("transform", d3.event.transform);
+  }
+
+  const link = g.append("g")
     .attr("stroke", "#999")
     .attr("stroke-opacity", 0.6)
     .selectAll("line")
@@ -145,7 +155,7 @@ NODEDATAHERE
     }
   }
 
-  var node = svg.append("g")
+  var node = g.append("g")
     .attr("class", "nodes")
     .selectAll("g")
     .data(nodes)
