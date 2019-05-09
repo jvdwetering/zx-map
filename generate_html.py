@@ -22,7 +22,9 @@ def entry_sort_key(entry):
         
 def normalise_name(n):
     p1, p2 = n.split(', ')
-    return p2.strip() + " " + p1.strip()
+    s = p2.strip() + " " + p1.strip()
+    s = s.replace(r'{\"o}','&ouml;').replace(r"{\'e}",'&eacute;')
+    return s
 
 def parse_math(s):
     i = s.rfind('$',0)

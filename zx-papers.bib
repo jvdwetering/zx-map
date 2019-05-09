@@ -250,7 +250,7 @@
 
 @unpublished{Anne,
     Author = {Hillebrand, Anne},
-    note = {University of Oxford MSc thesis},
+    note = {University of Oxford Master thesis},
     Title = {Quantum Protocols involving Multiparticle Entanglement and their Representations in the ZX-calculus},
     Year = {2011},
     keywords = {ZX-Calculus, Protocols, Master Thesis},
@@ -258,21 +258,31 @@
     abstract = {Quantum entanglement, described by Einstein as "spooky action at a distance", is a key resource in many quantum protocols, like quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to follow and check. This is why Coecke and Duncan have introduced a diagrammatic language for multi-qubit systems, called the red/green calculus or the ZX-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. One crucial feature that will be exploited here is the encoding of complementary observables and corresponding phase shifts. Reasoning is done by rewriting diagrams, i.e. locally replacing some part of a diagram. Diagrams are defined by their topology only; the number of inputs and outputs and the way they are connected. This exemplifies the 'flow' of information. For protocols involving multipartite entangled states, such as the GreenbergerHorne-Zeilinger and W-state, it will be shown that the zx-calculus provides a relatively easy and more intuitive presentation. Moreover, in this representation it is easier to check that protocols are correct. Protocols that will be discussed in detail are quantum teleportation, quantum cryptography, leader election, superdense coding and quantum direct communication with multipartite entangled states.}
 }
 
-@article{backens2014zx,
-  title={The ZX-calculus is complete for the single-qubit Clifford+T group},
-  author={Backens, Miriam},
-  journal={arXiv preprint arXiv:1412.8553},
-  year={2014},
+@Inproceedings{backens2014zx,
+  author    = {Backens, Miriam},
+  year      = {2014},
+  title     = {The {ZX-calculus} is complete for the single-qubit {Clifford+T} group},
+  editor    = {Coecke, Bob and Hasuo, Ichiro and Panangaden, Prakash},
+  booktitle = {{\rm Proceedings of the 11th workshop on}
+               Quantum Physics and Logic,
+               {\rm Kyoto, Japan, 4-6th June 2014}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {172},
+  publisher = {Open Publishing Association},
+  pages     = {293-303},
+  doi       = {10.4204/EPTCS.172.21},
   keywords = {ZX-Calculus, Clifford+T, Completeness},
   link = {https://arxiv.org/abs/1412.8553},
   abstract = {The ZX-calculus is a graphical calculus for reasoning about pure state qubit quantum mechanics. It is complete for pure qubit stabilizer quantum mechanics, meaning any equality involving only stabilizer operations that can be derived using matrices can also be derived pictorially. Stabilizer operations include the unitary Clifford group, as well as preparation of qubits in the state |0>, and measurements in the computational basis. For general pure state qubit quantum mechanics, the ZX-calculus is incomplete: there exist equalities involving non-stabilizer unitary operations on single qubits which cannot be derived from the current rule set for the ZX-calculus. Here, we show that the ZX-calculus for single qubits remains complete upon adding the operator T to the single-qubit stabilizer operations. This is particularly interesting as the resulting single-qubit Clifford+T group is approximately universal, i.e. any unitary single-qubit operator can be approximated to arbitrary accuracy using only Clifford operators and T.}
 }
 
-@article{DuncanPerdrixGraphStates,
-  title={Graphs States and the necessity of Euler Decomposition},
+@inproceedings{DuncanPerdrixGraphStates,
+  title={Graph states and the necessity of {Euler} decomposition},
   author={Duncan, Ross and Perdrix, Simon},
-  journal={arXiv preprint arXiv:0902.0500},
+  booktitle={Conference on Computability in Europe},
+  pages={167--177},
   year={2009},
+  organization={Springer},
   keywords = {ZX-Calculus, Clifford Fragment, Graph-states, Foundational},
   link = {https://arxiv.org/abs/0902.0500},
   abstract = {Coecke and Duncan recently introduced a categorical formalisation of the interaction of complementary quantum observables. In this paper we use their diagrammatic language to study graph states, a computationally interesting class of quantum states. We give a graphical proof of the fixpoint property of graph states. We then introduce a new equation, for the Euler decomposition of the Hadamard gate, and demonstrate that Van den Nest's theorem--locally equivalent graphs represent the same entanglement--is equivalent to this new axiom. Finally we prove that the Euler decomposition equation is not derivable from the existing axioms.}
@@ -320,25 +330,24 @@
   abstract = {We present a method for verifying measurement-based quantum computations, by producing a quantum circuit equivalent to a given deterministic measurement pattern. We define a diagrammatic presentation of the pattern, and produce a circuit via a rewriting strategy based on the generalised flow of the pattern. Unlike other methods for translating measurement patterns with generalised flow to circuits, this method uses neither ancilla qubits nor acausal loops.}
 }
 
-@article{duncan2012graphical,
-  title={A graphical approach to measurement-based quantum computing},
-  author={Duncan, Ross},
-  journal={arXiv preprint arXiv:1203.6242},
-  year={2012},
-  keywords = {ZX-Calculus, MBQC},
-  link = {https://arxiv.org/abs/1203.6242},
-  abstract = {Quantum computations are easily represented in the graphical notation known as the ZX-calculus, a.k.a. the red-green calculus. We demonstrate its use in reasoning about measurement-based quantum computing, where the graphical syntax directly captures the structure of the entangled states used to represent computations, and show that the notion of information flow within the entangled states gives rise to rewriting strategies for proving the correctness of quantum programs.}
-}
-
-@article{duncan2013verifying,
-  title={Verifying the Steane code with Quantomatic},
-  author={Duncan, Ross and Lucas, Maxime},
-  journal={arXiv preprint arXiv:1306.4532},
-  year={2013},
+@Inproceedings{duncan2013verifying,
+  author    = {Duncan, Ross and Lucas, Maxime},
+  year      = {2014},
+  title     = {Verifying the {Steane} code with {Quantomatic}},
+  editor    = {Coecke, Bob and Hoban, Matty},
+  booktitle = {{\rm Proceedings of the 10th International Workshop on}
+               Quantum Physics and Logic,
+               {\rm Castelldefels (Barcelona), Spain, 17th to 19th July 2013}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {171},
+  publisher = {Open Publishing Association},
+  pages     = {33-49},
+  doi       = {10.4204/EPTCS.171.4},
   keywords = {ZX-Calculus, Quantomatic, Error correcting codes},
   link = {https://arxiv.org/abs/1306.4532},
   abstract = {In this paper we give a partially mechanized proof of the correctness of Steane's 7-qubit error correcting code, using the tool Quantomatic. To the best of our knowledge, this represents the largest and most complicated verification task yet carried out using Quantomatic.}
 }
+
 @Inproceedings{EPTCS266.10,
   author    = {Garvie, Liam and Duncan, Ross},
   year      = {2018},
@@ -588,19 +597,6 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     year = {2014}
 }
 
-@article{jeandel_generalised_2017,
-    title = {Generalised Supplementarity and new rule for Empty Diagrams to Make the ZX-Calculus More Expressive},
-    link = {http://arxiv.org/abs/1702.01945},
-    keywords = {ZX-Calculus, Supplementarity},
-    abstract = {The ZX-Calculus is a powerful diagrammatic language for quantum mechanics and quantum information processing. The completeness of the $\pi/4$-fragment is a main open problem in categorical quantum mechanics, a program initiated by Abramsky and Coecke. It has recently been proven that this fragment, also called Clifford+T quantum mechanics, was not complete, and hence a new rule called supplementarity was introduced to palliate it. The completeness of the $\pi/4$-fragment is a crucial question, for it is the "easiest" approximately universal fragment, whereas the $\pi/2$-fragment, the stabiliser quantum mechanics, is known to be complete but is not approximately universal. In this paper, we will show that, on the one hand, the $\pi/4$-fragment is still not complete despite the new supplementarity rule, and that, on the other hand, this supplementarity rule can be generalised to any natural number n. To prove the incompleteness of the $\pi/4$-fragment, we can show an equality over scalars that is not derivable from the set of axioms, and that will lead to a substitute for the inverse rule, and the obsolescence of the zero rule. We can also show that the generalised supplementarity for any n not a power of 2 is not derivable from the current set of axioms of the ZX-Calculus, but that the rule for some n can be derived from some others. The hierarchy of these rules will be discussed.},
-    urldate = {2017-02-08},
-    journal = {arXiv:1702.01945 [quant-ph]},
-    author = {Jeandel, Emmanuel and Perdrix, Simon and Vilmart, Renaud and Wang, Quanlong},
-    month = {feb},
-    year = {2017},
-    note = {arXiv: 1702.01945}
-}
-
 @article{gong_equivalence_2017,
     title = {Equivalence of Local Complementation and Euler Decomposition in the Qutrit ZX-calculus},
     link = {http://arxiv.org/abs/1704.05955},
@@ -614,22 +610,22 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
     note = {arXiv: 1704.05955}
 }
 
-
-@article{cicala_categorifying_2018,
-    title = {Categorifying the ZX-calculus},
-    volume = {266},
-    issn = {2075-2180},
+@Inproceedings{cicala_categorifying_2018,
+    author    = {Cicala, Daniel},
+    year      = {2018},
+    title     = {Categorifying the {ZX-calculus}},
+    editor    = {Coecke, Bob and Kissinger, Aleks},
+    booktitle = {{\rm Proceedings 14th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Nijmegen, The Netherlands, 3-7 July 2017}},
+    series    = {Electronic Proceedings in Theoretical Computer Science},
+    volume    = {266},
+    publisher = {Open Publishing Association},
+    pages     = {294-314},
+    doi       = {10.4204/EPTCS.266.19},
     link = {http://arxiv.org/abs/1704.07034},
-    doi = {10.4204/EPTCS.266.19},
     keywords = {ZX-Calculus, Category Theory},
     abstract = {We build a symmetric monoidal and compact closed bicategory by combining spans and cospans inside a topos. This can be used as a framework in which to study open networks and diagrammatic languages. We illustrate this framework with Coecke and Duncan's zx-calculus by constructing a bicategory with the natural numbers for 0-cells, the zx-calculus diagrams for 1-cells, and rewrite rules for 2-cells.},
-    language = {en},
-    urldate = {2019-03-04},
-    journal = {Electronic Proceedings in Theoretical Computer Science},
-    author = {Cicala, Daniel},
-    month = {feb},
-    year = {2018},
-    pages = {294--314}
 }
 
 @article{hillebrand_superdense_2012,
@@ -857,7 +853,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 
 @unpublished{Borun,
     Author = {Shi, Borun},
-    note = {University of Oxford MSc thesis},
+    note = {University of Oxford Master thesis},
     Title = {Towards Minimality of Clifford+T ZX-Calculus},
     Year = {2018},
     keywords = {ZX-Calculus, Minimality, Master Thesis},
@@ -867,7 +863,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 
 @unpublished{ChristianMSC,
     Author = {Schr{\"o}der de Witt, Christian },
-    Note = {University of Oxford MSc thesis},
+    Note = {University of Oxford Master thesis},
     Title = {The ZX calculus is incomplete for non-stabilizer quantum mechanics},
     Year = {2013},
     keywords = {ZX-Calculus, Completeness, Master Thesis},
@@ -939,7 +935,7 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
 
 @unpublished{HerrmannThesis,
     Author = {Herrmann, Michael},
-    note = {University of Oxford MSc thesis},
+    note = {University of Oxford Master thesis},
     Title = {Models of Multipartite Entanglement},
     Year = {2010},
     keywords = {ZW-Calculus, Entanglement, Master Thesis},
@@ -987,10 +983,14 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
     abstract = {The zx-calculus and related theories are based on so-called interacting Frobenius algebras, where a pair of $\dagger$-special commutative Frobenius algebras jointly form a pair of Hopf algebras. In this setting we introduce a generalisation of this structure, Hopf-Frobenius algebras, starting from a single Hopf algebra which is not necessarily commutative or cocommutative. We provide the necessary and sufficient condition for a Hopf algebra to be a Hopf-Frobenius algebra, and show that every Hopf algebra in $\textbf{FVect}_\text{k}$ is a Hopf-Frobenius algebra. Hopf-Frobenius algebras provide a notion of duality, and give us a "dual" Hopf algebra that is isomorphic to the usual dual Hopf algebra in a compact closed category. We use this isomorphism to construct a Hopf algebra isomorphic to the Drinfeld double that is defined on $H\otimes H$ rather than $H\otimes H^*$.}
 }
 
-@article{DuncanMBQC,
+@incollection{DuncanMBQC,
     Author = {Duncan, Ross},
-    Title = {{A graphical approach to measurement-based quantum computing}},
-    Year = {2012},
+    Title = {A graphical approach to measurement-based quantum computing},
+    editor = {Chris Heunen, Mehrnoosh Sadrzadeh, and Edward Grefenstette},
+    booktitle = {Quantum Physics and Linguistics: A Compositional, Diagrammatic Discourse},
+    Year = {2013},
+    doi = {10.1093/acprof:oso/9780199646296.001.0001},
+    isbn = {9780199646296},
     keywords = {ZX-calculus, MBQC},
     journal = {arXiv preprint arXiv:1203.6242},
     link = {https://arxiv.org/abs/1203.6242},
