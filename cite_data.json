@@ -67,7 +67,7 @@
             "The algebra of entanglement and the geometry of composition",
             "A universal completion of the ZX-calculus",
             "Categorical probabilistic theories",
-            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "Diagrammatic reasoning beyond Clifford+T quantum mechanics",
             "Two roads to classicality",
             "Two complete axiomatisations of pure-state qubit quantum computing",
             "A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+ T, and Beyond",
@@ -83,6 +83,7 @@
             "The rational fragment of the ZX-calculus",
             "Finite Verification for Infinite Families of Diagram Equations"
         ],
+        "The rational fragment of the ZX-calculus": [],
         "A graphical approach to measurement-based quantum computing": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
             "Introduction to the book \"Quantum Theory: Informational Foundations and Foils\"",
@@ -94,7 +95,7 @@
             "Verifying the Steane code with Quantomatic",
             "Pivoting makes the ZX-calculus complete for real stabilizers",
             "Interacting Frobenius Algebras are Hopf",
-            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "Diagrammatic reasoning beyond Clifford+T quantum mechanics",
             "Categorical quantum dynamics",
             "Completeness of the ZX-Calculus",
             "A Near-Optimal Axiomatisation of ZX-Calculus for Pure Qubit Quantum Mechanics",
@@ -729,7 +730,7 @@
             "Supplementarity is necessary for quantum diagram reasoning",
             "Compositional quantum logic",
             "ZX-calculus: Cyclotomic supplementarity and incompleteness for Clifford+ T quantum mechanics",
-            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "Diagrammatic reasoning beyond Clifford+T quantum mechanics",
             "The GHZ/W-calculus contains rational arithmetic",
             "Depicting qudit quantum mechanics and mutually unbiased qudit theories",
             "Completeness and the ZX-calculus",
@@ -797,6 +798,7 @@
             "(Modular) Effect Algebras are Equivalent to (Frobenius) Antispecial Algebras",
             "A diagrammatic axiomatisation of the GHZ and W quantum states"
         ],
+        "Towards normal forms for GHZ/W calculus": [],
         "The ZX calculus is a language for surface code lattice surgery": [
             "SZX-calculus: Scalable Graphical Quantum Reasoning",
             "Pauli Fusion: a computational model to realise quantum transformations from ZX terms",
@@ -896,7 +898,7 @@
             "Evapotranspiration sensitivity to air temperature across a snow-influenced watershed: Space-for-time substitution versus integrated watershed modeling",
             "Watershed-Scale Drivers of Air-Water CO2 Exchanges in Two Lagoonal North Carolina (USA) Estuaries",
             "Diagrammatic Reasoning beyond Clifford+T Quantum Mechanics",
-            "Completeness of the ZX-calculus for Pure Qubit Clifford+T Quantum Mechanics",
+            "Completeness of the ZX-calculus for Pure Qubit Clifford+T Quantum Mechanics"
         ],
         "The compositional structure of multipartite quantum entanglement": [
             "PyZX: Large Scale Automated Diagrammatic Reasoning",
@@ -986,7 +988,7 @@
         "ZX-Calculus: Cyclotomic Supplementarity and Incompleteness for Clifford+T Quantum Mechanics": [
             "Towards a Minimal Stabilizer ZX-calculus",
             "A complete axiomatisation of the ZX-calculus for Clifford+ T quantum mechanics",
-            "Diagrammatic reasoning beyond Clifford+ T quantum mechanics",
+            "Diagrammatic reasoning beyond Clifford+T quantum mechanics",
             "A ZX-Calculus with Triangles for Toffoli-Hadamard, Clifford+ T, and Beyond",
             "A generic normal form for zx-diagrams and application to the rational angle completeness",
             "Y-calculus: A language for real matrices derived from the zx-calculus",
