@@ -55,10 +55,15 @@ keyword_pubs = dict()
 coauthors = dict()
 latest_pubs = dict()
 
+ids = set()
+
 def entry_to_html(entry):
     db = BibDatabase()
     db.entries = [entry]
     raw_bibdata = writer.write(db)
+    if entry['ID'] in ids:
+        raise Exception("Id {} already taken".format(entry['ID']))
+    ids.add(entry['ID'])
 
     if 'journal' in entry:
         journal = clean_text(entry['journal'])
