@@ -149,7 +149,7 @@ a:hover {
 /* Style the navigation bar */
 .header {
     width: 100%;
-    background-color: #e8a6a6;
+    background-color: #083308;
     overflow: auto;
     position: fixed;
     padding-left: 2em;
@@ -164,4 +164,5 @@ a:hover {
     padding: 1em;
     text-decoration: none;
     font-size: large;
+    color: white;
 }
