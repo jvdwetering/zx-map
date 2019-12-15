@@ -199,6 +199,28 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('froben
 
 </code></pre></span></li>
 <li class="pub_entry">
+<a target="_blank" href="https://arxiv.org/abs/1905.08916" class="paperTitle">Flexible layout of surface code computations using AutoCCZ states</a>,
+<span class="authors">Craig Gidney and Austin G. Fowler</span>,
+<span class="journal">arXiv preprint arXiv:1905.08916</span>
+<span class="year">(2019)</span>.
+<br>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('ccz')">CCZ</a>, <a target="_blank" onclick="forceSearch('surface codes')">Surface codes</a>, <a target="_blank" onclick="forceSearch('zx-calculus')">ZX-calculus</a></span>.
+<a href="#" class="abstract_more">Abstract</a>&nbsp;&nbsp;
+<a href="#" class="bibdata_more">Bibdata</a>
+<br>
+<span class="abstract" style="display:none">We construct a self-correcting CCZ state (the "AutoCCZ") with embedded delayed choice CZs for completing gate teleportations. Using the AutoCCZ state we create efficient surface code spacetime layouts for both a depth-limited circuit (a ripply-carry addition) and a Clifford-limited circuit (a QROM read). Our layouts account for distillation and routing, are based on plausible physical assumptions for a large-scale superconducting qubit platform, and suggest that circuit-level Toffoli parallelism (e.g. using a carry-lookahead adder instead of a ripple-carry adder) will not reduce the execution time of computations involving fewer than five million physical qubits. We reduce the spacetime volume of delayed choice CZs by a factor of 4 compared to techniques from previous work (Fowler 2012), and make several improvements to the CCZ magic state factory from (Gidney 2019).  </span>
+<span class="bibdata" style="display:none"><pre><code>@article{autoCCZ,
+    author = {  Gidney,Craig and   Fowler, Austin G.},
+    title = {Flexible layout of surface code computations using AutoCCZ states},
+    year = {2019},
+    journal = {arXiv preprint arXiv:1905.08916},
+    link = {https://arxiv.org/abs/1905.08916},
+    keywords = {CCZ, Surface codes, ZX-calculus},
+    abstract = {We construct a self-correcting CCZ state (the "AutoCCZ") with embedded delayed choice CZs for completing gate teleportations. Using the AutoCCZ state we create efficient surface code spacetime layouts for both a depth-limited circuit (a ripply-carry addition) and a Clifford-limited circuit (a QROM read). Our layouts account for distillation and routing, are based on plausible physical assumptions for a large-scale superconducting qubit platform, and suggest that circuit-level Toffoli parallelism (e.g. using a carry-lookahead adder instead of a ripple-carry adder) will not reduce the execution time of computations involving fewer than five million physical qubits. We reduce the spacetime volume of delayed choice CZs by a factor of 4 compared to techniques from previous work (Fowler 2012), and make several improvements to the CCZ magic state factory from (Gidney 2019).  }
+}
+
+</code></pre></span></li>
+<li class="pub_entry">
 <a target="_blank" href="https://arxiv.org/abs/1904.04735" class="paperTitle">PyZX: Large Scale Automated Diagrammatic Reasoning</a>,
 <span class="authors">Aleks Kissinger and John van de Wetering</span>,
 <span class="journal">arXiv preprint arXiv:1904.04735</span>
@@ -470,6 +492,28 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
     link = {https://arxiv.org/abs/1812.09114},
     keywords = {ZX-Calculus, Completeness, Universal Fragment},
     abstract = {Recent developments in the ZX-Calculus have resulted in complete axiomatisations first for an approximately universal restriction of the language, and then for the whole language. The main drawbacks were that the axioms that were added to achieve completeness were numerous, tedious to manipulate and lacked a physical interpretation. We present in this paper two complete axiomatisations for the general ZX-Calculus, that we believe are optimal, in that all their equations are necessary and moreover have a nice physical interpretation.}
+}
+
+</code></pre></span></li>
+<li class="pub_entry">
+<a target="_blank" href="https://arxiv.org/abs/1812.01238" class="paperTitle">Efficient magic state factories with a catalyzed |CCZ> to 2|T> transformations</a>,
+<span class="authors">Craig Gidney and Austin G. Fowler</span>,
+<span class="journal">arXiv preprint arXiv:1812.01238</span>
+<span class="year">(2018)</span>.
+<br>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('magic')">magic</a>, <a target="_blank" onclick="forceSearch('magic states')">magic states</a>, <a target="_blank" onclick="forceSearch('zx-calculus')">ZX-calculus</a></span>.
+<a href="#" class="abstract_more">Abstract</a>&nbsp;&nbsp;
+<a href="#" class="bibdata_more">Bibdata</a>
+<br>
+<span class="abstract" style="display:none">We present magic state factory constructions for producing |CCZ⟩ states and |T⟩ states. For the |CCZ⟩ factory we apply the surface code lattice surgery construction techniques described by Fowler et al. to the fault-tolerant Toffoli. The resulting factory has a footprint of 12d×6d (where d is the code distance) and produces one |CCZ⟩ every 5.5d surface code cycles. Our |T⟩ state factory uses the |CCZ⟩ factory's output and a catalyst |T⟩ state to exactly transform one |CCZ⟩ state into two |T⟩ states. It has a footprint 25% smaller than the factory of Fowler et al. but outputs |T⟩ states twice as quickly. We show how to generalize the catalyzed transformation to arbitrary phase angles, and note that the case \(θ=22.5^a\) produces a particularly efficient circuit for producing |T−−√⟩ states. Compared to using the 12d×8d×6.5d |T⟩ factory of Fowler et al., our |CCZ⟩ factory can quintuple the speed of algorithms that are dominated by the cost of applying Toffoli gates, including Shor's algorithm and the chemistry algorithm of Babbush et al.. Assuming a physical gate error rate of 10−3, our CCZ factory can produce ∼1010 states on average before an error occurs. This is sufficient for classically intractable instantiations of the chemistry algorithm, but for more demanding algorithms such as Shor's algorithm the mean number of states until failure can be increased to ∼1012 by increasing the factory footprint ~20%  </span>
+<span class="bibdata" style="display:none"><pre><code>@article{magicFactories,
+    author = {  Gidney,Craig and   Fowler, Austin G.},
+    title = {Efficient magic state factories with a catalyzed |CCZ> to 2|T> transformations},
+    year = {2018},
+    journal = {arXiv preprint arXiv:1812.01238},
+    link = {https://arxiv.org/abs/1812.01238},
+    keywords = {magic, magic states, ZX-calculus},
+    abstract = {We present magic state factory constructions for producing |CCZ⟩ states and |T⟩ states. For the |CCZ⟩ factory we apply the surface code lattice surgery construction techniques described by Fowler et al. to the fault-tolerant Toffoli. The resulting factory has a footprint of 12d×6d (where d is the code distance) and produces one |CCZ⟩ every 5.5d surface code cycles. Our |T⟩ state factory uses the |CCZ⟩ factory's output and a catalyst |T⟩ state to exactly transform one |CCZ⟩ state into two |T⟩ states. It has a footprint 25\% smaller than the factory of Fowler et al. but outputs |T⟩ states twice as quickly. We show how to generalize the catalyzed transformation to arbitrary phase angles, and note that the case $θ=22.5^a$ produces a particularly efficient circuit for producing |T−−√⟩ states. Compared to using the 12d×8d×6.5d |T⟩ factory of Fowler et al., our |CCZ⟩ factory can quintuple the speed of algorithms that are dominated by the cost of applying Toffoli gates, including Shor's algorithm and the chemistry algorithm of Babbush et al.. Assuming a physical gate error rate of 10−3, our CCZ factory can produce ∼1010 states on average before an error occurs. This is sufficient for classically intractable instantiations of the chemistry algorithm, but for more demanding algorithms such as Shor's algorithm the mean number of states until failure can be increased to ∼1012 by increasing the factory footprint ~20\%  }
 }
 
 </code></pre></span></li>

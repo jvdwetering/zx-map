@@ -1069,8 +1069,25 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
     link = {https://arxiv.org/abs/1912.01003},
     abstract = {In this extended abstract we give an axiomatisation of ZX-calculus over arbi-trary commutative rings and semirings respectively. By a normal form inspiredfrom matrix elementary operations such as row addition and row multiplication,we can obtain that these versions of ZX-calculus are still universal and complete.  }}
 
+@article{autoCCZ,
+    Author = {  Gidney,Craig and   Fowler, Austin G.},
+    Title = {Flexible layout of surface code computations using AutoCCZ states},
+    Year = {2019},
+    keywords = {CCZ, Surface codes, ZX-calculus},
+    journal = {arXiv preprint arXiv:1905.08916
+},
+    link = {https://arxiv.org/abs/1905.08916},
+    abstract = {We construct a self-correcting CCZ state (the "AutoCCZ") with embedded delayed choice CZs for completing gate teleportations. Using the AutoCCZ state we create efficient surface code spacetime layouts for both a depth-limited circuit (a ripply-carry addition) and a Clifford-limited circuit (a QROM read). Our layouts account for distillation and routing, are based on plausible physical assumptions for a large-scale superconducting qubit platform, and suggest that circuit-level Toffoli parallelism (e.g. using a carry-lookahead adder instead of a ripple-carry adder) will not reduce the execution time of computations involving fewer than five million physical qubits. We reduce the spacetime volume of delayed choice CZs by a factor of 4 compared to techniques from previous work (Fowler 2012), and make several improvements to the CCZ magic state factory from (Gidney 2019).  }}
 
-
+@article{magicFactories,
+    Author = {  Gidney,Craig and   Fowler, Austin G.},
+    Title = {Efficient magic state factories with a catalyzed |CCZ> to 2|T> transformations},
+    Year = {2018},
+    keywords = {magic, magic states, ZX-calculus},
+    journal = {arXiv preprint arXiv:1812.01238
+},
+    link = {https://arxiv.org/abs/1812.01238},
+    abstract = {We present magic state factory constructions for producing |CCZ⟩ states and |T⟩ states. For the |CCZ⟩ factory we apply the surface code lattice surgery construction techniques described by Fowler et al. to the fault-tolerant Toffoli. The resulting factory has a footprint of 12d×6d (where d is the code distance) and produces one |CCZ⟩ every 5.5d surface code cycles. Our |T⟩ state factory uses the |CCZ⟩ factory's output and a catalyst |T⟩ state to exactly transform one |CCZ⟩ state into two |T⟩ states. It has a footprint 25\% smaller than the factory of Fowler et al. but outputs |T⟩ states twice as quickly. We show how to generalize the catalyzed transformation to arbitrary phase angles, and note that the case $θ=22.5^a$ produces a particularly efficient circuit for producing |T−−√⟩ states. Compared to using the 12d×8d×6.5d |T⟩ factory of Fowler et al., our |CCZ⟩ factory can quintuple the speed of algorithms that are dominated by the cost of applying Toffoli gates, including Shor's algorithm and the chemistry algorithm of Babbush et al.. Assuming a physical gate error rate of 10−3, our CCZ factory can produce ∼1010 states on average before an error occurs. This is sufficient for classically intractable instantiations of the chemistry algorithm, but for more demanding algorithms such as Shor's algorithm the mean number of states until failure can be increased to ∼1012 by increasing the factory footprint ~20\%  }}
 
 
 }
