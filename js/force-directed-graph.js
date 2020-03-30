@@ -52,7 +52,7 @@ var start = function () {
   addNode(50,"Hector Miller-Bakewell", "person")
   addNode(52,"Miriam Backens", "person")
   addNode(54,"Nicholas Chancellor", "person")
-  addNode(56,"Joe Collins", "person")
+  addNode(56,"Joseph Collins", "person")
   addNode(58,"Emmanuel Jeandel", "person")
   addNode(59,"Giovanni de Felice", "person")
   addNode(60,"Stefano Gogioso", "person")
