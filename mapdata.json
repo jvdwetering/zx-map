@@ -1,31 +1,51 @@
 {
     "people": {"Kissinger, Aleks": 
-                {"place": ["Nijmegen"],
+                {"place": ["Oxford"],
                 "fields": ["ZH", 
                         "PyZX", 
-                        "Circuit optimisation", 
+                        "Circuit optimisation",
+                        "Circuit simulation", 
+                        "Circuit extraction",
                         "Error correcting codes",
                         "Quantomatic",
-                        "Foundations",
-                        "CoSy"]},
+                        "Foundations"]},
+                "Cowtan, Alex": 
+                {"place": ["Oxford", "Cambridge"],
+                "fields": ["Circuit optimisation"]},
+                "Booth, Robert": 
+                {"place": ["Nancy"],
+                "fields": ["Infinite-dimensional ZX"]},
+                "Paler, Alexandru": 
+                {"place": ["Linz"],
+                "fields": ["Circuit optimisation", 
+                            "Surface codes",
+                            "Circuit extraction"]},
                 "van de Wetering, John":
                 {"place": ["Nijmegen"],
                 "fields": ["ZH", 
-                        "PyZX", 
-                        "Circuit optimisation"]},
-                "Wolffs, Sal":
-                {"place": ["Nijmegen"],
-                "fields": ["ZH"]},
-                "Kuijpers, Stach":
-                {"place": ["Nijmegen"],
-                "fields": ["ZH"]},
+                        "PyZX", "MBQC",
+                        "Circuit optimisation",
+                        "Circuit extraction",
+                        "Circuit simulation"]},
+                "Borgna, Agustin":
+                {"place": ["Nancy", "Paris"],
+                "fields": ["Circuit optimisation",
+                            "PyZX",
+                            "Mixed ZX"]},
+                "Meichanetzidis, Konstantinos":
+                {"place": ["Oxford"],
+                "fields": ["NLP", "Tensor networks"]},
+                "Comfort, Cole":
+                {"place": ["Oxford"],
+                "fields": ["Completeness",
+                            "String diagrams"]},
                 "Ng, Kang Feng":
-                {"place": ["Nijmegen"],
+                {"place": ["London"],
                 "fields": ["ZW",
                         "Completeness",
-                        "Scalable ZX",
                         "Qudits",
-                        "Fermionic QC"]},
+                        "Fermionic QC",
+                        "Algorithms"]},
                 "Horsman, Dominic":
                 {"place": ["Grenoble"],
                 "fields": ["Surface codes",
@@ -36,19 +56,17 @@
                 {"place": ["Grenoble"],
                 "fields": ["Surface codes",
                         "Scalable ZX",
-                        "Mixed ZX"]},
-                "Simons, Will":
+                        "Mixed ZX",
+                        "Infinite-dimensional ZX",
+                        "Algorithms"]},
+                "Simmons, Will":
                 {"place": ["Cambridge"],
                 "fields": ["Circuit optimisation"]},
                 "Duncan, Ross":
-                {"place": ["Cambridge"],
+                {"place": ["Cambridge", "Glasgow"],
                 "fields": ["Circuit optimisation",
                         "MBQC",
-                        "Quantomatic",
-                        "Foundations"]},
-                "Zamziev,Vladimir":
-                {"place": ["Nancy"],
-                "fields": ["Quantomatic"]},
+                        "Quantomatic"]},
                 "Perdrix, Simon":
                 {"place": ["Nancy"],
                 "fields": ["Completeness",
@@ -69,37 +87,31 @@
                 {"place": ["Kyoto"],
                 "fields": ["ZW",
                         "Fermionic QC"]},
-                "Borehi, Philipe":
-                {"place": ["Piza"],
-                "fields": ["Hopf algebras",
-                        "String diagrams"]},
-                "Zanasi, Fabio":
-                {"place": ["London"],
-                "fields": ["Hopf algebras",
-                        "String diagrams"]},
                 "Coecke, Bob":
                 {"place": ["Oxford"],
                 "fields": ["Completeness",
                         "Circuit optimisation",
-                        "Foundations",
-                        "ZW"]},
+                        "ZW", "NLP"]},
                 "de Beaudrap, Niel":
                 {"place": ["Oxford"],
                 "fields": ["Circuit optimisation",
                         "MBQC",
                         "Surface codes",
-                        "ZH"]},
+                        "Algorithms"]},
                 "Miller-Bakewell, Hector":
                 {"place": ["Oxford"],
-                "fields": ["Quantomatic","CoSy"]},
+                "fields": ["Quantomatic",
+                            "Completeness",
+                            "ZQ", "ZH",
+                            "String diagrams"]},
                 "Backens, Miriam":
-                {"place": ["London"],
+                {"place": ["Birmingham"],
                 "fields": ["Completeness",
                         "ZH",
-                        "Foundations"]},
+                        "Circuit extraction"]},
                 "Chancellor, Nicholas":
                 {"place": ["Durham"],
-                "fields": ["Error correcting codes"]},
+                "fields": ["Error correcting codes", "Tensor networks"]},
                 "Collins, Joe":
                 {"place": ["Glasgow"],
                 "fields": ["Hopf algebras"]},
@@ -110,16 +122,17 @@
                 "de Felice, Giovanni":
                 {"place": ["Oxford"],
                 "fields": ["ZW",
-                        "Fermionic QC"]},
+                        "Fermionic QC",
+                        "NLP"]},
                 "Gogioso, Stefano":
                 {"place": ["Oxford"],
-                "fields": ["ZX-Dynamics", "Foundations"]},
+                "fields": ["ZX-Dynamics", "Foundations", "Infinite-dimensional ZX"]},
                 "Wang, Quanlong":
                 {"place": ["Oxford"],
                 "fields": ["Completeness",
                         "Circuit optimisation",
-                        "Foundations",
-                        "Qudits"]}
+                        "Qudits",
+                        "ΔZX"]}
 
     }
 }
