@@ -57,7 +57,7 @@ HTML = r"""
 </div>
 <div class="rightContent">
 <span>
-<a target="_blank" href="{url}" class="journal">{journal}</a> 
+<a target="_blank" href="{doiurl}" class="journal">{journal}</a> 
 </span>
 <br>
 <span>
@@ -118,13 +118,16 @@ def entry_to_html(entry):
             coauthors[author].update(authorset.difference({author}))
             if author not in latest_pubs: latest_pubs[author] = publink
 
+    if "doi" in entry:
+        doi_url = "https://dx.doi.org/" + entry["doi"].replace(r"\_", "_")
+    else: doi_url = entry['link']
 
     if 'keywords' in entry: kw = entry['keywords']
     elif 'keyword' in entry: kw = entry['keyword']
     else: kw = ""
     keywords = [s.strip() for s in kw.split(',')]
     keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
-    html = HTML.format(url = entry['link'], title=clean_text(entry['title']),
+    html = HTML.format(url = entry['link'], doiurl = doi_url, title=clean_text(entry['title']),
                        authors = authors, journal = journal,
                        year = entry['year'], abstract=parse_math(entry['abstract']),
                        bibdata=raw_bibdata, keywords = keyword_html)
