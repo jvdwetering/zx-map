@@ -1,4 +1,5 @@
 import json
+import datetime
 
 #############################################
 # First we do Publications stuff
@@ -6,6 +7,8 @@ import json
 import bibtexparser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
+
+import rfeed
 
 writer = BibTexWriter()
 writer.indent = '    '
@@ -40,6 +43,17 @@ def clear_arXiv_preprint_text(s):
 
 def clean_text(s):
     return s.replace('{','').replace('}','').replace(r'\rm','')
+
+def entry_to_rss(title,link,abstract,authors,year, arxiv):
+    if arxiv.find('arxiv') == -1:
+        month = 1
+    else:
+        month = int(arxiv.rsplit('/',1)[1][2:4])
+    return rfeed.Item(title = "New ZX-calculus paper by " + authors +": " + title,
+                link = link,
+                description = abstract,
+                guid = rfeed.Guid(arxiv),
+                pubDate = datetime.datetime(int(year),month,1,0,0))
 
 HTML = r"""
 <div class="perEntryDiv">
@@ -122,19 +136,23 @@ def entry_to_html(entry):
         doi_url = "https://dx.doi.org/" + entry["doi"].replace(r"\_", "_")
     else: doi_url = entry['link']
 
+    title = clean_text(entry['title'])
+    year = entry['year']
+
     if 'keywords' in entry: kw = entry['keywords']
     elif 'keyword' in entry: kw = entry['keyword']
     else: kw = ""
     keywords = [s.strip() for s in kw.split(',')]
+
     keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
-    html = HTML.format(url = entry['link'], doiurl = doi_url, title=clean_text(entry['title']),
+    html = HTML.format(url = entry['link'], doiurl = doi_url, title=title,
                        authors = authors, journal = journal,
-                       year = entry['year'], abstract=parse_math(entry['abstract']),
+                       year = year, abstract=parse_math(entry['abstract']),
                        bibdata=raw_bibdata, keywords = keyword_html)
     for kw in keywords:
         if kw in keyword_pubs: keyword_pubs[kw].append(html)
         else: keyword_pubs[kw] = [html]
-    return html
+    return html, entry_to_rss(title, doi_url, entry['abstract'], authors, year, entry['link'])
 
 def library_to_html(lib):
     pubs_per_year = {}
@@ -146,27 +164,38 @@ def library_to_html(lib):
         else: pubs_per_year[y] = [b]
 
     output = ""
+    latest = []
     for y in sorted(pubs_per_year.keys(),reverse=True):
         pubs = pubs_per_year[y]
         output += "<h2>{:d}</h2>\n".format(2000+y)
         output += '<ul>\n'
-        for e in [entry_to_html(b) for b in sorted(pubs,key=entry_sort_key,reverse=True)]:
+        for e, rss in [entry_to_html(b) for b in sorted(pubs,key=entry_sort_key,reverse=True)]:
             output += '<li class="pub_entry">' + e + "</li>" +"\n"
+            if len(latest) < 10: latest.append(rss)
         output += "</ul>\n \n"
 
-    return output
+    return output, latest
 
 def generate_publications_html():
     with open('zx-papers.bib',encoding='utf-8') as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
-        bib_data = library_to_html(bib_database)
+        bib_data, rss = library_to_html(bib_database)
     #Generate main page
     with open('html/publications_base.html') as f:
         html_base = f.read()
     output = html_base.format(content=bib_data)
-    f = open("publications.html",'wb')
-    f.write(output.encode('utf-8'))
-    f.close()
+    with open("publications.html",'wb') as f:
+        f.write(output.encode('utf-8'))
+
+    feed = rfeed.Feed(title = "ZX-calculus publications",
+                      link = "http://zxcalculus.com/publications.rss",
+                      description = "An up to date list of the newest publications related to the ZX-calculus",
+                      language = "en-US",
+                      lastBuildDate = datetime.datetime.now(),
+                      items = rss)
+    with open("publications.rss",'w', encoding='utf-8') as f:
+        f.write(feed.rss())
+
 
 ############################################
 # Now we do ZX-Map stuff
