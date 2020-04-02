@@ -2,11 +2,11 @@ jQuery(document).ready(function ($) {
 
     $('a.abstract_more').click(function(event){
         event.preventDefault();
-        $(this).parent().find('span.abstract').toggle();
+        $(this).parents('div.perEntryDiv').find('div.abstract').toggle();
     });
 
     $('a.bibdata_more').click(function(event){
         event.preventDefault();
-        $(this).parent().find('span.bibdata').toggle();
+        $(this).parents('div.perEntryDiv').find('div.bibdata').toggle();
     });
 });

@@ -89,3 +89,28 @@ code {
 	max-width: 90%;
 	white-space: pre-wrap;
 }
+
+.perEntryDiv{
+	display: grid;
+	grid-template-columns: 70fr 30fr;
+}
+
+.leftContent {
+	padding: 1em;
+}
+.rightContent {
+	padding: 1em;
+}
+
+.crossContent {
+	grid-column: span 2;
+}
+.crossContent > div {
+	padding: 1em;
+}
+
+ul {
+	list-style: none;
+}
+
+li:nth-child(odd) { background: #fafafa; }

@@ -38,10 +38,9 @@ body {
 }
 
 a {
-    color: #444;
+    color: black;
     text-decoration: none;
 }
-
 
 .subtle {
     text-align: center;
@@ -58,7 +57,9 @@ p>a,
 span>a:link,
 span>a:visited,
 span>a {
-    border-bottom: 1px dashed #444;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #CCC;
     cursor: pointer;
 }
 
@@ -86,6 +87,11 @@ a:hover {
     /* Firefox */
     -ms-user-select: none;
     /* IE10+ */
+}
+
+.paperTitle {
+    font-weight: bold;
+    font-size: large;
 }
 
 .next {

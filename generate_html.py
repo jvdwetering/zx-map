@@ -35,21 +35,40 @@ def parse_math(s):
         i = s.rfind('$')
     return s
 
+def clear_arXiv_preprint_text(s):
+    return s.replace('arXiv preprint ','')
+
 def clean_text(s):
     return s.replace('{','').replace('}','').replace(r'\rm','')
 
 HTML = r"""
-<a target="_blank" href="{url}" class="paperTitle">{title}</a>,
-<span class="authors">{authors}</span>,
-<span class="journal">{journal}</span>
-<span class="year">({year})</span>.
+<div class="perEntryDiv">
+<div class="leftContent">
+<span>
+<a target="_blank" href="{url}" class="paperTitle">{title}</a> 
+</span>
 <br>
+<span class="authors">{authors}</span>
+<br>
+<span>
+<a href="#" class="abstract_more">Show abstract &#x21F2</a>
+<a href="#" class="bibdata_more">Show bibdata &#x21F2</a>
+</span>
+</div>
+<div class="rightContent">
+<span>
+<a target="_blank" href="{url}" class="journal">{journal}</a> 
+</span>
+<br>
+<span>
 Keywords: <span class="keywords">{keywords}</span>.
-<a href="#" class="abstract_more">Abstract</a>&nbsp;&nbsp;
-<a href="#" class="bibdata_more">Bibdata</a>
-<br>
-<span class="abstract" style="display:none">{abstract}</span>
-<span class="bibdata" style="display:none"><pre><code>{bibdata}</code></pre></span>"""
+</span>
+</div>
+<div class="crossContent">
+<div class="abstract" style="display:none">{abstract}</div>
+<div class="bibdata" style="display:none"><pre><code>{bibdata}</code></pre></div>
+</div>
+</div>"""
 
 keyword_pubs = dict()
 coauthors = dict()
@@ -66,7 +85,7 @@ def entry_to_html(entry):
     ids.add(entry['ID'])
 
     if 'journal' in entry:
-        journal = clean_text(entry['journal'])
+        journal = clear_arXiv_preprint_text(clean_text(entry['journal']))
     elif 'booktitle' in entry:
         journal = clean_text(entry['booktitle'])
     elif 'note' in entry:
