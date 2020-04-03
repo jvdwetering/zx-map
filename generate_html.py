@@ -49,7 +49,8 @@ def entry_to_rss(title,link,abstract,authors,year, arxiv):
         month = 1
     else:
         month = int(arxiv.rsplit('/',1)[1][2:4])
-    return rfeed.Item(title = "New ZX-calculus paper by " + authors +": " + title,
+    return rfeed.Item(title = title,
+                author=authors,
                 link = link,
                 description = abstract,
                 guid = rfeed.Guid(arxiv),
