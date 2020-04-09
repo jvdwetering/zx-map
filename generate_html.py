@@ -110,7 +110,7 @@ def entry_to_html(entry):
         print(entry)
         raise
     journal = journal.replace('\n', ' ')
-    
+    abstract = parse_math(entry['abstract'])
     e = bibtexparser.customization.author(entry)
     bibtexparser.customization.convert_to_unicode(entry)
     authors = ""
@@ -148,7 +148,7 @@ def entry_to_html(entry):
     keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
     html = HTML.format(url = entry['link'], doiurl = doi_url, title=title,
                        authors = authors, journal = journal,
-                       year = year, abstract=parse_math(entry['abstract']),
+                       year = year, abstract=abstract,
                        bibdata=raw_bibdata, keywords = keyword_html)
     for kw in keywords:
         if kw in keyword_pubs: keyword_pubs[kw].append(html)

@@ -1079,14 +1079,20 @@ with qutrit dichromatic calculus as a special case, is universal for quantum mec
 }
 
 @article{magicFactories,
-    author = {  Gidney,Craig and   Fowler, Austin G.},
-    title = {Efficient magic state factories with a catalyzed |CCZ> to 2|T> transformations},
-    year = {2018},
-    journal = {arXiv preprint arXiv:1812.01238},
-    doi = {10.22331/q-2019-04-30-135},
-    link = {https://arxiv.org/abs/1812.01238},
-    keywords = {magic, magic states, ZX-calculus},
-    abstract = {We present magic state factory constructions for producing |CCZ⟩ states and |T⟩ states. For the |CCZ⟩ factory we apply the surface code lattice surgery construction techniques described by Fowler et al. to the fault-tolerant Toffoli. The resulting factory has a footprint of $12d\times 6d$ (where $d$ is the code distance) and produces one |CCZ⟩ every 5.5d surface code cycles. Our |T⟩ state factory uses the |CCZ⟩ factory's output and a catalyst |T⟩ state to exactly transform one |CCZ⟩ state into two |T⟩ states. It has a footprint $25\%$ smaller than the factory of Fowler et al. but outputs |T⟩ states twice as quickly. We show how to generalize the catalyzed transformation to arbitrary phase angles, and note that the case $θ=22.5^a$ produces a particularly efficient circuit for producing |T−−√⟩ states. Compared to using the $12d\times 8d\times 6.5d$ |T⟩ factory of Fowler et al., our |CCZ⟩ factory can quintuple the speed of algorithms that are dominated by the cost of applying Toffoli gates, including Shor's algorithm and the chemistry algorithm of Babbush et al.. Assuming a physical gate error rate of $10^{−3}$, our CCZ factory can produce $∼10^10$ states on average before an error occurs. This is sufficient for classically intractable instantiations of the chemistry algorithm, but for more demanding algorithms such as Shor's algorithm the mean number of states until failure can be increased to $∼10^12$ by increasing the factory footprint $~20\%$.}
+  doi = {10.22331/q-2019-04-30-135},
+  url = {https://doi.org/10.22331/q-2019-04-30-135},
+  link = {https://arxiv.org/abs/1812.01238},
+  title = {{Efficient magic state factories with a catalyzed {$|CCZ\rangle$} to {$2|T\rangle$} transformation}},
+  author = {Gidney, Craig and Fowler, Austin G.},
+  journal = {{Quantum}},
+  issn = {2521-327X},
+  publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+  volume = {3},
+  pages = {135},
+  month = {4},
+  year = {2019},
+  keywords = {magic, magic states, ZX-calculus},
+  abstract = {We present magic state factory constructions for producing |CCZ⟩ states and |T⟩ states. For the |CCZ⟩ factory we apply the surface code lattice surgery construction techniques described by Fowler et al. to the fault-tolerant Toffoli. The resulting factory has a footprint of $12d\times 6d$ (where $d$ is the code distance) and produces one |CCZ⟩ every 5.5d surface code cycles. Our |T⟩ state factory uses the |CCZ⟩ factory's output and a catalyst |T⟩ state to exactly transform one |CCZ⟩ state into two |T⟩ states. It has a footprint $25\%$ smaller than the factory of Fowler et al. but outputs |T⟩ states twice as quickly. We show how to generalize the catalyzed transformation to arbitrary phase angles, and note that the case $θ=22.5^a$ produces a particularly efficient circuit for producing |$\sqrt{T}$⟩ states. Compared to using the $12d\times 8d\times 6.5d$ |T⟩ factory of Fowler et al., our |CCZ⟩ factory can quintuple the speed of algorithms that are dominated by the cost of applying Toffoli gates, including Shor's algorithm and the chemistry algorithm of Babbush et al.. Assuming a physical gate error rate of $10^{−3}$, our CCZ factory can produce $∼10^{10}$ states on average before an error occurs. This is sufficient for classically intractable instantiations of the chemistry algorithm, but for more demanding algorithms such as Shor's algorithm the mean number of states until failure can be increased to $∼10^{12}$ by increasing the factory footprint $~20\%$.}
 }
 
 @article{braidedCircuits,
@@ -1153,3 +1159,13 @@ patterns and back again.}
     abstract = {Graphical calculi are vital tools for representing and reasoning about quantum circuits and processes. Some are not only graphically intuitive but also logically complete. The best known of these is the ZX-calculus, which is an industry candidate for an Intermediate Representation; a language that sits between the algorithm designer's intent and the quantum hardware's gate instructions. The ZX calculus, built from generalised Z and X rotations, has difficulty reasoning about arbitrary rotations. This contrasts with the cross-hardware compiler TriQ which uses these arbitrary rotations to exploit hardware efficiencies. In this paper we introduce the graphical calculus ZQ, which uses quaternions to represent these arbitrary rotations, similar to TriQ, and the phase-free Z spider to represent entanglement, similar to ZX. We show that this calculus is sound and complete for qubit quantum computing, while also showing that a fully spider-based representation would have been impossible. This new calculus extends the zoo of qubit graphical calculi, each with different strengths, and we hope it will provide a common language for the optimisation procedures of both ZX and TriQ. }
 }
 
+
+@article{HypergraphSimp2020,
+    author = {Lemonnier, Louis and van de Wetering, John and Kissinger, Aleks},
+    title = {Hypergraph simplification: {Linking} the path-sum approach to the {ZH-calculus}},
+    year = {2020},
+    journal = {arXiv preprint arXiv:2003.13564},
+    link = {https://arxiv.org/abs/2003.13564},
+    keywords = {ZH-calculus, Fourier, Sum-Over-Paths, hypergraph},
+    abstract = {The ZH-calculus is a complete graphical calculus for linear maps between qubits that admits, for example, a straightforward encoding of hypergraph states and circuits arising from the Toffoli+Hadamard gate set. In this paper, we establish a correspondence between the ZH-calculus and the path-sum formalism, a technique recently introduced by Amy to verify quantum circuits. In particular, we find a bijection between certain canonical forms of ZH-diagrams and path-sum expressions. We then introduce and prove several new simplification rules for the ZH-calculus, which are in direct correspondence to the simplification rules of the path-sum formalism. The relatively opaque path-sum rules are shown to arise naturally as the convergence of two consequences of the ZH-calculus. The first is the extension of the familiar graph-theoretic simplifications based on local complementation and pivoting to their hypergraph-theoretic analogues: hyper-local complementation and hyper-pivoting. The second is the graphical Fourier transform introduced by Kuijpers et al., which enables effective simplification of ZH-diagrams encoding multi-linear phase polynomials with arbitrary real coefficients.}
+}
