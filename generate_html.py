@@ -17,6 +17,9 @@ writer.display_order = ('ENTRYTYPE', 'author', 'title', 'year', 'journal', 'book
                         'keyword',  'keywords', 'abstract')
 
 def entry_sort_key(entry):
+    if 'link' not in entry:
+        raise Exception("{} does not have attribute 'link'".format(entry['ID']))
+
     l = entry['link']
     if l.find('arxiv') != -1:
         return int(l.rsplit('/',1)[1][:4]) #arxiv year-month
@@ -105,6 +108,13 @@ def entry_to_html(entry):
         journal = clean_text(entry['booktitle'])
     elif 'note' in entry:
         journal = clean_text(entry['note'])
+    elif 'school' in entry:
+        journal = clean_text(entry['school'])
+        if entry['ENTRYTYPE'] == 'phdthesis': journal += " PhD Thesis"
+        elif entry['ENTRYTYPE'] == 'mastersthesis': journal += " Masters Thesis"
+        else: 
+            print("Unknown entry type", entry['ENTRYTYPE'])
+            raise
     else:
         print("Missing entries:")
         print(entry)
