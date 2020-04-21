@@ -12,19 +12,18 @@ import rfeed
 
 writer = BibTexWriter()
 writer.indent = '    '
-writer.display_order = ('ENTRYTYPE', 'author', 'title', 'year', 'journal', 'booktitle',
-                        'editor', 'series', 'volume', 'pages', 'publisher', 'doi', 'link',
-                        'keyword',  'keywords', 'abstract')
+writer.display_order = ('ENTRYTYPE', 'author', 'title', 'year', 'journal', 'booktitle', 'school',
+                        'editor', 'series', 'volume', 'issue', 'number', 'month', 'pages', 'numpages', 'publisher',
+                        'organization', 'acmid', 'address', 'isbn', 'issn', 'location', 'language',
+                        'doi', 'urldate', 'link', 'url', 'keyword',  'keywords', 'abstract')
 
 def entry_sort_key(entry):
+    if 'urldate' in entry:
+        return entry['urldate']
     if 'link' not in entry:
         raise Exception("{} does not have attribute 'link'".format(entry['ID']))
-
-    l = entry['link']
-    if l.find('arxiv') != -1:
-        return int(l.rsplit('/',1)[1][:4]) #arxiv year-month
-    else:
-        return int(entry['year'][2:])*100
+    
+    return entry['year']+"-01-01"
         
 def normalise_name(n):
     p1, p2 = n.split(', ')
@@ -169,7 +168,7 @@ def library_to_html(lib):
     pubs_per_year = {}
     for b in lib.entries:
         k = entry_sort_key(b)
-        y = k//100
+        y = int(k.split('-')[0])
         if y in pubs_per_year:
             pubs_per_year[y].append(b)
         else: pubs_per_year[y] = [b]
@@ -178,7 +177,7 @@ def library_to_html(lib):
     latest = []
     for y in sorted(pubs_per_year.keys(),reverse=True):
         pubs = pubs_per_year[y]
-        output += "<h2>{:d}</h2>\n".format(2000+y)
+        output += "<h2>{:d}</h2>\n".format(y)
         output += '<ul>\n'
         for e, rss in [entry_to_html(b) for b in sorted(pubs,key=entry_sort_key,reverse=True)]:
             output += '<li class="pub_entry">' + e + "</li>" +"\n"
