@@ -46,17 +46,16 @@ def clear_arXiv_preprint_text(s):
 def clean_text(s):
     return s.replace('{','').replace('}','').replace(r'\rm','')
 
-def entry_to_rss(title,link,abstract,authors,year, arxiv):
-    if arxiv.find('arxiv') == -1:
-        month = 1
-    else:
-        month = int(arxiv.rsplit('/',1)[1][2:4])
+def entry_to_rss(title,link,abstract,authors,year, arxiv, date):
+    y,m,d = date.split("-")
+    m = int(m)
+    d = int(d)
     return rfeed.Item(title = title,
                 author=authors,
                 link = link,
                 description = abstract,
                 guid = rfeed.Guid(arxiv),
-                pubDate = datetime.datetime(int(year),month,1,0,0))
+                pubDate = datetime.datetime(int(year),m,d,0,0))
 
 HTML = r"""
 <div class="perEntryDiv">
@@ -162,7 +161,8 @@ def entry_to_html(entry):
     for kw in keywords:
         if kw in keyword_pubs: keyword_pubs[kw].append(html)
         else: keyword_pubs[kw] = [html]
-    return html, entry_to_rss(title, doi_url, entry['abstract'], authors, year, entry['link'])
+    return html, entry_to_rss(title, doi_url, entry['abstract'], authors, year, entry['link'],
+                                entry['urldate'] if 'urldate' in entry else "{}-01-01".format(year))
 
 def library_to_html(lib):
     pubs_per_year = {}
