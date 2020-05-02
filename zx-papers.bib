@@ -751,15 +751,23 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 In this paper, we present extended versions of ZW and ZX, and show their completeness for pure-state qubit theory, thus solving two major open problems in categorical quantum mechanics. First, we extend the original ZW calculus to represent states and linear maps with coefficients in an arbitrary commutative ring, and prove completeness by a strategy that rewrites all diagrams into a normal form. We then extend the language and axioms of the original ZX calculus, and show their completeness for pure-state qubit theory through a translation between ZX and ZW specialised to the field of complex numbers. This translation expands the one used by Jeandel, Perdrix, and Vilmart to derive an axiomatisation of the approximately universal Clifford+T fragment; restricting the field of complex numbers to a suitable subring, we obtain an alternative axiomatisation of the same theory.}
 }
 
-@article{Hector2019,
-    author = {Miller-Bakewell, Hector},
-    title = {Finite Verification for Infinite Families of Diagram Equations},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1904.00706},
-    urldate = {2019-04-01},
-    link = {https://arxiv.org/abs/1904.00706},
-    keywords = {ZX-calculus, Bang-Boxes, ZH-calculus, ZW-calculus, Automation},
-    abstract = {The ZX, ZW and ZH calculi are all complete graphical calculi for reasoning about pure state qubit quantum mechanics. All of these languages use certain diagrammatic decorations, called !-boxes and phase variables, to indicate not just one diagram but an infinite family of diagrams. In this same manner one can express infinite families of equations between diagrams, and these decorations are powerful enough to allow for complete rulesets expressing any equivalence in pure state qubit quantum mechanics. We present here results that show that equations between separable infinite families of diagrams are finitely verifiable; that is to say that to verify these infinite families of equations it suffices to check a finite subset of that family, provided a condition we call separability is met. The results we present in this paper not only construct such a verifying subfamily directly, but also generalise to any diagrammatic calculus that satisfies certain simple conditions.}
+@Inproceedings{MillerBakewell2020finite,
+  author    = {Miller-Bakewell, Hector},
+  year      = {2020},
+  title     = {Finite Verification of Infinite Families of Diagram Equations},
+  editor    = {Coecke, Bob and Leifer, Matthew},
+  booktitle = {{\rm Proceedings 16th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Chapman University, Orange, CA, USA., 10-14 June 2019}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {318},
+  publisher = {Open Publishing Association},
+  pages     = {27-52},
+  doi       = {10.4204/EPTCS.318.3},
+  urldate = {2019-04-01},
+  link = {https://arxiv.org/abs/1904.00706},
+  keywords = {ZX-calculus, Bang-Boxes, ZH-calculus, ZW-calculus, Automation},
+  abstract = {The ZX, ZW and ZH calculi are all complete graphical calculi for reasoning about pure state qubit quantum mechanics. All of these languages use certain diagrammatic decorations, called !-boxes and phase variables, to indicate not just one diagram but an infinite family of diagrams. In this same manner one can express infinite families of equations between diagrams, and these decorations are powerful enough to allow for complete rulesets expressing any equivalence in pure state qubit quantum mechanics. We present here results that show that equations between separable infinite families of diagrams are finitely verifiable; that is to say that to verify these infinite families of equations it suffices to check a finite subset of that family, provided a condition we call separability is met. The results we present in this paper not only construct such a verifying subfamily directly, but also generalise to any diagrammatic calculus that satisfies certain simple conditions.}
 }
 
 @mastersthesis{HerrmannThesis,
@@ -788,15 +796,23 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
     abstract = {Quantum entanglement is a key resource in many quantum protocols, such as quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to verify. This is why Coecke and Duncan have introduced a diagrammatic language for quantum protocols, called the ZX-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. In the author's MSc thesis it has been shown for over 25 quantum protocols that the ZX-calculus provides a relatively easy and more intuitive presentation. Moreover, the author embarked on the task to apply categorical quantum mechanics on quantum security; earlier works did not touch anything but Bennett and Brassard's quantum key distribution protocol, BB84. Superdense coding with the Greenberger-Horne-Zeilinger state and quantum key distribution with the W-state are presented in the ZX-calculus in this paper.}
 }
 
-@article{HopfFrobenius,
-    author = {Collins, Joseph and Duncan, Ross},
-    title = {Hopf-Frobenius algebras and a new Drinfeld double},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1905.00797},
-    urldate = {2019-05-02},
-    link = {https://arxiv.org/abs/1905.00797},
-    keywords = {Frobenius algebras, Category Theory},
-    abstract = {The zx-calculus and related theories are based on so-called interacting Frobenius algebras, where a pair of $\dagger$-special commutative Frobenius algebras jointly form a pair of Hopf algebras. In this setting we introduce a generalisation of this structure, Hopf-Frobenius algebras, starting from a single Hopf algebra which is not necessarily commutative or cocommutative. We provide the necessary and sufficient condition for a Hopf algebra to be a Hopf-Frobenius algebra, and show that every Hopf algebra in $\textbf{FVect}_\text{k}$ is a Hopf-Frobenius algebra. Hopf-Frobenius algebras provide a notion of duality, and give us a "dual" Hopf algebra that is isomorphic to the usual dual Hopf algebra in a compact closed category. We use this isomorphism to construct a Hopf algebra isomorphic to the Drinfeld double that is defined on $H\otimes H$ rather than $H\otimes H^*$.}
+@Inproceedings{Collins2020HopfFrobenius,
+  author    = {Collins, Joseph and Duncan, Ross},
+  year      = {2020},
+  title     = {Hopf-Frobenius Algebras and a Simpler Drinfeld Double},
+  editor    = {Coecke, Bob and Leifer, Matthew},
+  booktitle = {{\rm Proceedings 16th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Chapman University, Orange, CA, USA., 10-14 June 2019}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {318},
+  publisher = {Open Publishing Association},
+  pages     = {150-180},
+  doi       = {10.4204/EPTCS.318.10},
+  urldate = {2019-05-02},
+	link = {https://arxiv.org/abs/1905.00797},
+	keywords = {Frobenius algebras, Category Theory},
+	abstract = {The zx-calculus and related theories are based on so-called interacting Frobenius algebras, where a pair of $\dagger$-special commutative Frobenius algebras jointly form a pair of Hopf algebras. In this setting we introduce a generalisation of this structure, Hopf-Frobenius algebras, starting from a single Hopf algebra which is not necessarily commutative or cocommutative. We provide the necessary and sufficient condition for a Hopf algebra to be a Hopf-Frobenius algebra, and show that every Hopf algebra in $\textbf{FVect}_\text{k}$ is a Hopf-Frobenius algebra. Hopf-Frobenius algebras provide a notion of duality, and give us a "dual" Hopf algebra that is isomorphic to the usual dual Hopf algebra in a compact closed category. We use this isomorphism to construct a Hopf algebra isomorphic to the Drinfeld double that is defined on $H\otimes H$ rather than $H\otimes H^*$.}
 }
 
 @article{horsman2011quantum,
@@ -884,7 +900,7 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
 
 @inproceedings{kissinger2015quantomatic,
     author = {Kissinger, Aleks and Zamdzhiev, Vladimir},
-    title = {Quantomatic: A proof assistant for diagrammatic reasoning},
+    title = {{Quantomatic: A proof assistant for diagrammatic reasoning}},
     year = {2015},
     booktitle = {International Conference on Automated Deduction},
     pages = {326--336},
@@ -910,12 +926,20 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
     abstract = {We introduce a new family of models for measurement-based quantum computation which are deterministic and approximately universal. The resource states which play the role of graph states are prepared via 2-qubit gates of the form $\exp(−i\pi 2nZ\otimes Z)$. When $n=2$, these are equivalent, up to local Clifford unitaries, to graph states. However, when $n>2$, their behaviour diverges in two important ways. First, multiple applications of the entangling gate to a single pair of qubits produces non-trivial entanglement, and hence multiple parallel edges between nodes play an important role in these generalised graph states. Second, such a state can be used to realise deterministic, approximately universal computation using only Pauli Z and X measurements and feed-forward. Even though, for $n>2$, the relevant resource states are no longer stabiliser states, they admit a straightforward, graphical representation using the ZX-calculus. Using this representation, we are able to provide a simple, graphical proof of universality. We furthermore show that for every $n>2$ this family is capable of producing all Clifford gates and all diagonal gates in the $n$-th level of the Clifford hierarchy.}
 }
 
-@article{kissinger2019Pyzx,
-    author = {Kissinger, Aleks and van de Wetering, John},
-    title = {PyZX: Large Scale Automated Diagrammatic Reasoning},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1904.04735},
-    urldate = {2019-04-09},
+@Inproceedings{kissinger2019Pyzx,
+  author    = {Kissinger, Aleks and van de Wetering, John},
+  year      = {2020},
+  title     = {{PyZX: Large Scale Automated Diagrammatic Reasoning}},
+  editor    = {Coecke, Bob and Leifer, Matthew},
+  booktitle = {{\rm Proceedings 16th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Chapman University, Orange, CA, USA., 10-14 June 2019}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {318},
+  publisher = {Open Publishing Association},
+  pages     = {229-241},
+  doi       = {10.4204/EPTCS.318.14},
+  urldate = {2019-04-09},
     link = {https://arxiv.org/abs/1904.04735},
     keywords = {ZX-Calculus, Circuit Optimisation, PyZX, Automation},
     abstract = {The ZX-calculus is a graphical language for reasoning about ZX-diagrams, a tensor network-like language that can represent arbitrary linear maps between qubits. Using the ZX-calculus, we can intuitively reason about quantum mechanics, and optimise and validate quantum circuits. In this paper we introduce PyZX, an open source library for automated reasoning with large ZX-diagrams. We give a brief introduction to the ZX-calculus, then show how PyZX implements methods for circuit optimisation, equality validation, and visualisation and how it can be used in tandem with other software. We end with a set of challenges that when solved would expand the power of automated diagrammatic reasoning.}
@@ -928,7 +952,7 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
     journal = {arXiv preprint arXiv:1903.10477},
     urldate = {2019-03-25},
     link = {https://arxiv.org/abs/1903.10477},
-    keywords = {ZX-Calculus, Clifford+T, Circuit Optimisation},
+    keywords = {ZX-Calculus, Clifford+T, T-count, Circuit Optimisation},
     abstract = {Reducing the number of non-Clifford quantum gates present in a circuit is an important task for efficiently implementing quantum computations, especially in the fault-tolerant regime. We present a new method for reducing the number of T-gates in a quantum circuit based on the ZX-calculus, which matches or beats previous approaches to T-count reduction on the majority of our benchmark circuits in the ancilla-free case, in some cases yielding up to 50\% improvement. Our method begins by representing the quantum circuit as a ZX-diagram, a tensor network-like structure that can be transformed and simplified according to the rules of the ZX-calculus. We then show that a recently-proposed simplification strategy can be extended to reduce T-count using a new technique called phase teleportation. This technique allows non-Clifford phases to combine and cancel by propagating non-locally through a generic quantum circuit. Phase teleportation does not change the number or location of non-phase gates and the method also applies to arbitrary non-Clifford phase gates as well as gates with unknown phase parameters in parametrised circuits. Furthermore, the simplification strategy we use is powerful enough to validate equality of many circuits. In particular, we use it to show that our optimised circuits are indeed equal to the original ones. We have implemented the routines of this paper in the open-source library PyZX.}
 }
 
@@ -1006,15 +1030,23 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
     abstract = {We show that the formalism of "Sum-Over-Path" (SOP), used for symbolically representing linear maps or quantum operators, together with a proper rewrite system, has a structure of dagger-compact PROP. Several consequences arise from this observation: 1) Morphisms of SOP are very close to the diagrams of the graphical calculus called ZH-Calculus, so we give a system of interpretation between the two; 2) A construction, called the discard construction, can be applied to enrich the formalism so that, in particular, it can represent the quantum measurement. We also enrich the rewrite system so as to get the completeness of the Clifford fragments of both the initial formalism and its enriched version.}
 }
 
-@article{PauliFusion,
-    author = {de Beaudrap, Niel and Duncan, Ross and Horsman, Dominic and Perdrix, Simon},
-    title = {Pauli Fusion: a computational model to realise quantum transformations from ZX terms},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1904.12817},
-    urldate = {2019-04-29},
-    link = {https://arxiv.org/abs/1904.12817},
-    keywords = {ZX-calculus, Lattice Surgery, Pauli Fusion},
-    abstract = {We present an abstract model of quantum computation, the Pauli Fusion model, whose primitive operations correspond closely to generators of the ZX calculus (a formal graphical language for quantum computing). The fundamental operations of Pauli Fusion are also straightforward abstractions of basic processes in some leading proposed quantum technologies. These operations have non-deterministic heralded effects, similarly to measurement-based quantum computation. We describe sufficient conditions for Pauli Fusion procedures to be deterministically realisable, so that it performs a given transformation independently of its non-deterministic outcomes. This provides an operational model to realise ZX terms beyond the circuit model.}
+@Inproceedings{deBeaudrap2020Paulifusion,
+  author    = {de Beaudrap, Niel and Duncan, Ross and Horsman, Dominic and Perdrix, Simon},
+  year      = {2020},
+  title     = {{Pauli Fusion: a Computational Model to Realise Quantum Transformations from ZX Terms}},
+  editor    = {Coecke, Bob and Leifer, Matthew},
+  booktitle = {{\rm Proceedings 16th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Chapman University, Orange, CA, USA., 10-14 June 2019}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {318},
+  publisher = {Open Publishing Association},
+  pages     = {85-105},
+  doi       = {10.4204/EPTCS.318.6},
+  urldate = {2019-04-29},
+  link = {https://arxiv.org/abs/1904.12817},
+  keywords = {ZX-calculus, Lattice Surgery, Pauli Fusion},
+  abstract = {We present an abstract model of quantum computation, the Pauli Fusion model, whose primitive operations correspond closely to generators of the ZX calculus (a formal graphical language for quantum computing). The fundamental operations of Pauli Fusion are also straightforward abstractions of basic processes in some leading proposed quantum technologies. These operations have non-deterministic heralded effects, similarly to measurement-based quantum computation. We describe sufficient conditions for Pauli Fusion procedures to be deterministically realisable, so that it performs a given transformation independently of its non-deterministic outcomes. This provides an operational model to realise ZX terms beyond the circuit model.}
 }
 
 @article{PhasefreeZH2019,
@@ -1028,26 +1060,42 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
     abstract = {The ZH-calculus is a graphical calculus for linear maps between qubits that allows a natural representation of the Toffoli+Hadamard gate set. The original version of the calculus, which allows every generator to be labelled by an arbitrary complex number, was shown to be complete by Backens and Kissinger. Even though the calculus is complete, this does not mean it allows one to easily reason in restricted settings such as is the case in quantum computing. In this paper we study the fragment of the ZH-calculus that is phase-free, and thus is closer aligned to physically implementable maps. We present a modified rule-set for the phase-free ZH-calculus and show that it is complete. We further discuss the minimality of this rule-set and we give an intuitive interpretation of the rules. Our completeness result follows by reducing to Vilmart's rule-set for the phase-free $\Delta$ZX-calculus. }
 }
 
-@article{phaseGadgetSynth,
-    author = {Cowtan, Alexander and Dilkes, Silas and Duncan, Ross and Simmons, Will and Sivarajah, Seyon},
-    title = {Phase Gadget Synthesis for Shallow Circuits},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1906.01734},
-    urldate = {2019-06-04},
+@Inproceedings{Cowtan2020phasegadget,
+  author    = {Cowtan, Alexander and Dilkes, Silas and Duncan, Ross and Simmons, Will and Sivarajah, Seyon},
+  year      = {2020},
+  title     = {Phase Gadget Synthesis for Shallow Circuits},
+  editor    = {Coecke, Bob and Leifer, Matthew},
+  booktitle = {{\rm Proceedings 16th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Chapman University, Orange, CA, USA., 10-14 June 2019}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {318},
+  publisher = {Open Publishing Association},
+  pages     = {213-228},
+  doi       = {10.4204/EPTCS.318.13},
+  urldate = {2019-06-04},
     link = {https://arxiv.org/abs/1906.01734},
-    keywords = {Phase Gadget, Chemistry, ZX-calculus},
+    keywords = {Phase Gadget, Circuit optimisation, ZX-calculus},
     abstract = {We give an overview of the circuit optimisation methods used by tket, a compiler system for quantum software developed by Cambridge Quantum Computing Ltd. We focus on a novel technique based around phase gadgets, a family of multi-qubit quantum operations which occur naturally in a wide range of quantum circuits of practical interest. The phase gadgets have a simple presentation in the ZX-calculus, which makes it easy to reason about them. Taking advantage of this, we present an efficient method to translate the phase gadgets back to CNOT gates and single qubit operations suitable for execution on a quantum computer with significant reductions in gate count and circuit depth. We demonstrate the effectiveness of these methods on a quantum chemistry benchmarking set based on variational circuits for ground state estimation of small molecules.}
 }
 
-@article{pi4parity,
-    author = {de Beaudrap, Niel and Bian, Xiaoning and Wang, Quanlong},
-    title = {Techniques to reduce \pi/4-parity phase circuits, motivated by the ZX calculus},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1911.09039},
-    urldate = {2019-11-20},
-    link = {https://arxiv.org/abs/1911.09039},
-    keywords = {phase circuits, ZX-calculus},
-    abstract = {To approximate arbitrary unitary transformations on one or more qubits, one must perform transformations which are outside of the Clifford group. The gate most commonly considered for this purpose is the T=diag(1,exp(i\pi/4)) gate. As T gates are computationally expensive to perform fault-tolerantly in the most promising error-correction technologies, minimising the "T-count" (the number of T gates) required to realise a given unitary in a Clifford+T circuit is of great interest. We describe techniques to find circuits with reduced T-count in unitary circuits, which develop on the ideas of Heyfron and Campbell [arXiv:1712.01557] with the help of the ZX calculus. Following [arXiv:1712.01557], we reduce the problem to that of minimising the T count of a CNOT+T circuit. The ZX calculus motivates a further reduction to simplifying a product of commuting "\pi/4-parity-phase" operations: diagonal unitary transformations which induce a relative phase of exp(i\pi/4) depending on the outcome of a parity computation on the standard basis (which motivated Kissinger and van de Wetering [1903.10477] to introduce "phase gadgets"). For a number of standard benchmark circuits, we show that these techniques --- in some cases supplemented by the TODD subroutine of Heyfron and Campbell [arXiv:1712.01557] --- yield T-counts comparable to or better than the best previously known results.  }
+@Inproceedings{deBeaudrap2020Techniques,
+  author    = {de Beaudrap, Niel and Bian, Xiaoning and Wang, Quanlong},
+  year      = {2020},
+  title     = {{Techniques to Reduce $\pi/4$-Parity-Phase Circuits, Motivated by the ZX Calculus}},
+  editor    = {Coecke, Bob and Leifer, Matthew},
+  booktitle = {{\rm Proceedings 16th International Conference on}
+               Quantum Physics and Logic,
+               {\rm Chapman University, Orange, CA, USA., 10-14 June 2019}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {318},
+  publisher = {Open Publishing Association},
+  pages     = {131-149},
+  doi       = {10.4204/EPTCS.318.9},
+  urldate = {2019-11-20},
+  link = {https://arxiv.org/abs/1911.09039},
+  keywords = {Circuit optimisation, T-count, Clifford+T, ZX-calculus},
+  abstract = {To approximate arbitrary unitary transformations on one or more qubits, one must perform transformations which are outside of the Clifford group. The gate most commonly considered for this purpose is the T=diag(1,exp(i\pi/4)) gate. As T gates are computationally expensive to perform fault-tolerantly in the most promising error-correction technologies, minimising the "T-count" (the number of T gates) required to realise a given unitary in a Clifford+T circuit is of great interest. We describe techniques to find circuits with reduced T-count in unitary circuits, which develop on the ideas of Heyfron and Campbell [arXiv:1712.01557] with the help of the ZX calculus. Following [arXiv:1712.01557], we reduce the problem to that of minimising the T count of a CNOT+T circuit. The ZX calculus motivates a further reduction to simplifying a product of commuting "\pi/4-parity-phase" operations: diagonal unitary transformations which induce a relative phase of exp(i\pi/4) depending on the outcome of a parity computation on the standard basis (which motivated Kissinger and van de Wetering [1903.10477] to introduce "phase gadgets"). For a number of standard benchmark circuits, we show that these techniques --- in some cases supplemented by the TODD subroutine of Heyfron and Campbell [arXiv:1712.01557] --- yield T-counts comparable to or better than the best previously known results.}
 }
 
 @article{Qtritdit,
@@ -1227,7 +1275,7 @@ Quantum Physics and Logic,
     author = {Comfort, Cole},
     title = {The ZX\& calculus: A complete graphical calculus for classical circuits using spiders},
     year = {2020},
-    journal = {arXiv preprint arXiv:arXiv:2004.05287},
+    journal = {arXiv preprint arXiv:2004.05287},
     urldate = {2020-04-29},
     link = {https://arxiv.org/abs/2004.05287},
     keywords = { ZX\&, classical circuits},

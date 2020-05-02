@@ -15,7 +15,8 @@ writer.display_order = ('ENTRYTYPE', 'author', 'title', 'year', 'journal', 'book
 
 
 def strip_arxiv_link(s):
-    if s.find('arxiv') == -1: return None
+    s = s.lower().replace("arxiv:","")
+    if s.find('arxiv') == -1: return s
     return s.rsplit('/',1)[1]
 
 def strip_arxiv_id(s):
