@@ -1152,7 +1152,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('comple
 </div>
 <div class="rightContent">
 <span>
-<a target="_blank" href="https://arxiv.org/abs/1902.03178" class="journal">arXiv:1902.03178</a> 
+<a target="_blank" href="https://dx.doi.org/10.22331/q-2020-06-04-279" class="journal">Quantum</a> 
 </span>
 <br>
 <span>
@@ -1160,16 +1160,22 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 </div>
 <div class="crossContent">
-<div class="abstract" style="display:none">We present the theoretical foundations for a new quantum circuit optimisation technique based on an equational theory called the ZX-calculus. We first interpret quantum circuits as ZX-diagrams, which provide a flexible, lower-level language for describing quantum computations graphically. Then, using the rules of the ZX-calculus, we derive a terminating simplification procedure for ZX-diagrams based on the two graph transformations of local complementation and pivoting. While little is known about extracting an equivalent quantum circuit from an arbitrary ZX-diagram, we show that our simplification procedure preserves a graph property called focused gFlow, and use this property to derive a deterministic strategy for circuit re-extraction. Hence, this approach enables us to temporarily break the rigid quantum circuit structure and 'see around' obstructions (namely non-Clifford quantum gates) to produce significant reductions, while still maintaining enough data to extract a reduced quantum circuit at the end.</div>
+<div class="abstract" style="display:none">We present a completely new approach to quantum circuit optimisation, based on the ZX-calculus. We first interpret quantum circuits as ZX-diagrams, which provide a flexible, lower-level language for describing quantum computations graphically. Then, using the rules of the ZX-calculus, we give a simplification strategy for ZX-diagrams based on the two graph transformations of local complementation and pivoting and show that the resulting reduced diagram can be transformed back into a quantum circuit. While little is known about extracting circuits from arbitrary ZX-diagrams, we show that the underlying graph of our simplified ZX-diagram always has a graph-theoretic property called generalised flow, which in turn yields a deterministic circuit extraction procedure. For Clifford circuits, this extraction procedure yields a new normal form that is both asymptotically optimal in size and gives a new, smaller upper bound on gate depth for nearest-neighbour architectures. For Clifford+T and more general circuits, our technique enables us to to 'see around' gates that obstruct the Clifford structure and produce smaller circuits than naive 'cut-and-resynthesise' methods.</div>
 <div class="bibdata" style="display:none"><pre><code>@article{duncan2019graph,
     author = {Duncan, Ross and Kissinger, Aleks and Pedrix, Simon and van de Wetering, John},
-    title = {Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1902.03178},
+    title = {{Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus}},
+    year = {2020},
+    journal = {{Quantum}},
+    volume = {4},
+    month = {6},
+    pages = {279},
+    publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+    issn = {2521-327X},
+    doi = {10.22331/q-2020-06-04-279},
     urldate = {2019-02-08},
     link = {https://arxiv.org/abs/1902.03178},
     keywords = {ZX-Calculus, Circuit optimisation},
-    abstract = {We present the theoretical foundations for a new quantum circuit optimisation technique based on an equational theory called the ZX-calculus. We first interpret quantum circuits as ZX-diagrams, which provide a flexible, lower-level language for describing quantum computations graphically. Then, using the rules of the ZX-calculus, we derive a terminating simplification procedure for ZX-diagrams based on the two graph transformations of local complementation and pivoting. While little is known about extracting an equivalent quantum circuit from an arbitrary ZX-diagram, we show that our simplification procedure preserves a graph property called focused gFlow, and use this property to derive a deterministic strategy for circuit re-extraction. Hence, this approach enables us to temporarily break the rigid quantum circuit structure and 'see around' obstructions (namely non-Clifford quantum gates) to produce significant reductions, while still maintaining enough data to extract a reduced quantum circuit at the end.}
+    abstract = {We present a completely new approach to quantum circuit optimisation, based on the ZX-calculus. We first interpret quantum circuits as ZX-diagrams, which provide a flexible, lower-level language for describing quantum computations graphically. Then, using the rules of the ZX-calculus, we give a simplification strategy for ZX-diagrams based on the two graph transformations of local complementation and pivoting and show that the resulting reduced diagram can be transformed back into a quantum circuit. While little is known about extracting circuits from arbitrary ZX-diagrams, we show that the underlying graph of our simplified ZX-diagram always has a graph-theoretic property called generalised flow, which in turn yields a deterministic circuit extraction procedure. For Clifford circuits, this extraction procedure yields a new normal form that is both asymptotically optimal in size and gives a new, smaller upper bound on gate depth for nearest-neighbour architectures. For Clifford+T and more general circuits, our technique enables us to to 'see around' gates that obstruct the Clifford structure and produce smaller circuits than naive 'cut-and-resynthesise' methods.}
 }
 
 </code></pre></div>
