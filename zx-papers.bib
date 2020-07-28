@@ -1301,3 +1301,14 @@ Quantum Physics and Logic,
     abstract = {The ZX calculus is a mathematical tool to represent and analyse quantum operations by manipulating diagrams which in effect represent tensor networks. Two families of nodes of these networks are ones which commute with either Z rotations or X rotations, usually called "green nodes" and "red nodes" respectively. The original formulation of the ZX calculus was motivated in part by properties of the algebras formed by the green and red nodes: notably, that they form a bialgebra -- but only up to scalar factors. As a consequence, the diagram transformations and notation for certain unitary operations involve "scalar gadgets" which denote contributions to a normalising factor. We present renormalised generators for the ZX calculus, which form a bialgebra precisely. As a result, no scalar gadgets are required to represent the most common unitary transformations, and the corresponding diagram transformations are generally simpler. We also present a similar renormalised version of the ZH calculus. We obtain these results by an analysis of conditions under which various "idealised" rewrites are sound, leveraging the existing presentations of the ZX and ZH calculi.}
 }
 
+@article{cowtan2020generic,
+    author = {Cowtan, Alexander and Simmons, Will and Duncan, Ross},
+    title = {{A Generic Compilation Strategy for the Unitary Coupled Cluster Ansatz}},
+    year = {2020},
+    journal = {arXiv preprint arXiv:2007.10515},
+    urldate = {2020-07-20},
+    link = {http://arxiv.org/abs/2007.10515},
+    keywords = {Eigensolver, Compilation},
+    abstract = {We describe a compilation strategy for Variational Quantum Eigensolver (VQE) algorithms which use the Unitary Coupled Cluster (UCC) ansatz, designed to reduce circuit depth and gate count. This is achieved by partitioning Pauli exponential terms into mutually commuting sets. These sets are then diagonalised using Clifford circuits and synthesised using the phase polynomial formalism. This strategy reduces cx depth by 75.4\% on average, and by up to 89.9\%, compared to naive synthesis for a variety of molecules, qubit encodings and basis sets.}
+}
+
