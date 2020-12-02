@@ -1,3 +1,3 @@
-# Welcome to information on the ZX-calculus
+# ZX-Calculus official website
 
-This is currently a work in progress, but check back here soon for all the information you need on the ZX-calculus and quantum computing.
+This is the source for the official ZX-calculus website, hosted at [zxcalculus.com](https://zxcalculus.com).
