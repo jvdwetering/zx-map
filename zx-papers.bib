@@ -1198,13 +1198,18 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
   abstract = {To approximate arbitrary unitary transformations on one or more qubits, one must perform transformations which are outside of the Clifford group. The gate most commonly considered for this purpose is the T=diag(1,exp(i\pi/4)) gate. As T gates are computationally expensive to perform fault-tolerantly in the most promising error-correction technologies, minimising the "T-count" (the number of T gates) required to realise a given unitary in a Clifford+T circuit is of great interest. We describe techniques to find circuits with reduced T-count in unitary circuits, which develop on the ideas of Heyfron and Campbell [arXiv:1712.01557] with the help of the ZX calculus. Following [arXiv:1712.01557], we reduce the problem to that of minimising the T count of a CNOT+T circuit. The ZX calculus motivates a further reduction to simplifying a product of commuting "\pi/4-parity-phase" operations: diagonal unitary transformations which induce a relative phase of exp(i\pi/4) depending on the outcome of a parity computation on the standard basis (which motivated Kissinger and van de Wetering [1903.10477] to introduce "phase gadgets"). For a number of standard benchmark circuits, we show that these techniques --- in some cases supplemented by the TODD subroutine of Heyfron and Campbell [arXiv:1712.01557] --- yield T-counts comparable to or better than the best previously known results.}
 }
 
-@article{Qtritdit,
-    author = {  Wang , Quanlong and Bian,Xiaoning },
-    title = {Qutrit Dichromatic Calculus and Its Universality},
-    year = {2014},
-    journal = {Electronic Proceedings in Theoretical Computer Science},
-    doi = {10.4204/EPTCS.172.7},
-    urldate = {2014-06-08},
+@Inproceedings{wang2014qutrit,
+  author    = {Wang, Quanlong and Bian, Xiaoning},
+  year      = {2014},
+  title     = {{Qutrit Dichromatic Calculus and Its Universality}},
+  editor    = {Coecke, Bob and Hasuo, Ichiro and Panangaden, Prakash},
+  booktitle = {Proceedings of the 11th workshop on Quantum Physics and Logic,     Kyoto, Japan, 4-6th June 2014},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {172},
+  publisher = {Open Publishing Association},
+  pages     = {92-101},
+  doi       = {10.4204/EPTCS.172.7},
+  urldate = {2014-06-08},
     link = {https://arxiv.org/abs/1406.3056},
     keywords = {ZX-Calculus, Qutrit, Qudit},
     abstract = {We introduce a dichromatic calculus (RG) for qutrit systems. We show that the decomposition of the qutrit Hadamard gate is non-unique and not derivable from the dichromatic calculus. As an application of the dichromatic calculus, we depict a quantum algorithm with a single qutrit. Since it is not easy to decompose an arbitrary $d\times d$ unitary matrix into Z and X phase gates when $d > 2$, the
@@ -1289,14 +1294,25 @@ proof of the universality of qudit ZX calculus for quantum mechanics is far from
     abstract = {The ZX-calculus is a powerful diagrammatic language for quantum mechanics and quantum information processing. We prove that its $\pi/4$-fragment is not complete, in other words the ZX-calculus is not complete for the so called "Clifford+T quantum mechanics". The completeness of this fragment was one of the main open problems in categorical quantum mechanics, a programme initiated by Abramsky and Coecke. The ZX-calculus was known to be incomplete for quantum mechanics. On the other hand, its $\pi/2$-fragment is known to be complete, i.e. the ZX-calculus is complete for the so called "stabilizer quantum mechanics". Deciding whether its $\pi/4$-fragment is complete is a crucial step in the development of the ZX-calculus since this fragment is approximately universal for quantum mechanics, contrary to the $\pi/2$-fragment. To establish our incompleteness result, we consider a fairly simple property of quantum states called supplementarity. We show that supplementarity can be derived in the ZX-calculus if and only if the angles involved in this equation are multiples of $\pi/2$. In particular, the impossibility to derive supplementarity for $\pi/4$ implies the incompleteness of the ZX-calculus for Clifford+T quantum mechanics. As a consequence, we propose to add the supplementarity to the set of rules of the ZX-calculus. We also show that if a ZX-diagram involves antiphase twins, they can be merged when the ZX-calculus is augmented with the supplementarity rule. Merging antiphase twins makes diagrammatic reasoning much easier and provides a purely graphical meaning to the supplementarity rule.}
 }
 
-@article{SZXCalculus,
-    author = {Carette, Titouan and Horsman, Dominic and Perdrix, Simon},
-    title = {SZX-calculus: Scalable Graphical Quantum Reasoning},
-    year = {2019},
-    journal = {arXiv preprint arXiv:1905.00041},
-    urldate = {2019-04-30},
+@InProceedings{SZXCalculus,
+  author =  {Titouan Carette and Dominic Horsman and Simon Perdrix},
+  title =   {{SZX-Calculus: Scalable Graphical Quantum Reasoning}},
+  booktitle =   {44th International Symposium on Mathematical Foundations of Computer Science (MFCS 2019)},
+  pages =   {55:1--55:15},
+  series =  {Leibniz International Proceedings in Informatics (LIPIcs)},
+  ISBN =    {978-3-95977-117-7},
+  ISSN =    {1868-8969},
+  year =    {2019},
+  volume =  {138},
+  editor =  {Peter Rossmanith and Pinar Heggernes and Joost-Pieter Katoen},
+  publisher =   {Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik},
+  address = {Dagstuhl, Germany},
+  URL =     {http://drops.dagstuhl.de/opus/volltexte/2019/10999},
+  URN =     {urn:nbn:de:0030-drops-109999},
+  doi =     {10.4230/LIPIcs.MFCS.2019.55},
+  urldate = {2019-04-30},
     link = {https://arxiv.org/abs/1905.00041},
-    keywords = {ZX-calculus, Scalable ZX},
+    keywords = {ZX-calculus, Scalable ZX, Error correcting codes},
     abstract = {We introduce the Scalable ZX-calculus (SZX-calculus for short), a formal and compact graphical language for the design and verification of quantum computations. The SZX-calculus is an extension of the ZX-calculus, a powerful framework that captures graphically the fundamental properties of quantum mechanics through its complete set of rewrite rules. The ZX-calculus is, however, a low level language, with each wire representing a single qubit. This limits its ability to handle large and elaborate quantum evolutions. We extend the ZX-calculus to registers of qubits and allow compact representation of sub-diagrams via binary matrices. We show soundness and completeness of the SZX-calculus and provide two examples of applications, for graph states and error correcting codes.}
 }
 
