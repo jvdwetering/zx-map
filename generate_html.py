@@ -166,6 +166,7 @@ def entry_to_html(entry):
 
 def library_to_html(lib):
     pubs_per_year = {}
+    print("{:d} papers in publications list".format(len(lib.entries)))
     for b in lib.entries:
         k = entry_sort_key(b)
         y = int(k.split('-')[0])
