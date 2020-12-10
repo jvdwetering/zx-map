@@ -25,7 +25,7 @@ def strip_arxiv_id(s):
 
 aid = input("Input an arxiv link or id: ")
 if aid.find('arxiv') != -1:
-	aid = aid.rsplit('/',1)[1]
+	aid = aid.rsplit('/',1)[1].replace(".pdf","")
 
 aid = strip_arxiv_id(aid)
 print(aid)
