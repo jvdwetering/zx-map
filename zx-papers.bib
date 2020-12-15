@@ -273,13 +273,25 @@ Quantum Physics and Logic,
     title = {{Completeness and the ZX-calculus}},
     year = {2016},
     school = {University of Oxford},
-    month = {feb},
     address = {Oxford},
     language = {English},
     urldate = {2016-02-29},
     link = {http://arxiv.org/abs/1602.08954},
     keywords = {ZX-Calculus, Completeness, PhD Thesis},
     abstract = {Graphical languages offer intuitive and rigorous formalisms for quantum physics. They can be used to simplify expressions, derive equalities, and do computations. Yet in order to replace conventional formalisms, rigour alone is not sufficient: the new formalisms also need to have equivalent deductive power. This requirement is captured by the property of completeness, which means that any equality that can be derived using some standard formalism can also be derived graphically. In this thesis, I consider the ZX-calculus, a graphical language for pure state qubit quantum mechanics. I show that it is complete for pure state stabilizer quantum mechanics, so any problem within this fragment of quantum theory can be fully analysed using graphical methods. This includes questions of central importance in areas such as error-correcting codes or measurement-based quantum computation. Furthermore, I show that the ZX-calculus is complete for the single-qubit Clifford+T group, which is approximately universal: any single-qubit unitary can be approximated to arbitrary accuracy using only Clifford gates and the T-gate. Lastly, I extend the use of rigorous graphical languages outside quantum theory to Spekkens' toy theory, a local hidden variable model that nevertheless exhibits some features commonly associated with quantum mechanics. I develop a graphical calculus similar to the ZX-calculus that fully describes Spekkens' toy theory, and show that it is complete. Hence, stabilizer quantum mechanics and Spekkens' toy theory can be fully analysed and compared using graphical formalisms. Intuitive graphical languages can replace conventional formalisms for the analysis of many questions in quantum computation and foundations without loss of mathematical rigour or deductive power.}
+}
+
+@phdthesis{Atzemoglou2013phd,
+    author = {Backens, Miriam},
+    title = {{Higher-order semantics for quantum programming languages with classical control}},
+    year = {2013},
+    school = {University of Oxford},
+    address = {Oxford},
+    language = {English},
+    urldate = {2013-11-26},
+    link = {https://arxiv.org/abs/1311.6563},
+    keywords = {ZX-Calculus, Category theory, PhD Thesis},
+    abstract = {This thesis studies the categorical formalisation of quantum computing, through the prism of type theory, in a three-tier process. The first stage of our investigation involves the creation of the dagger lambda calculus, a lambda calculus for dagger compact categories. Our second contribution lifts the expressive power of the dagger lambda calculus, to that of a quantum programming language, by adding classical control in the form of complementary classical structures and dualisers. Finally, our third contribution demonstrates how our lambda calculus can be applied to various well known problems in quantum computation.}
 }
 
 @inproceedings{BackensSimplified,
@@ -306,6 +318,7 @@ Quantum Physics and Logic,
     school = {University of Oxford},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Borun},
     keywords = {ZX-Calculus, Minimality, Master Thesis},
+    urldate = {2018-06-30},
     abstract = {ZX-calculus is a high-level graphical language used for quantum computation.  A complete set of axioms for ZX-calculus has been found very recently. This thesis works towards minimizing axioms of ZX-calculus for Clifford+T quantum  mechanics,  a  fragment  consisting  of  an  approximately  universal gate  set. Similar work  has  been  done  for  the  smaller  fragment,  stabilizer quantum mechanics, which motivates many of our proofs.  We derive some singleton axioms and instances of axiom schemes.  We establish the necessity and some weaker independence results of several axioms, by considering a variety of models.  As a further step towards simplification we also consider alternative  presentations  of  axioms  that  are  equivalent  and  discuss  their uses.}
 }
 
@@ -410,13 +423,14 @@ The diagrammatic calculus substantially simplifies (and sometimes even trivialis
     abstract = {We introduce a high-level graphical framework for the design, analysis, and verification of quantum error correcting codes. The coherent parity check construction for stabilizer codes allows us to construct a broad range of quantum codes based on classical codes, and gives a framework in which large classes of such codes can be both analytically and numerically discovered. Using graphical tools based on the \zx calculus, we explicitly construct small distance 3 and 5 codes with high code rates using this framework. We also show how this framework can be used to represent CSS codes and conversely how to compute stabilisers for a CPC code. We give a construction turns (almost) any pair of classical [n,k,3] codes into a [[2n - k + 2, k, 3]] CPC code, and give a straightforward technique for machine search which yields thousands of potential codes, and demonstrate its operation for distance 3 and 5 codes. Finally we use the graphical tools we introduce to demonstrate how Clifford computation can be performed within CPC codes.}
 }
 
-@mastersthesis{ChristianMSC,
-    author = {Schr{\"o}der de Witt, Christian },
+@mastersthesis{deWitt2013Master,
+    author = {de Witt, Christian Schr{\"o}der},
     title = {{The ZX calculus is incomplete for non-stabilizer quantum mechanics}},
     year = {2013},
     school = {University of Oxford},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Christian_thesis.pdf},
     keywords = {ZX-Calculus, Completeness, Master Thesis},
+    urldate ={2013-09-06},
     abstract = {We prove that the ZX-calculus is incomplete for non-stabilizer quantum mechanics.   We suggest additional rules to be integrated with the graphical calculus and possible further incompleteness sources.  We express a simple quantum error correction circuit in Selinger's CPM construction in an attempt to obtain a graphical construction framework for general stabilizer error codes.  We also provide a simple framework for the integration of gate approximation errors into the ZX-calculus, including a simple way of propagating upper approximation bounds through quantum circuits.}
 }
 
@@ -923,8 +937,87 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
     year = {2010},
     school = {University of Oxford},
     link = {http://www.cs.ox.ac.uk/people/bob.coecke/Michael.pdf},
+    urldate = {2010-09-01},
     keywords = {ZW-Calculus, Entanglement, Master Thesis},
     abstract = {While multipartite entanglement is a crucial resource for many quantum algorithms and protocols, the abstract, structural rules governing it are still not fully understood. In their recent paper, Coecke and Kissinger propose a new language called GHZ/W-calculus that aims to give a structural axiomatization of multipartite entanglement in terms of interacting ``special'' and ``anti-special'' commutative Frobenius algebras (S/A-CFAs). These algebraic structures correspond precisely to the two different types of genuine entanglement between three qubits, as given by inter-convertability by stochastic local (quantum) operations and classical communication (SLOCC). An important feature of the language is that it lives in the framework of categorical quantum mechanics and thus comes with a Penrose-Joyal-Street graphical calulus. This thesis explores the expressive power of the GHZ/W-calculus. We prove a new result that demonstrates the canonicity of the recent concept of antispeciality for CFAs and use it to give a new classification of Frobenius Algebras on $\mathbb{C}^2$ in FdHilb, the category of finite-dimensional Hilbert spaces and bounded linear maps. Next, we look at the non-standard model of categorical quantum mechanics given by FRel, the category of finite sets and binary relations. We classify all special CFAs in this category, prove some properties of anti-special ones and identify precisely which SCFAs/ACFAs are captured by the GHZ/W-language. Finally, we define a quantum AND gate in the graphical language and prove (or disprove) some of its properties. We come to the conclusion that the GHZ/W-calculus is unlikely to be the final answer to the structural entanglement problem in dimensions $D > 2$ and identify intermediate ranks $1 < rank < D$ as the notion it fails to explain.}
+}
+
+@mastersthesis{Bar2012Master,
+    author = {Bar, Krzysztof},
+    title = {{Design and Analysis of Quantum Protocols and Algorithms}},
+    year = {2012},
+    school = {University of Oxford},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Krzysztof_Bar.pdf},
+    keywords = {ZX-Calculus, Protocols, Master Thesis},
+    urldate = {2012-05-20},
+    abstract = {Categorical axiomatisation of Quantum Theory leads to an intuitive language for describing quantum computation - graphical calculi. The subject of this dissertation is to
+explore its capabilities within different branches of the field of Quantum Computing.}
+}
+
+@mastersthesis{Manav2009Master,
+    author = {Bhushan, Manav},
+    title = {{Simulating quantum processes using classical structures}},
+    year = {2009},
+    school = {University of Oxford},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Manav},
+    keywords = {ZX-Calculus, Protocols, Master Thesis},
+    urldate = {2009-01-01},
+    abstract = {In earlier work, it has been shown that Frobenius algebras with certain properties can
+be used to simulate classical data. They are especially useful because in their deffnition itself they
+incorporate the most major difference between classical and quantum data- which is the absence of
+copying and deleting operations for arbitrary quantum states. In later work, it has been shown that a
+special, commutative, dagger-Frobenius algebra (classical structure) corresponds to an orthonormal
+basis for a finite-dimensional Hilbert Space. In this paper, we show how classical structures can be
+used to axiomatize maximally entangled states for two qubits. We then go on explain how this new
+representation of quantum informatic protocols using classical structures can be used to encode the
+flow of quantum data. We explain how this process encodes all the possible observational branches
+simultaneously, and thus has the ability to tell us the end result that can be achieved in any particular
+protocol. We end with a summary of the results obtained, and suggestions for future work.}
+}
+
+@mastersthesis{Frot2011Master,
+    author = {Frot, Benjamin},
+    title = {{Implementing and Automating complex arithmetic in quantomatic}},
+    year = {2011},
+    school = {University of Oxford},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/Ben.pdf},
+    keywords = {ZW-Calculus, Quantomatic, Master Thesis},
+    urldate = {2011-09-01},
+    abstract = {Much work has been done on trying to understand and classify multipartite entanglement. For the past few years Categorical Quantum Mechanics
+[AC04], which introduces a formalism of quantum mechanics in terms of
+Symmetric Monoidal Categories (SMCs), has been used successfully in describing quantum systems at a high level of abstraction. From this work
+emerges a graphical calculus which is powerful enough to express any Nqubit entangled state and suitable for automated reasoning [CK10]. In
+[CKMR11] the authors show that it is possible to encode rational arithmetic within the GHZ/W-calculus.
+In this dissertation, we propose an extension of the encoding of rational
+arithmetic to complex numbers and show how it is possible to approximate
+the complex field with arbitrary precision. We also present the work done
+on quantomatic [DD+] in order to support multiple theories. Finally, we
+show how both rational and complex arithmetics were implemented in this
+software.}
+}
+
+
+@mastersthesis{Mack2010Master,
+    author = {Mack, David},
+    title = {{Linking Form and Function: A geometric investigation of Multi-partite graph states}},
+    year = {2010},
+    school = {University of Oxford},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/David.pdf},
+    keywords = {ZX-Calculus, ZW-calculus, Master Thesis},
+    urldate = {2010-09-01},
+    abstract = {Quantum Computing has quickly established itself as a paradigmshifting force, displaying properties that defy intuition. Its power has
+produced revolutionary algorithms, yet we have no clear understanding of else is possible; we are still stumbling through a jungle rather
+than mastering the field.
+Bob Coecke et al. have produced a graphical calculus and algebraic
+model that intuitively captures quantum’s essential features, allowing
+one to manipulate complex structures easily on paper. Major algorithms can be verified in just a couple of steps. However, combining
+the basic elements is still alchemy, no rules nor intuitions exist to
+predict the results.
+This dissertation seeks to investigate those dark corners and catalogue its findings, presenting any rules it encounters on the way. This
+is prefaced by a thorough description of the advanced algebra and
+calculus used, displaying key results and insights. The final chapter
+presents interesting structures that warrant further investigation and
+possible components for a higher-level quantum tool-set.}
 }
 
 @article{hillebrand_superdense_2012,
