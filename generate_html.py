@@ -170,8 +170,8 @@ def entry_to_html(entry):
                        year = year, abstract=abstract,
                        bibdata=raw_bibdata, keywords = keyword_html)
     for kw in keywords:
-        if kw in keyword_pubs: keyword_pubs[kw].append(html)
-        else: keyword_pubs[kw] = [html]
+        if kw.lower() in keyword_pubs: keyword_pubs[kw.lower()] += 1
+        else: keyword_pubs[kw.lower()] = 1
     return html, entry_to_rss(title, doi_url, entry['abstract'], authors, year, entry['link'],
                                 entry['urldate'] if 'urldate' in entry else "{}-01-01".format(year))
 
@@ -195,8 +195,11 @@ def library_to_html(lib):
             output += '<li class="pub_entry">' + e + "</li>" +"\n"
             if len(latest) < 10: latest.append(rss)
         output += "</ul>\n \n"
-
+    print("statistics:")
     print(types)
+    print("Keyword distribution")
+    for kw, amount in sorted(keyword_pubs.items(),key=lambda x: x[1],reverse=True):
+        print(kw, amount)
     return output, latest
 
 def generate_publications_html():
