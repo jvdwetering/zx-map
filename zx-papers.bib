@@ -142,6 +142,17 @@ We also use our framework to describe generalizations of Spekkens toy theory to 
     abstract = {Quantum entanglement, described by Einstein as "spooky action at a distance", is a key resource in many quantum protocols, like quantum teleportation and quantum cryptography. Yet entanglement makes protocols presented in Dirac notation difficult to follow and check. This is why Coecke and Duncan have introduced a diagrammatic language for multi-qubit systems, called the red/green calculus or the ZX-calculus. This diagrammatic notation is both intuitive and formally rigorous. It is a simple, graphical, high level language that emphasises the composition of systems and naturally captures the essentials of quantum mechanics. One crucial feature that will be exploited here is the encoding of complementary observables and corresponding phase shifts. Reasoning is done by rewriting diagrams, i.e. locally replacing some part of a diagram. Diagrams are defined by their topology only; the number of inputs and outputs and the way they are connected. This exemplifies the 'flow' of information. For protocols involving multipartite entangled states, such as the GreenbergerHorne-Zeilinger and W-state, it will be shown that the zx-calculus provides a relatively easy and more intuitive presentation. Moreover, in this representation it is easier to check that protocols are correct. Protocols that will be discussed in detail are quantum teleportation, quantum cryptography, leader election, superdense coding and quantum direct communication with multipartite entangled states.}
 }
 
+@mastersthesis{Zamdzhiev2012masters,
+    author = {Zamdzhiev, Vladimir},
+    title = {{An Abstract Approach towards Quantum Secret Sharing}},
+    year = {2012},
+    school = {University of Oxford},
+    link = {http://www.cs.ox.ac.uk/people/bob.coecke/VladimirZamdzhievThesis.pdf},
+    urldate = {2012-08-31},
+    keywords = {ZX-Calculus, Protocols, Master Thesis},
+    abstract = {In this thesis we prove in a formal and rigorous way the correctness of some aspects of quantum secret sharing protocols. We do not use the traditional Hilbert space formalism to reason about quantum computation, but we instead approach the problem from another, more abstract perspective. All of our proofs are written in the ZX calculus [10] - a diagrammatic language developed from the study of categorical quantum mechanics [4].}
+}
+
 
 @mastersthesis{comfort2019masters,
     author = {Comfort, Cole},
@@ -1519,3 +1530,28 @@ Quantum Physics and Logic,
     abstract = {We describe a compilation strategy for Variational Quantum Eigensolver (VQE) algorithms which use the Unitary Coupled Cluster (UCC) ansatz, designed to reduce circuit depth and gate count. This is achieved by partitioning Pauli exponential terms into mutually commuting sets. These sets are then diagonalised using Clifford circuits and synthesised using the phase polynomial formalism. This strategy reduces cx depth by 75.4\% on average, and by up to 89.9\%, compared to naive synthesis for a variety of molecules, qubit encodings and basis sets.}
 }
 
+@article{miguelsignorelli2020compositional,
+    author = {Miguel Signorelli, Camilo and Wang, Quanlong and Khan, Ilyas},
+    title = {{A Compositional Model of Consciousness based on Consciousness-Only}},
+    year = {2020},
+    journal = {arXiv preprint arXiv:2007.16138},
+    urldate = {2020-07-31},
+    link = {http://arxiv.org/abs/2007.16138},
+    keywords = {Qudits, algebraic ZX},
+    abstract = {Scientific studies of consciousness rely on objects whose existence is independent of any consciousness. This theoretical-assumption leads to the "hard problem" of consciousness. We avoid this problem by assuming consciousness to be fundamental, and the main feature of consciousness is characterized as being other-dependent. We set up a framework which naturally subsumes the other-dependent feature by defining a compact closed category where morphisms represent conscious processes. These morphisms are a composition of a set of generators, each being specified by their relations with other generators, and therefore other-dependent. The framework is general enough, i.e. parameters in the morphisms take values in arbitrary commutative semi-rings, from which any finitely dimensional system can be dealt with. Our proposal fits well into a compositional model of consciousness and is an important step forward that addresses both the hard problem of consciousness and the combination problem of (proto)-panpsychism.}
+}
+
+@inproceedings{coecke2012tutorial,
+  title={{Tutorial: Graphical calculus for quantum circuits}},
+  author={Coecke, Bob and Duncan, Ross},
+  booktitle={International Workshop on Reversible Computation},
+  pages={1--13},
+  year={2012},
+  organization={Springer},
+  isbn={978-3-642-36315-3},
+  doi = {10.1007/978-3-642-36315-3_1},
+  link={https://link.springer.com/chapter/10.1007/978-3-642-36315-3_1},
+  keywords={ZX-calculus},
+  urldate={2012-01-01},
+  abstract={We explain the graphical zx-calculus for reasoning about qubits without any reference to the underlying categorical semantics, and illustrate its use on quantum circuits.}
+}
