@@ -89,6 +89,7 @@ Keywords: <span class="keywords">{keywords}</span>.
 keyword_pubs = dict()
 coauthors = dict()
 latest_pubs = dict()
+types = {"preprint": 0, "published": 0, "Master": 0, "Phd": 0}
 
 ids = set()
 
@@ -99,20 +100,30 @@ def entry_to_html(entry):
     if entry['ID'] in ids:
         raise Exception("Id {} already taken".format(entry['ID']))
     ids.add(entry['ID'])
+    et = entry['ENTRYTYPE']
 
     if 'journal' in entry:
+        if entry['journal'].lower().find('arxiv') != -1:
+            types["preprint"] += 1
+        else:
+            types["published"] += 1
         journal = clear_arXiv_preprint_text(clean_text(entry['journal']))
     elif 'booktitle' in entry:
+        types["published"] += 1
         journal = clean_text(entry['booktitle'])
-    elif 'note' in entry:
-        journal = clean_text(entry['note'])
     elif 'school' in entry:
         journal = clean_text(entry['school'])
-        if entry['ENTRYTYPE'] == 'phdthesis': journal += " PhD Thesis"
-        elif entry['ENTRYTYPE'] == 'mastersthesis': journal += " Masters Thesis"
+        if entry['ENTRYTYPE'] == 'phdthesis': 
+            journal += " PhD Thesis"
+            types["Phd"] += 1
+        elif entry['ENTRYTYPE'] == 'mastersthesis': 
+            journal += " Masters Thesis"
+            types["Master"] += 1
         else: 
             print("Unknown entry type", entry['ENTRYTYPE'])
             raise
+    #elif 'note' in entry:
+    #    journal = clean_text(entry['note'])
     else:
         print("Missing entries:")
         print(entry)
@@ -185,6 +196,7 @@ def library_to_html(lib):
             if len(latest) < 10: latest.append(rss)
         output += "</ul>\n \n"
 
+    print(types)
     return output, latest
 
 def generate_publications_html():
