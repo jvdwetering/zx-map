@@ -90,6 +90,9 @@ keyword_pubs = dict()
 coauthors = dict()
 latest_pubs = dict()
 types = {"preprint": 0, "published": 0, "Master": 0, "Phd": 0}
+with open("keyword_descriptions.json", 'r') as f:
+    keyword_descriptions = {k.lower():v for k,v in json.loads(f.read()).items()}
+#print(tagdescriptions)
 
 ids = set()
 
@@ -164,7 +167,16 @@ def entry_to_html(entry):
     else: kw = ""
     keywords = [s.strip() for s in kw.split(',')]
 
-    keyword_html = ", ".join('<a target="_blank" onclick="forceSearch(\'{}\')">{}</a>'.format(kw.lower(),kw) for kw in keywords)
+    l = []
+    for kw in keywords:
+        try:
+            descr = keyword_descriptions[kw.lower()]
+        except KeyError:
+            print("Unknown keyword '{}'. Please add it to keyword_descriptions.json".format(kw))
+            descr = ""
+        l.append('<a target="_blank" onclick="forceSearch(\'{}\')" title="{}">{}</a>'.format(kw.lower(),descr,kw))
+
+    keyword_html = ", ".join(l)
     html = HTML.format(url = entry['link'], doiurl = doi_url, title=title,
                        authors = authors, journal = journal,
                        year = year, abstract=abstract,
@@ -197,9 +209,9 @@ def library_to_html(lib):
         output += "</ul>\n \n"
     print("statistics:")
     print(types)
-    print("Keyword distribution")
-    for kw, amount in sorted(keyword_pubs.items(),key=lambda x: x[1],reverse=True):
-        print(kw, amount)
+    #print("Keyword distribution")
+    #for kw, amount in sorted(keyword_pubs.items(),key=lambda x: x[1],reverse=True):
+    #    print(kw, amount)
     return output, latest
 
 def generate_publications_html():
