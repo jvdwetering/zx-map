@@ -62,5 +62,6 @@
     "Pauli Fusion": "This paper discusses the Pauli Fusion model of computation",
     "Mixed States": "This paper discusses mixed quantum states",
     "Fermionic Quantum Computing": "This paper discusses Fermionic Quantum computing",
-    "Y-calculus": "This paper uses the Y-calculus for real matrices"
+    "Y-calculus": "This paper uses the Y-calculus for real matrices",
+    "Variational Circuits": "This paper deals with variational circuits"
 }
