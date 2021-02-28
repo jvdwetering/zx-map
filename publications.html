@@ -30,18 +30,30 @@
             <div class="title row shaded cell">
                 <h1>ZX-calculus publications <a href="./publications.rss"><image src="./images/feed-icon-28x28.png" /></a></h1>
             </div>
-            <div id="search" class="row cell">
-                <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
-                Search inside:
-                <label><input type="checkbox" id="chkpaperTitle" checked>Title</label>
-                <label><input type="checkbox" id="chkauthors" checked>Authors</label>
-                <label><input type="checkbox" id="chkabstract" checked>Abstract</label>
-                <label><input type="checkbox" id="chkkeywords" checked>Keywords</label>
+            <div class="row cell">
                 <p>
                     This is intended to be a complete list of all publications that use the ZX-calculus (and related graphical calculi) in some manner. The guiding principle is that if the paper contains at least one ZX-diagram, then it should be in this list.
                     If you find any errors or feel that a missing publication should be included in this list, please contact Richard East or John van de Wetering.
                     If you want to keep up-to-date with additions, there is also <a href="./publications.rss">an RSS feed</a>.
                 </p>
+            </div>
+            <div id="search" class="row cell">
+                <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
+                Search inside:
+                <label><input type="checkbox" id="chkall" checked onclick="deselectAllChecks('all');">All</label>
+                <label><input type="checkbox" id="chkpaperTitle" onclick="$('#chkall').prop('checked',false);">Title</label>
+                <label><input type="checkbox" id="chkauthors" onclick="$('#chkall').prop('checked',false);">Authors</label>
+                <label><input type="checkbox" id="chkabstract" onclick="$('#chkall').prop('checked',false);">Abstract</label>
+                <label><input type="checkbox" id="chkkeywords" onclick="$('#chkall').prop('checked',false);">Keywords</label>
+                <label><input type="checkbox" id="chkjournal" onclick="$('#chkall').prop('checked',false);">Journal</label>
+                <br>
+                View: 
+                <label><input type="checkbox" id="viewall" checked onclick="deselectAllViews('all');">All</label>
+                <label><input type="checkbox" id="viewpapers" onclick="$('#viewall').prop('checked',false);">Journal article</label>
+                <label><input type="checkbox" id="viewpreprints" onclick="$('#viewall').prop('checked',false);">Preprints</label>
+                <label><input type="checkbox" id="viewproceedings" onclick="$('#viewall').prop('checked',false);">Proceedings</label>
+                <label><input type="checkbox" id="viewtheses" onclick="$('#viewall').prop('checked',false);">Theses</label>
+                <p id="viewcount">Showing n items</p>
             </div>
             <div class="allshow row cell" id="tab-3-content">
                 <h2>2021</h2>
@@ -66,7 +78,7 @@
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('qnlp')" title="">QNLP</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -78,7 +90,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
     journal = {arXiv preprint arXiv:2102.10984},
     urldate = {2021-02-22},
     link = {http://arxiv.org/abs/2102.10984},
-    keywords = {ZX-calculus, QNLP, MBQC},
+    keywords = {ZX-calculus, NLP, MBQC},
     abstract = {This paper is a `spiritual child' of the 2005 lecture notes Kindergarten Quantum Mechanics, which showed how a simple, pictorial extension of Dirac notation allowed several quantum features to be easily expressed and derived, using language even a kindergartner can understand. Central to that approach was the use of pictures and pictorial transformation rules to understand and derive features of quantum theory and computation. However, this approach left many wondering `where's the beef?' In other words, was this new approach capable of producing new results, or was it simply an aesthetically pleasing way to restate stuff we already know?   The aim of this sequel paper is to say `here's the beef!', and highlight some of the major results of the approach advocated in Kindergarten Quantum Mechanics, and how they are being applied to tackle practical problems on real quantum computers. We will focus mainly on what has become the Swiss army knife of the pictorial formalism: the ZX-calculus. First we look at some of the ideas behind the ZX-calculus, comparing and contrasting it with the usual quantum circuit formalism. We then survey results from the past 2 years falling into three categories: (1) completeness of the rules of the ZX-calculus, (2) state-of-the-art quantum circuit optimisation results in commercial and open-source quantum compilers relying on ZX, and (3) the use of ZX in translating real-world stuff like natural language into quantum circuits that can be run on today's (very limited) quantum hardware.   We also take the title literally, and outline an ongoing experiment aiming to show that ZX-calculus enables children to do cutting-edge quantum computing stuff. If anything, this would truly confirm that `kindergarten quantum mechanics' wasn't just a joke.}
 }
 
@@ -105,7 +117,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -144,7 +156,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -188,7 +200,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -227,7 +239,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('comple
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -266,7 +278,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('catego
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('variational circuits')" title="This paper deals with variational circuits">Variational Circuits</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('variational circuits')" title="This paper deals with variational circuits">Variational Circuits</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -305,7 +317,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('variat
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -344,7 +356,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('nlp')"
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -387,7 +399,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -426,7 +438,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('scalable zx')" title="The paper uses the Scalable ZX notation">Scalable ZX</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('fourier')" title="The paper uses the (graphical) Fourier transform of semi-Boolean functions">Fourier</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('hypergraph')" title="This paper discusses or uses hypergraphs or hypergraph states">Hypergraph</a>, <a target="_blank" onclick="forceSearch('tempered')" title="This paper uses the tempered graphical calculi of de Beaudrap">Tempered</a>, <a target="_blank" onclick="forceSearch('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('scalable zx')" title="The paper uses the Scalable ZX notation">Scalable ZX</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('fourier')" title="The paper uses the (graphical) Fourier transform of semi-Boolean functions">Fourier</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('hypergraph')" title="This paper discusses or uses hypergraphs or hypergraph states">Hypergraph</a>, <a target="_blank" onclick="forceSearchKW('tempered')" title="This paper uses the tempered graphical calculi of de Beaudrap">Tempered</a>, <a target="_blank" onclick="forceSearchKW('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -465,7 +477,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('scalab
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-supported</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-supported</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -504,7 +516,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimi
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -543,7 +555,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('nlp')"
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('condensed matter')" title="This paper discusses condensed matter systems">Condensed Matter</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearch('tensor networks')" title="This paper discusses or uses tensor networks in an explicit manner">Tensor Networks</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('condensed matter')" title="This paper discusses condensed matter systems">Condensed Matter</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearchKW('tensor networks')" title="This paper discusses or uses tensor networks in an explicit manner">Tensor Networks</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -582,7 +594,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('conden
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zq-calculus')" title="This paper uses the ZQ-calculus based on quaternions">ZQ-calculus</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zq-calculus')" title="This paper uses the ZQ-calculus based on quaternions">ZQ-calculus</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -621,7 +633,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -660,7 +672,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -709,7 +721,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearch('algebraic zx')" title="The paper uses the algebraic ZX-calculus">Algebraic ZX</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearchKW('algebraic zx')" title="The paper uses the algebraic ZX-calculus">Algebraic ZX</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -748,7 +760,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('qudits
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('algebraic zx')" title="The paper uses the algebraic ZX-calculus">Algebraic ZX</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('algebraic zx')" title="The paper uses the algebraic ZX-calculus">Algebraic ZX</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -787,7 +799,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase gadgets</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase gadgets</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -826,7 +838,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimi
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('nlp')" title="This paper discusses (quantum) natural language processing">NLP</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -865,7 +877,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimi
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('scalable zx')" title="The paper uses the Scalable ZX notation">Scalable ZX</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('scalable zx')" title="The paper uses the Scalable ZX notation">Scalable ZX</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -904,7 +916,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('comple
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-Calculus</a>, <a target="_blank" onclick="forceSearch('tempered')" title="This paper uses the tempered graphical calculi of de Beaudrap">Tempered</a>, <a target="_blank" onclick="forceSearch('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-Calculus</a>, <a target="_blank" onclick="forceSearchKW('tempered')" title="This paper uses the tempered graphical calculi of de Beaudrap">Tempered</a>, <a target="_blank" onclick="forceSearchKW('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -943,7 +955,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -982,7 +994,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx&')" title="This paper uses the ZX&-calculus of Comfort">ZX&</a>, <a target="_blank" onclick="forceSearch('and gates')" title="This paper discusses or uses AND gates in some non-trivial way">AND gates</a>, <a target="_blank" onclick="forceSearch('classical circuits')" title="This paper discusses or uses classical Boolean circuits in a non-trivial way">Classical circuits</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx&')" title="This paper uses the ZX&-calculus of Comfort">ZX&</a>, <a target="_blank" onclick="forceSearchKW('and gates')" title="This paper discusses or uses AND gates in some non-trivial way">AND gates</a>, <a target="_blank" onclick="forceSearchKW('classical circuits')" title="This paper discusses or uses classical Boolean circuits in a non-trivial way">Classical circuits</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1021,7 +1033,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx&')"
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('tensor networks')" title="This paper discusses or uses tensor networks in an explicit manner">Tensor networks</a>, <a target="_blank" onclick="forceSearch('sat')" title="This paper discusses the SAT or #SAT problems">SAT</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('tensor networks')" title="This paper discusses or uses tensor networks in an explicit manner">Tensor networks</a>, <a target="_blank" onclick="forceSearchKW('sat')" title="This paper discusses the SAT or #SAT problems">SAT</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1060,7 +1072,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase gadgets</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase gadgets</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1099,7 +1111,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('phase 
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('t-count')" title="The paper discusses T-count (optimisation)">T-count</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('t-count')" title="The paper discusses T-count (optimisation)">T-count</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1138,7 +1150,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('t-coun
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('fourier')" title="The paper uses the (graphical) Fourier transform of semi-Boolean functions">Fourier</a>, <a target="_blank" onclick="forceSearch('sum-over-paths')" title="This paper uses the sum-over-paths framework of Amy et al.">Sum-Over-Paths</a>, <a target="_blank" onclick="forceSearch('hypergraph')" title="This paper discusses or uses hypergraphs or hypergraph states">Hypergraph</a>, <a target="_blank" onclick="forceSearch('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('fourier')" title="The paper uses the (graphical) Fourier transform of semi-Boolean functions">Fourier</a>, <a target="_blank" onclick="forceSearchKW('sum-over-paths')" title="This paper uses the sum-over-paths framework of Amy et al.">Sum-Over-Paths</a>, <a target="_blank" onclick="forceSearchKW('hypergraph')" title="This paper discusses or uses hypergraphs or hypergraph states">Hypergraph</a>, <a target="_blank" onclick="forceSearchKW('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1177,7 +1189,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zq-calculus')" title="This paper uses the ZQ-calculus based on quaternions">ZQ-Calculus</a>, <a target="_blank" onclick="forceSearch('quaternions')" title="This paper uses quaternions">Quaternions</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zq-calculus')" title="This paper uses the ZQ-calculus based on quaternions">ZQ-Calculus</a>, <a target="_blank" onclick="forceSearchKW('quaternions')" title="This paper uses quaternions">Quaternions</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1216,7 +1228,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zq-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-Calculus</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('sum-over-paths')" title="This paper uses the sum-over-paths framework of Amy et al.">Sum-Over-Paths</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-Calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('sum-over-paths')" title="This paper uses the sum-over-paths framework of Amy et al.">Sum-Over-Paths</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1255,7 +1267,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('circuit extraction')" title="This paper discusses the circuit extraction problem in a non-trivial way">circuit extraction</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('gflow')" title="This paper discusses the property of gflow in a non-trivial way">gflow</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('circuit extraction')" title="This paper discusses the circuit extraction problem in a non-trivial way">circuit extraction</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('gflow')" title="This paper discusses the property of gflow in a non-trivial way">gflow</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1298,7 +1310,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice surgery</a>, <a target="_blank" onclick="forceSearch('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice surgery</a>, <a target="_blank" onclick="forceSearchKW('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1341,7 +1353,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('lattic
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('rings')" title="This paper discusses graphical calculi over arbitrary rings">Rings</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('rings')" title="This paper discusses graphical calculi over arbitrary rings">Rings</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1380,7 +1392,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1419,7 +1431,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('t-count')" title="The paper discusses T-count (optimisation)">T-count</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('t-count')" title="The paper discusses T-count (optimisation)">T-count</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1466,7 +1478,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('algebraic zx')" title="The paper uses the algebraic ZX-calculus">Algebraic ZX</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('algebraic zx')" title="The paper uses the algebraic ZX-calculus">Algebraic ZX</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1505,7 +1517,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('and gates')" title="This paper discusses or uses AND gates in some non-trivial way">AND gates</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('and gates')" title="This paper discusses or uses AND gates in some non-trivial way">AND gates</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1544,7 +1556,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('phase 
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1583,7 +1595,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1622,7 +1634,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('toffol
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1669,7 +1681,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1717,7 +1729,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('ccz')" title="This paper uses CCZ gates in a non-trivial way">CCZ</a>, <a target="_blank" onclick="forceSearch('surface code')" title="This paper discusses surface code quantum computing">Surface code</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearch('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('ccz')" title="This paper uses CCZ gates in a non-trivial way">CCZ</a>, <a target="_blank" onclick="forceSearchKW('surface code')" title="This paper discusses surface code quantum computing">Surface code</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearchKW('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1756,7 +1768,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('ccz')"
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('frobenius algebras')" title="This paper discusses the abstract theory of Frobenius algebras">Frobenius algebras</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('frobenius algebras')" title="This paper discusses the abstract theory of Frobenius algebras">Frobenius algebras</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1803,7 +1815,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('scalable zx')" title="The paper uses the Scalable ZX notation">Scalable ZX</a>, <a target="_blank" onclick="forceSearch('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('scalable zx')" title="The paper uses the Scalable ZX notation">Scalable ZX</a>, <a target="_blank" onclick="forceSearchKW('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1853,7 +1865,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearch('pauli fusion')" title="This paper discusses the Pauli Fusion model of computation">Pauli Fusion</a>, <a target="_blank" onclick="forceSearch('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearch('gflow')" title="This paper discusses the property of gflow in a non-trivial way">gflow</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearchKW('pauli fusion')" title="This paper discusses the Pauli Fusion model of computation">Pauli Fusion</a>, <a target="_blank" onclick="forceSearchKW('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearchKW('gflow')" title="This paper discusses the property of gflow in a non-trivial way">gflow</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1900,7 +1912,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearch('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearchKW('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1939,7 +1951,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('comple
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('fourier')" title="The paper uses the (graphical) Fourier transform of semi-Boolean functions">Fourier</a>, <a target="_blank" onclick="forceSearch('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase gadgets</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('fourier')" title="The paper uses the (graphical) Fourier transform of semi-Boolean functions">Fourier</a>, <a target="_blank" onclick="forceSearchKW('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase gadgets</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -1978,7 +1990,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2017,7 +2029,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2064,7 +2076,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('circuit extraction')" title="This paper discusses the circuit extraction problem in a non-trivial way">Circuit extraction</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('circuit extraction')" title="This paper discusses the circuit extraction problem in a non-trivial way">Circuit extraction</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2107,7 +2119,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('optimi
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('!-boxes')" title="This paper discusses or uses !-boxes">!-Boxes</a>, <a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('!-boxes')" title="This paper discusses or uses !-boxes">!-Boxes</a>, <a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2154,7 +2166,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearch('t-count')" title="The paper discusses T-count (optimisation)">T-count</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearchKW('t-count')" title="The paper discusses T-count (optimisation)">T-count</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2200,7 +2212,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearch('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearchKW('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2241,7 +2253,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2289,7 +2301,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('comple
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a>, <a target="_blank" onclick="forceSearch('gflow')" title="This paper discusses the property of gflow in a non-trivial way">Gflow</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a>, <a target="_blank" onclick="forceSearchKW('gflow')" title="This paper discusses the property of gflow in a non-trivial way">Gflow</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2334,7 +2346,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2377,7 +2389,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('catego
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2425,7 +2437,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a>, <a target="_blank" onclick="forceSearch('minimality')" title="This paper discusses minimality of rule sets for one of the graphical calculi">Minimality</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a>, <a target="_blank" onclick="forceSearchKW('minimality')" title="This paper discusses minimality of rule sets for one of the graphical calculi">Minimality</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2468,7 +2480,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearch('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearch('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearch('ccz')" title="This paper uses CCZ gates in a non-trivial way">CCZ</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearchKW('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearchKW('optimisation')" title="This paper significantly discusses optimisation of quantum computation in any form, including compilation and routing">Optimisation</a>, <a target="_blank" onclick="forceSearchKW('ccz')" title="This paper uses CCZ gates in a non-trivial way">CCZ</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2514,7 +2526,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('rational fragment')" title="This paper uses the rational angle fragment of the ZX-calculus">Rational Fragment</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('rational fragment')" title="This paper uses the rational angle fragment of the ZX-calculus">Rational Fragment</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2554,7 +2566,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('minimality')" title="This paper discusses minimality of rule sets for one of the graphical calculi">Minimality</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('minimality')" title="This paper discusses minimality of rule sets for one of the graphical calculi">Minimality</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2593,7 +2605,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a>, <a target="_blank" onclick="forceSearch('rational fragment')" title="This paper uses the rational angle fragment of the ZX-calculus">Rational Fragment</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a>, <a target="_blank" onclick="forceSearchKW('rational fragment')" title="This paper uses the rational angle fragment of the ZX-calculus">Rational Fragment</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2638,7 +2650,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zh-calculus')" title="This paper uses the ZH-calculus in some way">ZH-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2685,7 +2697,7 @@ Halifax, Canada, 3-7th June 2018},
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2729,7 +2741,7 @@ These ZX-rules are much simpler than the complete of set Clifford+T circuit equa
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('toffoli')" title="The paper uses Toffoli gates in a substantial way">Toffoli</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2776,7 +2788,7 @@ Halifax, Canada, 3-7th June 2018},
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('qutrits')" title="The paper uses qutrits">Qutrits</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('qutrits')" title="The paper uses qutrits">Qutrits</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2823,7 +2835,7 @@ Nijmegen, The Netherlands, 3-7 July 2017},
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2878,7 +2890,7 @@ Finally, we show with some examples the application of the ZX-calculus to the pr
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">qudits</a>, <a target="_blank" onclick="forceSearch('qutrits')" title="The paper uses qutrits">qutrits</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">qudits</a>, <a target="_blank" onclick="forceSearchKW('qutrits')" title="The paper uses qutrits">qutrits</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2927,7 +2939,7 @@ formula to produce a complete diagrammatic calculus.}
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearch('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearchKW('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -2975,7 +2987,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3015,7 +3027,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('fermionic quantum computing')" title="This paper discusses Fermionic Quantum computing">Fermionic quantum computing</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('fermionic quantum computing')" title="This paper discusses Fermionic Quantum computing">Fermionic quantum computing</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3057,7 +3069,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a>, <a target="_blank" onclick="forceSearch('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a>, <a target="_blank" onclick="forceSearchKW('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3112,7 +3124,7 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('minimality')" title="This paper discusses minimality of rule sets for one of the graphical calculi">Minimality</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('minimality')" title="This paper discusses minimality of rule sets for one of the graphical calculi">Minimality</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3154,7 +3166,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('rings')" title="This paper discusses graphical calculi over arbitrary rings">Rings</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('rings')" title="This paper discusses graphical calculi over arbitrary rings">Rings</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3199,7 +3211,7 @@ The ZW calculus has several advantages over ZX calculi, including a computationa
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('universal fragment')" title="The paper uses the universal fragment of the ZX-calculus in a non-trivial way">Universal Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3238,7 +3250,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3285,7 +3297,7 @@ Nijmegen, The Netherlands, 3-7 July 2017},
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">triangle</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3333,7 +3345,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('cliffo
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearch('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('lattice surgery')" title="This paper discusses the surface code quantum computing using lattice surgery specifically">Lattice Surgery</a>, <a target="_blank" onclick="forceSearchKW('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3374,7 +3386,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3421,7 +3433,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('phase gadgets')" title="This paper uses phase gadgets in a non-trivial way">Phase Gadgets</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3463,7 +3475,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('qutrits')" title="The paper uses qutrits">Qutrits</a>, <a target="_blank" onclick="forceSearch('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('qutrits')" title="The paper uses qutrits">Qutrits</a>, <a target="_blank" onclick="forceSearchKW('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3503,7 +3515,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('rational fragment')" title="This paper uses the rational angle fragment of the ZX-calculus">Rational Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('rational fragment')" title="This paper uses the rational angle fragment of the ZX-calculus">Rational Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3551,7 +3563,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3594,7 +3606,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('y-calculus')" title="This paper uses the Y-calculus for real matrices">Y-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('y-calculus')" title="This paper uses the Y-calculus for real matrices">Y-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3641,7 +3653,7 @@ Nijmegen, The Netherlands, 3-7 July 2017},
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearch('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a>, <a target="_blank" onclick="forceSearch('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearch('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('mixed states')" title="This paper discusses mixed quantum states">Mixed States</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearchKW('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a>, <a target="_blank" onclick="forceSearchKW('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearchKW('triangle')" title="This paper uses the triangle generator of ZX-diagrams a non-trivial amount">Triangle</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3685,7 +3697,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3724,7 +3736,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3765,7 +3777,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a>, <a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">Phd Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a>, <a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">Phd Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3804,7 +3816,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3845,7 +3857,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3890,7 +3902,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('frobenius algebras')" title="This paper discusses the abstract theory of Frobenius algebras">Frobenius algebras</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('frobenius algebras')" title="This paper discusses the abstract theory of Frobenius algebras">Frobenius algebras</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3936,7 +3948,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('froben
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('scalars')" title="The paper discusses scalar diagrams in a non-trivial way">Scalars</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -3980,7 +3992,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong complementarity</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong complementarity</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4025,7 +4037,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('founda
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4069,7 +4081,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4113,7 +4125,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('strong
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4155,7 +4167,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('quanto
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4203,7 +4215,7 @@ In this paper, we present a full graphical axiomatisation of the relations betwe
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford+t')" title="This paper focuses on the Clifford+T fragment of quantum computation">Clifford+T</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4250,7 +4262,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4297,7 +4309,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('qutrits')" title="The paper uses qutrits">Qutrits</a>, <a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">Qudits</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('qutrits')" title="The paper uses qutrits">Qutrits</a>, <a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">Qudits</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4344,7 +4356,7 @@ proof of the universality of qudit ZX calculus for quantum mechanics is far from
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4391,7 +4403,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearch('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('qudits')" title="The paper uses non-qubit Qudits">Qudits</a>, <a target="_blank" onclick="forceSearchKW('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4442,7 +4454,7 @@ We also use our framework to describe generalizations of Spekkens toy theory to 
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category theory</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category theory</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">PhD Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4483,7 +4495,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4527,7 +4539,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4566,7 +4578,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4610,7 +4622,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a>, <a target="_blank" onclick="forceSearch('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearch('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('real fragment')" title="The paper uses the real Clifford fragment">Real Fragment</a>, <a target="_blank" onclick="forceSearchKW('completeness')" title="This paper significantly discusses completeness of one of the languages related to the ZX-calculus">Completeness</a>, <a target="_blank" onclick="forceSearchKW('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4654,7 +4666,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('error correcting codes')" title="The paper discusses quantum error correcting codes">Error correcting codes</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4705,7 +4717,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4749,7 +4761,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4788,7 +4800,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4829,7 +4841,7 @@ explore its capabilities within different branches of the field of Quantum Compu
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4871,7 +4883,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a>, <a target="_blank" onclick="forceSearch('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a>, <a target="_blank" onclick="forceSearchKW('strong complementarity')" title="The paper discusses or uses the fundamental property of strong complementarity outside of the standard ZX-calculus setting">Strong Complementarity</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4919,7 +4931,7 @@ The diagrammatic calculus substantially simplifies (and sometimes even trivialis
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('!-boxes')" title="This paper discusses or uses !-boxes">!-boxes</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('phd thesis')" title="This is a PhD Thesis">Phd Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('!-boxes')" title="This paper discusses or uses !-boxes">!-boxes</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('phd thesis')" title="This is a PhD Thesis">Phd Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -4962,7 +4974,7 @@ The third contribution is a description of two software tools developed in part 
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5009,7 +5021,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5056,7 +5068,7 @@ Quantum Physics and Logic,
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearch('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('quantomatic')" title="The paper uses Quantomatic">Quantomatic</a>, <a target="_blank" onclick="forceSearchKW('automation')" title="This paper discusses automation of processes via software or algorithms">Automation</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5115,7 +5127,7 @@ software.}
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5157,7 +5169,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('entanglement')" title="This paper discusses entanglement theory">Entanglement</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('entanglement')" title="This paper discusses entanglement theory">Entanglement</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5203,7 +5215,7 @@ Kazan, Russia, June 21-22, 2010},
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('surface code')" title="This paper discusses surface code quantum computing">Surface Code</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5247,7 +5259,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5286,7 +5298,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('normal-form')" title="The paper discusses normal-form diagrams in a non-trivial way">Normal-form</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5333,7 +5345,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('entanglement')" title="This paper discusses entanglement theory">Entanglement</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('entanglement')" title="This paper discusses entanglement theory">Entanglement</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5372,7 +5384,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a>, <a target="_blank" onclick="forceSearch('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-calculus</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a>, <a target="_blank" onclick="forceSearchKW('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5435,7 +5447,7 @@ possible components for a higher-level quantum tool-set.}
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('category theory')" title="This paper uses category theory in a explicit fashion">Category Theory</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5478,7 +5490,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('spekkens toy model')" title="The paper discusses Spekkens' Toy Model">Spekkens Toy Model</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5521,7 +5533,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearch('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zw-calculus')" title="This paper uses the ZW-calculus in some way">ZW-Calculus</a>, <a target="_blank" onclick="forceSearchKW('foundations')" title="This paper discusses Quantum Foundations, including topics such as entanglement theory or contextuality">Foundations</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5568,7 +5580,7 @@ Together, a GHZ and a W Frobenius state form the primitives of a graphical calcu
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearch('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearch('gflow')" title="This paper discusses the property of gflow in a non-trivial way">Gflow</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('mbqc')" title="This paper discusses measurement-based quantum computation">MBQC</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('gflow')" title="This paper discusses the property of gflow in a non-trivial way">Gflow</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5613,7 +5625,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5655,7 +5667,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearch('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('protocols')" title="The paper discusses quantum protocols like teleportation or quantum key distribution">Protocols</a>, <a target="_blank" onclick="forceSearchKW('master thesis')" title="This is a Master Thesis">Master Thesis</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5714,7 +5726,7 @@ protocol. We end with a summary of the results obtained, and suggestions for fut
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5758,7 +5770,7 @@ Using the well-studied canonical correspondence between graphical calculi and sy
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearch('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearch('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearch('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a>, <a target="_blank" onclick="forceSearchKW('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearchKW('local complementation')" title="The paper uses the local complementation rewrite rule of ZX-diagrams">Local Complementation</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5804,7 +5816,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">
@@ -5848,7 +5860,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-cal
 </span>
 <br>
 <span>
-Keywords: <span class="keywords"><a target="_blank" onclick="forceSearch('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearch('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-Calculus</a>, <a target="_blank" onclick="forceSearchKW('foundational')" title="This is a paper that was foundational to the original development of the ZX-calculus">Foundational</a></span>.
 </span>
 </div>
 <div class="crossContent">

@@ -174,7 +174,7 @@ def entry_to_html(entry):
         except KeyError:
             print("Unknown keyword '{}'. Please add it to keyword_descriptions.json".format(kw))
             descr = ""
-        l.append('<a target="_blank" onclick="forceSearch(\'{}\')" title="{}">{}</a>'.format(kw.lower(),descr,kw))
+        l.append('<a target="_blank" onclick="forceSearchKW(\'{}\')" title="{}">{}</a>'.format(kw.lower(),descr,kw))
 
     keyword_html = ", ".join(l)
     html = HTML.format(url = entry['link'], doiurl = doi_url, title=title,
@@ -221,7 +221,7 @@ def generate_publications_html():
     #Generate main page
     with open('html/publications_base.html') as f:
         html_base = f.read()
-    output = html_base.format(content=bib_data)
+    output = html_base.replace("THE_CONTENT_HERE",bib_data)
     with open("publications.html",'wb') as f:
         f.write(output.encode('utf-8'))
 

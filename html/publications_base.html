@@ -30,21 +30,33 @@
             <div class="title row shaded cell">
                 <h1>ZX-calculus publications <a href="./publications.rss"><image src="./images/feed-icon-28x28.png" /></a></h1>
             </div>
-            <div id="search" class="row cell">
-                <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
-                Search inside:
-                <label><input type="checkbox" id="chkpaperTitle" checked>Title</label>
-                <label><input type="checkbox" id="chkauthors" checked>Authors</label>
-                <label><input type="checkbox" id="chkabstract" checked>Abstract</label>
-                <label><input type="checkbox" id="chkkeywords" checked>Keywords</label>
+            <div class="row cell">
                 <p>
                     This is intended to be a complete list of all publications that use the ZX-calculus (and related graphical calculi) in some manner. The guiding principle is that if the paper contains at least one ZX-diagram, then it should be in this list.
                     If you find any errors or feel that a missing publication should be included in this list, please contact Richard East or John van de Wetering.
                     If you want to keep up-to-date with additions, there is also <a href="./publications.rss">an RSS feed</a>.
                 </p>
             </div>
+            <div id="search" class="row cell">
+                <h2>Search: <input type="text" id="txtSearch" onKeyUp="updateSearch()"></input></h2>
+                Search inside:
+                <label><input type="checkbox" id="chkall" checked onclick="deselectAllChecks('all');">All</label>
+                <label><input type="checkbox" id="chkpaperTitle" onclick="$('#chkall').prop('checked',false);">Title</label>
+                <label><input type="checkbox" id="chkauthors" onclick="$('#chkall').prop('checked',false);">Authors</label>
+                <label><input type="checkbox" id="chkabstract" onclick="$('#chkall').prop('checked',false);">Abstract</label>
+                <label><input type="checkbox" id="chkkeywords" onclick="$('#chkall').prop('checked',false);">Keywords</label>
+                <label><input type="checkbox" id="chkjournal" onclick="$('#chkall').prop('checked',false);">Journal</label>
+                <br>
+                View: 
+                <label><input type="checkbox" id="viewall" checked onclick="deselectAllViews('all');">All</label>
+                <label><input type="checkbox" id="viewpapers" onclick="$('#viewall').prop('checked',false);">Journal article</label>
+                <label><input type="checkbox" id="viewpreprints" onclick="$('#viewall').prop('checked',false);">Preprints</label>
+                <label><input type="checkbox" id="viewproceedings" onclick="$('#viewall').prop('checked',false);">Proceedings</label>
+                <label><input type="checkbox" id="viewtheses" onclick="$('#viewall').prop('checked',false);">Theses</label>
+                <p id="viewcount">Showing n items</p>
+            </div>
             <div class="allshow row cell" id="tab-3-content">
-                {content}
+                THE_CONTENT_HERE
             </div>
         </div>
     </div>
