@@ -1876,7 +1876,7 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2102.02204},
     urldate = {2021-02-02},
     link = {http://arxiv.org/abs/2102.02204},
-    keywords = {NLP, ZX-calculus},
+    keywords = {NLP, ZX-calculus, Applied},
     abstract = {In this paper, we develop a compositional vector-based semantics of positive transitive sentences in quantum natural language processing for a non-English language, i.e. Persian, to compare the parametrized quantum circuits of two synonymous sentences in two languages, English and Persian. By considering grammar+meaning of a transitive sentence, we translate DisCoCat diagram via ZX-calculus into quantum circuit form. Also, we use a bigraph method to rewrite DisCoCat diagram and turn into quantum circuit in the semantic side.}
 }
 
@@ -1887,7 +1887,7 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2102.01828},
     urldate = {2021-02-03},
     link = {http://arxiv.org/abs/2102.01828},
-    keywords = {Variational Circuits, ZX-calculus},
+    keywords = {Variational Circuits, ZX-calculus, Applied},
     abstract = {In this paper, we propose a general scheme to analyze the barren plateau phenomenon in training quantum neural networks with the ZX-calculus. More precisely, we extend the barren plateaus theorem from unitary 2-design circuits to any parameterized quantum circuits under certain reasonable assumptions. The main technical contribution of this paper is representing certain integrations as ZX-diagrams and computing them with the ZX-calculus. The method is used to analyze four concrete quantum neural networks with different structures. It is shown that, for the hardware efficient ansatz and the MPS-inspired ansatz, there exist barren plateaus, while for the QCNN and the tree tensor network ansatz, there exists no barren plateau.}
 }
 
@@ -1936,7 +1936,7 @@ Quantum Physics and Logic,
     journal = {ACM SRC Grand Finals Candidates},
     urldate = {2020-05-01},
     link = {https://src.acm.org/binaries/content/assets/src/2020/lia-yeh.pdf},
-    keywords = {ZX-calculus, PyZX, Optimisation},
+    keywords = {ZX-calculus, PyZX, Optimisation, Applied},
     abstract = {Quantum hardware and algorithms researchers alike have expressed the critical need for and shortage of expertise in quantum programming languages, compilation, and computer architecture. We design, implement, and benchmark quantum compilation and visualization in PyZX, a Python tool for the ZX-calculus, applied to Qiskit, the most widely-used quantum programming language. We demonstrate correct circuit optimization by our Qiskit transpiler pass on 1000 two qubit Randomized Benchmarking circuits, reducing gate count of 29% of the circuits further than Qiskit’s default transpiler.}
 }
 
@@ -1991,6 +1991,17 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2103.06914},
     urldate = {2021-03-11},
     link = {http://arxiv.org/abs/2103.06914},
-    keywords = {ZX-calculus,Applied},
+    keywords = {ZX-calculus, Tensor networks, Applied},
     abstract = {The ZX-calculus is a graphical language which allows for reasoning about suitably represented tensor networks - namely ZX-diagrams - in terms of rewrite rules. Here, we focus on problems which amount to exactly computing a scalar encoded as a closed tensor network. In general, such problems are #P-hard. However, there are families of such problems which are known to be in P when the dimension is below a certain value. By expressing problem instances from these families as ZX-diagrams, we see that the easy instances belong to the stabilizer fragment of the ZX-calculus. Building on previous work on efficient simplification of qubit stabilizer diagrams, we present simplifying rewrites for the case of qutrits, which are of independent interest in the field of quantum circuit optimisation. Finally, we look at the specific examples of evaluating the Jones polynomial and of counting graph-colourings. Our exposition further champions the ZX-calculus as a suitable and unifying language for studying the complexity of a broad range of classical and quantum problems.}
+}
+
+@article{toumi2021diagrammatic,
+    author = {Toumi, Alexis and Yeung, Richie and de Felice, Giovanni},
+    title = {{Diagrammatic Differentiation for Quantum Machine Learning}},
+    year = {2021},
+    journal = {arXiv preprint arXiv:2103.07960},
+    urldate = {2021-03-14},
+    link = {http://arxiv.org/abs/2103.07960},
+    keywords = {ZX-calculus, Applied, PyZX, NLP},
+    abstract = {We introduce diagrammatic differentiation for tensor calculus by generalising the dual number construction from rigs to monoidal categories. Applying this to ZX diagrams, we show how to calculate diagrammatically the gradient of a linear map with respect to a phase parameter. For diagrams of parametrised quantum circuits, we get the well-known parameter-shift rule at the basis of many variational quantum algorithms. We then extend our method to the automatic differentation of hybrid classical-quantum circuits, using diagrams with bubbles to encode arbitrary non-linear operators. Moreover, diagrammatic differentiation comes with an open-source implementation in DisCoPy, the Python library for monoidal categories. Diagrammatic gradients of classical-quantum circuits can then be simplified using the PyZX library and executed on quantum hardware via the tket compiler. This opens the door to many practical applications harnessing both the structure of string diagrams and the computational power of quantum machine learning.}
 }
