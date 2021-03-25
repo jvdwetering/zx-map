@@ -11,6 +11,7 @@ function search(s) {
     if (journal.match(/arxiv/gi) || journal.match(/preprint/gi)) {pubtype="preprint";}
     if (journal.match(/thesis/gi)) {pubtype="thesis";}
     if ($(elt).find(".bibdata").text().match(/inproceedings/gi)) {pubtype="proceedings";}
+    if ($(elt).find(".paperTitle").text().match(/Video/gi)) {pubtype="video";}
 
     var should_accept = false;
     if ($('#viewall').is(':checked')) {should_accept=true;}
@@ -18,6 +19,7 @@ function search(s) {
     if ($('#viewpreprints').is(':checked') && pubtype=="preprint") {should_accept=true;}
     if ($('#viewtheses').is(':checked') && pubtype=="thesis") {should_accept=true;}
     if ($('#viewproceedings').is(':checked') && pubtype=="proceedings") {should_accept=true;}
+    if ($('#viewvideos').is(':checked') && (pubtype=="video" || $(elt).find(".bibdata").text().match(/video/))) {should_accept=true;}
 
     var find = function (selector) {
       if ($("#chk" + selector).is(":checked") || $("#chkall").is(":checked")) {
@@ -75,7 +77,7 @@ function deselectAllChecks(exception) {
 }
 
 function deselectAllViews(exception) {
-  ["papers","preprints","proceedings","theses","all"].forEach(
+  ["papers","preprints","proceedings","theses","videos","all"].forEach(
     function(s,i) {
       if (s!=exception) {$('#view'+s).prop('checked',false)}
     });

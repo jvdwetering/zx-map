@@ -22,14 +22,15 @@ def entry_sort_key(entry):
         return entry['urldate']
     if 'link' not in entry:
         raise Exception("{} does not have attribute 'link'".format(entry['ID']))
-    
     return entry['year']+"-01-01"
-        
+
+
 def normalise_name(n):
     p1, p2 = n.split(', ')
     s = p2.strip() + " " + p1.strip()
     s = s.replace(r'{\"o}','&ouml;').replace(r"{\'e}",'&eacute;')
     return s
+
 
 def parse_math(s):
     i = s.rfind('$',0)
@@ -40,22 +41,25 @@ def parse_math(s):
         i = s.rfind('$')
     return s
 
+
 def clear_arXiv_preprint_text(s):
     return s.replace('arXiv preprint ','')
 
+
 def clean_text(s):
     return s.replace('{','').replace('}','').replace(r'\rm','')
+
 
 def entry_to_rss(title,link,abstract,authors,year, arxiv, date):
     y,m,d = date.split("-")
     m = int(m)
     d = int(d)
     return rfeed.Item(title = title,
-                author=authors,
-                link = link,
-                description = abstract,
-                guid = rfeed.Guid(arxiv),
-                pubDate = datetime.datetime(int(year),m,d,0,0))
+                    author=authors,
+                    link = link,
+                    description = abstract,
+                    guid = rfeed.Guid(arxiv),
+                    pubDate = datetime.datetime(int(year),m,d,0,0))
 
 HTML = r"""
 <div class="perEntryDiv">
@@ -69,6 +73,7 @@ HTML = r"""
 <span>
 <a href="#" class="abstract_more">Show abstract &#x21F2</a>
 <a href="#" class="bibdata_more">Show bibdata &#x21F2</a>
+{video}
 </span>
 </div>
 <div class="rightContent">
@@ -92,9 +97,9 @@ latest_pubs = dict()
 types = {"preprint": 0, "published": 0, "Master": 0, "Phd": 0}
 with open("keyword_descriptions.json", 'r') as f:
     keyword_descriptions = {k.lower():v for k,v in json.loads(f.read()).items()}
-#print(tagdescriptions)
 
 ids = set()
+
 
 def entry_to_html(entry):
     db = BibDatabase()
@@ -103,7 +108,6 @@ def entry_to_html(entry):
     if entry['ID'] in ids:
         raise Exception("Id {} already taken".format(entry['ID']))
     ids.add(entry['ID'])
-    et = entry['ENTRYTYPE']
 
     if 'journal' in entry:
         if entry['journal'].lower().find('arxiv') != -1:
@@ -116,17 +120,19 @@ def entry_to_html(entry):
         journal = clean_text(entry['booktitle'])
     elif 'school' in entry:
         journal = clean_text(entry['school'])
-        if entry['ENTRYTYPE'] == 'phdthesis': 
+        if entry['ENTRYTYPE'] == 'phdthesis':
             journal += " PhD Thesis"
             types["Phd"] += 1
-        elif entry['ENTRYTYPE'] == 'mastersthesis': 
+        elif entry['ENTRYTYPE'] == 'mastersthesis':
             journal += " Masters Thesis"
             types["Master"] += 1
-        else: 
+        else:
             print("Unknown entry type", entry['ENTRYTYPE'])
             raise
-    #elif 'note' in entry:
-    #    journal = clean_text(entry['note'])
+    elif 'howpublished' in entry:  # It is a video
+        journal = clean_text(entry['howpublished'])
+        entry['link'] = entry['url']
+        entry['title'] = '[Video] ' + entry['title']
     else:
         print("Missing entries:")
         print(entry)
@@ -137,9 +143,17 @@ def entry_to_html(entry):
     bibtexparser.customization.convert_to_unicode(entry)
     authors = ""
 
+    title = clean_text(entry['title'])
+    year = entry['year']
+
     publink = """<a href="{}" target="_blank">{}</a>""".format(entry['link'], clean_text(entry['title']))
 
-    if len(e['author'])==1:
+    if 'video' in entry:
+        video = """<a href="{}">Video</a>""".format(entry['video'])
+    else:
+        video = ""
+
+    if len(e['author']) == 1:
         authors = normalise_name(e['author'][0])
         if authors not in coauthors: coauthors[authors] = set()
         if authors not in latest_pubs: latest_pubs[authors] = publink
@@ -159,9 +173,6 @@ def entry_to_html(entry):
         doi_url = "https://dx.doi.org/" + entry["doi"].replace(r"\_", "_")
     else: doi_url = entry['link']
 
-    title = clean_text(entry['title'])
-    year = entry['year']
-
     if 'keywords' in entry: kw = entry['keywords']
     elif 'keyword' in entry: kw = entry['keyword']
     else: kw = ""
@@ -177,15 +188,15 @@ def entry_to_html(entry):
         l.append('<a target="_blank" onclick="forceSearchKW(\'{}\')" title="{}">{}</a>'.format(kw.lower(),descr,kw))
 
     keyword_html = ", ".join(l)
-    html = HTML.format(url = entry['link'], doiurl = doi_url, title=title,
-                       authors = authors, journal = journal,
-                       year = year, abstract=abstract,
-                       bibdata=raw_bibdata, keywords = keyword_html)
+    html = HTML.format(url=entry['link'], doiurl=doi_url, title=title,
+                       authors=authors, journal=journal,
+                       year=year, abstract=abstract,
+                       bibdata=raw_bibdata, keywords=keyword_html, video=video)
     for kw in keywords:
         if kw.lower() in keyword_pubs: keyword_pubs[kw.lower()] += 1
         else: keyword_pubs[kw.lower()] = 1
     return html, entry_to_rss(title, doi_url, entry['abstract'], authors, year, entry['link'],
-                                entry['urldate'] if 'urldate' in entry else "{}-01-01".format(year))
+                              entry['urldate'] if 'urldate' in entry else "{}-01-01".format(year))
 
 def library_to_html(lib):
     pubs_per_year = {}
