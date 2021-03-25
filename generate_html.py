@@ -132,7 +132,7 @@ def entry_to_html(entry):
     elif 'howpublished' in entry:  # It is a video
         journal = clean_text(entry['howpublished'])
         entry['link'] = entry['url']
-        entry['title'] = '[Video] ' + entry['title']
+        entry['title'] = '[Video] ' + entry['title'] + ' &#127909;'
     else:
         print("Missing entries:")
         print(entry)
@@ -149,7 +149,7 @@ def entry_to_html(entry):
     publink = """<a href="{}" target="_blank">{}</a>""".format(entry['link'], clean_text(entry['title']))
 
     if 'video' in entry:
-        video = """<a href="{}">Video</a>""".format(entry['video'])
+        video = """<a href="{}">Video &#127909;</a>""".format(entry['video'])
     else:
         video = ""
 
