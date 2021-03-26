@@ -13,6 +13,7 @@ import rfeed
 writer = BibTexWriter()
 writer.indent = '    '
 writer.display_order = ('ENTRYTYPE', 'author', 'title', 'year', 'journal', 'booktitle', 'school',
+                        'howpublished',
                         'editor', 'series', 'volume', 'issue', 'number', 'month', 'pages', 'numpages', 'publisher',
                         'organization', 'acmid', 'address', 'isbn', 'issn', 'location', 'language',
                         'doi', 'urldate', 'link', 'url', 'keyword',  'keywords', 'abstract')
