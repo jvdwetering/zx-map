@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>The ZX-calculus</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/intro.css">
+    <script>
+
+        var setup = function () {
+            var i;
+            var slides = [
+                ["figures/swap1.png", "We start with three CNOT gates"],
+                ["figures/swap2.png", "Apply the bi-algebra rule"],
+                ["figures/swap3.png", "Pull the gate through the swap"],
+                ["figures/swap4.png", "Merge the two red nodes and the two green nodes"],
+                ["figures/swap5.png", "Apply the Hopf law"],
+                ["figures/swap6.png", "And remove the blank spiders, leaving just the swap gate"]
+            ]
+
+            var slideshowHTML = ""
+            slides.forEach(function (sc) {
+                slideshowHTML += `<div class="slideHolder">
+                <img src="${sc[0]}" class="slide">
+                <div class="slideCaption">${sc[1]}</div>
+            </div>`
+            })
+
+            slideshowHTML += `<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>`
+            var dotsHTML = ""
+            slides.forEach(function (sc, i) {
+                dotsHTML += `<span class="dot" onclick="currentSlide(${i})"></span>`
+            })
+            document.getElementById("slideshow").innerHTML = slideshowHTML
+            document.getElementById("slideshowDots").innerHTML = dotsHTML
+            showSlides(slideIndex);
+        }
+
+        var slideIndex = 0;
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var slides = document.getElementsByClassName("slideHolder");
+            var dots = document.getElementsByClassName("dot");
+            if (n >= slides.length) { slideIndex = slides.length - 1 }
+            if (n < 0) { slideIndex = 0 }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+            console.log(slideIndex)
+        } 
+    </script>
+    <style>
+        #introImage {
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body onload="setup()">
+    <div class="contentGrid" style="grid-template-columns: 2fr 1fr;">
+        <div class="row cell title shaded">
+            <h1>The ZX-calculus</h1>
+        </div>
+        <div id="introText" class="square cell">
+            <p>
+                The ZX-calculus is a graphical language that goes beyond circuit diagrams.
+                It ‘splits the atom’ of well-known quantum logic gates to reveal the compositional structure inside.
+                The calculus works by generalising the ideas of Z and X operations,
+                allowing us to break out of the circuit model while maintaining soundness of reasoning.
+                In doing so we can show properties of circuits, entanglement states, and protocols, in a visually
+                succinct
+                but logically complete manner.
+            </p>
+
+            <p>
+                The ZX-calculus is forging the next generation of quantum software.
+                Using the calculus gives optimisation strategies that performs state-of-the-art T-count reduction (an
+                important metric for fault-tolerant computing) and gate compilation.
+                The generators of the calculus correspond closely to the basic operations of lattice surgery in the
+                surface
+                code, giving a visual design and verification language for these codes;
+                and ZX has also been used to discover novel error correction procedures.
+                It comes with a scalable notation capable of representing repeated structures at arbitrary qubit scales.
+                The calculus also acts in the crucial role of an intermediate representation in a new commercial quantum
+                compiler.
+            </p>
+
+            <p>
+            	Want to learn more or ask some questions? Join us on <a target="_blank" href="https://discord.gg/6shbsEQ3FC">Discord</a>!
+            </p>
+        </div>
+        <div id="introImage" class="square" style="text-align: center;">
+            <img src="./figures/cnot.svg" style="max-height: 100%; max-width: 100%;" />
+        </div>
+        <div id="introDerivation" class="derivation row cell">
+            <h2>Example derivation</h2>
+            This example starts with a circuit and ends with a circuit, but the intermediate steps are not always
+            circuits:
+            <div id="slideshow">
+                The example derivation requires javascript in order to be displayed.
+            </div>
+
+            <div id="slideshowDots">
+            </div>
+            <p>
+                For a longer introduction to the ZX-calculus see the <a href="./intro.html">tutorial</a> page.
+            </p>
+        </div>
+        <div class="square cell">
+            <h2>
+                PyZX demonstration
+            </h2>
+            <p>
+                We have <a href="./pyzx.html">implemented an in-browser demonstration</a> of the T-count optimising
+                procedure from
+                <a href="https://arxiv.org/abs/1903.10477">this paper</a>.
+            </p>
+        </div>
+        <div class="square cell">
+            <img src="/images/pyzx.png" style="max-width: 100%; max-height: 100%;">
+        </div>
+        <div id="introPublications" class="row cell">
+            <h2>Selected publications</h2>
+            <p>We show here a couple of papers that might serve as good introductions to the ZX-calculus. Please see the <a href="./publications.html">publications page</a> for a full list of papers using the ZX-calculus.
+            </p>
+            <ul>
+                <li><a href="https://arxiv.org/abs/2012.13966">ZX-calculus for the working quantum computer scientist</a> (2020). A review of the literature on the ZX-calculus together with an extended introduction.</li>
+                <li><a href="https://arxiv.org/abs/1902.03178">Graph-theoretic Simplification of Quantum Circuits with the ZX-calculus</a> (2019). This paper demonstrates a use-case of the ZX-calculus: quantum circuit optimisation.</li>
+                <li><a href="https://arxiv.org/abs/1812.09114">A Near-Optimal Axiomatisation of ZX-Calculus for Pure
+                        Qubit Quantum Mechanics</a> (2018). This paper established the simplest complete axiomatisation of the ZX-calculus.</li>
+                <li><a href="https://www.amazon.com/Picturing-Quantum-Processes-Diagrammatic-Reasoning/dp/110710422X">Picturing Quantum Processes: A First Course in Quantum Theory and Diagrammatic Reasoning</a>(2017). This extensive book explains quantum theory using a diagrammatic method that ultimately leads one to the ZX-calculus.</li> 
+            </ul>
+            <h2>Other parts of the site:</h2>
+            These are also accessible from the banner at the top of the page.
+            <ul>
+                <li><a href="./intro.html">A longer introduction / tutorial on the ZX-calculus</a></li>
+                <li><a href="./publications.html">A full, searchable list of publications</a></li>
+                <li><a href="./map.html">A map of the ZX community</a></li>
+                <li><a href="./accessibility.html">Accessibility advice on colour choice and conference
+                        livestreaming</a></li>
+                <li><a href="./pyzx.html">An in-browser demonstration of (part of) PyZX</a></li>
+            </ul>
+            </p>
+        </div>
+        <div class="row cell">
+            <p class="subtle">
+                Website by <a href="http://hmillerbakewell.github.io/website">Hector Miller-Bakewell</a> and <a
+                    href="http://vdwetering.name">John van de Wetering</a>,
+                with thanks to
+                <a
+                    href="https://quantum.univ-grenoble-alpes.fr/fostering-the-ecosystem/our-chairs-of-excellence/quantum-computing/horsman-dominic-734445.htm">
+                    Dom Horsman
+                </a> and Richard East
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <a href="/">Home</a>
+        <a href="/intro.html">Tutorial</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/map.html">Map</a>
+        <a href="/pyzx.html">PyZX Demo</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+.square {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.row {
+    grid-row: span 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+
+.cell {
+    text-align: justify;
+    padding: 3em;
+}
+
+.console {
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    padding-top: 5em;
+    text-align: center;
+    font-size: x-large;
+}
+
+.contentGrid {
+    display: grid;
+}
+
+body {
+    font-size: large;
+    color: #222;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.subtle {
+    text-align: center;
+    font-size: small;
+    color: #777;
+}
+
+li>a:link,
+li>a:visited,
+li>a,
+p>a:link,
+p>a:visited,
+p>a,
+span>a:link,
+span>a:visited,
+span>a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #CCC;
+    cursor: pointer;
+}
+
+a:hover {
+    color: initial;
+}
+
+.shaded {
+    background-color: #d8f8d8;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    font-weight: bold;
+    transition: 0.6s ease;
+    user-select: none;
+    padding: 2em;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+}
+
+.paperTitle {
+    font-weight: bold;
+    font-size: large;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slideHolder {
+    display: block;
+    position: relative;
+    min-width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.slideCaption {
+    color: #444;
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.slide {
+    height: 100%;
+}
+
+#slideshow {
+    position: relative;
+    margin: auto;
+    max-width: 30em;
+}
+
+#slideshowDots {
+    text-align: center;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 1em;
+    background-color: #d8f8d8;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #e8a6a6;
+}
+
+/* Style the navigation bar */
+.header {
+    width: 100%;
+    background-color: #083308;
+    overflow: auto;
+    position: fixed;
+    padding-left: 2em;
+    top: 0px;
+    font-weight: bold;
+}
+
+/* Navbar links */
+.header a {
+    float: left;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-size: large;
+    color: white;
+}
