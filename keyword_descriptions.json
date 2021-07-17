@@ -64,5 +64,6 @@
     "Fermionic Quantum Computing": "This paper discusses Fermionic Quantum computing",
     "Y-calculus": "This paper uses the Y-calculus for real matrices",
     "Variational Circuits": "This paper deals with variational circuits",
-    "Braids": "This paper deals with braided monoidal categories"
+    "Braids": "This paper deals with braided monoidal categories",
+    "Classical Simulation": "This paper discusses classical simulation of quantum circuits"
 }
