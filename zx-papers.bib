@@ -54,8 +54,16 @@
 @article{east2020akltstates,
     author = {D. P. East, Richard and van de Wetering, John and Chancellor, Nicholas and G. Grushin, Adolfo},
     title = {{AKLT-states as ZX-diagrams: diagrammatic reasoning for quantum states}},
-    year = {2020},
-    journal = {arXiv preprint arXiv:2012.01219},
+    year = {2022},
+    journal = {PRX Quantum},
+    volume = {3},
+    issue = {1},
+    pages = {010302},
+    numpages = {31},
+    year = {2022},
+    month = {Jan},
+    publisher = {American Physical Society},
+    doi = {10.1103/PRXQuantum.3.010302},
     urldate = {2020-12-02},
     link = {http://arxiv.org/abs/2012.01219},
     video = {https://www.youtube.com/watch?v=vi-ndkgKgQY},
@@ -2359,6 +2367,7 @@ Quantum Physics and Logic,
     urldate = {2021-07-02},
     link = {http://arxiv.org/abs/2107.01186},
     keywords = {ZH-calculus, Classical Simulation},
+    video = {https://www.youtube.com/watch?v=HTPU-XqW2gM},
     abstract = {Graphical calculi such as the ZH-calculus are powerful tools in the study and analysis of quantum processes, with links to other models of quantum computation such as quantum circuits, measurement-based computing, etc.   A somewhat compact but systematic way to describe a quantum process is through the use of quantum multiple-valued decision diagrams (QMDDs), which have already been used for the synthesis of quantum circuits as well as for verification.   We show in this paper how to turn a QMDD into an equivalent ZH-diagram, and vice-versa, and show how reducing a QMDD translates in the ZH-Calculus, hence allowing tools from one formalism to be used into the other.}
 }
 
@@ -2392,6 +2401,7 @@ Quantum Physics and Logic,
     urldate = {2021-09-02},
     link = {http://arxiv.org/abs/2109.01076},
     keywords = {ZX-calculus, Classical Simulation, Applied, PyZX, Automation},
+    video = {https://www.youtube.com/watch?v=0C9i0sUkQgk},
     abstract = {We introduce an enhanced technique for strong classical simulation of quantum circuits which combines the `sum-of-stabilisers' method with an automated simplification strategy based on the ZX-calculus. Recently it was shown that quantum circuits can be classically simulated by expressing the non-stabiliser gates in a circuit as magic state injections and decomposing them in chunks of 2-6 states at a time, obtaining sums of (efficiently-simulable) stabiliser states with many fewer terms than the naive approach. We adapt these techniques from the original setting of Clifford circuits with magic state injection to generic ZX-diagrams and show that, by interleaving this "chunked" decomposition with a ZX-calculus-based simplification strategy, we can obtain stabiliser decompositions that are many orders of magnitude smaller than existing approaches. We illustrate this technique to perform exact norm calculations (and hence strong simulation) on the outputs of random 50- and 100-qubit Clifford+T circuits with up to 70 T-gates as well as a family of hidden shift circuits previously considered by Bravyi and Gosset with over 1000 T-gates.}
 }
 
@@ -2432,6 +2442,7 @@ Quantum Physics and Logic,
     urldate = {2021-10-13},
     link = {http://arxiv.org/abs/2110.06898},
     keywords = {Algebraic ZX, Normal-Form},
+    video = {https://www.youtube.com/watch?v=E9BJZ2uAVOM},
     abstract = {Elementary matrices play an important role in linear algebra applications. In this paper, we represent all the elementary matrices of size 2^m\times 2^m using algebraic ZX-calculus. Then we show their properties on inverses and transpose using rewriting rules of ZX-calculus. As a consequence, we are able to depict any matrices of size 2^m\times 2^n by string diagrams without resort to a diagrammatic normal form for matrices as shown in [Wang 2020]. By doing so we pave the way towards visualising by string diagrams important matrix technologies deployed in AI especially machine learning.}
 }
 
@@ -2444,4 +2455,17 @@ Quantum Physics and Logic,
     link = {http://arxiv.org/abs/2111.03114},
     keywords = {ZH-calculus, Tensor Networks, Applied, PyZX},
     abstract = {The ZX-calculus, and the variant we consider in this paper (ZXH-calculus), are formal diagrammatic languages for qubit quantum computing. We show that it can also be used to describe SU(2) representation theory. To achieve this, we first recall the definition of Yutsis diagrams, a standard graphical calculus used in quantum chemistry and quantum gravity, which captures the main features of SU(2) representation theory. Second, we show precisely how it embed within Penrose's binor calculus. Third, we subsume both calculus into ZXH-diagrams. In the process we show how the SU(2) invariance of Wigner symbols is trivially provable in the ZXH-calculus. Additionally, we show how we can explicitly diagrammatically calculate 3jm, 4jm and 6j symbols. It has long been thought that quantum gravity should be closely aligned to quantum information theory. In this paper, we present a way in which this connection can be made exact, by writing the spin-networks of loop quantum gravity (LQG) in the ZX-diagrammatic language of quantum computation.}
+}
+
+@phdthesis{carette2021thesis,
+    author = {Carette, Titouan},
+    title = {{Wielding the ZX-calculus, Flexsymmetry, Mixed States, and Scalable Notations}},
+    year = {2021},
+    school = {Loria, Universit\'e de Lorraine},
+    urldate = {2021-12-06},
+    link = {https://hal.archives-ouvertes.fr/tel-03468027/document},
+    keywords = {ZX-calculus, Category Theory, Scalable ZX, Mixed States, ZH-calculus, ZW-calculus, Protocols, PhD Thesis},
+    abstract = {My first contribution is to propose a formalisation of this property through the notion of flexsymmetry in Chapter 5, it relies on the notion of paradigm introduced in Chapter 4. This equation called the bialgebra rule and making two spiders interact is the key ingredient in the definition of Z*-algebras in Chapter 6 where it is shown that the red and green spiders are not the only ones following this pattern. The introduction of Z*-algebras and the classification of all their models in qubits is the second contribution of this thesis. There are essentially three such structures for qubits, corresponding to the ZX-calculus, ZH-calculus, and ZW-calculus. Similar behaviour can also appear in other settings, as in the graphical linear algebra introduced in Chapter 7. All those calculi can then be used to represent quantum algorithms. But there are two obstacles. First, those algorithms can involve interactions with the non-quantum world that require a broader model of computation allowing classical behaviours alongside quantum ones.
+    This is called mixed state quantum mechanics and a way to extend quantum graphical languages to this setting is presented in Chapter 8. The extension of ZX-calculus to mixed-state quantum mechanics is the third contribution presented in this thesis. A second obstacle is the fact that a quantum algorithm is defined by a uniform family of circuits, one for each possible size of the input. The scalable notations presented in Chapter 9 allow to handle such families, completing the toolbox necessary to calmly approach quantum algorithm graphically. The scalable notations are the fourth and last theoretical contribution of this thesis.
+    All those methods can be used to graphically prove the correction of quantum algorithms. Examples are provided in Chapter 10, which concludes the thesis.}
 }
