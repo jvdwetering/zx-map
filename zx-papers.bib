@@ -2469,3 +2469,16 @@ Quantum Physics and Logic,
     This is called mixed state quantum mechanics and a way to extend quantum graphical languages to this setting is presented in Chapter 8. The extension of ZX-calculus to mixed-state quantum mechanics is the third contribution presented in this thesis. A second obstacle is the fact that a quantum algorithm is defined by a uniform family of circuits, one for each possible size of the input. The scalable notations presented in Chapter 9 allow to handle such families, completing the toolbox necessary to calmly approach quantum algorithm graphically. The scalable notations are the fourth and last theoretical contribution of this thesis.
     All those methods can be used to graphically prove the correction of quantum algorithms. Examples are provided in Chapter 10, which concludes the thesis.}
 }
+
+
+@mastersthesis{staudacher2021masters,
+    author = {Staudacher, Korbinian},
+    title = {{Optimization Approaches for Quantum Circuits using ZX-calculus}},
+    year = {2021},
+    school = {Der Ludwig-Maximilians-Universit\"at M\"unchen},
+    link = {https://www.mnm-team.org/pub/Diplomarbeiten/stau21/PDF-Version/stau21.pdf},
+    urldate = {2021-09-30},
+    keywords = {ZX-Calculus, Optimisation, Automation, PyZX, Circuit Extraction, Master Thesis},
+    abstract = {This work focuses on quantum circuit optimization using the ZX-calculus, a recently developed graphical language designed to simplify reasoning about quantum systems. Quantum circuits can be optimized in an intuitive and efficient way by transforming them to equivalent ZX-diagrams and using rules of the ZX-calculus for diagram simplification. However, some rules can modify ZX-diagrams in such a way that the re-extraction of a quantum circuit is no longer possible. Moreover, rules that simplify ZX-diagrams can still increase the size of the underlying circuits. Due to these problems, most of the existing ZXcalculus based optimization approaches become inefficient with increasing quantum circuit complexity. In our work we develop different strategies to improve those approaches. In particular, we introduce heuristics to estimate the optimization benefit gained by certain ZX-rules. This allows treating ZX-diagram simplification as a classical search problem where heuristics can be applied to guide the sequence of rule applications towards minimal circuits. We implement different heuristic-based algorithms like greedy search, random search and simulated annealing in the open-source library PyZX where we test them against existing strategies on circuits of variant size. The results show that using heuristics in diagram simplification often leads to better overall optimization results, especially when optimizing large and complex quantum circuits. Our algorithms can be further improved in several aspects like runtime or consideration of hardware topology.
+    }
+}
