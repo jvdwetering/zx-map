@@ -29,7 +29,6 @@ def entry_sort_key(entry):
 def normalise_name(n):
     p1, p2 = n.split(', ')
     s = p2.strip() + " " + p1.strip()
-    s = s.replace(r'{\"o}','&ouml;').replace(r"{\'e}",'&eacute;')
     return s
 
 
@@ -48,6 +47,7 @@ def clear_arXiv_preprint_text(s):
 
 
 def clean_text(s):
+    s = s.replace(r'\"o','&ouml;').replace(r"\'e",'&eacute;').replace(r'\"u', '&uuml;').replace(r'\"a', '&auml;')
     return s.replace('{','').replace('}','').replace(r'\rm','')
 
 
@@ -155,11 +155,11 @@ def entry_to_html(entry):
         video = ""
 
     if len(e['author']) == 1:
-        authors = normalise_name(e['author'][0])
+        authors = clean_text(normalise_name(e['author'][0]))
         if authors not in coauthors: coauthors[authors] = set()
         if authors not in latest_pubs: latest_pubs[authors] = publink
     else:
-        names = [normalise_name(a) for a in e['author']]
+        names = [clean_text(normalise_name(a)) for a in e['author']]
         for a in names[:-2]:
             authors += a + ", "
         authors += names[-2] + " and "
