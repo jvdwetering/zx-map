@@ -2237,17 +2237,6 @@ Quantum Physics and Logic,
   abstract = {Reducing ZX-diagrams using the technique from "Graph-theoretic simplification" (arXiv:1902.03178) does not result in unique normal forms, but rather one of many equivalent diagrams modulo local complementation and pivoting. The particular choice of normal form can then have a big effect on the CNOT count of the resulting diagram. In this talk, I will show some preliminary efforts to explore this space and use simulated annealing to get the CNOT count down.}
 }
 
-@misc{Borgna2020Video,
-  title = {{Mixed quantum-classical circuit optimization using grounds}},
-  howpublished = {ZX seminar},
-  author = {Borgna, Agustín},
-  url = {https://www.youtube.com/watch?v=-Frd8w-hTD0},
-  year = {2020},
-  urldate = {2020-10-19},
-  keywords = {ZX-calculus, PyZX, Optimisation, Mixed States, Applied},
-  abstract = {In this talk I show an extension to "Graph-theoretic simplification using ZX" (arXiv:1902.03178) to support mixed circuits with measurement and classical wires, using the ZX-ground calculus. I will present new gFlow-preserving rewrite rules that can be used with the ground generators, the extended optimization algorithm, and the extraction particularities that produce circuits with classical controls.}
-}
-
 @misc{Cowtan2021Video,
   title = {{String Diagrams for the Surface Code}},
   howpublished = {ZX seminar},
@@ -2492,4 +2481,21 @@ Quantum Physics and Logic,
     link = {http://arxiv.org/abs/2201.13250},
     keywords = {ZX-calculus, Applied, Variational Circuits},
     abstract = {ZX-calculus has proved to be a useful tool for quantum technology with a wide range of successful applications. Most of these applications are of an algebraic nature. However, other tasks that involve differentiation and integration remain unreachable with current ZX techniques. Here we elevate ZX to an analytical perspective by realising differentiation and integration entirely within the framework of ZX-calculus. We explicitly illustrate the new analytic framework of ZX-calculus by applying it in context of quantum machine learning.}
+}
+
+@inproceedings{borgna2021hybrid,
+    author = {Borgna, Agust{\'i}n and Perdrix, Simon and Valiron, Beno{\^i}t},
+    title = {{Hybrid quantum-classical circuit simplification with the ZX-calculus}},
+    year = {2021},
+    editor={Oh, Hakjoo},
+    booktitle={Programming Languages and Systems},
+    publisher={Springer International Publishing},
+    address={Cham},
+    pages={121--139},
+    doi = {10.1007/978-3-030-89051-3_8},
+    urldate = {2021-09-13},
+    link = {http://arxiv.org/abs/2109.06071},
+    keywords = {ZX-calculus, Mixed States, Optimisation, Automation, PyZX, Applied},
+    video = {https://www.youtube.com/watch?v=-Frd8w-hTD0},
+    abstract = {We present a complete optimization procedure for hybrid quantum-classical circuits with classical parity logic. While common optimization techniques for quantum algorithms focus on rewriting solely the pure quantum segments, there is interest in applying a global optimization process for applications such as quantum error correction and quantum assertions.   This work, based on the pure-quantum circuit optimization procedure by Duncan et al., uses an extension of the formal graphical ZX-calculus called ZX-ground as an intermediary representation of the hybrid circuits to allow for granular optimizations below the quantum-gate level. We define a translation from hybrid circuits into diagrams that admit the graph-theoretical focused-gFlow property, needed for the final extraction back into a circuit. We then derive a number of gFlow-preserving optimization rules for ZX-ground diagrams that reduce the size of the graph, and devise an strategy to find optimization opportunities by rewriting the diagram guided by a Gauss elimination process. Then, after extracting the circuit, we present a general procedure for detecting segments of circuit-like ZX-ground diagrams which can be implemented with classical gates in the extracted circuit. We have implemented our optimization procedure as an extension to the open-source python library PyZX.}
 }
