@@ -2522,3 +2522,15 @@ Quantum Physics and Logic,
     keywords = {ZX-calculus, Circuit Extraction},
     abstract = {The ZX-calculus is a graphical language for reasoning about quantum computation using ZX-diagrams, a certain flexible generalisation of quantum circuits that can be used to represent linear maps from $m$ to $n$ qubits for any $m,n \geq 0$. Some applications for the ZX-calculus, such as quantum circuit optimisation and synthesis, rely on being able to efficiently translate a ZX-diagram back into a quantum circuit of comparable size. While several sufficient conditions are known for describing families of ZX-diagrams that can be efficiently transformed back into circuits, it has previously been conjectured that the general problem of circuit extraction is hard. That is, that it should not be possible to efficiently convert an arbitrary ZX-diagram describing a unitary linear map into an equivalent quantum circuit. In this paper we prove this conjecture by showing that the circuit extraction problem is #P-hard, and so is itself at least as hard as strong simulation of quantum circuits. In addition to our main hardness result, which relies specifically on the circuit representation, we give a representation-agnostic hardness result. Namely, we show that any oracle that takes as input a ZX-diagram description of a unitary and produces samples of the output of the associated quantum computation enables efficient probabilistic solutions to NP-complete problems.}
 }
+
+
+@article{jeandel2022addition,
+    author = {Jeandel, Emmanuel and Perdrix, Simon and Veshchezerova, Margarita},
+    title = {{Addition and Differentiation of ZX-diagrams}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2202.11386},
+    urldate = {2022-02-23},
+    link = {http://arxiv.org/abs/2202.11386},
+    keywords = {ZX-calculus, Applied, Variational Circuits},
+    abstract = {The ZX-calculus is a powerful framework for reasoning in quantum computing. It provides in particular a compact representation of matrices of interests. A peculiar property of the ZX-calculus is the absence of a formal sum allowing the linear combinations of arbitrary ZX-diagrams. The universality of the formalism guarantees however that for any two ZX-diagrams, the sum of their interpretations can be represented by a ZX-diagram. We introduce a general, inductive definition of the addition of ZX-diagrams, relying on the construction of controlled diagrams. Based on this addition technique, we provide an inductive differentiation of ZX-diagrams.   Indeed, given a ZX-diagram with variables in the description of its angles, one can differentiate the diagram according to one of these variables. Differentiation is ubiquitous in quantum mechanics and quantum computing (e.g. for solving optimization problems). Technically, differentiation of ZX-diagrams is strongly related to summation as witnessed by the product rules.   We also introduce an alternative, non inductive, differentiation technique rather based on the isolation of the variables. Finally, we apply our results to deduce a diagram for an Ising Hamiltonian.}
+}
