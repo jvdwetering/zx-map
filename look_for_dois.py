@@ -57,7 +57,7 @@ with open('zx-papers.bib', encoding='utf-8') as bibtex_file:
 papers = {}
 
 for e in bd.entries:
-    if 'doi' in e or e['link'].find("arxiv") == -1: continue
+    if 'doi' in e or 'link' not in e or e['link'].find("arxiv") == -1: continue
     aid = strip_arxiv_id(strip_arxiv_link(e['link']))
     papers[aid] = e
 
