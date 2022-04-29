@@ -2493,7 +2493,7 @@ Quantum Physics and Logic,
     author = {Staudacher, Korbinian},
     title = {{Optimization Approaches for Quantum Circuits using ZX-calculus}},
     year = {2021},
-    school = {Der Ludwig-Maximilians-Universit\"at M\"unchen},
+    school = {Ludwig-Maximilians-Universit\"at M\"unchen},
     link = {https://www.mnm-team.org/pub/Diplomarbeiten/stau21/PDF-Version/stau21.pdf},
     urldate = {2021-09-30},
     keywords = {ZX-Calculus, Optimisation, Automation, PyZX, Circuit Extraction, Master Thesis},
@@ -2608,4 +2608,37 @@ Quantum Physics and Logic,
     link = {http://arxiv.org/abs/2204.01307},
     keywords = {ZX-calculus, Variational Circuits, Applied},
     abstract = {Diagrammatic representations of quantum algorithms and circuits offer novel approaches to their design and analysis. In this work, we describe extensions of the ZX-calculus especially suitable for parameterized quantum circuits, in particular for computing observable expectation values as functions of or for fixed parameters, which are important algorithmic quantities in a variety of applications ranging from combinatorial optimization to quantum chemistry. We provide several new ZX-diagram rewrite rules and generalizations for this setting. In particular, we give formal rules for dealing with linear combinations of ZX-diagrams, where the relative complex-valued scale factors of each diagram must be kept track of, in contrast to most previously studied single-diagram realizations where these coefficients can be effectively ignored. This allows us to directly import a number useful relations from the operator analysis to ZX-calculus setting, including causal cone and quantum gate commutation rules. We demonstrate that the diagrammatic approach offers useful insights into algorithm structure and performance by considering several ans\"atze from the literature including realizations of hardware-efficient ans\"atze and QAOA. We find that by employing a diagrammatic representation, calculations across different ans\"atze can become more intuitive and potentially easier approach systematically than by alternative means. Finally, we outline how diagrammatic approaches may aid in the design and study of new and more effective quantum circuit ans\"atze.}
+}
+
+@article{Chardonnet2022ManyWorlds,
+    author = {Chardonnet, Kostia and de Visme, Marc and Valiron, Benoit and Vilmart, Renaud},
+    title = {{The Many-Worlds Calculus: Representing Quantum Control}},
+    year = {2022},
+    journal = {HAL preprint: hal-03654190},
+    urldate = {2022-04-28},
+    link = {https://hal.archives-ouvertes.fr/hal-03654190},
+    keywords = {ZX-calculus, Category Theory, Completeness},
+    abstract = {We propose a new typed graphical language for quantum computation, based on compact categories with biproducts. Our language generalizes existing approaches such as ZX-calculus and quantum circuits, while offering a natural framework to support quantum control: it natively supports "quantum tests". The language comes equipped with a denotational semantics based on linear applications, and an equational theory. Through the use of normal forms for the diagrams, we prove the language to be universal, and the equational theory to be complete with respect to the semantics.}
+}
+
+@article{cowtan2022qudit,
+    author = {Cowtan, Alexander},
+    title = {{Qudit lattice surgery}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2204.13228},
+    urldate = {2022-04-27},
+    link = {http://arxiv.org/abs/2204.13228},
+    keywords = {ZX-calculus, Qudits, Lattice Surgery, Surface Code},
+    abstract = {We observe that lattice surgery, a model of fault-tolerant qubit computation, generalises straightforwardly to arbitrary finite-dimensional qudits. The generalised model is based on the group algebras $\mathbb{C}\mathbb{Z}_d$ for $d \geq 2$. It still requires magic state injection for universal quantum computation. We relate the model to the ZX-calculus, a diagrammatic language based on Hopf-Frobenius algebras.}
+}
+
+@article{vandewetering2022phase,
+    author = {van de Wetering, John and Yeh, Lia},
+    title = {{Phase gadget compilation for diagonal qutrit gates}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2204.13681},
+    urldate = {2022-04-28},
+    link = {http://arxiv.org/abs/2204.13681},
+    keywords = {ZX-calculus, Qutrits, Phase Gadgets, Applied, Clifford Fragment},
+    abstract = {Phase gadgets have proved to be an indispensable tool for reasoning about ZX-diagrams, being used in optimisation and simulation of quantum circuits and the theory of measurement-based quantum computation. In this paper we study phase gadgets for qutrits. We present the flexsymmetric variant of the original qutrit ZX-calculus, which allows for rewriting that is closer in spirit to the original (qubit) ZX-calculus. In this calculus phase gadgets look as you would expect, but there are non-trivial differences in their properties. We devise new qutrit-specific tricks to extend the graphical Fourier theory of qubits, resulting in a translation between the 'additive' phase gadgets and a 'multiplicative' counterpart we dub phase multipliers. This enables us to build different types of qutrit multiple-controlled phase gates. As an application of these results we find a construction for emulating arbitrary qubit diagonal unitaries, and specifically find an emulation for the qubit CCZ gate that only requires three single-qutrit non-Clifford gates to implement - provably lower than the four T gates needed using just qubit gates.}
 }
