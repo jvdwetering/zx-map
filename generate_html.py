@@ -112,7 +112,7 @@ def entry_to_html(entry):
     ids.add(entry['ID'])
 
     if 'journal' in entry:
-        if entry['journal'].lower().find('arxiv') != -1:
+        if entry['journal'].lower().find('arxiv') != -1 or entry['journal'].lower().find('preprint') != -1:
             types["preprint"] += 1
         else:
             types["published"] += 1

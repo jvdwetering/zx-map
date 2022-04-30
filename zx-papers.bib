@@ -994,7 +994,7 @@ In this paper, we present extended versions of ZW and ZX, and show their complet
   doi       = {10.4204/EPTCS.318.3},
   urldate = {2019-04-01},
   link = {https://arxiv.org/abs/1904.00706},
-  keywords = {ZX-calculus, !-Boxes, ZH-calculus, ZW-calculus, Automation},
+  keywords = {ZX-calculus, !-Boxes, ZH-calculus, ZW-calculus, Verification, Automation},
   abstract = {The ZX, ZW and ZH calculi are all complete graphical calculi for reasoning about pure state qubit quantum mechanics. All of these languages use certain diagrammatic decorations, called !-boxes and phase variables, to indicate not just one diagram but an infinite family of diagrams. In this same manner one can express infinite families of equations between diagrams, and these decorations are powerful enough to allow for complete rulesets expressing any equivalence in pure state qubit quantum mechanics. We present here results that show that equations between separable infinite families of diagrams are finitely verifiable; that is to say that to verify these infinite families of equations it suffices to check a finite subset of that family, provided a condition we call separability is met. The results we present in this paper not only construct such a verifying subfamily directly, but also generalise to any diagrammatic calculus that satisfies certain simple conditions.}
 }
 
@@ -1274,7 +1274,7 @@ possible components for a higher-level quantum tool-set.}
     doi = {10.1103/PhysRevA.102.022406},
     urldate = {2019-03-25},
     link = {https://arxiv.org/abs/1903.10477},
-    keywords = {ZX-calculus, Clifford+T, T-count, Optimisation, PyZX, Automation, Phase Gadgets, Applied},
+    keywords = {ZX-calculus, Clifford+T, T-count, Optimisation, PyZX, Automation, Phase Gadgets, Applied, Verification},
     abstract = {Reducing the number of non-Clifford quantum gates present in a circuit is an important task for efficiently implementing quantum computations, especially in the fault-tolerant regime. We present a new method for reducing the number of T-gates in a quantum circuit based on the ZX-calculus, which matches or beats previous approaches to T-count reduction on the majority of our benchmark circuits in the ancilla-free case, in some cases yielding up to 50\% improvement. Our method begins by representing the quantum circuit as a ZX-diagram, a tensor network-like structure that can be transformed and simplified according to the rules of the ZX-calculus. We then show that a recently-proposed simplification strategy can be extended to reduce T-count using a new technique called phase teleportation. This technique allows non-Clifford phases to combine and cancel by propagating non-locally through a generic quantum circuit. Phase teleportation does not change the number or location of non-phase gates and the method also applies to arbitrary non-Clifford phase gates as well as gates with unknown phase parameters in parametrised circuits. Furthermore, the simplification strategy we use is powerful enough to validate equality of many circuits. In particular, we use it to show that our optimised circuits are indeed equal to the original ones. We have implemented the routines of this paper in the open-source library PyZX.}
 }
 
@@ -2401,7 +2401,7 @@ Quantum Physics and Logic,
   doi =     {10.4230/LIPIcs.MFCS.2021.89},
   urldate = {2021-07-02},
   link = {http://arxiv.org/abs/2107.01186},
-  keywords = {ZH-calculus, Classical Simulation},
+  keywords = {ZH-calculus, Classical Simulation, Verification},
   video = {https://www.youtube.com/watch?v=HTPU-XqW2gM},
   abstract = {Graphical calculi such as the ZH-calculus are powerful tools in the study and analysis of quantum processes, with links to other models of quantum computation such as quantum circuits, measurement-based computing, etc.   A somewhat compact but systematic way to describe a quantum process is through the use of quantum multiple-valued decision diagrams (QMDDs), which have already been used for the synthesis of quantum circuits as well as for verification.   We show in this paper how to turn a QMDD into an equivalent ZH-diagram, and vice-versa, and show how reducing a QMDD translates in the ZH-Calculus, hence allowing tools from one formalism to be used into the other.}
 }
@@ -2502,6 +2502,7 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2111.03114},
     urldate = {2021-11-04},
     link = {http://arxiv.org/abs/2111.03114},
+    video = {https://www.youtube.com/watch?v=QLnW4h_UpT4},
     keywords = {ZH-calculus, Tensor Networks, Applied, PyZX},
     abstract = {The ZX-calculus, and the variant we consider in this paper (ZXH-calculus), are formal diagrammatic languages for qubit quantum computing. We show that it can also be used to describe SU(2) representation theory. To achieve this, we first recall the definition of Yutsis diagrams, a standard graphical calculus used in quantum chemistry and quantum gravity, which captures the main features of SU(2) representation theory. Second, we show precisely how it embed within Penrose's binor calculus. Third, we subsume both calculus into ZXH-diagrams. In the process we show how the SU(2) invariance of Wigner symbols is trivially provable in the ZXH-calculus. Additionally, we show how we can explicitly diagrammatically calculate 3jm, 4jm and 6j symbols. It has long been thought that quantum gravity should be closely aligned to quantum information theory. In this paper, we present a way in which this connection can be made exact, by writing the spin-networks of loop quantum gravity (LQG) in the ZX-diagrammatic language of quantum computation.}
 }
@@ -2539,6 +2540,7 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2201.13250},
     urldate = {2022-01-31},
     link = {http://arxiv.org/abs/2201.13250},
+    video = {https://www.youtube.com/watch?v=JHjZLCryqm4},
     keywords = {ZX-calculus, Applied, Variational Circuits},
     abstract = {ZX-calculus has proved to be a useful tool for quantum technology with a wide range of successful applications. Most of these applications are of an algebraic nature. However, other tasks that involve differentiation and integration remain unreachable with current ZX techniques. Here we elevate ZX to an analytical perspective by realising differentiation and integration entirely within the framework of ZX-calculus. We explicitly illustrate the new analytic framework of ZX-calculus by applying it in context of quantum machine learning.}
 }
@@ -2567,6 +2569,7 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2202.09202},
     urldate = {2022-02-18},
     link = {http://arxiv.org/abs/2202.09202},
+    video = {https://www.youtube.com/watch?v=4DKGfTMRI38},
     keywords = {ZX-calculus, Classical Simulation, Applied, PyZX, Automation},
     abstract = {Recent developments in classical simulation of quantum circuits make use of clever decompositions of chunks of magic states into sums of efficiently simulable stabiliser states. We show here how, by considering certain non-stabiliser entangled states which have more favourable decompositions, we can speed up these simulations. This is made possible by using the ZX-calculus, which allows us to easily find instances of these entangled states in the simplified diagram representing the quantum circuit to be simulated. We additionally find a new technique of partial stabiliser decompositions that allow us to trade magic states for stabiliser terms. With this technique we require only $2^{\alpha t}$ stabiliser terms, where $\alpha\approx 0.396$, to simulate a circuit with T-count $t$. This matches the $\alpha$ found by Qassim et al., but whereas they only get this scaling in the asymptotic limit, ours applies for a circuit of any size. Our method builds upon a recently proposed scheme for simulation combining stabiliser decompositions and optimisation strategies implemented in the software QuiZX. With our techniques we manage to reliably simulate 50-qubit 1400 T-count hidden shift circuits in a couple of minutes on a consumer laptop.}
 }
@@ -2579,6 +2582,7 @@ Quantum Physics and Logic,
     journal = {arXiv preprint arXiv:2202.09194},
     urldate = {2022-02-18},
     link = {http://arxiv.org/abs/2202.09194},
+    video = {https://www.youtube.com/watch?v=d-2HSa9MHKY},
     keywords = {ZX-calculus, Circuit Extraction},
     abstract = {The ZX-calculus is a graphical language for reasoning about quantum computation using ZX-diagrams, a certain flexible generalisation of quantum circuits that can be used to represent linear maps from $m$ to $n$ qubits for any $m,n \geq 0$. Some applications for the ZX-calculus, such as quantum circuit optimisation and synthesis, rely on being able to efficiently translate a ZX-diagram back into a quantum circuit of comparable size. While several sufficient conditions are known for describing families of ZX-diagrams that can be efficiently transformed back into circuits, it has previously been conjectured that the general problem of circuit extraction is hard. That is, that it should not be possible to efficiently convert an arbitrary ZX-diagram describing a unitary linear map into an equivalent quantum circuit. In this paper we prove this conjecture by showing that the circuit extraction problem is #P-hard, and so is itself at least as hard as strong simulation of quantum circuits. In addition to our main hardness result, which relies specifically on the circuit representation, we give a representation-agnostic hardness result. Namely, we show that any oracle that takes as input a ZX-diagram description of a unitary and produces samples of the output of the associated quantum computation enables efficient probabilistic solutions to NP-complete problems.}
 }
@@ -2672,4 +2676,26 @@ Quantum Physics and Logic,
     link = {http://arxiv.org/abs/2204.13681},
     keywords = {ZX-calculus, Qutrits, Phase Gadgets, Applied, Clifford Fragment},
     abstract = {Phase gadgets have proved to be an indispensable tool for reasoning about ZX-diagrams, being used in optimisation and simulation of quantum circuits and the theory of measurement-based quantum computation. In this paper we study phase gadgets for qutrits. We present the flexsymmetric variant of the original qutrit ZX-calculus, which allows for rewriting that is closer in spirit to the original (qubit) ZX-calculus. In this calculus phase gadgets look as you would expect, but there are non-trivial differences in their properties. We devise new qutrit-specific tricks to extend the graphical Fourier theory of qubits, resulting in a translation between the 'additive' phase gadgets and a 'multiplicative' counterpart we dub phase multipliers. This enables us to build different types of qutrit multiple-controlled phase gates. As an application of these results we find a construction for emulating arbitrary qubit diagonal unitaries, and specifically find an emulation for the qubit CCZ gate that only requires three single-qutrit non-Clifford gates to implement - provably lower than the four T gates needed using just qubit gates.}
+}
+
+@mastersthesis{Peham2022masters,
+    author = {Peham, Tom},
+    title = {{Equivalence Checking of Quantum Circuits with the ZX-Calculus}},
+    year = {2022},
+    school = {Johannes Kepler Universit\"at Linz},
+    link = {https://epub.jku.at/obvulihs/content/titleinfo/7683969},
+    urldate = {2022-02-01},
+    keywords = {ZX-Calculus, Verification, Automation, Master Thesis},
+    abstract = {As state-of-the-art quantum computers are capable of running increasingly complex algorithms, the need for automated methods to design and test potential applications rises. Equivalence checking of quantum circuits is an important, yet hardly automated, task in the development of the quantum software stack. Recently, new methods have been proposed that tackle this problem from widely different perspectives. One of them is based on the ZX-calculus, a graphical rewriting system for quantum computing. However, the power and capability of this equivalence checking method has barely been explored. The aim of this work is to evaluate the ZX-calculus as a tool for equivalence checking of quantum circuits. To this end, it is demonstrated how the ZX-calculus-based approach to equivalence checking can be expanded in order to verify the results of compilation flows and optimizations on quantum circuits. It is also shown that the ZX-calculus based method is not complete — especially for quantum circuits with ancillary qubits. In order to properly evaluate the proposed method we conduct a detailed case study by comparing it to a prominent method in equivalence checking based on decision diagrams.}
+}
+
+@article{carette2022largescale,
+    author = {Carette, Titouan and Lemonnier, Louis},
+    title = {{Large-scale quantum diagrammatic reasoning tools, !-boxes vs. scalable notations}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2204.11702},
+    urldate = {2022-04-25},
+    link = {http://arxiv.org/abs/2204.11702},
+    keywords = {Scalable ZX, ZH-calculus, !-boxes, Hypergraph, Local Complementation, Graph States},
+    abstract = {The application of diagrammatic reasoning techniques to large-scale quantum processes needs specific tools to describe families of diagrams of arbitrary size. For now, large-scale diagrammatic reasoning tools in ZH-calculus come in two flavours, !-boxes and scalable notations. This paper investigates the interactions between the two approaches by exhibiting correspondences through various examples from the literature, focusing on (hyper)graph states and diagrammatic transforms. In doing so, we set up a path toward a neat and tidy large-scale diagrammatic reasoning toolbox.}
 }
