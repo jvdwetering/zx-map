@@ -2739,3 +2739,15 @@ Quantum Physics and Logic,
     keywords = {ZX-calculus, Clifford Fragment, gflow, Circuit Extraction, Local Complementation},
     abstract = {In the one-way model of measurement-based quantum computation (MBQC), computation proceeds via measurements on some standard resource state. So-called flow conditions ensure that the overall computation is deterministic in a suitable sense, with Pauli flow being the most general of these. Existing work on rewriting MBQC patterns while preserving the existence of flow has focused on rewrites that reduce the number of qubits.   In this work, we show that introducing new $Z$-measured qubits, connected to any subset of the existing qubits, preserves the existence of Pauli flow. Furthermore, we give a unique canonical form for stabilizer ZX-diagrams inspired by recent work of Hu & Khesin [arXiv:2109.10210]. We prove that any MBQC-like stabilizer ZX-diagram with Pauli flow can be rewritten into this canonical form using only rules which preserve the existence of Pauli flow and that each of these rules can be reversed while also preserving the existence of Pauli flow. Hence we have complete graphical rewriting for MBQC-like stabilizer ZX-diagrams with Pauli flow.}
 }
+
+@article{Winderl2022ZXPolynomial,
+    author = {Winderl, David},
+    title = {{ZX Polynomial Synthesis}},
+    year = {2022},
+    journal = {Preprint},
+    urldate = {2022-04-23},
+    link = {https://mediatum.ub.tum.de/doc/1658567/0cqw8i7hoo3k7g3wsrbs0k51m.pdf},
+    keywords = {ZX-calculus, Optimisation, Applied, Phase Gadgets},
+    abstract = {The Noisy intermediate state quantum devices era (NISQ era) in quantum computing can be seen as the era of quantum devices with 50-100 qubits, which provide restricted connectivity between qubits and nosy qubits with a limited coherence time. This issue motivates efficient algorithms to reduce the number of gates applied to circuits in an automated way, similar to the simplification process of classical compilers. Various researchers have proposed methods that reduce the number of gates, and the depth of the quantum circuit. Nevertheless, providing a routed circuit, so a circuit that suffices the connectivity graph of the device was always considered a process that is done after optimization. Griend et al. has proposed a recursive algorithm for synthesizing so-called Z polynomials. Moreover, they showed that optimization and routing in combination are pretty effective for Z Polynomials. Hence they proposed the avenue of future work to extend their algorithm to Pauli gadgets. This guided research aims to analyze the problem of general phase gadget synthesis. Herefore we provide two extensions to the algorithm by Griend et al.. One extension focuses on splitting the ZX Polynomial into smaller commuting regions, while the other tries to identify blocking columns and resolve them beforehand. Next, we provide an algorithm based on the A* search heuristic. Finally, we compare our results to the Pauli-Gadet simplification-pass by tket combined with their internal routing strategy and our optimization strategy with pyzx concerning one qubit gates}
+}
+
