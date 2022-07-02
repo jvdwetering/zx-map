@@ -2751,3 +2751,46 @@ Quantum Physics and Logic,
     abstract = {The Noisy intermediate state quantum devices era (NISQ era) in quantum computing can be seen as the era of quantum devices with 50-100 qubits, which provide restricted connectivity between qubits and nosy qubits with a limited coherence time. This issue motivates efficient algorithms to reduce the number of gates applied to circuits in an automated way, similar to the simplification process of classical compilers. Various researchers have proposed methods that reduce the number of gates, and the depth of the quantum circuit. Nevertheless, providing a routed circuit, so a circuit that suffices the connectivity graph of the device was always considered a process that is done after optimization. Griend et al. has proposed a recursive algorithm for synthesizing so-called Z polynomials. Moreover, they showed that optimization and routing in combination are pretty effective for Z Polynomials. Hence they proposed the avenue of future work to extend their algorithm to Pauli gadgets. This guided research aims to analyze the problem of general phase gadget synthesis. Herefore we provide two extensions to the algorithm by Griend et al.. One extension focuses on splitting the ZX Polynomial into smaller commuting regions, while the other tries to identify blocking columns and resolve them beforehand. Next, we provide an algorithm based on the A* search heuristic. Finally, we compare our results to the Pauli-Gadet simplification-pass by tket combined with their internal routing strategy and our optimization strategy with pyzx concerning one qubit gates}
 }
 
+@article{borgna2022encoding,
+    author = {Borgna, Agustín and Romero, Rafael},
+    title = {{Encoding High-level Quantum Programs as SZX-diagrams}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2206.09376},
+    urldate = {2022-06-19},
+    link = {http://arxiv.org/abs/2206.09376},
+    keywords = {Scalable ZX, ZX-calculus, Protocols},
+    abstract = {The Scalable ZX-calculus is a compact graphical language used to reason about linear maps between quantum states. These diagrams have multiple applications, but they frequently have to be constructed in a case-by-case basis. In this work we present a method to encode quantum programs implemented in a fragment of the linear dependently typed Proto-Quipper-D language as families of SZX-diagrams. We define a subset of translatable Proto-Quipper-D programs and show that our procedure is able to encode non-trivial algorithms as diagrams that grow linearly on the size of the program.}
+}
+
+@article{gogioso2022annealing,
+    author = {Gogioso, Stefano and Yeung, Richie},
+    title = {{Annealing optimisation of Mixed ZX Phase Circuits}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2206.11839},
+    urldate = {2022-06-23},
+    link = {http://arxiv.org/abs/2206.11839},
+    keywords = {ZX-calculus, Applied, Phase Gadgets, Optimisation, Variational Circuits},
+    abstract = {We present a topology-aware optimisation technique for circuits of mixed ZX phase gadgets, based on conjugation by CX gates and simulated annealing.}
+}
+
+@article{cao2022multiagent,
+    author = {Cao, Shuxiang},
+    title = {{Multi-agent blind quantum computation without universal cluster state}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2206.13330},
+    urldate = {2022-06-27},
+    link = {http://arxiv.org/abs/2206.13330},
+    keywords = {MBQC, gflow, Applied, Graph States},
+    abstract = {Blind quantum computation (BQC) protocols enable quantum algorithms to be executed on third-party quantum agents while keeping the data and algorithm confidential. The previous proposals for measurement-based BQC require preparing a highly entangled cluster state. In this paper, we show that such a requirement is not necessary. Our protocol only requires pre-shared bell pairs between delegated quantum agents, and there is no requirement of any classical or quantum information exchange between agents during the execution. Our proposal requires fewer quantum resources than previous proposals by removing the universal cluster state.}
+}
+
+@article{gidney2022pair,
+    author = {Gidney, Craig},
+    title = {{A Pair Measurement Surface Code on Pentagons}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2206.12780},
+    urldate = {2022-06-26},
+    link = {http://arxiv.org/abs/2206.12780},
+    keywords = {Surface Code, ZX-calculus, Applied},
+    abstract = {In this paper, I present a way to compile the surface code into two-body parity measurements ("pair measurements"), where the pair measurements run along the edges of a Cairo pentagonal tiling. The resulting circuit improves on prior work by Chao et al. by using fewer pair measurements per four-body stabilizer measurement (5 instead of 6) and fewer time steps per round of stabilizer measurement (6 instead of 10). Using Monte Carlo sampling, I show that these improvements increase the threshold of the surface code when compiling into pair measurements from $\approx 0.2\%$ to $\approx 0.4\%$, and also that they improve the teraquop footprint at a $0.1\%$ physical gate error rate from $\approx6000$ qubits to $\approx3000$ qubits. However, I also show that Chao et al's construction will have a smaller teraquop footprint for physical gate error rates below $\approx 0.03\%$ (due to bidirectional hook errors in my construction). I also compare to the planar honeycomb code, showing that although this work does noticeably reduce the gap between the surface code and the honeycomb code (when compiling into pair measurements), the honeycomb code is still more efficient (threshold $\approx 0.8\%$, teraquop footprint at $0.1\%$ of $\approx 1000$).}
+}
