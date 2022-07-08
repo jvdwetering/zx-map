@@ -2565,11 +2565,21 @@ Quantum Physics and Logic,
     abstract = {We present a complete optimization procedure for hybrid quantum-classical circuits with classical parity logic. While common optimization techniques for quantum algorithms focus on rewriting solely the pure quantum segments, there is interest in applying a global optimization process for applications such as quantum error correction and quantum assertions.   This work, based on the pure-quantum circuit optimization procedure by Duncan et al., uses an extension of the formal graphical ZX-calculus called ZX-ground as an intermediary representation of the hybrid circuits to allow for granular optimizations below the quantum-gate level. We define a translation from hybrid circuits into diagrams that admit the graph-theoretical focused-gFlow property, needed for the final extraction back into a circuit. We then derive a number of gFlow-preserving optimization rules for ZX-ground diagrams that reduce the size of the graph, and devise an strategy to find optimization opportunities by rewriting the diagram guided by a Gauss elimination process. Then, after extracting the circuit, we present a general procedure for detecting segments of circuit-like ZX-ground diagrams which can be implemented with classical gates in the extracted circuit. We have implemented our optimization procedure as an extension to the open-source python library PyZX.}
 }
 
-@article{kissinger2022classical,
-    author = {Kissinger, Aleks and van de Wetering, John and Vilmart, Renaud},
-    title = {{Classical simulation of quantum circuits with partial and graphical stabiliser decompositions}},
-    year = {2022},
-    journal = {arXiv preprint arXiv:2202.09202},
+
+@InProceedings{kissinger2022classical,
+  author =  {Kissinger, Aleks and van de Wetering, John and Vilmart, Renaud},
+  title =   {{Classical Simulation of Quantum Circuits with Partial and Graphical Stabiliser Decompositions}},
+  booktitle =   {17th Conference on the Theory of Quantum Computation, Communication and Cryptography (TQC 2022)},
+  pages =   {5:1--5:13},
+  series =  {Leibniz International Proceedings in Informatics (LIPIcs)},
+  ISBN =    {978-3-95977-237-2},
+  ISSN =    {1868-8969},
+  year =    {2022},
+  volume =  {232},
+  editor =  {Le Gall, Fran\c{c}ois and Morimae, Tomoyuki},
+  publisher =   {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  address = {Dagstuhl, Germany},
+  doi =     {10.4230/LIPIcs.TQC.2022.5},
     urldate = {2022-02-18},
     link = {http://arxiv.org/abs/2202.09202},
     video = {https://www.youtube.com/watch?v=4DKGfTMRI38},
@@ -2577,19 +2587,26 @@ Quantum Physics and Logic,
     abstract = {Recent developments in classical simulation of quantum circuits make use of clever decompositions of chunks of magic states into sums of efficiently simulable stabiliser states. We show here how, by considering certain non-stabiliser entangled states which have more favourable decompositions, we can speed up these simulations. This is made possible by using the ZX-calculus, which allows us to easily find instances of these entangled states in the simplified diagram representing the quantum circuit to be simulated. We additionally find a new technique of partial stabiliser decompositions that allow us to trade magic states for stabiliser terms. With this technique we require only $2^{\alpha t}$ stabiliser terms, where $\alpha\approx 0.396$, to simulate a circuit with T-count $t$. This matches the $\alpha$ found by Qassim et al., but whereas they only get this scaling in the asymptotic limit, ours applies for a circuit of any size. Our method builds upon a recently proposed scheme for simulation combining stabiliser decompositions and optimisation strategies implemented in the software QuiZX. With our techniques we manage to reliably simulate 50-qubit 1400 T-count hidden shift circuits in a couple of minutes on a consumer laptop.}
 }
 
-
-@article{debeaudrap2022circuit,
-    author = {de Beaudrap, Niel and Kissinger, Aleks and van de Wetering, John},
-    title = {{Circuit Extraction for ZX-diagrams can be #P-hard}},
-    year = {2022},
-    journal = {arXiv preprint arXiv:2202.09194},
+@InProceedings{debeaudrap2022circuit,
+  author =  {de Beaudrap, Niel and Kissinger, Aleks and van de Wetering, John},
+  title =   {{Circuit Extraction for ZX-Diagrams Can Be #P-Hard}},
+  booktitle =   {49th International Colloquium on Automata, Languages, and Programming (ICALP 2022)},
+  pages =   {119:1--119:19},
+  series =  {Leibniz International Proceedings in Informatics (LIPIcs)},
+  ISBN =    {978-3-95977-235-8},
+  ISSN =    {1868-8969},
+  year =    {2022},
+  volume =  {229},
+  editor =  {Boja\'{n}czyk, Miko{\l}aj and Merelli, Emanuela and Woodruff, David P.},
+  publisher =   {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  address = {Dagstuhl, Germany},
+  doi =     {10.4230/LIPIcs.ICALP.2022.119},
     urldate = {2022-02-18},
     link = {http://arxiv.org/abs/2202.09194},
     video = {https://www.youtube.com/watch?v=d-2HSa9MHKY},
     keywords = {ZX-calculus, Circuit Extraction},
     abstract = {The ZX-calculus is a graphical language for reasoning about quantum computation using ZX-diagrams, a certain flexible generalisation of quantum circuits that can be used to represent linear maps from $m$ to $n$ qubits for any $m,n \geq 0$. Some applications for the ZX-calculus, such as quantum circuit optimisation and synthesis, rely on being able to efficiently translate a ZX-diagram back into a quantum circuit of comparable size. While several sufficient conditions are known for describing families of ZX-diagrams that can be efficiently transformed back into circuits, it has previously been conjectured that the general problem of circuit extraction is hard. That is, that it should not be possible to efficiently convert an arbitrary ZX-diagram describing a unitary linear map into an equivalent quantum circuit. In this paper we prove this conjecture by showing that the circuit extraction problem is #P-hard, and so is itself at least as hard as strong simulation of quantum circuits. In addition to our main hardness result, which relies specifically on the circuit representation, we give a representation-agnostic hardness result. Namely, we show that any oracle that takes as input a ZX-diagram description of a unitary and produces samples of the output of the associated quantum computation enables efficient probabilistic solutions to NP-complete problems.}
 }
-
 
 @article{jeandel2022addition,
     author = {Jeandel, Emmanuel and Perdrix, Simon and Veshchezerova, Margarita},
