@@ -2866,3 +2866,56 @@ algorithms and giving a novel diagrammatic perspective on quantum phase transiti
 LQG it is hoped this re-imagining of its state space will spur further integration of quantum
 information and gravity.}
 }
+
+@inproceedings{10.1145/3489517.3530627,
+author = {Wille, Robert and Burgholzer, Lukas and Hillmich, Stefan and Grurl, Thomas and Ploier, Alexander and Peham, Tom},
+title = {{The Basis of Design Tools for Quantum Computing: Arrays, Decision Diagrams, Tensor Networks, and ZX-Calculus}},
+year = {2022},
+isbn = {9781450391429},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+link = {https://doi.org/10.1145/3489517.3530627},
+doi = {10.1145/3489517.3530627},
+urldate = {2022-07-01},
+abstract = {Quantum computers promise to efficiently solve important problems classical computers never will. However, in order to capitalize on these prospects, a fully automated quantum software stack needs to be developed. This involves a multitude of complex tasks from the classical simulation of quantum circuits, over their compilation to specific devices, to the verification of the circuits to be executed as well as the obtained results. All of these tasks are highly non-trivial and necessitate efficient data structures to tackle the inherent complexity. Starting from rather straight-forward arrays over decision diagrams (inspired by the design automation community) to tensor networks and the ZX-calculus, various complementary approaches have been proposed. This work provides a look "under the hood" of today's tools and showcases how these means are utilized in them, e.g., for simulation, compilation, and verification of quantum circuits.},
+booktitle = {Proceedings of the 59th ACM/IEEE Design Automation Conference},
+pages = {1367–1370},
+numpages = {4},
+keywords = {ZX-calculus, Verification, Classical Simulation, Optimisation, Applied},
+location = {San Francisco, California},
+series = {DAC '22}
+}
+
+@ARTICLE{9868772,  
+author={Peham, Tom and Burgholzer, Lukas and Wille, Robert},  
+journal={IEEE Journal on Emerging and Selected Topics in Circuits and Systems},   
+title={Equivalence Checking of Quantum Circuits with the ZX-Calculus},   
+year={2022},  
+volume={},  
+number={},  
+pages={1-1},  
+doi={10.1109/JETCAS.2022.3202204},
+link = {https://ieeexplore.ieee.org/document/9868772/authors#authors},
+urldate = {2022-08-26},
+keywords = {ZX-calculus, Verification, Applied, Automation, Sum-Over-Paths},
+abstract = {As state-of-the-art quantum computers are capable of running increasingly complex algorithms, the need for automated methods to design and test potential applications rises. Equivalence checking of quantum circuits is an important, yet hardly automated, task in the development of the quantum software stack. Recently, new methods have been proposed that tackle this problem from widely different perspectives. One of them is based on the ZX-calculus, a graphical rewriting system for quantum computing. However, the power and capability of this equivalence checking method has barely been explored. The aim of this work is to evaluate the ZX-calculus as a tool for equivalence checking of quantum circuits. To this end, it is demonstrated how the ZX-calculus based approach for equivalence checking can be expanded in order to verify the results of compilation flows and optimizations on quantum circuits. It is also shown that the ZX-calculus based method is not complete–especially for quantum circuits with ancillary qubits. In order to properly evaluate the proposed method, we conduct a detailed case study by comparing it to two other state-of-the-art methods for equivalence checking: one based on path-sums and another based on decision diagrams. The proposed methods have been integrated into the publicly available QCEC tool (https://github.com/cda-tum/qcec) which is part of the Munich Quantum Toolkit (MQT).}
+}
+
+@inproceedings{10.1145/3489517.3530480,
+author = {Peham, Tom and Burgholzer, Lukas and Wille, Robert},
+title = {Equivalence Checking Paradigms in Quantum Circuit Design: A Case Study},
+year = {2022},
+isbn = {9781450391429},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+link = {https://doi.org/10.1145/3489517.3530480},
+doi = {10.1145/3489517.3530480},
+urldate = {2022-08-23},
+keywords = {ZX-calculus, Verification, Applied},
+abstract = {As state-of-the-art quantum computers are capable of running increasingly complex algorithms, the need for automated methods to design and test potential applications rises. Equivalence checking of quantum circuits is an important, yet hardly automated, task in the development of the quantum software stack. Recently, new methods have been proposed that tackle this problem from widely different perspectives. However, there is no established baseline on which to judge current and future progress in equivalence checking of quantum circuits. In order to close this gap, we conduct a detailed case study of two of the most promising equivalence checking methodologies---one based on decision diagrams and one based on the ZX-calculus---and compare their strengths and weaknesses.},
+booktitle = {Proceedings of the 59th ACM/IEEE Design Automation Conference},
+pages = {517–522},
+numpages = {6},
+location = {San Francisco, California},
+series = {DAC '22}
+}
