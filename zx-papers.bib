@@ -2951,3 +2951,14 @@ series = {DAC '22}
     video = {https://www.youtube.com/watch?v=sPv-ufgLr1E},
     abstract = {Optimizing quantum circuits is a key challenge for quantum computing. The PyZX compiler broke new ground by optimizing circuits via the ZX calculus, a powerful graphical alternative to the quantum circuit model. Still, it carries no guarantee of its correctness. To address this, we developed VyZX, a verified ZX-calculus in the Coq proof assistant. VyZX provides two distinct representations of ZX diagrams for ease of programming and proof: A graph-based representation for writing high-level functions on diagrams and a block-based representation for proving ZX diagrams equivalent. Through these two different views, VyZX provides the tools necessary to verify properties and transformations of ZX diagrams. This paper explores the proofs and design choices underlying VyZX and its application and the challenges of verifying a graphical programming language.}
 }
+
+@article{cerveromartín2022barren,
+    author = {Cervero Martín, Enrique and Plekhanov, Kirill and Lubasch, Michael},
+    title = {{Barren plateaus in quantum tensor network optimization}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2209.00292},
+    urldate = {2022-09-01},
+    link = {http://arxiv.org/abs/2209.00292},
+    keywords = {ZX-calculus, Variational Circuits, Applied, Tensor Networks},
+    abstract = {We analyze the barren plateau phenomenon in the variational optimization of quantum circuits inspired by matrix product states (qMPS), tree tensor networks (qTTN), and the multiscale entanglement renormalization ansatz (qMERA). We consider as the cost function the expectation value of a Hamiltonian that is a sum of local terms. For randomly chosen variational parameters we show that the variance of the cost function gradient decreases exponentially with the distance of a Hamiltonian term from the canonical centre in the quantum tensor network. Therefore, as a function of qubit count, for qMPS most gradient variances decrease exponentially and for qTTN as well as qMERA they decrease polynomially. We also show that the calculation of these gradients is exponentially more efficient on a classical computer than on a quantum computer.}
+}
