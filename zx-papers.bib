@@ -3021,3 +3021,35 @@ effective, and suggest avenues for further improvement.}
     abstract = {The aim of this thesis is to study and improve classical simulation of quan tum circuits with stabiliser decompositions by using the ZX-calculus. We propose more efficient decompositions for a large family of states in addi- tion to integrating graphs cuts to make use of potential low connectivity of ZX-diagrams. We also discovered different heuristics to speed up the simulations. Finally, we implemented our method and compared it with the state-of-the-art on different families of circuits to asses the improvements achieved by our approach.}
 }
 
+@article{ritaahmadi2022topological,
+    author = {Rita Ahmadi, Fatimah and Kissinger, Aleks},
+    title = {{Topological Quantum Computation Through the Lens of Categorical Quantum Mechanics}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2211.03855},
+    urldate = {2022-11-07},
+    link = {http://arxiv.org/abs/2211.03855},
+    keywords = {Braids, ZX-calculus, Applied},
+    abstract = {Unitary fusion categories formalise the algebraic theory of topological quantum computation. We rectify confusion around a category describing an anyonic theory and a category describing topological quantum computation. We show that the latter is a subcategory of Hilb. We represent elements of the Fibonacci and Ising models, namely the encoding of qubits and the associated braid group representations, with the ZX-calculus and show that in both cases, the Yang-Baxter equation is directly connected to an instance of the P-rule of the ZX-calculus. In the Ising case, this reduces to a familiar rule relating two distinct Euler decompositions of the Hadamard gate as $\pi/2$ phase rotations, whereas in the Fibonacci case, we give a previously unconsidered exact solution of the P-rule involving the Golden ratio. We demonstrate the utility of these representations by giving graphical derivations of the single-qubit braid equations for Fibonacci anyons and the single- and two-qubit braid equations for Ising anyons.}
+}
+
+@mastersthesis{Domitrz2022Masters,
+    author = {Domitrz, Witalis},
+    title = {{On the Verge to Improve Technique of T-count Reduction via Spider Nest Identities}},
+    year = {2022},
+    school = {University of Oxford},
+    link = {https://www.cs.ox.ac.uk/people/aleks.kissinger/theses/domitrz-thesis.pdf},
+    urldate = {2022-11-22},
+    keywords = {ZX-Calculus, Optimisation, T-count, Clifford+T, Phase Gadgets, Applied, Master Thesis},
+    abstract = {Approximate, universal quantum computation is most commonly described by circuits consisting of Clifford+T gates. The T gate, except being crucial for the universality, is the one which is, in real-world implementations, the most resource-intensive, and the least fault-tolerant of all operations. Because of that, a natural question emerges – how to reduce the number of T gates (or T-count) in a given circuit. The known methods used to reduce the T-count to an optimal value have an exponential running time [24, 2], which motivates the search for an efficient heuristic algorithm. The importance of this problem, along with proposed solutions were discussed in multiple publications including [6, 18, 16, 15, 7, 23]. Spider nest identities, introduced in [16], together with the decomposition of the circuit inspired by [18], were combined in [15] to provide an effective algorithm for T-count reduction. This approach was tested and compared with previous results, and, in some cases, it resulted in a significant improvement of the state of the art. Another advantage of this algorithm was, in contrast to the other results, a significant improvement of the execution time. In this dissertation, we discuss several modifications of the algorithm in order to gain partial outperformance without a significant increase of the running time, which include analysis of the influence of the order of applying the identities, efficient usage of identities generated from small and big spider nests, combining the results obtained in [25] with spider nest identities, and others. Some of these modifications improve or achieve the current state of the art for various circuits. We also provide a quantitative comparison of results, verified using [3] – a tool created alongside [4], on numerous benchmark circuits obtained from [9, 26, 3]. Moreover, we present abstract formulations of considered problem, pose a question of completeness of spider nest identities with respect to T-count reduction, and present different, possibly more elegant, way of phrasing the spider nest identities, as dense spider nest identities.}
+}
+
+@mastersthesis{Raj2022Masters,
+    author = {Raj, Snehal},
+    title = {{Graphical calculus for Tensor Network Contractions}},
+    year = {2022},
+    school = {University of Oxford},
+    link = {https://www.cs.ox.ac.uk/people/aleks.kissinger/theses/raj-thesis.pdf},
+    urldate = {2022-11-23},
+    keywords = {ZX-Calculus, Classical Simulation, Tensor Networks, Applied, Master Thesis},
+    abstract = {Quantum computing is an emerging field of research that harnesses the laws of quantum mechanics to solve computationally hard problems. In addition to developing better and bigger quantum computers, a significant challenge is developing techniques to benchmark these devices. Thus, pushing the barrier of classical simulation goes hand in hand with the development of quantum computers. In this dissertation, we hope to leverage the existing work on quantum graphical languages such as the ZX-calculus to aid one of the most prominent classical simulation tools, tensor network methods. By their very nature, graphical languages have a more modular representation of quantum circuits, which could be optimized using the associated rewrite rules of the calculi. We investigate how effective the existing procedures are at enhancing tensor network contractions and propose new strategies based on our observations. Furthermore, we evaluate our strategies using a variety of circuits, including the Sycamore circuits used by Google to demonstrate quantum supremacy in 2019.}
+}
