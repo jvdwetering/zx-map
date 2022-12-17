@@ -84,3 +84,20 @@ db.entries = [entry]
 raw_bibdata = writer.write(db)
 print()
 print(raw_bibdata)
+print()
+
+proceed = input("Add to zx-papers.bib?\nY/N: ")
+if not proceed.lower().startswith("y"):
+    exit()
+
+with open("zx-papers.bib", 'a') as f:
+    f.write("\n"+raw_bibdata)
+
+print("Added data to zx-papers.bib")
+
+proceed = input("Recompile html?\nY/N:")
+if not proceed.lower().startswith("y"):
+    exit()
+
+import generate_html
+generate_html.main()

@@ -329,6 +329,10 @@ def generate_map_html():
     with open("map.html", 'w', encoding='utf-8') as f:
         f.write(data)
 
-if __name__ == '__main__':
+def main():
     generate_publications_html()
     generate_map_html()
+
+
+if __name__ == '__main__':
+    main()
