@@ -116,7 +116,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('clas
 </div>
 <div class="rightContent">
 <span>
-<a target="_blank" href="http://arxiv.org/abs/2212.06615" class="journal">arXiv:2212.06615</a> 
+<a target="_blank" href="http://arxiv.org/abs/2212.06615" class="journal">University of Oxford PhD Thesis</a> 
 </span>
 <br>
 <span>
@@ -125,11 +125,11 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('nlp'
 </div>
 <div class="crossContent">
 <div class="abstract" style="display:none">This thesis introduces quantum natural language processing (QNLP) models based on a simple yet powerful analogy between computational linguistics and quantum mechanics: grammar as entanglement. The grammatical structure of text and sentences connects the meaning of words in the same way that entanglement structure connects the states of quantum systems. Category theory allows to make this language-to-qubit analogy formal: it is a monoidal functor from grammar to vector spaces. We turn this abstract analogy into a concrete algorithm that translates the grammatical structure onto the architecture of parameterised quantum circuits. We then use a hybrid classical-quantum algorithm to train the model so that evaluating the circuits computes the meaning of sentences in data-driven tasks.   The implementation of QNLP models motivated the development of DisCoPy (Distributional Compositional Python), the toolkit for applied category theory of which the first chapter gives a comprehensive overview. String diagrams are the core data structure of DisCoPy, they allow to reason about computation at a high level of abstraction. We show how they can encode both grammatical structures and quantum circuits, but also logical formulae, neural networks or arbitrary Python code. Monoidal functors allow to translate these abstract diagrams into concrete computation, interfacing with optimised task-specific libraries.   The second chapter uses DisCopy to implement QNLP models as parameterised functors from grammar to quantum circuits. It gives a first proof-of-concept for the more general concept of functorial learning: generalising machine learning from functions to functors by learning from diagram-like data. In order to learn optimal functor parameters via gradient descent, we introduce the notion of diagrammatic differentiation: a graphical calculus for computing the gradients of parameterised diagrams.</div>
-<div class="bibdata" style="display:none"><pre><code>@article{toumi2022category,
+<div class="bibdata" style="display:none"><pre><code>@phdthesis{toumi2022thesis,
     author = {Toumi, Alexis},
     title = {{Category Theory for Quantum Natural Language Processing}},
     year = {2022},
-    journal = {arXiv preprint arXiv:2212.06615},
+    school = {University of Oxford},
     urldate = {2022-12-13},
     link = {http://arxiv.org/abs/2212.06615},
     keywords = {NLP, Category Theory, PhD Thesis, Applied},
@@ -207,7 +207,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('surf
 <div class="crossContent">
 <div class="abstract" style="display:none">In this paper, we explore the relationship between the width of a qubit lattice constrained in one dimension and physical thresholds for scalable, fault-tolerant quantum computation. To circumvent the traditionally low thresholds of small fixed-width arrays, we deliberately engineer an error bias at the lowest level of encoding using the surface code. We then address this engineered bias at a higher level of encoding using a lattice-surgery surface code bus that exploits this bias, or a repetition code to make logical qubits with unbiased errors out of biased surface code qubits. Arbitrarily low error rates can then be reached by further concatenating with other codes, such as Steane [[7,1,3]] code and the [[15,7,3]] CSS code. This enables a scalable fixed-width quantum computing architecture on a square qubit lattice that is only 19 qubits wide, given physical qubits with an error rate of \(8.0\times 10^{-4}\). This potentially eases engineering issues in systems with fine qubit pitches, such as quantum dots in silicon or gallium arsenide.</div>
 <div class="bibdata" style="display:none"><pre><code>@article{shaw2022quantum,
-    author = {Shaw, Alexis and Bremner, Michael and Paler, Alexandru and Herr, Daniel and J. Devitt, Simon},
+    author = {Shaw, Alexis and Bremner, Michael and Paler, Alexandru and Herr, Daniel and Devitt, Simon J.},
     title = {{Quantum computation on a 19-qubit wide 2d nearest neighbour qubit array}},
     year = {2022},
     journal = {arXiv preprint arXiv:2212.01550},
@@ -327,7 +327,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('brai
 <div class="crossContent">
 <div class="abstract" style="display:none">Unitary fusion categories formalise the algebraic theory of topological quantum computation. We rectify confusion around a category describing an anyonic theory and a category describing topological quantum computation. We show that the latter is a subcategory of Hilb. We represent elements of the Fibonacci and Ising models, namely the encoding of qubits and the associated braid group representations, with the ZX-calculus and show that in both cases, the Yang-Baxter equation is directly connected to an instance of the P-rule of the ZX-calculus. In the Ising case, this reduces to a familiar rule relating two distinct Euler decompositions of the Hadamard gate as \(\pi/2\) phase rotations, whereas in the Fibonacci case, we give a previously unconsidered exact solution of the P-rule involving the Golden ratio. We demonstrate the utility of these representations by giving graphical derivations of the single-qubit braid equations for Fibonacci anyons and the single- and two-qubit braid equations for Ising anyons.</div>
 <div class="bibdata" style="display:none"><pre><code>@article{ritaahmadi2022topological,
-    author = {Rita Ahmadi, Fatimah and Kissinger, Aleks},
+    author = {Ahmadi, Fatimah Rita and Kissinger, Aleks},
     title = {{Topological Quantum Computation Through the Lens of Categorical Quantum Mechanics}},
     year = {2022},
     journal = {arXiv preprint arXiv:2211.03855},
@@ -2454,7 +2454,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-c
 <div class="crossContent">
 <div class="abstract" style="display:none">This article presents a novel algorithmic methodology for performing automated diagrammatic deductions over combinatorial structures, using a combination of modified equational theorem-proving techniques and the extended Wolfram model hypergraph rewriting formalism developed by the authors in previous work. We focus especially upon the application of this new algorithm to the problem of automated circuit simplification in quantum information theory, using Wolfram model multiway operator systems combined with the ZX-calculus formalism for enacting fast diagrammatic reasoning over linear transformations between qubits. We show how to construct a generalization of the deductive inference rules for Knuth-Bendix completion in which equation matches are selected on the basis of causal edge density in the associated multiway system, before proceeding to demonstrate how to embed the higher-order logic of the ZX-calculus rules within this first-order equational framework. After showing explicitly how the (hyper)graph rewritings of both Wolfram model systems and the ZX-calculus can be effectively realized within this formalism, we proceed to exhibit comparisons of time complexity vs. proof complexity for this new algorithmic approach when simplifying randomly-generated Clifford circuits down to pseudo-normal form, as well as when reducing the number of T-gates in randomly-generated non-Clifford circuits, with circuit sizes ranging up to 3000 gates, illustrating that the method performs favorably in comparison with existing circuit simplification frameworks, and also exhibiting the approximately quadratic speedup obtained by employing the causal edge density optimization. Finally, we present a worked example of an automated proof of correctness for a simple quantum teleportation protocol, in order to demonstrate more clearly the internal operations of the theorem-proving procedure.</div>
 <div class="bibdata" style="display:none"><pre><code>@article{gorard2021zxcalculus,
-    author = {Gorard, Jonathan and Namuduri, Manojna and D. Arsiwalla, Xerxes},
+    author = {Gorard, Jonathan and Namuduri, Manojna and Arsiwalla, Xerxes D.},
     title = {{ZX-Calculus and Extended Wolfram Model Systems II: Fast Diagrammatic Reasoning with an Application to Quantum Circuit Simplification}},
     year = {2021},
     journal = {arXiv preprint arXiv:2103.15820},
@@ -3351,7 +3351,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('cond
 <div class="crossContent">
 <div class="abstract" style="display:none">From Feynman diagrams to tensor networks, diagrammatic representations of computations in quantum mechanics have catalysed progress in physics. These diagrams represent the underlying mathematical operations and aid physical interpretation, but cannot generally be computed with directly. In this paper we introduce the ZXH-calculus, a graphical language based on the ZX-calculus, that we use to represent and reason about many-body states entirely graphically. As a demonstration, we express the 1D AKLT state, a symmetry protected topological state, in the ZXH-calculus by developing a representation of spins higher than 1/2 within the calculus. By exploiting the simplifying power of the ZXH-calculus rules we show how this representation straightforwardly recovers two important properties, the existence of topologically protected edge states, and the non-vanishing of a string order parameter. We furthermore show how the AKLT matrix-product state representation can be recovered from our diagrams. In addition, we provide an alternative proof that the 2D AKLT state on a hexagonal lattice can be reduced to a graph state, demonstrating that it is a universal quantum computing resource. Our results show that the ZXH-calculus is a powerful language for representing and computing with physical states entirely graphically, paving the way to develop more efficient many-body algorithms.</div>
 <div class="bibdata" style="display:none"><pre><code>@article{east2020akltstates,
-    author = {D. P. East, Richard and van de Wetering, John and Chancellor, Nicholas and G. Grushin, Adolfo},
+    author = {East, Richard D. P. and van de Wetering, John and Chancellor, Nicholas and Grushin, Adolfo G.},
     title = {{AKLT-states as ZX-diagrams: diagrammatic reasoning for quantum states}},
     year = {2022},
     journal = {PRX Quantum},
@@ -5563,7 +5563,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-c
 <a target="_blank" href="http://arxiv.org/abs/1902.00032" class="paperTitle">Categorical Semantics for Time Travel</a> 
 </span>
 <br>
-<span class="authors">N. Pinzani, S. Gogioso and B. Coecke</span>
+<span class="authors">Nicola Pinzani, Stefano Gogioso and Bob Coecke</span>
 <br>
 <span>
 <a href="#" class="abstract_more">Show abstract &#x21F2</a>
@@ -5583,7 +5583,7 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('cate
 <div class="crossContent">
 <div class="abstract" style="display:none">We introduce a general categorical framework to reason about quantum theory and other process theories living in spacetimes where Closed Timelike Curves (CTCs) are available, allowing resources to travel back in time and provide computational speedups. Our framework is based on a weakening of the definition of traced symmetric monoidal categories, obtained by dropping the yanking axiom and the requirement that the trace be defined on all morphisms. We show that the two leading models for quantum theory with closed timelike curves---namely the P-CTC model of Lloyd et al. and the D-CTC model of Deutsch---are captured by our framework, and in doing so we provide the first compositional description of the D-CTC model. Our description of the D-CTC model results in a process theory which respects the constraints of relativistic causality: this is in direct contrast to the P-CTC model, where CTCs are implemented by a trace and allow post-selection to be performed deterministically.</div>
 <div class="bibdata" style="display:none"><pre><code>@inproceedings{pinzani2019categorical,
-    author = {N. {Pinzani} and S. {Gogioso} and B. {Coecke}},
+    author = {Pinzani, Nicola and Gogioso, Stefano and Coecke, Bob},
     title = {{Categorical Semantics for Time Travel}},
     year = {2019},
     booktitle = {2019 34th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS)},
