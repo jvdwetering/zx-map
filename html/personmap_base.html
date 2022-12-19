@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZX-calculus community map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/intro.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/d3/d3.min.js"></script>
+  <script src="js/person-graph.js"></script>
+
+  <link rel="stylesheet" href="intro.css">
+  <style>
+    body {
+      background-color: white;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0 1em;
+      font-weight: initial;
+    }
+
+    
+    h3 {
+      text-align: center;
+      font-weight: initial;
+    }
+
+    #map {
+      grid-column: 1;
+      text-align: center;
+      font-size: medium;
+    }
+
+    #info-container {
+      grid-column: 2;
+      position: relative;
+      top: 300px;
+      font-size: medium;
+    }
+
+    .key {
+      margin: 3em;
+      padding: 0.5em;
+    }
+
+    .person-link {
+      border-bottom: 1px dashed #444;
+      cursor: pointer;
+    }
+    
+  </style>
+
+<body>
+  <div class="contentGrid" style="grid-template-columns: 1fr 1fr 1fr;">
+    <div class="title cell row shaded">
+    <h1 style="grid-column: span 3">Map of the ZX community</h1>
+    </div>
+    <h2 class="key" style="grid-column: 1; background-color: #d8f8d8">People</h2>
+    <h2 class="key" style="grid-column: 2; background-color: #e8a6a6">Places</h2>
+    <h2 class="key" style="grid-column: 3; background-color: #CCE">Fields</h2>
+    <h3 style="grid-column: span 3">
+      <p>This map is automatically generated. You can drag nodes with the mouse.
+    For a list of publications <a href="./publications.html">click here</a>.</p></h3>
+  </div>
+  <div class="contentGrid" style="grid-template-columns: 5fr 1fr;width:95%;">
+    <div id="map"></div>
+    <div id="info-container">
+      INFODATAHERE
+    </div>
+  </div>
+
+</body>
+<script>
+  start()
+</script>
+    <div class="header">
+      <a href="/">Home</a>
+      <a href="/intro.html">Tutorial</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/map.html">Map</a>
+      <a href="/pyzx.html">PyZX Demo</a>
+    </div>
+
+</html>
