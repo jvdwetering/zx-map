@@ -3164,3 +3164,19 @@ effective, and suggest avenues for further improvement.}
     abstract = {We present a quantum compilation algorithm that maps Clifford encoders, an equivalence class of quantum circuits that arise universally in quantum error correction, into a representation in the ZX calculus. In particular, we develop a canonical form in the ZX calculus and prove canonicity as well as efficient reducibility of any Clifford encoder into the canonical form. The diagrams produced by our compiler explicitly visualize information propagation and entanglement structure of the encoder, revealing properties that may be obscured in the circuit or stabilizer-tableau representation.}
 }
 
+
+@inproceedings{Staudacher2022reducing,
+    author = {Staudacher, Korbinian and Guggemos, Tobias and Grundner-Culemann, Sophia},
+    title = {{Reducing 2-qubit gate count for ZX-calculus based quantum circuit optimization}},
+    year = {2022},
+    booktitle = {Proceedings 19th International Conference on Quantum Physics and Logic, University of Oxford, United Kingdom, 27 June - 1 July 2022},
+    editor = {Gogioso, Stefano and Hoban, Matty},
+    series = {Electronic Proceedings in Theoretical Computer Science},
+    volume = {To appear},
+    pages = {TBD},
+    publisher = {Open Publishing Association},
+    urldate = {2022-06-20},
+    link = {https://www.qplconference.org/proceedings2022/QPL_2022_paper_10.pdf},
+    keywords = {Optimisation, ZX-calculus, Optimisation, PyZX, Applied, Local Complementation},
+    abstract = {In the near term, programming quantum computers will remain severely limited by low quantum volumes. Therefore, it is desirable to implement quantum circuits with the fewest resources possible. For the common Clifford+T circuits, most research is focused on reducing the number of T gates, since they are an order of magnitude more expensive than Clifford gates in quantum error corrected encoding schemes. However, this optimization sometimes leads to more 2-qubit gates, which, even though they are less expensive in terms of fault-tolerance, contribute significantly to the overall circuit cost. Approaches based on the ZX-calculus have recently gained some popularity in the field, but reduction of 2-qubit gates is not their focus. In this work, we present an alternative for improving 2-qubit gate count of a quantum circuit with the ZX-calculus by using heuristics in ZX-diagram simplification. Our approach maintains the good reduction of the T gate count provided by other strategies based on ZX-calculus, thus serving as an extension for other optimization algorithms. Our results show that combining the available ZX-calculus-based optimizations with our algorithms can reduce the number of 2-qubit gates by as much as 40\% compared to current approaches using ZXcalculus. Additionally, we improve the results of the best currently available optimization technique of Nam et. al [22] for some circuits by up to 15\%.} 
+    }
