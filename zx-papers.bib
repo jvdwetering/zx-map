@@ -3192,3 +3192,34 @@ effective, and suggest avenues for further improvement.}
     keywords = {ZX-calculus, Scalable ZX, Mixed States, Protocols, PyZX, Automation, Optimisation, Category Theory, Circuit Extraction, Applied, PhD Thesis},
     abstract = {In this thesis, we present various contributions to the different stages of a quantum compiler toolchain. Our first contribution is the definition of a new intermediate representation for quantum programs based on an extension of the ZX calculus called Scalable ZX (SZX), which allows us to compactly represent quantum circuits repeated structure. We introduce a non-trivial fragment of the Proto-Quipper-D language and present its encoding into families of such SZX-diagrams, that can be used to optimize recurrent segments of the program in a single optimization pass. This intermediate representation can then be transformed into a ZX diagram or a quantum circuit to continue the compilation process. This work was first presented at the International Workshop on Programming Languages for Quantum Computing (PLanQC 2022), and a full version was published in the proceedings of the Quantum Physics and Logic Conference (QPL 2022). A second contribution of this work is the definition of a new optimization procedure for quantum circuits containing both quantum and classical segments, based on the method by Duncan et al. We are able to use an extension of the ZX calculus called ZX Ground to represent such hybrid programs, and optimize programs that encode some communication between the quantum and classical components. A preliminary version of this work was first presented in the proceedings of the International Workshop on Quantum Compilation (IWQC 2020), and finally published at the Asian Symposium on Programming Languages and Systems (APLAS 2021). We have implemented our optimization procedure as an extension of the ZX-diagram manipulation tool pyzx, and upstreamed some of the changes to the main repository. Finally, our last contribution pertains to the detection of classical segments in a hybrid quantum-classical circuit. Some automated optimization processes such as the one we present may produce circuits that computes quantumly some operations that could be performed classically using fewer resources. We formalise the classicalisation problem and present an efficient heuristic to detect such segments. This work was developed jointly with the optimization procedure for hybrid quantum-classical circuits, and a succinct version was published along it at APLAS 2021.} 
 }
+
+@article{mernyei2023equivariant,
+  title={Equivariant quantum graph circuits: constructions for universal approximation over graphs},
+  author={Mernyei, P{\'e}ter and Meichanetzidis, Konstantinos and Ceylan, {\.I}smail {\.I}lkan},
+  journal={Quantum Machine Intelligence},
+  volume={5},
+  number={1},
+  pages={6},
+  year={2023},
+  publisher={Springer},
+  doi = {10.1007/s42484-022-00086-w},
+  keywords = {ZX-calculus, Variational Circuits, Graph States, Applied},
+  urldate = {2023-01-24},
+  link = {https://link.springer.com/article/10.1007/s42484-022-00086-w},
+  abstract = {We investigate quantum circuits for graph representation learning, and propose equivariant quantum graph circuits (EQGCs), as a class of parameterized quantum circuits with strong relational inductive bias for learning over graph-structured data. Conceptually, EQGCs serve as a unifying framework for quantum graph representation learning, allowing us to define several interesting subclasses subsuming existing proposals. In terms of the representation power, we prove that the subclasses of interest are universal approximators for functions over the bounded graph domain. This theoretical perspective on quantum graph machine learning methods opens many directions for further work, and could lead to models with capabilities beyond those of classical approaches. We also provide experimental evidence, and observe that the performance of EQGCs scales well with the depth of the model.}
+}
+
+@article{10.1145/3579367,
+author = {Cuomo, Daniele and Caleffi, Marcello and Krsulich, Kevin and Tramonto, Filippo and Agliardi, Gabriele and Prati, Enrico and Cacciapuoti, Angela Sara},
+title = {Optimized Compiler for Distributed Quantum Computing},
+year = {2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {2643-6809},
+doi = {10.1145/3579367},
+abstract = {Practical distributed quantum computing requires the development of efficient compilers, able to make quantum circuits compatible with some given hardware constraints. This problem is known to be tough, even for local computing. Here, we address it on distributed architectures. As generally assumed in this scenario, telegates represent the fundamental remote (inter-processor) operations. Each telegate consists of several tasks: i) entanglement generation and distribution, ii) local operations, and iii) classical communications. Entanglement generations and distribution is an expensive resource, as it is time-consuming. To mitigate its impact, we model an optimization problem that combines running-time minimization with the usage of distributed entangled states. Specifically, we formulated the distributed compilation problem as a dynamic network flow. To enhance the solution space, we extend the formulation, by introducing a predicate that manipulates the circuit given in input and parallelizes telegate tasks. To evaluate our framework, we split the problem into three sub-problems, and solve it by means of an approximation routine. Experiments demonstrate that the run-time is resistant to the problem size scaling. Moreover, we apply the proposed algorithm to compile circuits under different topologies, showing that topologies with a higher ratio between edges and nodes give rise to shallower circuits},
+journal = {ACM Transactions on Quantum Computing},
+keywords = {ZX-Supported, Applied, PyZX, Clifford Fragment},
+link = {https://arxiv.org/abs/2112.14139},
+urldate = {2021-12-28}
+}

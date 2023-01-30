@@ -63,6 +63,51 @@
 <div class="perEntryDiv">
 <div class="leftContent">
 <span>
+<a target="_blank" href="https://link.springer.com/article/10.1007/s42484-022-00086-w" class="paperTitle">Equivariant quantum graph circuits: constructions for universal approximation over graphs</a> 
+</span>
+<br>
+<span class="authors">Péter Mernyei, Konstantinos Meichanetzidis and İsmail \̇lkan Ceylan</span>
+<br>
+<span>
+<a href="#" class="abstract_more">Show abstract &#x21F2</a>
+<a href="#" class="bibdata_more">Show bibdata &#x21F2</a>
+
+</span>
+</div>
+<div class="rightContent">
+<span>
+<a target="_blank" href="https://dx.doi.org/10.1007/s42484-022-00086-w" class="journal">Quantum Machine Intelligence</a> 
+</span>
+<br>
+<span>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-calculus')" title="This paper uses the core ZX-calculus and not any of the other variations that exists">ZX-calculus</a>, <a target="_blank" onclick="forceSearchKW('variational circuits')" title="This paper deals with variational circuits">Variational Circuits</a>, <a target="_blank" onclick="forceSearchKW('graph states')" title="The paper uses or discusses graph states in a non-trivial way">Graph States</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a></span>.
+</span>
+</div>
+<div class="crossContent">
+<div class="abstract" style="display:none">We investigate quantum circuits for graph representation learning, and propose equivariant quantum graph circuits (EQGCs), as a class of parameterized quantum circuits with strong relational inductive bias for learning over graph-structured data. Conceptually, EQGCs serve as a unifying framework for quantum graph representation learning, allowing us to define several interesting subclasses subsuming existing proposals. In terms of the representation power, we prove that the subclasses of interest are universal approximators for functions over the bounded graph domain. This theoretical perspective on quantum graph machine learning methods opens many directions for further work, and could lead to models with capabilities beyond those of classical approaches. We also provide experimental evidence, and observe that the performance of EQGCs scales well with the depth of the model.</div>
+<div class="bibdata" style="display:none"><pre><code>@article{mernyei2023equivariant,
+    author = {Mernyei, P{\'e}ter and Meichanetzidis, Konstantinos and Ceylan, {\.I}smail {\.I}lkan},
+    title = {Equivariant quantum graph circuits: constructions for universal approximation over graphs},
+    year = {2023},
+    journal = {Quantum Machine Intelligence},
+    volume = {5},
+    number = {1},
+    pages = {6},
+    publisher = {Springer},
+    doi = {10.1007/s42484-022-00086-w},
+    urldate = {2023-01-24},
+    link = {https://link.springer.com/article/10.1007/s42484-022-00086-w},
+    keywords = {ZX-calculus, Variational Circuits, Graph States, Applied},
+    abstract = {We investigate quantum circuits for graph representation learning, and propose equivariant quantum graph circuits (EQGCs), as a class of parameterized quantum circuits with strong relational inductive bias for learning over graph-structured data. Conceptually, EQGCs serve as a unifying framework for quantum graph representation learning, allowing us to define several interesting subclasses subsuming existing proposals. In terms of the representation power, we prove that the subclasses of interest are universal approximators for functions over the bounded graph domain. This theoretical perspective on quantum graph machine learning methods opens many directions for further work, and could lead to models with capabilities beyond those of classical approaches. We also provide experimental evidence, and observe that the performance of EQGCs scales well with the depth of the model.}
+}
+
+</code></pre></div>
+</div>
+</div></li>
+<li class="pub_entry">
+<div class="perEntryDiv">
+<div class="leftContent">
+<span>
 <a target="_blank" href="https://lmf.cnrs.fr/downloads/Perso/thesis-aborgna.pdf" class="paperTitle">Towards a compiler toolchain for quantum programs</a> 
 </span>
 <br>
@@ -1940,6 +1985,50 @@ Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-c
  
 <h2>2021</h2>
 <ul>
+<li class="pub_entry">
+<div class="perEntryDiv">
+<div class="leftContent">
+<span>
+<a target="_blank" href="https://arxiv.org/abs/2112.14139" class="paperTitle">Optimized Compiler for Distributed Quantum Computing</a> 
+</span>
+<br>
+<span class="authors">Daniele Cuomo, Marcello Caleffi, Kevin Krsulich, Filippo Tramonto, Gabriele Agliardi, Enrico Prati and Angela Sara Cacciapuoti</span>
+<br>
+<span>
+<a href="#" class="abstract_more">Show abstract &#x21F2</a>
+<a href="#" class="bibdata_more">Show bibdata &#x21F2</a>
+
+</span>
+</div>
+<div class="rightContent">
+<span>
+<a target="_blank" href="https://dx.doi.org/10.1145/3579367" class="journal">ACM Transactions on Quantum Computing</a> 
+</span>
+<br>
+<span>
+Keywords: <span class="keywords"><a target="_blank" onclick="forceSearchKW('zx-supported')" title="This paper uses ZX-diagrams in a way that is not essential for the results of the paper">ZX-Supported</a>, <a target="_blank" onclick="forceSearchKW('applied')" title="This paper uses ZX-diagrams for some task other than describing the ZX-calculus itself">Applied</a>, <a target="_blank" onclick="forceSearchKW('pyzx')" title="The paper uses PyZX">PyZX</a>, <a target="_blank" onclick="forceSearchKW('clifford fragment')" title="This paper focuses solely on Clifford diagrams or computation">Clifford Fragment</a></span>.
+</span>
+</div>
+<div class="crossContent">
+<div class="abstract" style="display:none">Practical distributed quantum computing requires the development of efficient compilers, able to make quantum circuits compatible with some given hardware constraints. This problem is known to be tough, even for local computing. Here, we address it on distributed architectures. As generally assumed in this scenario, telegates represent the fundamental remote (inter-processor) operations. Each telegate consists of several tasks: i) entanglement generation and distribution, ii) local operations, and iii) classical communications. Entanglement generations and distribution is an expensive resource, as it is time-consuming. To mitigate its impact, we model an optimization problem that combines running-time minimization with the usage of distributed entangled states. Specifically, we formulated the distributed compilation problem as a dynamic network flow. To enhance the solution space, we extend the formulation, by introducing a predicate that manipulates the circuit given in input and parallelizes telegate tasks. To evaluate our framework, we split the problem into three sub-problems, and solve it by means of an approximation routine. Experiments demonstrate that the run-time is resistant to the problem size scaling. Moreover, we apply the proposed algorithm to compile circuits under different topologies, showing that topologies with a higher ratio between edges and nodes give rise to shallower circuits</div>
+<div class="bibdata" style="display:none"><pre><code>@article{10.1145/3579367,
+    author = {Cuomo, Daniele and Caleffi, Marcello and Krsulich, Kevin and Tramonto, Filippo and Agliardi, Gabriele and Prati, Enrico and Cacciapuoti, Angela Sara},
+    title = {Optimized Compiler for Distributed Quantum Computing},
+    year = {2023},
+    journal = {ACM Transactions on Quantum Computing},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    issn = {2643-6809},
+    doi = {10.1145/3579367},
+    urldate = {2021-12-28},
+    link = {https://arxiv.org/abs/2112.14139},
+    keywords = {ZX-Supported, Applied, PyZX, Clifford Fragment},
+    abstract = {Practical distributed quantum computing requires the development of efficient compilers, able to make quantum circuits compatible with some given hardware constraints. This problem is known to be tough, even for local computing. Here, we address it on distributed architectures. As generally assumed in this scenario, telegates represent the fundamental remote (inter-processor) operations. Each telegate consists of several tasks: i) entanglement generation and distribution, ii) local operations, and iii) classical communications. Entanglement generations and distribution is an expensive resource, as it is time-consuming. To mitigate its impact, we model an optimization problem that combines running-time minimization with the usage of distributed entangled states. Specifically, we formulated the distributed compilation problem as a dynamic network flow. To enhance the solution space, we extend the formulation, by introducing a predicate that manipulates the circuit given in input and parallelizes telegate tasks. To evaluate our framework, we split the problem into three sub-problems, and solve it by means of an approximation routine. Experiments demonstrate that the run-time is resistant to the problem size scaling. Moreover, we apply the proposed algorithm to compile circuits under different topologies, showing that topologies with a higher ratio between edges and nodes give rise to shallower circuits}
+}
+
+</code></pre></div>
+</div>
+</div></li>
 <li class="pub_entry">
 <div class="perEntryDiv">
 <div class="leftContent">
