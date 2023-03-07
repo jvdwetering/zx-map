@@ -66,5 +66,7 @@
     "Variational Circuits": "This paper deals with variational circuits",
     "Braids": "This paper deals with braided monoidal categories",
     "Classical Simulation": "This paper discusses classical simulation of quantum circuits",
-    "Verification": "This paper discusses verification of equality (of quantum circuits)"
+    "Verification": "This paper discusses verification of equality (of quantum circuits)",
+    "Chemistry": "This paper is about quantum chemistry",
+    "Cryptography": "This paper is about (post-)quantum cryptography"
 }
