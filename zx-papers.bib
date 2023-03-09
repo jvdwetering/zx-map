@@ -3353,3 +3353,36 @@ abstract={For a number of useful quantum circuits, qudit constructions have been
     abstract = {We provide a generic construction to turn any classical Zero-Knowledge (ZK) protocol into a composable (quantum) oblivious transfer (OT) protocol, mostly lifting the round-complexity properties and security guarantees (plain-model/statistical security/unstructured functions...) of the ZK protocol to the resulting OT protocol. Such a construction is unlikely to exist classically as Cryptomania is believed to be different from Minicrypt.   In particular, by instantiating our construction using Non-Interactive ZK (NIZK), we provide the first round-optimal (2-message) quantum OT protocol secure in the random oracle model, and round-optimal extensions to string and k-out-of-n OT.   At the heart of our construction lies a new method that allows us to prove properties on a received quantum state without revealing (too much) information on it, even in a non-interactive way and/or with statistical guarantees when using an appropriate classical ZK protocol. We can notably prove that a state has been partially measured (with arbitrary constraints on the set of measured qubits), without revealing any additional information on this set. This notion can be seen as an analog of ZK to quantum states, and we expect it to be of independent interest as it extends complexity theory to quantum languages, as illustrated by the two new complexity classes we introduce, ZKstateQIP and ZKstateQMA.}
 }
 
+
+@article{cl?ent2023simple,
+    author = {Cl{\'e}ment, Alexandre and Delorme, No{\'e} and Perdrix, Simon and Vilmart, Renaud},
+    title = {{Simple Complete Equational Theories for Quantum Circuits with Ancillae or Partial Trace}},
+    year = {2023},
+    journal = {arXiv preprint arXiv:2303.03117},
+    urldate = {2023-03-06},
+    link = {http://arxiv.org/abs/2303.03117},
+    keywords = {Completeness, Mixed States, Universal Fragment, Toffoli, ZX-Supported},
+    abstract = {Although quantum circuits have been ubiquitous for decades in quantum computing, the first complete equational theory for quantum circuits has only recently been introduced. Completeness guarantees that any true equation on quantum circuits can be derived from the equational theory. Our contribution is twofold: (i) We simplify this equational theory by proving that several rules can be derived from the remaining ones. In particular, two out of the three most intricate rules are removed, the third one being slightly simplified. (ii) We extend the complete equational theory to quantum circuits with ancillae or qubit discarding, to represent respectively quantum computations using an additional workspace, and hybrid quantum computations. We show that the remaining intricate rule can be greatly simplified in these more expressive settings. The development of simple and complete equational theories for expressive quantum circuit models opens new avenues for reasoning about quantum circuits. It provides strong formal foundations for various compiling tasks such as circuit optimisation, hardware constraint satisfaction and verification.}
+}
+
+@article{coecke2023basic,
+    author = {Coecke, Bob},
+    title = {{Basic ZX-calculus for students and professionals}},
+    year = {2023},
+    journal = {arXiv preprint arXiv:2303.03163},
+    urldate = {2023-03-06},
+    link = {http://arxiv.org/abs/2303.03163},
+    keywords = {ZX-calculus, MBQC, Graph States, Protocols},
+    abstract = {These are the lecture notes of guest lectures for Artur Ekert's course Introduction to Quantum Information at the Mathematical Institute of Oxford University, Hilary Term 2023. Some basic familiarity with Dirac notation is assumed. For the readers of Quantum in Pictures (QiP) who have some basic quantum background, these notes also constitute the shortest path to an explanation of how what they learn in QIP relates to the traditional quantum formalism.}
+}
+
+@article{cl?ent2022complete,
+    author = {Cl{\'e}ment, Alexandre and Heurtel, Nicolas and Mansfield, Shane and Perdrix, Simon and Valiron, Beno{\^i}t},
+    title = {{A Complete Equational Theory for Quantum Circuits}},
+    year = {2022},
+    journal = {arXiv preprint arXiv:2206.10577},
+    urldate = {2022-06-21},
+    link = {http://arxiv.org/abs/2206.10577},
+    keywords = {Completeness, Universal Fragment, Toffoli, ZX-Supported},
+    abstract = {We introduce the first complete equational theory for quantum circuits. More precisely, we introduce a set of circuit equations that we prove to be sound and complete: two circuits represent the same unitary map if and only if they can be transformed one into the other using the equations. The proof is based on the properties of multi-controlled gates -- that are defined using elementary gates -- together with an encoding of quantum circuits into linear optical circuits, which have been proved to have a complete axiomatisation.}
+}
