@@ -47,7 +47,9 @@ ID = None
 for a in q['authors']:
 	first, last = a.split(' ',1)
 	authors.append('{}, {}'.format(last, first))
-	if ID is None: ID = last.replace(" ","").lower() + str(d.tm_year)
+	if ID is None: 
+		ID = last.replace(" ","").lower() + str(d.tm_year)
+		ID = ID.replace('í','i').replace('ó','o').replace('á','a').replace('é','e')
 
 t = q['title'].lower().replace("the ","").replace("a ","").replace("an ", "")
 t = t.replace("towards ", "").replace("-","")
@@ -81,9 +83,10 @@ entry['keywords'] = keywords
 
 db = BibDatabase()
 db.entries = [entry]
-raw_bibdata = writer.write(db)
+data = writer.write(db)
+data = data.replace("í",r"{\'i}").replace("é",r"{\'e}").replace("á",r"{\'a}").replace('ó',r"{\'o}")
 print()
-print(raw_bibdata)
+print(data)
 print()
 
 proceed = input("Add to zx-papers.bib?\nY/N: ")
@@ -91,7 +94,7 @@ if not proceed.lower().startswith("y"):
     exit()
 
 with open("zx-papers.bib", 'a') as f:
-    f.write("\n"+raw_bibdata)
+    f.write("\n"+data)
 
 print("Added data to zx-papers.bib")
 
