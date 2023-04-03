@@ -66,32 +66,36 @@ def entry_to_rss(title,link,abstract,authors,year, arxiv, date):
 
 HTML = r"""
 <div class="perEntryDiv">
-<div class="leftContent">
-<span>
-<a target="_blank" href="{url}" class="paperTitle">{title}</a> 
-</span>
-<br>
-<span class="authors">{authors}</span>
-<br>
-<span>
-<a href="#" class="abstract_more">Show abstract &#x21F2</a>
-<a href="#" class="bibdata_more">Show bibdata &#x21F2</a>
-{video}
-</span>
-</div>
-<div class="rightContent">
-<span>
-<a target="_blank" href="{doiurl}" class="journal">{journal}</a> 
-</span>
-<br>
-<span>
-Keywords: <span class="keywords">{keywords}</span>.
-</span>
-</div>
-<div class="crossContent">
-<div class="abstract" style="display:none">{abstract}</div>
-<div class="bibdata" style="display:none"><pre><code>{bibdata}</code></pre></div>
-</div>
+    <div class="leftContent">
+        <span>
+            <a target="_blank" href="{url}" class="paperTitle">{title}</a>
+        </span>
+        <br>
+            <span class="authors">{authors}</span>
+        <br>
+        <span>
+            <a href="#" class="abstract_more">
+                Show abstract &#x21F2;
+            </a>
+            <a href="#" class="bibdata_more">
+                Show bibdata &#x21F2;
+            </a>
+            {video}
+        </span>
+    </div>
+    <div class="rightContent">
+        <span>
+            <a target="_blank" href="{doiurl}" class="journal">{journal}</a>
+        </span>
+        <br>
+        <span>
+            Keywords: <span class="keywords">{keywords}</span>.
+        </span>
+    </div>
+    <div class="crossContent">
+        <div class="abstract" style="display:none">{abstract}</div>
+        <div class="bibdata" style="display:none"><pre><code>{bibdata}</code></pre></div>
+    </div>
 </div>"""
 
 keyword_pubs = dict()

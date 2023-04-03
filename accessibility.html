@@ -1,350 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/css/intro.css">
-  <style>
-    pre {
-      overflow: auto;
-    }
-  </style>
-  <title>
-    ZX-calculus accessibility
-  </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/intro.css">
+    <style>
+        pre {
+            overflow: auto;
+        }
+    </style>
+    <title>
+        ZX-calculus accessibility
+    </title>
 </head>
 
 <body>
-  <div class="contentGrid" style="grid-template-columns: 1fr;">
-    <div class="title cell shaded row">
-      <h1>
-        ZX-calculus and accessibility
-      </h1>
-    </div>
-    <div class="cell row">
-      <h2>Suggested red and green colours</h2>
-      <p>
-        The ZX calculus has always been a red / green calculus.
-        This can cause problems if authors use shades of red and green that are hard to distinguish
-        for people with CVD.
-        We present here shades of red and green that should be distinguishable
-        by people with any form of CVD, will print clearly in greyscale,
-        and satisfies the W3 web standards for contrast against black text.
-      </p>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/intro.html">Tutorial</a></li>
+        <li><a href="/publications.html">Publications</a></li>
+        <li><a href="/accessibility.html">Accessibility</a></li>
+        <li><a href="/map.html">Map</a></li>
+        <li><a href="/pyzx.html">PyZX Demo</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="contentGrid" style="grid-template-columns: 1fr;">
+        <div class="title cell shaded row">
+            <h1>
+                ZX-calculus and accessibility
+            </h1>
+        </div>
+        <div class="cell row">
+            <h2>Suggested red and green colours</h2>
+            <p>
+                The ZX calculus has always been a red / green calculus.
+                This can cause problems if authors use shades of red and green that are hard to distinguish
+                for people with CVD.
+                We present here shades of red and green that should be distinguishable
+                by people with any form of CVD, will print clearly in greyscale,
+                and satisfies the W3 web standards for contrast against black text.
+            </p>
 
-      <div style="padding: 1em; background: #e8a6a6">
-        This is black text against the preferred shade of red
-      </div>
-      <div style="padding: 1em; background: #d8f8d8">
-        This is black text against the preferred shade of green
-      </div>
+            <div style="padding: 1em; background: #e8a6a6">
+                This is black text against the preferred shade of red
+            </div>
+            <div style="padding: 1em; background: #d8f8d8">
+                This is black text against the preferred shade of green
+            </div>
 
-      <p>
-        For methodology and metrics see the Jupyter notebook <a
-          href="https://github.com/zx-outreach/accessibility/blob/master/colours.ipynb">here</a>.
-        Comments from the community are welcome, and should be directed to Hector Miller-Bakewell.
-      </p>
+            <p>
+                For methodology and metrics see the Jupyter notebook
+                <a href="https://github.com/zx-outreach/accessibility/blob/master/colours.ipynb">here</a>.
+                Comments from the community are welcome, and should be directed to Hector Miller-Bakewell.
+            </p>
 
-      <h2>How to implement in LaTeX</h2>
-      <p>
-        Simply add the following two snippets of code to your preamble. The first defines the colours "zx_red" and
-        "zx_green":
+            <h2>How to implement in LaTeX</h2>
+            <p>
+                Simply add the following two snippets of code to your preamble. The first defines the colours "zx_red"
+                and "zx_green":
+            </p>
 
-        <pre>
+            <pre>
 \definecolor{zx_red}{RGB}{232, 165, 165}
 \definecolor{zx_green}{RGB}{216, 248, 216}
 </pre>
 
-        The second defines two node types "gn" and "rn" for use inside tikz diagrams:
+            The second defines two node types "gn" and "rn" for use inside tikz diagrams:
 
-        <pre>
+            <pre>
 \tikzstyle{gn}=[rectangle,rounded corners=0.8em,fill=zx_green,draw=Black,
   line width=0.8 pt,inner sep=3pt,minimum width=1.5em,minimum height=1.5em]
 \tikzstyle{rn}=[rectangle,rounded corners=0.8em,fill=zx_red,draw=Black,
   line width=0.8 pt,inner sep=3pt,minimum width=1.5em,minimum height=1.5em]
 </pre>
 
-        We also encourage authors to demonstrate which colour is which.
-        For example by including a tikz green node and red node immediately after first mentioning the colours:
-        <pre>
+            We also encourage authors to demonstrate which colour is which.
+            For example by including a tikz green node and red node immediately after first mentioning the colours:
+            <pre>
   The ZX-calculus is built from red [red node] and green [green node] spiders.
 </pre>
 
-        Note that we encourage rounded rectangles over circles.
-        And strongly encourage green Z nodes to be lighter in shade than red X nodes when printed in greyscale.
-      </p>
-      <h2>
-        Alternative colours schemes:
-      </h2>
-      <p>
-        The suggested colours above are by no means the only choice available.
-        We require that contrast of black text against the colours is at least 4.5 under all CVD transformations,
-        and suggest (but do not require) a lowest Delta-E value of at least 5.
-        Here is another colour scheme suggested by the community:
-      </p>
-      <p>
-        <div style="padding: 1em; background:  #ff8888">
-          This is black text against red
+            <p>
+                Note that we encourage rounded rectangles over circles.
+                And strongly encourage green Z nodes to be lighter in shade than red X nodes when printed in greyscale.
+            </p>
+            <h2>
+                Alternative colours schemes:
+            </h2>
+            <p>
+                The suggested colours above are by no means the only choice available.
+                We require that contrast of black text against the colours is at least 4.5 under all CVD
+                transformations, and suggest (but do not require) a lowest Delta-E value of at least 5.
+                Here is another colour scheme suggested by the community:
+            </p>
+            <div style="padding: 1em; background:  #ff8888">
+                This is black text against red
+            </div>
+            <div style="padding: 1em; background:  #ccffcc">
+                This is black text against green
+            </div>
+            <p>
+                Which passes the contrast test, but has a lower Delta-E than the suggested colours.
+            </p>
         </div>
-        <div style="padding: 1em; background:  #ccffcc">
-          This is black text against green
-        </div>
-      </p>
-      <p>
-        Which passes the contrast test, but has a lower Delta-E than the suggested colours.
-      </p>
-    </div>
-    <div class="row cell">
-      <h2>Livestreaming of workshops</h2>
-      There are many reasons that someone may be unable to make it to a workshop in person.
-      Here we give some recommendations on how to run a livestream,
-      so that these people can still participate in the scientific discourse.
+        <div class="row cell">
+            <h2>Livestreaming of workshops</h2>
+            There are many reasons that someone may be unable to make it to a workshop in person.
+            Here we give some recommendations on how to run a livestream,
+            so that these people can still participate in the scientific discourse.
 
-      <h3>
-        Setting up a stream
-      </h3>
-      <ul>
-        <li>
-          <p>There are many livestream providers available that only require setting up an account.
-            These include:</p>
-          <ul>
-            <li>
-              <p><a href="http://www.youtube.com">Youtube</a></p>
-            </li>
-            <li>
-              <p><a href="http://hangouts.google.com">Google Hangouts</a></p>
-            </li>
-            <li>
-              <p><a href="http://www.skype.com">Skype</a></p>
-            </li>
-            <li>
-              <p><a href="http://zoom.us">Zoom</a></p>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <p>
-            Talks that involve slides can be managed by having the computer showing the slides also join the stream,
-            and using the "share screen" feature.
-            Note that joining nearby computers to the same stream can result in feedback,
-            and microphones / speakers should be muted before doing so.
-          </p>
-        </li>
-        <li>
-          <p>
-            Talks that involve a speaker and a board can be presented using a webcam; ideally one on a cord that can be
-            repositioned
-            to follow the speaker.
-            An external microphone is also a great help here.
-          </p>
-        </li>
-        <li>
-          <p>
-            General discussions can be managed by projecting the stream onto the projector screen, like a slide
-            presentation.
-            Care should be taken that a microphone is positioned so that questions and answers can be heard.
-          </p>
-        </li>
-      </ul>
-      <h3>
-        Chairing a stream
-      </h3>
-      <p>
-        There should always be a dedicated person whose task it is to manage the stream.
-        This should also be on a rota,
-        to spread the load and allow people to focus on the talks they are most interested in.
-        The chair's duties include: </p>
-      <ul>
-        <li>
-          <p>
-            Ensuring the livestream is still live </p>
-        </li>
-        <li>
-          <p>
-            Relaying questions from the stream to the speaker </p>
-        </li>
-        <li>
-          <p>
-            Relaying announcements to the stream (e.g. "we are having a break for lunch, and will start again in 75
-            minutes") </p>
-        </li>
-      </ul>
-      <p>
-        Note that those on the stream may well be in different timezones,
-        so relative timings ("in 15 minutes") are preferred to absolute times ("at 2 o'clock".)
-        Notes from previous conferences / livestreams are included in the sections below.
-      </p>
-    </div>
-    <div class="row cell">
-      <h2 id="notesfromrunningalivestreamduringthezxworkshopgrenoble2526february2019">Notes from running a livestream
-        during the ZX workshop, Grenoble 25-26 February 2019</h2>
-
-      <p>The stream:</p>
-
-      <ul>
-        <li>
-          <p>The livestream was broadcast via the open ZX Google Hangout at
-            https://hangouts.google.com/call/pk4lfcfxx5avtj5jrb36e5e3aue?no_rd</p>
-        </li>
-
-        <li>
-          <p>Anyone with the URL could access the Hangout (as long as they were signed into Google). The URL was
-            distributed on the conference scratch website, and via the ZX mailing list a few days in advance.</p>
-        </li>
-
-        <li>
-          <p>The "workshop account" (in practice the account of the organiser) left the Hangout at breaks and lunchtime,
-            transmitting only during the sessions.</p>
-        </li>
-      </ul>
-
-      <p>The set-up:</p>
-
-      <ul>
-        <li>
-          <p>The main broadcasting computer was a 2018 MacBook Pro. Older computers were occasionally used and handled
-            the stream fine. Despite initial worries, there was no problem with the laptop overheating or getting slow.
-          </p>
-        </li>
-
-        <li>
-          <p>An external webcam was plugged into the laptop, and set up on a table in front of where the speakers stood
-            to give their talks. This meant the microphone was close to the speakers, and there was no issue with sound
-            once the settings on the Hangout had been switched to capture sound from the webcam (this did not happen
-            automatically like the video settings did).</p>
-        </li>
-
-        <li>
-          <p>One person (generally the session chair, which in this case was the organiser) sat to the side at the
-            front, with laptop at right angles to the speaker, at the end of the webcam wire and monitored the
-            livestream for technical issues, checked that the speaker was in frame, and took any questions from the
-            livestream chat. This worked well. The streaming laptop screen wasn't visible to either the speaker or the
-            audience, so did not distract.</p>
-        </li>
-      </ul>
-
-      <p>There were three types of session, all with slightly different set-ups.</p>
-
-      <ol>
-        <li>Talks with slides.
-
-          <ul>
-            <li>
-              <p>The webcam was pointed at the speaker, who was told where the field of view of the camera was and
-                requested
-                not to wander out of it. Speakers generally took this in their stride (or at least didn't appear visibly
-                to
-                be put off). The speaker's laptop was also connected to the Hangout and they shared their screen. This
-                meant
-                people on the Hangout could chose to full-screen either the slides or the picture of the speaker.</p>
-            </li>
-
-            <li>
-              <p>Dealing with audio feedback was an important issue. The full solutions on each laptop were the
-                following:
-              </p>
-
-              <ul>
+            <h3>
+                Setting up a stream
+            </h3>
+            <ul>
                 <li>
-                  <p>Chair's laptop: connected to webcam, video and microphone set to capture from webcam, speakers on.
-                  </p>
+                    <p>
+                        There are many livestream providers available that only require setting up an account.
+                        These include:
+                    </p>
+                    <ul>
+                        <li>
+                            <p><a href="http://www.youtube.com">Youtube</a></p>
+                        </li>
+                        <li>
+                            <p><a href="http://hangouts.google.com">Google Hangouts</a></p>
+                        </li>
+                        <li>
+                            <p><a href="http://www.skype.com">Skype</a></p>
+                        </li>
+                        <li>
+                            <p><a href="http://zoom.us">Zoom</a></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        Talks that involve slides can be managed by having the computer showing the slides also join the
+                        stream, and using the "share screen" feature.
+                        Note that joining nearby computers to the same stream can result in feedback,
+                        and microphones / speakers should be muted before doing so.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Talks that involve a speaker and a board can be presented using a webcam; ideally one on a cord
+                        that can be repositioned to follow the speaker.
+                        An external microphone is also a great help here.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        General discussions can be managed by projecting the stream onto the projector screen, like a
+                        slide presentation.
+                        Care should be taken that a microphone is positioned so that questions and answers can be heard.
+                    </p>
+                </li>
+            </ul>
+            <h3>
+                Chairing a stream
+            </h3>
+            <p>
+                There should always be a dedicated person whose task it is to manage the stream.
+                This should also be on a rota,
+                to spread the load and allow people to focus on the talks they are most interested in.
+                The chair's duties include:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        Ensuring the livestream is still live
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Relaying questions from the stream to the speaker
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Relaying announcements to the stream (e.g. "we are having a break for lunch, and will start
+                        again in 75 minutes")
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Note that those on the stream may well be in different timezones,
+                so relative timings ("in 15 minutes") are preferred to absolute times ("at 2 o'clock".)
+                Notes from previous conferences / livestreams are included in the sections below.
+            </p>
+        </div>
+        <div class="row cell">
+            <h2 id="notesfromrunningalivestreamduringthezxworkshopgrenoble2526february2019">
+                Notes from running a livestream during the ZX workshop, Grenoble 25-26 February 2019
+            </h2>
+
+            <p>The stream:</p>
+
+            <ul>
+                <li>
+                    <p>
+                        The livestream was broadcast via the open ZX Google Hangout at
+                        https://hangouts.google.com/call/pk4lfcfxx5avtj5jrb36e5e3aue?no_rd
+                    </p>
                 </li>
 
                 <li>
-                  <p>Speakers' laptop: connect to projector. Mute speakers before entering the Hangout. Once in,
-                    immediately
-                    mute microphone. Share screen (sometimes sharing only the application caused the Hangout to crash so
-                    generally 'share entire screen' was preferred). Then start slides as usual for a presentation.</p>
+                    <p>
+                        Anyone with the URL could access the Hangout (as long as they were signed into Google). The URL
+                        was distributed on the conference scratch website, and via the ZX mailing list a few days in
+                        advance.
+                    </p>
                 </li>
-              </ul>
-            </li>
 
-            <li>
-              <p>Questions: sometimes the livestream could not hear questions from the audience. Asking the speaker to
-                repeat any questions solved that. For questions from the livestream, either the chair read out questions
-                written into the chat, or else livestream attendees unmuted their microphones and asked through the
-                chair's
-                laptop. It worked quite well to turn the laptop around to the speaker so they could see the video of the
-                person asking the question. There was a direct line of sight between the speaker, the webcam, and the
-                chair+laptop.</p>
-            </li>
-          </ul>
-        </li>
-        <li>Talks on the whiteboard.
+                <li>
+                    <p>
+                        The "workshop account" (in practice the account of the organiser) left the Hangout at breaks and
+                        lunchtime, transmitting only during the sessions.
+                    </p>
+                </li>
+            </ul>
 
-          <ul>
-            <li>
-              <p>Again the webcam was pointed at the speaker. This time, only the webcam image and sound was broadcast.
-                This
-                worked less well than slides talks. Challenges included getting the speaker to write large enough for
-                the
-                livestream to read, and to move the webcam around mid-talk to make sure the speaker and board were
-                always
-                in
-                shot.</p>
-            </li>
+            <p>The set-up:</p>
 
-            <li>
-              <p>In general, the whiteboard did not come over well on the webcam, and almost all detail was lost.</p>
-            </li>
+            <ul>
+                <li>
+                    <p>
+                        The main broadcasting computer was a 2018 MacBook Pro. Older computers were occasionally used
+                        and handled the stream fine. Despite initial worries, there was no problem with the laptop
+                        overheating or getting slow.
+                    </p>
+                </li>
 
-            <li>
-              <p>One possible solution in future is to have a second person broadcasting from the speaker's location,
-                who
-                is
-                copying the contents of the whiteboard onto their own laptop (eg using a digital pen) and sharing their
-                screen.</p>
-            </li>
-          </ul>
+                <li>
+                    <p>
+                        An external webcam was plugged into the laptop, and set up on a table in front of where the
+                        speakers stood to give their talks. This meant the microphone was close to the speakers, and
+                        there was no issue with sound once the settings on the Hangout had been switched to capture
+                        sound from the webcam (this did not happen automatically like the video settings did).
+                    </p>
+                </li>
 
-        </li>
-        <li>Discussion sessions.
+                <li>
+                    <p>
+                        One person (generally the session chair, which in this case was the organiser) sat to the side
+                        at the front, with laptop at right angles to the speaker, at the end of the webcam wire and
+                        monitored the livestream for technical issues, checked that the speaker was in frame, and took
+                        any questions from the livestream chat. This worked well. The streaming laptop screen wasn't
+                        visible to either the speaker or the audience, so did not distract.
+                    </p>
+                </li>
+            </ul>
 
-          <ul>
-            <li>For these sessions the livestream was projected onto the main screen, and the webcam positioned in front
-              of
-              it pointing at the audience. This enabled two-way communication and involvement of the livestream
-              participants. If auto-switching of the livestream was disabled, someone (eg the chair) needed to manually
-              click on whichever livestream person was speaking in order to put them into the main window. This seemed
-              to
-              work well and the audio in both directions enabled reasonably free discussions.</li>
-          </ul>
+            <p>There were three types of session, all with slightly different set-ups.</p>
 
-        </li>
-      </ol>
-      <p>Comments:</p>
+            <ol>
+                <li>Talks with slides.
 
-      <ul>
-        <li>
-          <p>Having the livestream increased the participation for minimal cost. It seemed to integrate
-            well, and speaking as the person chiefly responsibly for running it, it required minimal faffing.</p>
-        </li>
+                    <ul>
+                        <li>
+                            <p>
+                                The webcam was pointed at the speaker, who was told where the field of view of the
+                                camera was and requested not to wander out of it. Speakers generally took this in their
+                                stride (or at least didn't appear visibly to be put off). The speaker's laptop was also
+                                connected to the Hangout, and they shared their screen. This meant people on the Hangout
+                                could choose to full-screen either the slides or the picture of the speaker.
+                            </p>
+                        </li>
 
-        <li>
-          <p>Next time, I would have a rota of different people monitoring the livestream, not just the same person
-            (me)
-            all the time.</p>
-        </li>
+                        <li>
+                            <p>
+                                Dealing with audio feedback was an important issue. The full solutions on each laptop
+                                were the following:
+                            </p>
 
-        <li>
-          <p>It would be good to find a way of giving general announcements in the livestream that people see when
-            they
-            join. E.g "we are running 20 mins behind schedule".</p>
-        </li>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Chair's laptop: connected to webcam, video and microphone set to capture from
+                                        webcam, speakers on.
+                                    </p>
+                                </li>
 
-        <li>
-          <p>Note that people join the livestream in different timezones, so announcements are better as "we will
-            reconvene after lunch in 1 hour" rather than "at 1pm".</p>
-        </li>
-      </ul>
+                                <li>
+                                    <p>
+                                        Speakers' laptop: connect to projector. Mute speakers before entering the
+                                        Hangout. Once in, immediately mute microphone. Share screen (sometimes sharing
+                                        only the application caused the Hangout to crash so generally 'share entire
+                                        screen' was preferred). Then start slides as usual for a presentation.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
 
-      <p>Final comment: <strong>HIGHLY RECOMMENDED</strong> that we move to make livestreaming a normal part of
-        workshops within the community.</p>
+                        <li>
+                            <p>
+                                Questions: sometimes the livestream could not hear questions from the audience. Asking
+                                the speaker to repeat any questions solved that. For questions from the livestream,
+                                either the chair read out questions written into the chat, or else livestream attendees
+                                unmuted their microphones and asked through the chair's laptop. It worked quite well to
+                                turn the laptop around to the speaker, so they could see the video of the person asking
+                                the question. There was a direct line of sight between the speaker, the webcam, and the
+                                chair+laptop.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>Talks on the whiteboard.
+
+                    <ul>
+                        <li>
+                            <p>
+                                Again the webcam was pointed at the speaker. This time, only the webcam image and sound
+                                was broadcast. This worked less well than slides talks. Challenges included getting the
+                                speaker to write large enough for the livestream to read, and to move the webcam around
+                                mid-talk to make sure the speaker and board were always in shot.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                In general, the whiteboard did not come over well on the webcam, and almost all detail
+                                was lost.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                One possible solution in future is to have a second person broadcasting from the
+                                speaker's location, who is copying the contents of the whiteboard onto their own laptop
+                                (e.g. using a digital pen) and sharing their screen.
+                            </p>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>Discussion sessions.
+
+                    <ul>
+                        <li>
+                            For these sessions the livestream was projected onto the main screen, and the webcam
+                            positioned in front of it pointing at the audience. This enabled two-way communication and
+                            involvement of the livestream participants. If auto-switching of the livestream was
+                            disabled, someone (e.g. the chair)
+                            needed to manually click on whichever livestream person was speaking in order to put them
+                            into the main window. This seemed to work well and the audio in both directions enabled
+                            reasonably free discussions.
+                        </li>
+                    </ul>
+
+                </li>
+            </ol>
+            <p>Comments:</p>
+
+            <ul>
+                <li>
+                    <p>
+                        Having the livestream increased the participation for minimal cost. It seemed to integrate
+                        well, and speaking as the person chiefly responsibly for running it, it required minimal
+                        faffing.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Next time, I would have a rota of different people monitoring the livestream, not just the same
+                        person (me) all the time.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        It would be good to find a way of giving general announcements in the livestream that people see
+                        when they join. E.g "we are running 20 mins behind schedule".
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Note that people join the livestream in different timezones, so announcements are better as "we
+                        will reconvene after lunch in 1 hour" rather than "at 1pm".
+                    </p>
+                </li>
+            </ul>
+
+            <p>
+                Final comment: <strong>HIGHLY RECOMMENDED</strong> that we move to make livestreaming a normal part of
+                workshops within the community.
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="header">
-    <a href="/">Home</a>
-    <a href="/intro.html">Tutorial</a>
-    <a href="/publications.html">Publications</a>
-    <a href="/accessibility.html">Accessibility</a>
-    <a href="/map.html">Map</a>
-    <a href="/pyzx.html">PyZX Demo</a>
-  </div>
+</main>
+<footer>
+    <p class="subtle">
+        Website by <a href="https://hjmb.co.uk">Hector Miller-Bakewell</a>
+        and <a href="https://vdwetering.name">John van de Wetering</a>,
+        with thanks to
+        <a href="https://quantum.univ-grenoble-alpes.fr/fostering-the-ecosystem/our-chairs-of-excellence/quantum-computing/horsman-dominic-734445.htm">
+            Dom Horsman
+        </a>
+        and Richard East
+    </p>
+</footer>
 </body>
+
+</html>

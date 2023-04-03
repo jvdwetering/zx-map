@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -53,10 +54,10 @@
 
         #obscure {
             position: fixed;
-            top: 0px;
-            right: 0px;
-            left: 0px;
-            bottom: 0px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
             z-index: 2;
             background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
@@ -66,6 +67,17 @@
 </head>
 
 <body onload="brython({debug: 0, indexedDB: true})">
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/intro.html">Tutorial</a></li>
+        <li><a href="/publications.html">Publications</a></li>
+        <li><a href="/accessibility.html">Accessibility</a></li>
+        <li><a href="/map.html">Map</a></li>
+        <li><a href="/pyzx.html">PyZX Demo</a></li>
+    </ul>
+</nav>
+<main>
     <div id="obscure">
         <h1>
             Loading...
@@ -128,7 +140,7 @@ grid-template-columns: 3fr 6fr 4fr;">
                         'QFT8', 'QFTAdd8', 'rc_adder_6',
                         'tof_3', 'tof_4', 'tof_5',
                         'vbe_adder_3']
-                    
+
                     class NameSpace:
                         pass
                     ns = NameSpace()
@@ -149,7 +161,7 @@ grid-template-columns: 3fr 6fr 4fr;">
                     def original(event):
                         display("Original circuit:")
                         display(ns.circ)
-                        
+
                     def simplify(event):
                         display("Simplified diagram:")
                         g = ns.circ.to_graph()
@@ -239,166 +251,156 @@ grid-template-columns: 3fr 6fr 4fr;">
     <div class="row" id="display-content">
         Loading PyZX. This can take a few seconds.
     </div>
-    <div class="row cell">
-        <p class="subtle">
-            Website by <a href="http://hmillerbakewell.github.io/website">Hector Miller-Bakewell</a> and <a
-                href="http://vdwetering.name">John van de Wetering</a>,
-            with thanks to
-            <a
-                href="https://quantum.univ-grenoble-alpes.fr/fostering-the-ecosystem/our-chairs-of-excellence/quantum-computing/horsman-dominic-734445.htm">
-                Dom Horsman
-            </a> and Richard East
-        </p>
-    </div>
+</main>
+<footer>
+    <p class="subtle">
+        Website by <a href="https://hjmb.co.uk">Hector Miller-Bakewell</a>
+        and <a href="https://vdwetering.name">John van de Wetering</a>,
+        with thanks to
+        <a href="https://quantum.univ-grenoble-alpes.fr/fostering-the-ecosystem/our-chairs-of-excellence/quantum-computing/horsman-dominic-734445.htm">
+            Dom Horsman
+        </a>
+        and Richard East
+    </p>
+</footer>
 
+<script type="text/python">
+    from browser import window
+    editor = window.ace.edit("editor")
+    editor.setTheme("ace/theme/monokai")
+    session = editor.getSession()
+    session.setMode("ace/mode/python")
+</script>
 
+<script type="text/python">
+    from browser import document, html, window
 
-    <div class="header">
-        <a href="/">Home</a>
-        <a href="/intro.html">Tutorial</a>
-        <a href="/publications.html">Publications</a>
-        <a href="/accessibility.html">Accessibility</a>
-        <a href="/map.html">Map</a>
-        <a href="/pyzx.html">PyZX Demo</a>
-    </div>
+    editor = window.ace.edit("editor")
 
-    <script type="text/python">
-        from browser import window
-        editor = window.ace.edit("editor")
-        editor.setTheme("ace/theme/monokai")
-        session = editor.getSession()
-        session.setMode("ace/mode/python")
-    </script>
+    current = None
 
-    <script type="text/python">
-        from browser import document, html, window
+    def load_example(ev):
+        global current
+        if current is not None:
+            document["a"+current].style.fontWeight = "normal"
+        example_id = ev.target.num
+        ev.target.style.fontWeight = "bold"
 
-        editor = window.ace.edit("editor")
+        example = document[example_id]
+        src = example.get(selector="script")[0].text
+        while src.startswith("\n"):
+            src = src[1:]
+        indent = 0
+        while src[indent] == ' ':
+            indent += 1
+        src = "\n".join(line[indent:] for line in src.split("\n"))
 
-        current = None
+        editor.setValue(src)
 
-        def load_example(ev):
-            global current
-            if current is not None:
-                document["a"+current].style.fontWeight = "normal"
-            example_id = ev.target.num
-            ev.target.style.fontWeight = "bold"
+        current = example_id
 
-            example = document[example_id]
-            src = example.get(selector="script")[0].text
-            while src.startswith("\n"):
-                src = src[1:]
-            indent = 0
-            while src[indent] == ' ':
-                indent += 1
-            src = "\n".join(line[indent:] for line in src.split("\n"))
+    for example in document.get(selector=".example"):
+        button = example.get(selector="button")[0]
+        anchor = html.A(button.text, Class="menu", id="a"+example.id)
+        anchor.num = example.id
 
-            editor.setValue(src)
+        anchor.bind("click", load_example)
+        document["menu"] <= html.LI(anchor)
+</script>
 
-            current = example_id
+<script type="text/python">
+    import javascript
+    from browser import document as doc, window, alert, html, timer
 
-        for example in document.get(selector=".example"):
-            button = example.get(selector="button")[0]
-            anchor = html.A(button.text, Class="menu", id="a"+example.id)
-            anchor.num = example.id
+    import traceback
+    import sys
+    from fractions import Fraction
 
-            anchor.bind("click", load_example)
-            document["menu"] <= html.LI(anchor)
-    </script>
+    editor = window.ace.edit("editor")
 
-    <script type="text/python">
-        import javascript
-        from browser import document as doc, window, alert, html, timer
+    #editor.setValue("""g = zx.generate.cliffordT(3,20)\ndisplay(zx.draw(g))\nzx.simplify.full_reduce(g)\ng.normalise()\ndisplay(zx.draw(g))""")
+    editor.setValue("# Choose an example script from the panel to the left")
+    import pyzx as zx
 
-        import traceback
-        import sys
-        from fractions import Fraction
+    div_display = doc["display-content"]
+    div_display.html = ""
+    button = doc["run-button"]
+    console = doc["console"]
 
-        editor = window.ace.edit("editor")
+    class cOutput:
+        encoding = 'utf-8'
 
-        #editor.setValue("""g = zx.generate.cliffordT(3,20)\ndisplay(zx.draw(g))\nzx.simplify.full_reduce(g)\ng.normalise()\ndisplay(zx.draw(g))""")
-        editor.setValue("# Choose an example script from the panel to the left")
-        import pyzx as zx
+        def __init__(self):
+            self.cons = console
+            self.buf = ''
 
-        div_display = doc["display-content"]
+        def write(self, data):
+            self.buf += str(data)
+
+        def flush(self):
+            self.cons.value += self.buf
+            self.buf = ''
+
+        def reset(self):
+            self.buf = ''
+            self.cons.value = ''
+
+        def __len__(self):
+            return len(self.buf)
+
+    cOut = cOutput()
+    sys.stdout = cOut
+    sys.stderr = cOut
+
+    def display(item, raw=False):
+        if isinstance(item, str):
+            if raw:
+                div_display.html += item
+            else:
+                div_display <= html.PRE(item)
+            return
+        elif hasattr(item, "to_tensor"): # It is a circuit or graph
+            item = zx.draw(item)
+        for e in item:
+            div_display <= e
+        div_display.scrollIntoView()
+
+    def respond(ev=None):
+        button.innerHTML = "Running..."
+        cOut.reset()
         div_display.html = ""
-        button = doc["run-button"]
-        console = doc["console"]
+        timer.set_timeout(run_code,0) # Give control back to browser
+        #
 
-        class cOutput:
-            encoding = 'utf-8'
-
-            def __init__(self):
-                self.cons = console
-                self.buf = ''
-
-            def write(self, data):
-                self.buf += str(data)
-
-            def flush(self):
-                self.cons.value += self.buf
-                self.buf = ''
-
-            def reset(self):
-                self.buf = ''
-                self.cons.value = ''
-
-            def __len__(self):
-                return len(self.buf)
-
-        cOut = cOutput()
-        sys.stdout = cOut
-        sys.stderr = cOut
-
-        def display(item, raw=False):
-            if isinstance(item, str):
-                if raw:
-                    div_display.html += item
-                else:
-                    div_display <= html.PRE(item)
-                return
-            elif hasattr(item, "to_tensor"): # It is a circuit or graph
-                item = zx.draw(item)
-            for e in item:
-                div_display <= e
-            div_display.scrollIntoView()
-
-        def respond(ev=None):
-            button.innerHTML = "Running..."
-            cOut.reset()
-            div_display.html = ""
-            timer.set_timeout(run_code,0) # Give control back to browser
-            #
-
-        def run_code():
-            content = editor.getValue()
-            content += "\nNone" # Hack to make it be an expression, and not a statement
-            try:
-                eval(content)
-            except Exception as exc:
-                traceback.print_exc(file=sys.stderr)
-            sys.stdout.flush()
-            button.innerHTML = "Run Code"
-
-        button.bind('click', respond)
-
-        #timer.set_timeout(respond,0)
+    def run_code():
+        content = editor.getValue()
+        content += "\nNone" # Hack to make it be an expression, and not a statement
+        try:
+            eval(content)
+        except Exception as exc:
+            traceback.print_exc(file=sys.stderr)
+        sys.stdout.flush()
         button.innerHTML = "Run Code"
-        doc["obscure"].hidden = True
+
+    button.bind('click', respond)
+
+    #timer.set_timeout(respond,0)
+    button.innerHTML = "Run Code"
+    doc["obscure"].hidden = True
 </script>
 
 
-    <script src="js/require.js"></script>
-    <script src="js/main.js"></script>
+<script src="js/require.js"></script>
+<script src="js/main.js"></script>
 
 
-    <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/ace/mode-python.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/ace/snippets/python.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ace/ace.js"></script>
+<script src="js/ace/ext-language_tools.js"></script>
+<script src="js/ace/mode-python.js"></script>
+<script src="js/ace/snippets/python.js"></script>
 
-    <script src="js/brython.js"></script>
-    <script src="js/brython_modules.js"></script>
+<script src="js/brython.js"></script>
+<script src="js/brython_modules.js"></script>
 
 </body>
 

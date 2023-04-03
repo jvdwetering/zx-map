@@ -48,20 +48,20 @@ a {
     color: #777;
 }
 
-li>a:link,
-li>a:visited,
-li>a,
-p>a:link,
-p>a:visited,
-p>a,
-span>a:link,
-span>a:visited,
-span>a {
-    color: black;
-    text-decoration: none;
-    border-bottom: 1px solid #CCC;
-    cursor: pointer;
-}
+main > li > a:link,
+main > li > a:visited,
+main > li > a,
+main > p > a:link,
+main > p > a:visited,
+main > p > a,
+main > span > a:link,
+main > span > a:visited,
+main > span > a {
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid #CCC;
+        cursor: pointer;
+    }
 
 a:hover {
     color: initial;
@@ -153,18 +153,23 @@ a:hover {
 }
 
 /* Style the navigation bar */
-.header {
-    width: 100%;
+nav ul {
     background-color: #083308;
-    overflow: auto;
+    margin: 0;
+    width: 100%;
     position: fixed;
     padding-left: 2em;
-    top: 0px;
     font-weight: bold;
 }
 
 /* Navbar links */
-.header a {
+nav ul li {
+    /*display: inline-block;*/
+    list-style-type: none;
+}
+
+/* Navbar links */
+nav > ul > li > a {
     float: left;
     text-align: center;
     padding: 1em;
