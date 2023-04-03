@@ -15,11 +15,11 @@ function search(s) {
 
     var should_accept = false;
     if ($('#viewall').is(':checked')) {should_accept=true;}
-    if ($('#viewpapers').is(':checked') && pubtype=="paper") {should_accept=true;}
-    if ($('#viewpreprints').is(':checked') && pubtype=="preprint") {should_accept=true;}
-    if ($('#viewtheses').is(':checked') && pubtype=="thesis") {should_accept=true;}
-    if ($('#viewproceedings').is(':checked') && pubtype=="proceedings") {should_accept=true;}
-    if ($('#viewvideos').is(':checked') && (pubtype=="video" || $(elt).find(".bibdata").text().match(/video/))) {should_accept=true;}
+    if ($('#viewpapers').is(':checked') && pubtype==="paper") {should_accept=true;}
+    if ($('#viewpreprints').is(':checked') && pubtype==="preprint") {should_accept=true;}
+    if ($('#viewtheses').is(':checked') && pubtype==="thesis") {should_accept=true;}
+    if ($('#viewproceedings').is(':checked') && pubtype==="proceedings") {should_accept=true;}
+    if ($('#viewvideos').is(':checked') && (pubtype==="video" || $(elt).find(".bibdata").text().match(/video/))) {should_accept=true;}
 
     var find = function (selector) {
       if ($("#chk" + selector).is(":checked") || $("#chkall").is(":checked")) {
@@ -30,7 +30,7 @@ function search(s) {
     }
 
     var h = "" + find("paperTitle") + find("authors") + find("abstract") + find("keywords") + find("journal")
-    if (h.match(reg) && should_accept==true) {
+    if (h.match(reg) && should_accept===true) {
       $(elt).show()
     }
     else {
@@ -47,13 +47,13 @@ function updateSearch() {
   // Hide all unused years
   var viewcount = 0;
   $("h2").filter(function (i, e) {
-    return $(e).next().get(0).nodeName == "UL"
+    return $(e).next().get(0).nodeName === "UL"
   }).filter(function (i, e) {
     var l = $(e).next().children().filter(function (j, f) {
       return $(f).css("display") !== "none"
     }).length
     viewcount += l;
-    return l == 0;
+    return l === 0;
   }).hide();
   $('#viewcount').html("Showing " + viewcount.toString() + " items")
 }
@@ -72,14 +72,14 @@ function forceSearchKW(s) {
 function deselectAllChecks(exception) {
   ["paperTitle","authors","abstract","keywords","journal","all"].forEach(
     function(s,i) {
-      if (s!=exception) {$('#chk'+s).prop('checked',false)}
+      if (s!==exception) {$('#chk'+s).prop('checked',false)}
     });
 }
 
 function deselectAllViews(exception) {
   ["papers","preprints","proceedings","theses","videos","all"].forEach(
     function(s,i) {
-      if (s!=exception) {$('#view'+s).prop('checked',false)}
+      if (s!==exception) {$('#view'+s).prop('checked',false)}
     });
 }
 
@@ -91,7 +91,7 @@ $(function () { // Code to be executed once all the html is ready
   // Clear the search box on page load
   $("#txtSearch").val("");
   var s = window.location.search.substr(1);
-  if (s != null && s != "" && s[0] == 'q') {
+  if (s != null && s !== "" && s[0] === 'q') {
     forceSearch(decodeURI(s).split('=')[1])
   }
   else {

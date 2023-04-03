@@ -87,10 +87,10 @@ NODEDATAHERE
   const categoryForce = function (alpha) {
     for (var i = 0, n = nodes.length, node, k = alpha * 0.1; i < n; ++i) {
       node = nodes[i];
-      if (node.type == "field") {
+      if (node.type === "field") {
         node.y -= k * (node.y - 0.9 * size);
       }
-      if (node.type == "place") {
+      if (node.type === "place") {
         node.x -= k * (node.x - 0.9 * size);
       }
     }
